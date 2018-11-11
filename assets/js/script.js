@@ -1,1 +1,1 @@
-new ClipboardJS('.btn');
+new ClipboardJS('.a-btn');
