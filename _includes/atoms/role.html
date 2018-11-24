@@ -1,1 +1,2 @@
-<span class="b" style="color: {{ include.color }}">@{{ include.name }}</span>
+{%- assign role = site.data.role_nodes | where: "type", "role" | where: "id", include.id | first -%}
+<span class="b" style="color: {{ role.color }}">@{{ role.name }}</span>
