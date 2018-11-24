@@ -1,0 +1,4 @@
+{% capture description %}
+    {{ include.description | replace: "{% channel ", "{% include atoms/channel.html name=\"" | replace: " %}", "\" %}" }}
+{% endcapture %}
+{{ description }}
