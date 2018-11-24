@@ -1,5 +1,37 @@
 ---
 -
+  type: "text"
+  category: "Introduction"
+  description: "Welcome to <code>The Night House | בית הלילה</code>!"
+-
+  type: "text"
+  category: "Introduction"
+  description: "To gain access to the main part of the server, you will need to request the !@!497610586750976020!@! role from a !@!499037360340598819!@! member in the !#!role-request!#! channel."
+-
+  type: "text"
+  category: "Introduction"
+  description: "In that channel you may also optionally self assign a number of roles, listed out below. The roles that can be self assigned have <span class=\"b\">clickable green buttons</span> which, when pressed, will copy the role assignment command to your system clipboard so that you can easily paste it in the channel."
+-
+  type: "text"
+  category: "Introduction"
+  description: "<span class=\"b\">Please only paste and send one command at a time</span>. The bot does not know how to parse more than one command per message."
+-
+  type: "note"
+  category: "Introduction"
+  description: "Example: <code>n.iam <@&504966239765135360></code> would <span class=\"i\">assign</span> you to the <span class=\"b c-1a7939\">@Notify | להודיע</span> role."
+-
+  type: "text"
+  category: "Introduction"
+  description: "To unassign a self-assigned role, use the same command but replace <code>n.iam</code> with <code>n.iamn</code>."
+-
+  type: "note"
+  category: "Introduction"
+  description: "Example: <code>n.iamn <@&504966239765135360></code> would <span class=\"i\">unassign</span> you from the <span class=\"b c-1a7939\">@Notify | להודיע</span> role."
+-
+  type: "text"
+  category: "Introduction"
+  description: "When you get the opportunity, please also <span class=\"b\">leave a quick introduction</span> in the !#!introduction!#! channel. In addition to learning more about you and your practice, we'd also like to know how you found us!"
+-
   type: "role"
   category: "Staff"
   name: "Administrator | כוהנת"
