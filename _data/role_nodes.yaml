@@ -62,6 +62,14 @@
 -
   type: "role"
   category: "Messaging Preferences"
+  name: "Notify | להודיע"
+  id: "504966239765135360"
+  color: "#1a7939"
+  description: "this is an opt-in role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. The Hebrew means \"inform\" [leho'dia]."
+  show_button: true
+-
+  type: "role"
+  category: "Messaging Preferences"
   name: "DM Friendly | בסדר לשלח הודעות"
   id: "498208423524171796"
   color: "#7dff00"
@@ -85,9 +93,73 @@
   show_button: true
 -
   type: "role"
-  category: "Messaging Preferences"
-  name: "Notify | להודיע"
-  id: "504966239765135360"
-  color: "#1a7939"
-  description: "this is an opt-in role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. The Hebrew means \"inform\" [leho'dia]."
+  category: "Identities"
+  name: "Enby/Other | אנשים"
+  id: "497568507601485836"
+  color: "#0dcf4f"
+  description: "this is the enby (short for non-binary) / catch-all role, for anyone who does not identify inside the binary gender boxes for whatever reason. The Hebrew means \"people\" [anashim]."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Feminine | נשים"
+  id: "476916459470061569"
+  color: "#e91e63"
+  description: "this is the feminine gender identity role. The Hebrew literally means \"women\" [nashim]."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Masculine | גברים"
+  id: "476916976011444244"
+  color: "#1a7de5"
+  description: "this is the masculine gender identity role. The Hebrew literally means \"men\" [gvarim]."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Pride | גאווה"
+  id: "498828572325183489"
+  color: "#aa32e6"
+  description: "this role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\" [gav'ah]."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Plural | לא אחד"
+  id: "501658770389336084"
+  color: "#843da4"
+  description: "this is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"not one\" [lo ekhad]."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Empath | אמפת"
+  id: "497830688175685643"
+  color: "#b8ffdf"
+  description: "Empath"
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Psivamp | ערפד נפשי"
+  id: "505446232005541889"
+  color: "#1d1d2f"
+  description: "for self-identified vampires who feed on psychic energy."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Sanguinarian | ערפד הדם"
+  id: "505446530354774050"
+  color: "#3d110a"
+  description: "for self-identified vampires who feed on animal and/or human blood."
+  show_button: true
+-
+  type: "role"
+  category: "Identities"
+  name: "Spoonie | כפיות"
+  id: "504971274431496194"
+  color: "#ff9960"
+  description: "this is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). <a href=\"https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/\" target=\"_blank\">Click here</a> for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
   show_button: true
