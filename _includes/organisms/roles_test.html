@@ -1,9 +1,6 @@
 <div class="w-90 center db mv4 pv1 ph3 cb-393c41">
     {%- for role_category in site.data.role_categories -%}
-        {%- capture role_nodes -%}
-            {{ site.data.role_nodes | where:"type","role" | where:"category",role_category.name }}
-        {%- endcapture -%}
-        <code>{{ role_nodes }}</code>
+        {%- assign role_nodes = site.data.role_nodes | where:"type","role" | where:"category",role_category.name -%}
         {%- include molecules/role_category.html name=role_category.name items=role_nodes -%}
         {%- if forloop.last == false -%}
             <hr />
