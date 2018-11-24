@@ -26,3 +26,24 @@
       color: "#8c0cc5"
       description: "this role is for server staff, so when you need help with something you can ping this role and everyone who helps manage the server will get pinged, rather than just one tier of moderators. The Hebrew means \"staff\" [tzevet]."
       show_button: false
+-
+  name: "General"
+  items:
+    -
+      name: "Members | חברים"
+      id: "497610586750976020"
+      color: "#17ac86"
+      description: "this is a general role for server members, and it is required to access the main part of the server. The Hebrew simply means \"members\" [khaverim]."
+      show_button: false
+    -
+      name: "Bots | רובוטים"
+      id: "497626822742376448"
+      color: "#808588"
+      description: "Bots"
+      show_button: false
+    -
+      name: "Guests | אורחים"
+      id: "504828346522140693"
+      color: "#4d6875"
+      description: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the {% include atoms/channel.html name=\"rules\" %} and {% include atoms/channel.html name=\"roles\" %}, leaving an {% include atoms/channel.html name=\"introduction\" %}, and visiting {% include atoms/channel.html name=\"role-request\" %} to ask for roles. The Hebrew means \"guests\" [orkhim]."
+      show_button: false
