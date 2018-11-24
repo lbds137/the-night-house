@@ -1,6 +1,6 @@
 {% assign description_arr = include.description | split: "!#!" %}
 {% for item in description_arr  %}
-    {% assign mod = forloop.index | modulo: 2 %}
+    {% assign mod = forloop.index0 | modulo: 2 %}
     {% if mod == 0 %}
         {{ item }}
     {% else %}
