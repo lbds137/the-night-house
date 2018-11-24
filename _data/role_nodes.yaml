@@ -18,7 +18,7 @@
 -
   type: "note"
   category: "Introduction"
-  description: "Example: <code>n.iam <@&504966239765135360></code> would <span class=\"i\">assign</span> you to the <span class=\"b c-1a7939\">@Notify | להודיע</span> role."
+  description: "Example: <code>n.iam <@&504966239765135360></code> would <span class=\"i\">assign</span> you to the !@!504966239765135360!@! role."
 -
   type: "text"
   category: "Introduction"
@@ -26,7 +26,7 @@
 -
   type: "note"
   category: "Introduction"
-  description: "Example: <code>n.iamn <@&504966239765135360></code> would <span class=\"i\">unassign</span> you from the <span class=\"b c-1a7939\">@Notify | להודיע</span> role."
+  description: "Example: <code>n.iamn <@&504966239765135360></code> would <span class=\"i\">unassign</span> you from the !@!504966239765135360!@! role."
 -
   type: "text"
   category: "Introduction"
