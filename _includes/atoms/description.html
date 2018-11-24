@@ -1,5 +1,9 @@
-{% capture description_string %}
-    {{ include.description | replace: "{% channel ", '{% include atoms/channel.html name="' | replace: " %}", '" %}' }}
-{% endcapture %}
-{% assign description = description_string %}
-{{ description }}
+{% assign description_arr = include.description | split: "!#!" %}
+{% for item in description_arr  %}
+    {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod == 0 %}
+        {{ item }}
+    {% else %}
+        {% include atoms/channel.html name=item %}
+    {% endif %}
+{% endfor %}
