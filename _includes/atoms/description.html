@@ -1,9 +1,12 @@
 {%- assign description_arr = include.description | split: "!#!" -%}
-{%- for item in description_arr -%}
-    {%- assign mod = forloop.index0 | modulo: 2 -%}
-    {%- if mod == 0 -%}
-        {{ item }}
-    {%- else -%}
-        {%- include atoms/channel.html name=item -%}
-    {%- endif -%}
-{%- endfor -%}
+{%- capture description -%}
+    {%- for item in description_arr -%}
+        {%- assign mod = forloop.index0 | modulo: 2 -%}
+        {%- if mod == 0 -%}
+            {{ item }}
+        {%- else -%}
+            {%- include atoms/channel.html name=item -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+{{ description }}
