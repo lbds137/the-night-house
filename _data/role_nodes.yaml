@@ -55,3 +55,39 @@
   color: "#4d6875"
   description: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !#!rules!#! and !#!roles!#!, leaving an !#!introduction!#!, and visiting !#!role-request!#! to ask for roles. The Hebrew means \"guests\" [orkhim]."
   show_button: false
+-
+  type: "note"
+  category: "Messaging Preferences"
+  description: "Note: these roles are not relevant for server staff since they are here to help you if you need anything, so feel free to DM !@!499037360340598819!@! if you need assistance."
+-
+  type: "role"
+  category: "Messaging Preferences"
+  name: "DM Friendly | בסדר לשלח הודעות"
+  id: "498208423524171796"
+  color: "#7dff00"
+  description: "this role is to signify that you are OK with receiving direct messages (DMs) from people on this server. The Hebrew means \"OK to send messages\" [beseder lishloakh hodaot]."
+  show_button: true
+-
+  type: "role"
+  category: "Messaging Preferences"
+  name: "Ask To DM | שאל לפני לשלח הודעות"
+  id: "498207388890038274"
+  color: "#ffd200"
+  description: "this role is to signify that you might be OK with receiving direct messages, if you are asked first and reply in the affirmative. The Hebrew means \"ask before sending messages\" [she'el lifney lishloakh hodaot]."
+  show_button: true
+-
+  type: "role"
+  category: "Messaging Preferences"
+  name: "Do Not DM | לא לשלח הודעות"
+  id: "498208466066866186"
+  color: "#ff0000"
+  description: "this role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you. The Hebrew means \"do not send messages\" [lo lishloakh hodaot]."
+  show_button: true
+-
+  type: "role"
+  category: "Messaging Preferences"
+  name: "Notify | להודיע"
+  id: "504966239765135360"
+  color: "#1a7939"
+  description: "this is an opt-in role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. The Hebrew means \"inform\" [leho'dia]."
+  show_button: true

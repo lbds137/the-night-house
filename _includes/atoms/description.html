@@ -1,5 +1,5 @@
 {%- assign description_channel_arr = include.description | split: "!#!" -%}
-{%- capture description -%}
+{%- capture description_channel -%}
     {%- for item in description_channel_arr -%}
         {%- assign mod = forloop.index0 | modulo: 2 -%}
         {%- if mod == 0 -%}
@@ -9,4 +9,17 @@
         {%- endif -%}
     {%- endfor -%}
 {%- endcapture -%}
+
+{%- assign description_role_arr = description_channel | split: "!@!" -%}
+{%- capture description -%}
+    {%- for item in description_role_arr -%}
+        {%- assign mod = forloop.index0 | modulo: 2 -%}
+        {%- if mod == 0 -%}
+            {{ item }}
+        {%- else -%}
+            {%- include atoms/role.html id=item -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+
 {{ description }}
