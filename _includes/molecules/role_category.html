@@ -1,4 +1,4 @@
 <h2 class="tc underline">{{ include.name }}</h2>
-{% for item in include.items %}
-    {% include atoms/role.html name=item.name id=item.id color=item.color description=item.description show_button=item.show_button %}
-{% endfor %}
+{%- for item in include.items -%}
+    {%- include atoms/role.html name=item.name id=item.id color=item.color description=item.description show_button=item.show_button -%}
+{%- endfor -%}
