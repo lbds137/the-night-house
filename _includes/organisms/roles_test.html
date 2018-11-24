@@ -3,6 +3,7 @@
         {%- capture role_nodes -%}
             {{ site.data.role_nodes | where:"type","role" | where:"category",role_category.name }}
         {%- endcapture -%}
+        <code>{{ role_nodes }}</code>
         {%- include molecules/role_category.html name=role_category.name items=role_nodes -%}
         {%- if forloop.last == false -%}
             <hr />
