@@ -45,5 +45,5 @@
       name: "Guests | אורחים"
       id: "504828346522140693"
       color: "#4d6875"
-      description: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the {% channel rules %} and {% channel roles %}, leaving an {% channel introduction %}, and visiting {% channel role-request %} to ask for roles. The Hebrew means \"guests\" [orkhim]."
+      description: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !#!rules!#! and !#!roles!#!, leaving an !#!introduction!#!, and visiting !#!role-request!#! to ask for roles. The Hebrew means \"guests\" [orkhim]."
       show_button: false
