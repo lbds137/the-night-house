@@ -4,5 +4,7 @@
         {%- include molecules/role_details.html name=item.name id=item.id description=item.description show_button=item.show_button -%}
     {%- elsif item.type == "note" -%}
         {%- include molecules/role_note.html description=item.description -%}
+    {%- elsif item.type == "text" -%}
+        {%- include molecules/role_text.html description=item.description -%}
     {%- endif -%}
 {%- endfor -%}
