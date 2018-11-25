@@ -222,6 +222,7 @@
   id: "512052948747026443"
   color: "#ff3333"
   text: "this is the role for folks who work with demons, including but not limited to the Goetic demons. This role grants access to just the Demonology channel if you don't want the LHP role."
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -229,6 +230,7 @@
   id: "497568843003199488"
   color: "#ff3333"
   text: "this is the Left Hand Path role, which signifies interest and/or active practice in such matters. The LHP section is role-locked, and this is the role necessary to gain access to it (whether because you're a practitioner or are curious enough to want to poke around and ask questions of our more experienced folks). The Hebrew literally means \"left hand path\" [nativ ah'yad smali]."
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -236,6 +238,7 @@
   id: "497734400352714752"
   color: "#ff3333"
   text: "this is the role for people who have some kind of relationship with or interest in Lilith. This role grants access to just the Lilith channel if you don't want the LHP role. The Hebrew is simply Her name [lilit]."
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -243,6 +246,7 @@
   id: "505155807583928364"
   color: "#ff3333"
   text: "Lovecraftian (grants access to its channel even without the LHP role)"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -250,6 +254,7 @@
   id: "511406657000177682"
   color: "#ff3333"
   text: "Luciferianism (grants access to its channel even without the LHP role)"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -257,6 +262,7 @@
   id: "505123979074469909"
   color: "#ff3333"
   text: "this is the role for folks who work with the Qliphot. This role grants access to just the Qliphot channel if you don't want the LHP role."
+  show_button: true
 -
   type: "note"
   category: "Spiritual Practices / Interests"
@@ -268,6 +274,7 @@
   id: "505747462615728130"
   color: "#11806a"
   text: "Celtic Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -275,6 +282,7 @@
   id: "505757620255326221"
   color: "#11806a"
   text: "Christianity"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -282,6 +290,7 @@
   id: "497604721121427456"
   color: "#11806a"
   text: "this is the role for Discordianism. The Hebrew is a transliteration of Discordianism [diskordianizm]."
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -289,6 +298,7 @@
   id: "500412215011311626"
   color: "#11806a"
   text: "this is the role for folks who work with dragons. The Hebrew means \"draconic\" [drakoni]."
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -296,6 +306,7 @@
   id: "505744777904390146"
   color: "#11806a"
   text: "Egyptian Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -303,6 +314,7 @@
   id: "505119791284224000"
   color: "#11806a"
   text: "Greco-Roman Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -310,6 +322,7 @@
   id: "505757680443326474"
   color: "#11806a"
   text: "Islam"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -317,6 +330,7 @@
   id: "505757653545254912"
   color: "#11806a"
   text: "Judaism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -324,6 +338,7 @@
   id: "505734825076850698"
   color: "#11806a"
   text: "Norse Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -331,6 +346,7 @@
   id: "505122608623386630"
   color: "#11806a"
   text: "Qabalah"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -338,6 +354,7 @@
   id: "505793568049463306"
   color: "#11806a"
   text: "Slavic Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -345,6 +362,7 @@
   id: "505745773028311040"
   color: "#11806a"
   text: "Sumerian Polytheism"
+  show_button: true
 -
   type: "role"
   category: "Spiritual Practices / Interests"
@@ -352,3 +370,4 @@
   id: "505748591831416833"
   color: "#11806a"
   text: "Wicca"
+  show_button: true
