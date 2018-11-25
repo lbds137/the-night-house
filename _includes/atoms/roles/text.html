@@ -1,0 +1,10 @@
+{%- assign text = include.text -%}
+{%- for token in site.data.tokens -%}
+    {%- capture replaced_text -%}
+        {%- include utils/token_replacer.html text=text token=token -%}
+    {%- endcapture -%}
+    {%- assign text = replaced_text -%}
+    {%- if forloop.last == true -%}
+        {{ text }}
+    {%- endif -%}
+{%- endfor -%}

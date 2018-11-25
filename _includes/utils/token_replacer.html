@@ -1,6 +1,6 @@
-{%- assign string_arr = include.string | split: include.token.token -%}
+{%- assign text_arr = include.text | split: include.token.token -%}
 {%- capture output -%}
-    {%- for item in string_arr -%}
+    {%- for item in text_arr -%}
         {%- assign mod = forloop.index0 | modulo: 2 -%}
         {%- if mod == 0 -%}
             {{ item }}
