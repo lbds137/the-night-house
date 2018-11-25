@@ -1,4 +1,8 @@
 github: [metadata]
+markdown: kramdown
+kramdown:
+  input: GFM
+
 color: "#b62e21"
 theme: jekyll-theme-cayman
 title: The Night House | בית הלילה

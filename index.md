@@ -1,4 +1,4 @@
 ---
 ---
 
-{% include organisms/roles.html %}
+{%- include organisms/roles.html -%}

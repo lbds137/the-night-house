@@ -2,35 +2,35 @@
 -
   type: "text"
   category: "Introduction"
-  text: "Welcome to <code>The Night House | בית הלילה</code>!"
+  text: "Welcome to `The Night House | בית הלילה`!"
 -
   type: "text"
   category: "Introduction"
-  text: "To gain access to the main part of the server, you will need to request the !@!497610586750976020!@! role from a !@!499037360340598819!@! member in the !#!role-request!#! channel."
+  text: "To gain access to the main part of the server, you will need to request the !r!497610586750976020!r! role from a !r!499037360340598819!r! member in the !c!role-request!c! channel."
 -
   type: "text"
   category: "Introduction"
-  text: "In that channel you may also optionally self assign a number of roles, listed out below. The roles that can be self assigned have <span class=\"b\">clickable green buttons</span> which, when pressed, will copy the role assignment command to your system clipboard so that you can easily paste it in the channel."
+  text: "In that channel you may also optionally self assign a number of roles, listed out below. The roles that can be self assigned have **clickable green buttons** which, when pressed, will copy the role assignment command to your system clipboard so that you can easily paste it in the channel."
 -
   type: "text"
   category: "Introduction"
-  text: "<span class=\"b\">Please only paste and send one command at a time</span>. The bot does not know how to parse more than one command per message."
+  text: "**Please only paste and send one command at a time**. The bot does not know how to parse more than one command per message."
 -
   type: "note"
   category: "Introduction"
-  text: "Example: <code>n.iam <@&504966239765135360></code> would <span class=\"i\">assign</span> you to the !@!504966239765135360!@! role."
+  text: "Example: `n.iam <@&504966239765135360>` would *assign* you to the !r!504966239765135360!r! role."
 -
   type: "text"
   category: "Introduction"
-  text: "To unassign a self-assigned role, use the same command but replace <code>n.iam</code> with <code>n.iamn</code>."
+  text: "To unassign a self-assigned role, use the same command but replace `n.iam` with `n.iamn`."
 -
   type: "note"
   category: "Introduction"
-  text: "Example: <code>n.iamn <@&504966239765135360></code> would <span class=\"i\">unassign</span> you from the !@!504966239765135360!@! role."
+  text: "Example: `n.iamn <@&504966239765135360>` would *unassign* you from the !r!504966239765135360!r! role."
 -
   type: "text"
   category: "Introduction"
-  text: "When you get the opportunity, please also <span class=\"b\">leave a quick introduction</span> in the !#!introduction!#! channel. In addition to learning more about you and your practice, we'd also like to know how you found us!"
+  text: "When you get the opportunity, please also **leave a quick introduction** in the !c!introduction!c! channel. In addition to learning more about you and your practice, we'd also like to know how you found us!"
 -
   type: "role"
   category: "Staff"
@@ -85,12 +85,12 @@
   name: "Guests | אורחים"
   id: "504828346522140693"
   color: "#4d6875"
-  text: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !#!rules!#! and !#!roles!#!, leaving an !#!introduction!#!, and visiting !#!role-request!#! to ask for roles. The Hebrew means \"guests\" [orkhim]."
+  text: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\" [orkhim]."
   show_button: false
 -
   type: "note"
   category: "Messaging Preferences"
-  text: "Note: these roles are not relevant for server staff since they are here to help you if you need anything, so feel free to DM !@!499037360340598819!@! if you need assistance."
+  text: "Note: these roles are not relevant for server staff since they are here to help you if you need anything, so feel free to DM !r!499037360340598819!r! if you need assistance."
 -
   type: "role"
   category: "Messaging Preferences"
@@ -193,5 +193,5 @@
   name: "Spoonie | כפיות"
   id: "504971274431496194"
   color: "#ff9960"
-  text: "this is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). <a href=\"https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/\" target=\"_blank\">Click here</a> for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
+  text: "this is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
   show_button: true
