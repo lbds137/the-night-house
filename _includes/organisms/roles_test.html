@@ -3,10 +3,10 @@
         {%- assign nodes = site.data.roles.nodes | where: "category_id", category.id -%}
         {%- assign node_count = nodes | size -%}
         {%- if node_count != 0 -%}
+            {%- if forloop.first == false -%}
+                <hr />
+            {%- endif -%}
             {%- include molecules/roles/category.html name=category.name nodes=nodes -%}
-        {%- endif -%}
-        {%- if forloop.last == false -%}
-            <hr />
         {%- endif -%}
     {%- endfor -%}
 </div>
