@@ -1,1 +1,4 @@
-<p>{% if include.show_button == true %}<a class="a-btn link f6 dim ph1 pv1 mb1 dib white bg-dark-green" data-clipboard-text="n.iam <@&{{ include.id }}>" href="#0">Copy</a> | {% endif %}{% include atoms/roles/role.html param=include.id %} - {% include atoms/roles/text.html text=include.text %}</p>
+{%- if include.show_button == true -%}
+    <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-green" data-clipboard-text="n.iam <@&{{ include.id }}>" href="#0">Copy</a>
+{%- endif -%}
+{%- include atoms/roles/role.html param=include.id -%}&nbsp;:&nbsp;{%- include atoms/roles/text.html text=include.text -%}

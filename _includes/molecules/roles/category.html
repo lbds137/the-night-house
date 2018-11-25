@@ -1,10 +1,13 @@
 <h2 class="tc underline">{{ include.name }}</h2>
 {%- for node in include.nodes -%}
-    {%- if node.type == "role" -%}
-        {%- include molecules/roles/role.html name=node.name id=node.id text=node.text show_button=node.show_button -%}
-    {%- elsif node.type == "note" -%}
-        {%- include molecules/roles/note.html text=node.text -%}
-    {%- elsif node.type == "text" -%}
-        {%- include molecules/roles/text.html text=node.text -%}
-    {%- endif -%}
+    {%- capture node_output -%}
+        {%- if node.type == "role" -%}
+            {%- include molecules/roles/role.html name=node.name id=node.id text=node.text show_button=node.show_button -%}
+        {%- elsif node.type == "note" -%}
+            {%- include molecules/roles/note.html text=node.text -%}
+        {%- elsif node.type == "text" -%}
+            {%- include molecules/roles/text.html text=node.text -%}
+        {%- endif -%}
+    {%- endcapture -%}
+    {{ node_output | markdownify }}
 {%- endfor -%}
