@@ -31,3 +31,11 @@
   name: "Languages"
   id: "language"
   group_id: 6
+-
+  name: "Zodiac Sun Signs"
+  id: "zodiac"
+  group_id: 7
+-
+  name: "Colors"
+  id: "color"
+  group_id: 1

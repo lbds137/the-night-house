@@ -603,3 +603,99 @@
   color: "#00ccff"
   text: "Spanish"
   show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Aquarius | מזל דלי"
+  id: "505332679315554334"
+  color: "#ffd700"
+  text: "Aquarius"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Aries | מזל טלה"
+  id: "505331358831345674"
+  color: "#ffd700"
+  text: "Aries"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Cancer | מזל סרטן"
+  id: "505333004416319498"
+  color: "#ffd700"
+  text: "Cancer"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Capricorn | מזל גדי"
+  id: "505333024314097664"
+  color: "#ffd700"
+  text: "Capricorn"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Gemini | מזל תאומים"
+  id: "505333955285745665"
+  color: "#ffd700"
+  text: "Gemini"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Leo | מזל אריה"
+  id: "505334079647121440"
+  color: "#ffd700"
+  text: "Leo"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Libra | מזל מזניים"
+  id: "505334178066333706"
+  color: "#ffd700"
+  text: "Libra"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Pisces | מזל דגים"
+  id: "505334371016900610"
+  color: "#ffd700"
+  text: "Pisces"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Sagittarius | מזל קשת"
+  id: "505334673962958859"
+  color: "#ffd700"
+  text: "Sagittarius"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Scorpio | מזל עקרב"
+  id: "505334576030285825"
+  color: "#ffd700"
+  text: "Scorpio"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Taurus | מזל שור"
+  id: "505334870147465216"
+  color: "#ffd700"
+  text: "Taurus"
+  show_button: true
+-
+  type: "role"
+  category_id: "zodiac"
+  name: "Virgo | מזל בתולה"
+  id: "505334963160219678"
+  color: "#ffd700"
+  text: "Virgo"
+  show_button: true
