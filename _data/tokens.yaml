@@ -1,0 +1,7 @@
+---
+-
+  token: "!#!"
+  file: "atoms/channel.html"
+-
+  token: "!@!"
+  file: "atoms/role.html"
