@@ -9,5 +9,5 @@
             {%- include molecules/roles/text.html text=node.text -%}
         {%- endif -%}
     {%- endcapture -%}
-    {{ node_output | markdownify }}
+    {{ node_output }}
 {%- endfor -%}
