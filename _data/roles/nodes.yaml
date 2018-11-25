@@ -996,6 +996,11 @@
 -
   type: "role"
   category_id: "color"
+  id: "#dccbe7"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
   id: "#deaddd"
   show_button: true
 -
