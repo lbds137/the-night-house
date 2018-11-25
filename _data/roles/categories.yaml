@@ -1,19 +1,33 @@
 ---
 -
   name: "Introduction"
+  id: "introduction"
 -
   name: "Staff"
+  id: "staff"
 -
   name: "General"
+  id: "general"
 -
   name: "Messaging Preferences"
+  id: "messages"
+  group_id: 3
 -
   name: "Identities"
+  id: "identity"
+  group_id: 2
 -
   name: "NSFW"
+  id: "nsfw"
 -
   name: "Spiritual Practices / Interests"
+  id: "belief"
+  group_id: 4
 -
   name: "Knowledge / Interest Domains"
+  id: "domain"
+  group_id: 5
 -
   name: "Languages"
+  id: "language"
+  group_id: 6

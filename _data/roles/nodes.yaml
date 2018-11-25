@@ -1,39 +1,39 @@
 ---
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "Welcome to `The Night House | בית הלילה`!"
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "To gain access to the main part of the server, you will need to request the !r!497610586750976020!r! role from a !r!499037360340598819!r! member in the !c!role-request!c! channel."
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "In that channel you may also optionally self assign a number of roles, listed out below. The roles that can be self assigned have **clickable green buttons** which, when pressed, will copy the role assignment command to your system clipboard so that you can easily paste it in the channel."
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "**Please only paste and send one command at a time**. The bot does not know how to parse more than one command per message."
 -
   type: "note"
-  category: "Introduction"
+  category_id: "introduction"
   text: "Example: `n.iam <@&504966239765135360>` would *assign* you to the !r!504966239765135360!r! role."
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "To unassign a self-assigned role, use the same command but replace `n.iam` with `n.iamn`."
 -
   type: "note"
-  category: "Introduction"
+  category_id: "introduction"
   text: "Example: `n.iamn <@&504966239765135360>` would *unassign* you from the !r!504966239765135360!r! role."
 -
   type: "text"
-  category: "Introduction"
+  category_id: "introduction"
   text: "When you get the opportunity, please also **leave a quick introduction** in the !c!introduction!c! channel. In addition to learning more about you and your practice, we'd also like to know how you found us!"
 -
   type: "role"
-  category: "Staff"
+  category_id: "staff"
   name: "Administrator | כוהנת"
   id: "497584935234830366"
   color: "#e4b400"
@@ -41,7 +41,7 @@
   show_button: false
 -
   type: "role"
-  category: "Staff"
+  category_id: "staff"
   name: "Moderators | מנהלים"
   id: "497580616817311745"
   color: "#ff7503"
@@ -49,7 +49,7 @@
   show_button: false
 -
   type: "role"
-  category: "Staff"
+  category_id: "staff"
   name: "Assistant Moderators | עוזר מנהלים"
   id: "499033497764233237"
   color: "#b4570f"
@@ -57,7 +57,7 @@
   show_button: false
 -
   type: "role"
-  category: "Staff"
+  category_id: "staff"
   name: "Staff | צוות"
   id: "499037360340598819"
   color: "#8c0cc5"
@@ -65,7 +65,7 @@
   show_button: false
 -
   type: "role"
-  category: "General"
+  category_id: "general"
   name: "Members | חברים"
   id: "497610586750976020"
   color: "#17ac86"
@@ -73,7 +73,7 @@
   show_button: false
 -
   type: "role"
-  category: "General"
+  category_id: "general"
   name: "Bots | רובוטים"
   id: "497626822742376448"
   color: "#808588"
@@ -81,7 +81,7 @@
   show_button: false
 -
   type: "role"
-  category: "General"
+  category_id: "general"
   name: "Guests | אורחים"
   id: "504828346522140693"
   color: "#4d6875"
@@ -89,11 +89,11 @@
   show_button: false
 -
   type: "note"
-  category: "Messaging Preferences"
+  category_id: "messages"
   text: "Note: these roles are not relevant for server staff since they are here to help you if you need anything, so feel free to DM !r!499037360340598819!r! if you need assistance."
 -
   type: "role"
-  category: "Messaging Preferences"
+  category_id: "messages"
   name: "Notify | להודיע"
   id: "504966239765135360"
   color: "#1a7939"
@@ -101,7 +101,7 @@
   show_button: true
 -
   type: "role"
-  category: "Messaging Preferences"
+  category_id: "messages"
   name: "DM Friendly | בסדר לשלח הודעות"
   id: "498208423524171796"
   color: "#7dff00"
@@ -109,7 +109,7 @@
   show_button: true
 -
   type: "role"
-  category: "Messaging Preferences"
+  category_id: "messages"
   name: "Ask To DM | שאל לפני לשלח הודעות"
   id: "498207388890038274"
   color: "#ffd200"
@@ -117,7 +117,7 @@
   show_button: true
 -
   type: "role"
-  category: "Messaging Preferences"
+  category_id: "messages"
   name: "Do Not DM | לא לשלח הודעות"
   id: "498208466066866186"
   color: "#ff0000"
@@ -125,7 +125,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Enby/Other | אנשים"
   id: "497568507601485836"
   color: "#0dcf4f"
@@ -133,7 +133,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Feminine | נשים"
   id: "476916459470061569"
   color: "#e91e63"
@@ -141,7 +141,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Masculine | גברים"
   id: "476916976011444244"
   color: "#1a7de5"
@@ -149,7 +149,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Pride | גאווה"
   id: "498828572325183489"
   color: "#aa32e6"
@@ -157,7 +157,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Plural | לא אחד"
   id: "501658770389336084"
   color: "#843da4"
@@ -165,7 +165,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Empath | אמפת"
   id: "497830688175685643"
   color: "#b8ffdf"
@@ -173,7 +173,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Psivamp | ערפד נפשי"
   id: "505446232005541889"
   color: "#1d1d2f"
@@ -181,7 +181,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Sanguinarian | ערפד הדם"
   id: "505446530354774050"
   color: "#3d110a"
@@ -189,7 +189,7 @@
   show_button: true
 -
   type: "role"
-  category: "Identities"
+  category_id: "identity"
   name: "Spoonie | כפיות"
   id: "504971274431496194"
   color: "#ff9960"
@@ -197,7 +197,7 @@
   show_button: true
 -
   type: "role"
-  category: "NSFW"
+  category_id: "nsfw"
   name: "Adults/18+ | מבוגרים"
   id: "497961918519312386"
   color: "#b62e21"
@@ -205,7 +205,7 @@
   show_button: false
 -
   type: "role"
-  category: "NSFW"
+  category_id: "nsfw"
   name: "Nudists | צלמים עירומים"
   id: "500076544924975114"
   color: "#b62e21"
@@ -213,11 +213,11 @@
   show_button: false
 -
   type: "note"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   text: "LHP"
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Demonology | דמונולוגיה"
   id: "512052948747026443"
   color: "#ff3333"
@@ -225,7 +225,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Left Hand Path | נתיב היד שמאלי"
   id: "497568843003199488"
   color: "#ff3333"
@@ -233,7 +233,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Lilit | לילית"
   id: "497734400352714752"
   color: "#ff3333"
@@ -241,7 +241,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Lovecraftian | לאבקראפטי"
   id: "505155807583928364"
   color: "#ff3333"
@@ -249,7 +249,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Luciferianism | לוציפריאניזם"
   id: "511406657000177682"
   color: "#ff3333"
@@ -257,7 +257,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Qliphot | קליפות"
   id: "505123979074469909"
   color: "#ff3333"
@@ -265,11 +265,11 @@
   show_button: true
 -
   type: "note"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   text: "Non-LHP"
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Celtic Polytheism | פוליתאיזם קלטי"
   id: "505747462615728130"
   color: "#11806a"
@@ -277,7 +277,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Christianity | נצרות"
   id: "505757620255326221"
   color: "#11806a"
@@ -285,7 +285,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Discordianism | דיסקורדיאניזם"
   id: "497604721121427456"
   color: "#11806a"
@@ -293,7 +293,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Draconic | דרקוני"
   id: "500412215011311626"
   color: "#11806a"
@@ -301,7 +301,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Egyptian Polytheism | פוליתאיזם מצרי"
   id: "505744777904390146"
   color: "#11806a"
@@ -309,7 +309,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Greco-Roman Polytheism | פוליתאיזם יווני-רומי"
   id: "505119791284224000"
   color: "#11806a"
@@ -317,7 +317,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Islam | איסלאם"
   id: "505757680443326474"
   color: "#11806a"
@@ -325,7 +325,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Judaism | יהדות"
   id: "505757653545254912"
   color: "#11806a"
@@ -333,7 +333,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Norse Polytheism | פוליתאיזם נורדי"
   id: "505734825076850698"
   color: "#11806a"
@@ -341,7 +341,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Qabalah | קבלה"
   id: "505122608623386630"
   color: "#11806a"
@@ -349,7 +349,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Slavic Polytheism | פוליתאיזם סלאבי"
   id: "505793568049463306"
   color: "#11806a"
@@ -357,7 +357,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Sumerian Polytheism | הפוליתאיזם השומרי"
   id: "505745773028311040"
   color: "#11806a"
@@ -365,7 +365,7 @@
   show_button: true
 -
   type: "role"
-  category: "Spiritual Practices / Interests"
+  category_id: "belief"
   name: "Wicca | ויקה"
   id: "505748591831416833"
   color: "#11806a"
@@ -373,7 +373,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Astral Travel | טיול אסטרלי"
   id: "497830434181349415"
   color: "#66ffff"
@@ -381,7 +381,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Astrology | אסטרולוגיה"
   id: "497830231852449847"
   color: "#66ffff"
@@ -389,7 +389,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Baneful Magick | קסם ההרסני"
   id: "515302873135841281"
   color: "#66ffff"
@@ -397,7 +397,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Blood Work | עבודת הדם"
   id: "497830711496146954"
   color: "#66ffff"
@@ -405,7 +405,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Chaos Magick | קסם האנדרלמוסיה"
   id: "497830979767894023"
   color: "#66ffff"
@@ -413,7 +413,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Crystals | גבישים"
   id: "497830512338141205"
   color: "#66ffff"
@@ -421,7 +421,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Death Work | עבודת המוות"
   id: "497830908590686218"
   color: "#66ffff"
@@ -429,7 +429,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Divination | נחוש"
   id: "497830296968757275"
   color: "#66ffff"
@@ -437,7 +437,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Dream Work | עובדת החלום"
   id: "497830385590337546"
   color: "#66ffff"
@@ -445,7 +445,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Element Work | עבודת היסודות"
   id: "497830634111107072"
   color: "#66ffff"
@@ -453,7 +453,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Energy Work | עבודת המרץ"
   id: "497830473238708224"
   color: "#66ffff"
@@ -461,7 +461,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Kitchen Magick | קסם המטבח"
   id: "497831078653067264"
   color: "#66ffff"
@@ -469,7 +469,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Meditation | מדיטציה"
   id: "505450974907727872"
   color: "#66ffff"
@@ -477,7 +477,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Sigils | סיגילים"
   id: "497831006104059915"
   color: "#66ffff"
@@ -485,7 +485,7 @@
   show_button: true
 -
   type: "role"
-  category: "Knowledge / Interest Domains"
+  category_id: "domain"
   name: "Spirit Work | עבודת הרוח"
   id: "497829909192769536"
   color: "#66ffff"
@@ -493,7 +493,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Arabic | ערבית"
   id: "505107963049148426"
   color: "#00ccff"
@@ -501,7 +501,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Chinese | סינית"
   id: "505108546220982282"
   color: "#00ccff"
@@ -509,7 +509,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "French | צרפתית"
   id: "505097859356557313"
   color: "#00ccff"
@@ -517,7 +517,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "German | גרמנית"
   id: "505105085043572746"
   color: "#00ccff"
@@ -525,7 +525,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Greek | יוונית"
   id: "505106627414851604"
   color: "#00ccff"
@@ -533,7 +533,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Hebrew | עברית"
   id: "505041888441663489"
   color: "#00ccff"
@@ -541,7 +541,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Japanese | יפנית"
   id: "505110446445953039"
   color: "#00ccff"
@@ -549,7 +549,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Korean | קוריאנית"
   id: "506178327019520019"
   color: "#00ccff"
@@ -557,7 +557,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Latin | לטינית"
   id: "505107401205088258"
   color: "#00ccff"
@@ -565,7 +565,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Polish | פולנית"
   id: "505104067408953344"
   color: "#00ccff"
@@ -573,7 +573,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Portuguese | פורטוגזית"
   id: "505111967288000553"
   color: "#00ccff"
@@ -581,7 +581,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Romanian | רומנית"
   id: "505100756547010571"
   color: "#00ccff"
@@ -589,7 +589,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Russian | רוסית"
   id: "505111216298000384"
   color: "#00ccff"
@@ -597,7 +597,7 @@
   show_button: true
 -
   type: "role"
-  category: "Languages"
+  category_id: "language"
   name: "Spanish | ספרדית"
   id: "505424154019889152"
   color: "#00ccff"
