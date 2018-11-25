@@ -491,3 +491,115 @@
   color: "#66ffff"
   text: "Spirit Work"
   show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Arabic | ערבית"
+  id: "505107963049148426"
+  color: "#00ccff"
+  text: "Arabic"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Chinese | סינית"
+  id: "505108546220982282"
+  color: "#00ccff"
+  text: "Chinese"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "French | צרפתית"
+  id: "505097859356557313"
+  color: "#00ccff"
+  text: "French"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "German | גרמנית"
+  id: "505105085043572746"
+  color: "#00ccff"
+  text: "German"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Greek | יוונית"
+  id: "505106627414851604"
+  color: "#00ccff"
+  text: "Greek"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Hebrew | עברית"
+  id: "505041888441663489"
+  color: "#00ccff"
+  text: "Hebrew"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Japanese | יפנית"
+  id: "505110446445953039"
+  color: "#00ccff"
+  text: "Japanese"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Korean | קוריאנית"
+  id: "506178327019520019"
+  color: "#00ccff"
+  text: "Korean"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Latin | לטינית"
+  id: "505107401205088258"
+  color: "#00ccff"
+  text: "Latin"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Polish | פולנית"
+  id: "505104067408953344"
+  color: "#00ccff"
+  text: "Polish"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Portuguese | פורטוגזית"
+  id: "505111967288000553"
+  color: "#00ccff"
+  text: "Portuguese"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Romanian | רומנית"
+  id: "505100756547010571"
+  color: "#00ccff"
+  text: "Romanian"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Russian | רוסית"
+  id: "505111216298000384"
+  color: "#00ccff"
+  text: "Russian"
+  show_button: true
+-
+  type: "role"
+  category: "Languages"
+  name: "Spanish | ספרדית"
+  id: "505424154019889152"
+  color: "#00ccff"
+  text: "Spanish"
+  show_button: true
