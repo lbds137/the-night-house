@@ -1,11 +1,10 @@
-{%- capture description -%}
-    {{ include.description }}
-{%- endcapture -%}
+{%- assign description = include.description -%}
 {%- for token in site.data.tokens -%}
-    {%- capture description -%}
+    {%- capture replaced_description -%}
         {%- include utils/token_replacer.html string=description token=token -%}
     {%- endcapture -%}
-    {%- if forloop.last == false -%}
+    {%- assign description = replaced_description -%}
+    {%- if forloop.last == true -%}
         {{ description }}
     {%- endif -%}
 {%- endfor -%}
