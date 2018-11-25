@@ -1,7 +1,10 @@
 <div class="w-90 center db mv4 pv1 ph3 cb-393c41">
     {%- for category in site.data.roles.categories -%}
         {%- assign nodes = site.data.roles.nodes | where: "category_id", category.id -%}
-        {%- include molecules/roles/category.html name=category.name nodes=nodes -%}
+        {%- assign node_count = nodes | size -%}
+        {%- if node_count != 0 -%}
+            {%- include molecules/roles/category.html name=category.name nodes=nodes -%}
+        {%- endif -%}
         {%- if forloop.last == false -%}
             <hr />
         {%- endif -%}
