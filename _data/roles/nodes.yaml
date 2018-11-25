@@ -371,3 +371,123 @@
   color: "#11806a"
   text: "Wicca"
   show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Astral Travel | טיול אסטרלי"
+  id: "497830434181349415"
+  color: "#66ffff"
+  text: "Astral Travel"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Astrology | אסטרולוגיה"
+  id: "497830231852449847"
+  color: "#66ffff"
+  text: "Astrology"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Baneful Magick | קסם ההרסני"
+  id: "515302873135841281"
+  color: "#66ffff"
+  text: "Baneful Magick"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Blood Work | עבודת הדם"
+  id: "497830711496146954"
+  color: "#66ffff"
+  text: "Blood Work"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Chaos Magick | קסם האנדרלמוסיה"
+  id: "497830979767894023"
+  color: "#66ffff"
+  text: "Chaos Magick"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Crystals | גבישים"
+  id: "497830512338141205"
+  color: "#66ffff"
+  text: "Crystals"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Death Work | עבודת המוות"
+  id: "497830908590686218"
+  color: "#66ffff"
+  text: "Death Work"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Divination | נחוש"
+  id: "497830296968757275"
+  color: "#66ffff"
+  text: "Divination"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Dream Work | עובדת החלום"
+  id: "497830385590337546"
+  color: "#66ffff"
+  text: "Dream Work"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Element Work | עבודת היסודות"
+  id: "497830634111107072"
+  color: "#66ffff"
+  text: "Element Work"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Energy Work | עבודת המרץ"
+  id: "497830473238708224"
+  color: "#66ffff"
+  text: "Energy Work"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Kitchen Magick | קסם המטבח"
+  id: "497831078653067264"
+  color: "#66ffff"
+  text: "Kitchen Magick"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Meditation | מדיטציה"
+  id: "505450974907727872"
+  color: "#66ffff"
+  text: "Meditation"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Sigils | סיגילים"
+  id: "497831006104059915"
+  color: "#66ffff"
+  text: "Sigils"
+  show_button: true
+-
+  type: "role"
+  category: "Knowledge / Interest Domains"
+  name: "Spirit Work | עבודת הרוח"
+  id: "497829909192769536"
+  color: "#66ffff"
+  text: "Spirit Work"
+  show_button: true
