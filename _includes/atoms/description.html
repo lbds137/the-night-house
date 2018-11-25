@@ -1,4 +1,6 @@
-{%- assign description = include.description -%}
+{%- capture description -%}
+    {{ include.description }}
+{%- endcapture -%}
 {%- for token in site.data.tokens -%}
     {%- capture description -%}
         {%- include utils/token_replacer.html string=description token=token -%}
