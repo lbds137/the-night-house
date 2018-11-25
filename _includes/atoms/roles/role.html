@@ -1,2 +1,22 @@
 {%- assign role = site.data.roles.nodes | where: "type", "role" | where: "id", include.param | first -%}
-<span style="color: {{ role.color }};">**@{{ role.name }}**</span>
+{%- assign id_first_char = role.id | slice: 0 -%}
+{%- capture color -%}
+    {%- if role.color.size > 0 -%}
+        {{ role.color }}
+    {%- elsif role.id.size == 7 and id_first_char == "#" -%}
+        {{ role.id }}
+    {%- endif -%}
+{%- endcapture -%}
+{%- capture style -%}
+    {%- if color.size > 0 -%}
+        style="color: {{ color }};"
+    {%- endif -%}
+{%- endcapture -%}
+{%- capture name -%}
+    {%- if role.name.size > 0 -%}
+        {{ role.name }}
+    {%- else -%}
+        {{ role.id }}
+    {%- endif -%}
+{%- endcapture -%}
+<span {{ style }}>**@{{ name }}**</span>

@@ -1,4 +1,7 @@
 ---
+# ---
+# introduction
+# ---
 -
   type: "text"
   category_id: "introduction"
@@ -31,6 +34,9 @@
   type: "text"
   category_id: "introduction"
   text: "When you get the opportunity, please also **leave a quick introduction** in the !c!introduction!c! channel. In addition to learning more about you and your practice, we'd also like to know how you found us!"
+# ---
+# staff
+# ---
 -
   type: "role"
   category_id: "staff"
@@ -63,6 +69,9 @@
   color: "#8c0cc5"
   text: "this role is for server staff, so when you need help with something you can ping this role and everyone who helps manage the server will get pinged, rather than just one tier of moderators. The Hebrew means \"staff\" [tzevet]."
   show_button: false
+# ---
+# general
+# ---
 -
   type: "role"
   category_id: "general"
@@ -87,6 +96,9 @@
   color: "#4d6875"
   text: "this role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\" [orkhim]."
   show_button: false
+# ---
+# messages
+# ---
 -
   type: "note"
   category_id: "messages"
@@ -123,6 +135,9 @@
   color: "#ff0000"
   text: "this role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you. The Hebrew means \"do not send messages\" [lo lishloakh hodaot]."
   show_button: true
+# ---
+# identity
+# ---
 -
   type: "role"
   category_id: "identity"
@@ -195,6 +210,9 @@
   color: "#ff9960"
   text: "this is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
   show_button: true
+# ---
+# nsfw
+# ---
 -
   type: "role"
   category_id: "nsfw"
@@ -211,6 +229,9 @@
   color: "#b62e21"
   text: "this is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\" [tzalamim eyromim]."
   show_button: false
+# ---
+# belief
+# ---
 -
   type: "note"
   category_id: "belief"
@@ -371,6 +392,9 @@
   color: "#11806a"
   text: "Wicca"
   show_button: true
+# ---
+# domain
+# ---
 -
   type: "role"
   category_id: "domain"
@@ -491,6 +515,9 @@
   color: "#66ffff"
   text: "Spirit Work"
   show_button: true
+# ---
+# language
+# ---
 -
   type: "role"
   category_id: "language"
@@ -603,6 +630,9 @@
   color: "#00ccff"
   text: "Spanish"
   show_button: true
+# ---
+# zodiac
+# ---
 -
   type: "role"
   category_id: "zodiac"
@@ -699,3 +729,350 @@
   color: "#ffd700"
   text: "Virgo"
   show_button: true
+# ---
+# color
+# ---
+-
+  type: "note"
+  category_id: "color"
+  text: "Roles available only to !r!497584935234830366!r!"
+-
+  type: "role"
+  category_id: "color"
+  name: "#ff6dd6 [A] | כוהנת"
+  id: "502979917453983757"
+  color: "#ff6dd6"
+  show_button: false
+-
+  type: "note"
+  category_id: "color"
+  text: "Roles available only to !r!497580616817311745!r!"
+-
+  type: "role"
+  category_id: "color"
+  name: "#008080 [M] | מנהלים"
+  id: "502288694670262313"
+  color: "#008080"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#9966ff [M] | מנהלים"
+  id: "502435399151648810"
+  color: "#9966ff"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#b62e21 [M] | מנהלים"
+  id: "504771578383564810"
+  color: "#b62e21"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#ccccff [M] | מנהלים"
+  id: "502886698544529408"
+  color: "#ccccff"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#e6b800 [M] | מנהלים"
+  id: "502968575296929803"
+  color: "#e6b800"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#ff6dd6 [M] | מנהלים"
+  id: "505086485469462538"
+  color: "#ff6dd6"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#ffcde9 [M] | מנהלים"
+  id: "502611464973189146"
+  color: "#ffcde9"
+  show_button: false
+-
+  type: "note"
+  category_id: "color"
+  text: "Roles available to all !r!497610586750976020!r!"
+-
+  type: "role"
+  category_id: "color"
+  id: "#0066ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#008080"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#009973"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#00ccff"
+  text: "same color as !r!505107963049148426!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#0dcf4f"
+  text: "same color as !r!497568507601485836!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#11806a"
+  text: "same color as !r!505747462615728130!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#17ac86"
+  text: "same color as !r!497610586750976020!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#1a7939"
+  text: "same color as !r!504966239765135360!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#1a7de5"
+  text: "same color as !r!476916976011444244!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#1d1d2f"
+  text: "same color as !r!505446232005541889!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#3d110a"
+  text: "same color as !r!505446530354774050!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#40bea2"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#42d7f4"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#4d6875"
+  text: "same color as !r!504828346522140693!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#5911e8"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#63ced4"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#6600ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#66ffff"
+  text: "same color as !r!497830231852449847!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#7dff00"
+  text: "same color as !r!498208423524171796!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#808588"
+  text: "same color as !r!497626822742376448!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#843da4"
+  text: "same color as !r!501658770389336084!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#88cc00"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#8c0cc5"
+  text: "same color as !r!499037360340598819!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#9933ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#9966ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#aa32e6"
+  text: "same color as !r!498828572325183489!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#b4570f"
+  text: "same color as !r!499033497764233237!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#b62e21"
+  text: "same color as !r!497961918519312386!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#b8ffdf"
+  text: "same color as !r!497830688175685643!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#c5b3ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#c87bff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#cb1a45"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#cc00cc"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ccccff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#d9c8e4"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#deaddd"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#e4b400"
+  text: "same color as !r!497584935234830366!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#e6b800"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#e91e63"
+  text: "same color as !r!476916459470061569!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff0000"
+  text: "same color as !r!498208466066866186!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff0090"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff3333"
+  text: "same color as !r!512052948747026443!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff6dd6"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff7503"
+  text: "same color as !r!497580616817311745!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff7bfa"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff9960"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ffc800"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ffcde9"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ffd200"
+  text: "same color as !r!498207388890038274!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ffd700"
+  text: "same color as !r!505332679315554334!r!"
+  show_button: true
+---
