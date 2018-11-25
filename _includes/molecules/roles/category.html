@@ -2,7 +2,7 @@
 {%- for node in include.nodes -%}
     {%- capture node_output -%}
         {%- if node.type == "role" -%}
-            {%- include molecules/roles/role.html name=node.name id=node.id text=node.text show_button=node.show_button -%}
+            {%- include molecules/roles/role.html role=node -%}
         {%- elsif node.type == "note" -%}
             {%- include molecules/roles/note.html text=node.text -%}
         {%- elsif node.type == "text" -%}
