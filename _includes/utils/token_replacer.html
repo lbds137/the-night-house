@@ -1,0 +1,12 @@
+{%- assign string_arr = include.string | split: include.token.token -%}
+{%- capture output -%}
+    {%- for item string_arr -%}
+        {%- assign mod = forloop.index0 | modulo: 2 -%}
+        {%- if mod == 0 -%}
+            {{ item }}
+        {%- else -%}
+            {%- include include.token.file param=item -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+{{ output }}

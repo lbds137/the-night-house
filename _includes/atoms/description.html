@@ -1,25 +1,9 @@
-{%- assign description_channel_arr = include.description | split: "!#!" -%}
-{%- capture description_channel -%}
-    {%- for item in description_channel_arr -%}
-        {%- assign mod = forloop.index0 | modulo: 2 -%}
-        {%- if mod == 0 -%}
-            {{ item }}
-        {%- else -%}
-            {%- include atoms/channel.html name=item -%}
-        {%- endif -%}
-    {%- endfor -%}
-{%- endcapture -%}
-
-{%- assign description_role_arr = description_channel | split: "!@!" -%}
-{%- capture description -%}
-    {%- for item in description_role_arr -%}
-        {%- assign mod = forloop.index0 | modulo: 2 -%}
-        {%- if mod == 0 -%}
-            {{ item }}
-        {%- else -%}
-            {%- include atoms/role.html id=item -%}
-        {%- endif -%}
-    {%- endfor -%}
-{%- endcapture -%}
-
-{{ description }}
+{%- assign description = include.description -%}
+{%- for token in site.data.tokens -%}
+    {%- capture description -%}
+        {%- include utils/token_replacer.html string=description token=token -%}
+    {%- endcapture -%}
+    {%- if forloop.last == false -%}
+        {{ description }}
+    {%- endif -%}
+{%- endfor -%}
