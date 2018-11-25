@@ -195,3 +195,19 @@
   color: "#ff9960"
   text: "this is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
   show_button: true
+-
+  type: "role"
+  category: "NSFW"
+  name: "Adults/18+ | מבוגרים"
+  id: "497961918519312386"
+  color: "#b62e21"
+  text: "this role is for determining whether access is granted to channels specifically designated as NSFW. The Hebrew simply means \"adults\" [mevugarim]."
+  show_button: false
+-
+  type: "role"
+  category: "NSFW"
+  name: "Nudists | צלמים עירומים"
+  id: "500076544924975114"
+  color: "#b62e21"
+  text: "this is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\" [tzalamim eyromim]."
+  show_button: false
