@@ -10,5 +10,6 @@
 {%- endif -%}
 {%- include atoms/roles/role.html param=include.role.id -%}
 {%- if include.role.text.size > 0 -%}
-    &nbsp;:&nbsp;{%- include atoms/roles/text.html text=include.role.text -%}
+    <br />
+    {%- include atoms/roles/text.html text=include.role.text -%}
 {%- endif -%}
