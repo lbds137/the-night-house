@@ -1,4 +1,5 @@
 ---
+exclude: true
 ---
 
 @import "{{ site.theme }}";
@@ -8,6 +9,7 @@
 .page-header {
   background-color: #000000;
   background-image: none;
+  padding: 2rem;
 }
 
 /* Base styles */
@@ -26,6 +28,20 @@ code {
   font-size: 0.9em;
   background-color: #2f3136;
   padding: 0.2em;
+}
+
+/* Page elements */
+
+.header-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.btn.active {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background-color: rgba(182, 46, 33, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Background colors */
