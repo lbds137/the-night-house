@@ -3,6 +3,7 @@ encoding: UTF-8
 color: "#b62e21"
 theme: jekyll-theme-cayman
 markdown: kramdown
+baseurl: ""
 permalink: /:title/
 
 title: The Night House | בית הלילה
