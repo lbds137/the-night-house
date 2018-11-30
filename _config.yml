@@ -2,5 +2,8 @@ github: [metadata]
 encoding: UTF-8
 color: "#b62e21"
 theme: jekyll-theme-cayman
+markdown: kramdown
+permalink: /:title/
+
 title: The Night House | בית הלילה
 description: A friendly and inclusive Left Hand Path / Satanism focused (but not exclusive) server that is welcome to all, regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. and does not tolerate discrimination, bigotry, or harassment.
