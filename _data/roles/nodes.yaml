@@ -243,6 +243,7 @@
   id: "520348477440655360"
   color: "#ff3333"
   text: "This is the role for people who have some kind of relationship with or interest in Baphomet. This role grants access to just the Baphomet channel if you don't want the LHP role."
+  show_button: true
 -
   type: "role"
   category_id: "belief"
