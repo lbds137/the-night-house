@@ -12,21 +12,25 @@ exclude: true
   padding: 1rem;
 }
 
+.project-name h1 {
+  font-weight: normal;
+}
+
 @media screen and (min-width: 64em) {
   .project-name {
-    font-size:2.75rem
+    font-size: 2.75rem
   }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-name {
-    font-size:2.25rem
+    font-size: 2.25rem
   }
 }
 
 @media screen and (max-width: 42em) {
   .project-name {
-    font-size:1.75rem
+    font-size: 1.75rem
   }
 }
 
