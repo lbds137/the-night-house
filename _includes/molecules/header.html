@@ -15,5 +15,9 @@
                 <a href="{{ link.url }}" class="btn {{ active }}">{{ link.title }}</a>
             {%- endunless -%}
         {%- endfor -%}
+        {%- comment -%}
+            hardcoding this for now since it links offsite (even though it's mapped to a subdomain)
+        {%- endcomment -%}
+        <a href="http://blog.thenighthouse.org/" class="btn">Blog</a>
     </nav>
 </header>
