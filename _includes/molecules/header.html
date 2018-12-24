@@ -4,20 +4,5 @@
     </div>
     <h1 class="project-name">{{ site.title }}</h1>
     <h2 class="project-tagline">{{ site.description }}</h2>
-    <nav>
-        {%- for link in site.pages -%}
-            {%- unless link.exclude or link.url contains "/assets/" -%}
-                {%- capture active -%}
-                    {%- if page.url == link.url -%}
-                        active
-                    {%- endif -%}
-                {%- endcapture -%}
-                <a href="{{ link.url }}" class="btn {{ active }}">{{ link.title }}</a>
-            {%- endunless -%}
-        {%- endfor -%}
-        {%- comment -%}
-            hardcoding this for now since it links offsite (even though it's mapped to a subdomain)
-        {%- endcomment -%}
-        <a href="http://blog.thenighthouse.org/" class="btn">Blog</a>
-    </nav>
+    {%- include atoms/nav.html -%}
 </header>

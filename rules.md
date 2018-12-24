@@ -1,4 +1,5 @@
 ---
+ordinal: 2
 title: Rules
 ---
 
