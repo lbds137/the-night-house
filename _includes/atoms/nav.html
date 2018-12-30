@@ -3,7 +3,7 @@
     {%- for link in sorted_pages -%}
         {%- unless link.exclude or link.url contains "/assets/" -%}
             {%- capture active -%}
-                {%- if include.page.url == link.url -%}
+                {%- if page.url == link.url -%}
                     active
                 {%- endif -%}
             {%- endcapture -%}
