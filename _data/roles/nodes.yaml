@@ -5,26 +5,34 @@
 -
   type: "role"
   category_id: "staff"
-  name: "Administrator | כוהנת"
+  name: "Administrator | מנהל ראש"
   id: "497584935234830366"
   color: "#e4b400"
-  text: "This is my admin role, and the Hebrew means \"priestess\" [cohenet]."
+  text: "This is the admin role, and the Hebrew means \"head moderator\" [menahel rosh]."
+  show_button: false
+-
+  type: "role"
+  category_id: "staff"
+  name: "Elder Moderators | מנהלים זקנים"
+  id: "497580616817311745"
+  color: "#ff7503"
+  text: "This is the role for our most senior and trusted moderators, who must be over the age of 18 (legal majority). The Hebrew means \"senior moderators\" [menahlim zaknim]."
   show_button: false
 -
   type: "role"
   category_id: "staff"
   name: "Moderators | מנהלים"
-  id: "497580616817311745"
-  color: "#ff7503"
-  text: "This is the role for our most trusted, senior moderators, who must be over the age of 18 (legal majority). The Hebrew means \"moderators\" [menahelim]."
+  id: "530956356539252736"
+  color: "#ff6505"
+  text: "This is the role for our adult moderators, who must be over the age of 18 (legal majority). The Hebrew means \"moderators\" [menahlim]."
   show_button: false
 -
   type: "role"
   category_id: "staff"
-  name: "Assistant Moderators | עוזר מנהלים"
+  name: "Junior Moderators | מנהלים צעירים"
   id: "499033497764233237"
   color: "#b4570f"
-  text: "This is the role for assistant/junior moderators, who may be under 18 provided that they are sufficiently trustworthy to handle such duties. The Hebrew means \"assistant moderators\" [ozer menahelim]."
+  text: "This is the role for junior moderators, who are under 18 but have been deemed sufficiently trustworthy to handle such duties. The Hebrew means \"junior moderators\" [menahlim tzayirim]."
   show_button: false
 -
   type: "role"
@@ -712,7 +720,14 @@
 -
   type: "role"
   category_id: "color"
-  name: "#ff6dd6 [A] | כוהנת"
+  name: "#ff3333 [A] | מנהל ראש"
+  id: "529228572959703040"
+  color: "#ff3333"
+  show_button: false
+-
+  type: "role"
+  category_id: "color"
+  name: "#ff6dd6 [A] | מנהל ראש"
   id: "502979917453983757"
   color: "#ff6dd6"
   show_button: false
@@ -1009,6 +1024,12 @@
   category_id: "color"
   id: "#ff3333"
   text: "same color as !r!520348477440655360!r!"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ff6505"
+  text: "same color as !r!530956356539252736!r!"
   show_button: true
 -
   type: "role"
