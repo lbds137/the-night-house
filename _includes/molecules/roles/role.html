@@ -1,15 +1,38 @@
-{%- capture copy_command -%}
+{%- capture role_id -%}
     {%- if include.role.id.size > 7 -%}
-        "n.iam <@&{{ include.role.id }}>"
+        <@&{{ include.role.id }}>
     {%- elsif include.role.id.size == 7 -%}
-        "n.iam {{ include.role.id }}"
+        {{ include.role.id }}
     {%- endif -%}
 {%- endcapture -%}
-{%- if copy_command.size > 0 and include.role.show_button == true -%}
-    <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-green" data-clipboard-text={{ copy_command }} href="#0">Copy</a>
-{%- endif -%}
-{%- include atoms/roles/role.html param=include.role.id -%}
-{%- if include.role.text.size > 0 -%}
-    <br />
-    {%- include atoms/roles/text.html text=include.role.text -%}
-{%- endif -%}
+{%- capture assign_command -%}
+    {%- if role_id.size > 0 -%}
+        "n.iam {{role_id}}"
+    {%- endif -%}
+{%- endcapture -%}
+{%- capture unassign_command -%}
+    {%- if role_id.size > 0 -%}
+        "n.iamn {{role_id}}"
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="flex flex-wrap items-center justify-start">
+    {%- if assign_command.size > 0 and include.role.show_button == true -%}
+        <div>
+            <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-green" data-clipboard-text={{ assign_command }} href="#0">Add</a>
+        </div>
+    {%- endif -%}
+    {%- if unassign_command.size > 0 and include.role.show_button == true -%}
+        <div>
+            <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-red" data-clipboard-text={{ unassign_command }} href="#0">Remove</a>
+        </div>
+    {%- endif -%}
+    <div>
+        {%- include atoms/roles/role.html param=include.role.id -%}
+    </div>
+    <div class="w-100 mt1 mb4">
+        {%- if include.role.text.size > 0 -%}
+        {%- include atoms/roles/text.html text=include.role.text -%}
+        {%- endif -%}
+    </div>
+</div>

@@ -1,1 +1,4 @@
-<span class="dib w-100 pa2 cb-3d110a">{%- include atoms/roles/text.html text=include.text -%}</span>
+{%- capture output -%}
+    <span class="dib w-100 pa2 cb-3d110a">{%- include atoms/roles/text.html text=include.text -%}</span>
+{%- endcapture -%}
+{{ output | markdownify }}
