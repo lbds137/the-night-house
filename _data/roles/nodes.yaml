@@ -154,10 +154,10 @@
 -
   type: "role"
   category_id: "identity"
-  name: "Plural | לא אחד"
+  name: "Plural | רבוי"
   id: "501658770389336084"
   color: "#843da4"
-  text: "This is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"not one\" [lo ekhad]."
+  text: "This is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"plurality\" [ribui]."
   show_button: true
 -
   type: "role"
