@@ -1,8 +1,10 @@
 {%- capture role_id -%}
-    {%- if include.role.id.size > 7 -%}
-        <@&{{ include.role.id }}>
-    {%- elsif include.role.id.size == 7 -%}
-        {{ include.role.id }}
+    {%- if include.role.show_button == true -%}
+        {%- if include.role.id.size > 7 -%}
+            <@&{{ include.role.id }}>
+        {%- elsif include.role.id.size == 7 -%}
+            {{ include.role.id }}
+        {%- endif -%}
     {%- endif -%}
 {%- endcapture -%}
 {%- capture assign_command -%}
@@ -17,12 +19,12 @@
 {%- endcapture -%}
 
 <div class="flex flex-wrap items-center justify-start">
-    {%- if assign_command.size > 0 and include.role.show_button == true -%}
+    {%- if assign_command.size > 0 -%}
         <div>
             <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-green" data-clipboard-text={{ assign_command }} href="#0">Add</a>
         </div>
     {%- endif -%}
-    {%- if unassign_command.size > 0 and include.role.show_button == true -%}
+    {%- if unassign_command.size > 0 -%}
         <div>
             <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-red" data-clipboard-text={{ unassign_command }} href="#0">Remove</a>
         </div>
