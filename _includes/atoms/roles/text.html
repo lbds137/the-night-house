@@ -5,6 +5,6 @@
     {%- endcapture -%}
     {%- assign text = replaced_text -%}
     {%- if forloop.last == true -%}
-        {{ text }}
+        {{ text | markdownify | replace: "<p>", "" | replace: "</p>", "" }}
     {%- endif -%}
 {%- endfor -%}
