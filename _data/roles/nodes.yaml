@@ -75,7 +75,7 @@
 -
   type: "note"
   category_id: "messages"
-  text: "Note: these roles are not relevant for server staff since they are here to help you if you need anything, so feel free to DM !r!499037360340598819!r! if you need assistance."
+  text: "Note: !r!499037360340598819!r! members may always be contacted over DM, **provided that you are reaching out to discuss official server business** (e.g. privately log a complaint). In other contexts, you **should** respect their DM preference roles (i.e. don't bug members of staff that have restricted DM preferences if you just want to chit-chat, **unless you have obtained permission first**)."
 -
   type: "role"
   category_id: "messages"
