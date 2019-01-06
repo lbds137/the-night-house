@@ -82,7 +82,15 @@
   name: "Notify | להודיע"
   id: "504966239765135360"
   color: "#1a7939"
-  text: "This is an opt-in role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. The Hebrew means \"inform\" [leho'dia]."
+  text: "This is an opt-out role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon joining the server but you may unassign it yourself at any time. The Hebrew means \"inform\" [leho'dia]."
+  show_button: true
+-
+  type: "role"
+  category_id: "messages"
+  name: "Students | תלמידים"
+  id: "531315690217406494"
+  color: "#40bea2"
+  text: "This is an opt-in role for announcements regarding classes taking place on the server. The Hebrew means \"students\" [talmidim]."
   show_button: true
 -
   type: "role"
@@ -403,10 +411,10 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Blood Work | עבודת הדם"
+  name: "Blood Magick | קסם הדם"
   id: "497830711496146954"
   color: "#66ffff"
-  text: "Blood Work"
+  text: "Blood Magick"
   show_button: true
 -
   type: "role"
@@ -855,6 +863,7 @@
   type: "role"
   category_id: "color"
   id: "#40bea2"
+  text: "same color as !r!531315690217406494!r!"
   show_button: true
 -
   type: "role"
@@ -1051,6 +1060,7 @@
   type: "role"
   category_id: "color"
   id: "#ff9960"
+  text: "same color as !r!504971274431496194!r!"
   show_button: true
 -
   type: "role"
