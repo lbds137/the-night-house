@@ -2,16 +2,21 @@
     {%- assign sorted_pages = site.pages | sort: "ordinal" -%}
     {%- for link in sorted_pages -%}
         {%- unless link.exclude or link.url contains "/assets/" -%}
-            {%- capture active -%}
+            {%- capture btn_class -%}
                 {%- if page.url == link.url -%}
-                    active
+                    btn active
+                {%- else -%}
+                    btn
                 {%- endif -%}
             {%- endcapture -%}
-            <a href="{{ link.url }}" class="btn {{ active }}">{{ link.title }}</a>
+            <a href="{{ link.url }}" class="{{ btn_class }}">{{ link.title }}</a>
         {%- endunless -%}
     {%- endfor -%}
-    {%- comment -%}
-        hardcoding this for now since it links offsite (even though it's mapped to a subdomain)
-    {%- endcomment -%}
-    <a href="http://blog.thenighthouse.org/" class="btn">Blog</a>
+    {%- capture blog_link -%}
+        <a href="https://blog.thenighthouse.org/" class="btn">Blog</a>
+    {%- endcapture -%}
+    {%- capture twitter_link -%}
+        <a href="https://twitter.com/thenighthouse1/" class="btn" target="_blank">Twitter</a>
+    {%- endcapture -%}
+    {{ blog_link }}{{ twitter_link }}
 </nav>
