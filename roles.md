@@ -16,4 +16,6 @@ These roles can be unassigned in the same manner by using the **red buttons** in
 
 **Please only paste and send one command at a time**. The bot does not know how to parse more than one command per message.
 
+**The role categories below are collapsed by default; to expand them, click/tap on the heading name**. Each click toggles the display of the category (show/hide).
+
 {% include organisms/roles.html %}

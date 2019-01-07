@@ -1,10 +1,16 @@
-<h2 class="tc underline">{{ include.name }}</h2>
-{%- for node in include.nodes -%}
-    {%- if node.type == "role" -%}
-        {%- include molecules/roles/role.html role=node -%}
-    {%- elsif node.type == "note" -%}
-        {%- include molecules/roles/note.html text=node.text -%}
-    {%- elsif node.type == "text" -%}
-        {%- include atoms/roles/text.html text=node.text -%}
-    {%- endif -%}
-{%- endfor -%}
+{%- assign heading_id = include.name | slugify -%}
+{%- capture toggle_code -%}
+    $('#{{ heading_id }}-container').toggle();
+{%- endcapture -%}
+<h2 id="{{ heading_id }}" class="tc underline pointer" onClick="{{ toggle_code }}">{{ include.name }}</h2>
+<div id="{{ heading_id }}-container" class="dn">
+    {%- for node in include.nodes -%}
+        {%- if node.type == "role" -%}
+            {%- include molecules/roles/role.html role=node -%}
+        {%- elsif node.type == "note" -%}
+            {%- include molecules/roles/note.html text=node.text -%}
+        {%- elsif node.type == "text" -%}
+            {%- include atoms/roles/text.html text=node.text -%}
+        {%- endif -%}
+    {%- endfor -%}
+</div>
