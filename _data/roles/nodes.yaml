@@ -722,81 +722,6 @@
 # color
 # ---
 -
-  type: "note"
-  category_id: "color"
-  text: "Roles available only to !r!497584935234830366!r!"
--
-  type: "role"
-  category_id: "color"
-  name: "#ff3333 [A] | מנהל ראש"
-  id: "529228572959703040"
-  color: "#ff3333"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#ff6dd6 [A] | מנהל ראש"
-  id: "502979917453983757"
-  color: "#ff6dd6"
-  show_button: false
--
-  type: "note"
-  category_id: "color"
-  text: "Roles available only to !r!497580616817311745!r!"
--
-  type: "role"
-  category_id: "color"
-  name: "#008080 [EM] | מנהלים זקנים"
-  id: "502288694670262313"
-  color: "#008080"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#9966ff [EM] | מנהלים זקנים"
-  id: "502435399151648810"
-  color: "#9966ff"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#b62e21 [EM] | מנהלים זקנים"
-  id: "504771578383564810"
-  color: "#b62e21"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#ccccff [EM] | מנהלים זקנים"
-  id: "502886698544529408"
-  color: "#ccccff"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#e6b800 [EM] | מנהלים זקנים"
-  id: "502968575296929803"
-  color: "#e6b800"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#ff6dd6 [EM] | מנהלים זקנים"
-  id: "505086485469462538"
-  color: "#ff6dd6"
-  show_button: false
--
-  type: "role"
-  category_id: "color"
-  name: "#ffcde9 [EM] | מנהלים זקנים"
-  id: "502611464973189146"
-  color: "#ffcde9"
-  show_button: false
--
-  type: "note"
-  category_id: "color"
-  text: "Roles available to all !r!497610586750976020!r!"
--
   type: "role"
   category_id: "color"
   id: "#0066ff"
@@ -935,6 +860,11 @@
   type: "role"
   category_id: "color"
   id: "#9966ff"
+  show_button: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#9999ff"
   show_button: true
 -
   type: "role"
