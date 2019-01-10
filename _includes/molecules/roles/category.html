@@ -1,8 +1,5 @@
 {%- assign heading_id = include.name | slugify -%}
-{%- capture toggle_code -%}
-    $('#{{ heading_id }}-container').toggle();
-{%- endcapture -%}
-<h2 id="{{ heading_id }}" class="tc underline pointer" onClick="{{ toggle_code }}">{{ include.name }}</h2>
+<h2 id="{{ heading_id }}" class="tc underline pointer" onclick="onClickHandler('{{ heading_id }}')">{{ include.name }}</h2>
 <div id="{{ heading_id }}-container" class="dn">
     {%- for node in include.nodes -%}
         {%- if node.type == "role" -%}
