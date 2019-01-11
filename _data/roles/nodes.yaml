@@ -9,7 +9,8 @@
   id: "497584935234830366"
   color: "#e4b400"
   text: "This is the admin role, and the Hebrew means \"head moderator\" [menahel rosh]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 -
   type: "role"
   category_id: "staff"
@@ -17,7 +18,8 @@
   id: "497580616817311745"
   color: "#ff7503"
   text: "This is the role for our most senior and trusted moderators, who must be over the age of 18 (legal majority). The Hebrew means \"senior moderators\" [menahlim zaknim]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 -
   type: "role"
   category_id: "staff"
@@ -25,7 +27,8 @@
   id: "530956356539252736"
   color: "#ff6505"
   text: "This is the role for our adult moderators, who must be over the age of 18 (legal majority). The Hebrew means \"moderators\" [menahlim]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 -
   type: "role"
   category_id: "staff"
@@ -33,7 +36,8 @@
   id: "499033497764233237"
   color: "#b4570f"
   text: "This is the role for junior moderators, who are under 18 but have been deemed sufficiently trustworthy to handle such duties. The Hebrew means \"junior moderators\" [menahlim tzayirim]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 -
   type: "role"
   category_id: "staff"
@@ -41,7 +45,8 @@
   id: "499037360340598819"
   color: "#8c0cc5"
   text: "This role is for server staff, so when you need help with something you can ping this role and everyone who helps manage the server will get pinged, rather than just one tier of moderators. The Hebrew means \"staff\" [tzevet]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 # ---
 # general
 # ---
@@ -52,7 +57,7 @@
   id: "497610586750976020"
   color: "#17ac86"
   text: "This is a general role for server members, and it is required to access the main part of the server. The Hebrew simply means \"members\" [khaverim]."
-  show_button: false
+  show_button_member: false
 -
   type: "role"
   category_id: "general"
@@ -60,7 +65,8 @@
   id: "497626822742376448"
   color: "#808588"
   text: "Bots"
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 -
   type: "role"
   category_id: "general"
@@ -68,7 +74,8 @@
   id: "504828346522140693"
   color: "#4d6875"
   text: "This role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\" [orkhim]."
-  show_button: false
+  hide_button_staff: true
+  show_button_member: false
 # ---
 # messages
 # ---
@@ -83,7 +90,7 @@
   id: "504966239765135360"
   color: "#1a7939"
   text: "This is an opt-out role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon joining the server but you may unassign it yourself at any time. The Hebrew means \"inform\" [leho'dia]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "messages"
@@ -91,7 +98,7 @@
   id: "531315690217406494"
   color: "#40bea2"
   text: "This is an opt-in role for announcements regarding classes taking place on the server. The Hebrew means \"students\" [talmidim]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "messages"
@@ -99,7 +106,7 @@
   id: "498208423524171796"
   color: "#7dff00"
   text: "This role is to signify that you are OK with receiving direct messages (DMs) from people on this server. The Hebrew means \"OK to send messages\" [beseder lishloakh hodaot]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "messages"
@@ -107,7 +114,7 @@
   id: "498207388890038274"
   color: "#ffd200"
   text: "This role is to signify that you might be OK with receiving direct messages, if you are asked first and reply in the affirmative. The Hebrew means \"ask before sending messages\" [she'el lifney lishloakh hodaot]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "messages"
@@ -115,7 +122,7 @@
   id: "498208466066866186"
   color: "#ff0000"
   text: "This role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you. The Hebrew means \"do not send messages\" [lo lishloakh hodaot]."
-  show_button: true
+  show_button_member: true
 # ---
 # identity
 # ---
@@ -126,7 +133,7 @@
   id: "497568507601485836"
   color: "#0dcf4f"
   text: "This is the enby (short for non-binary) / catch-all role, for anyone who does not identify inside the binary gender boxes for whatever reason. The Hebrew means \"people\" [anashim]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -134,7 +141,7 @@
   id: "476916459470061569"
   color: "#e91e63"
   text: "This is the feminine gender identity role. The Hebrew literally means \"women\" [nashim]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -142,7 +149,7 @@
   id: "476916976011444244"
   color: "#1a7de5"
   text: "This is the masculine gender identity role. The Hebrew literally means \"men\" [gvarim]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -150,7 +157,7 @@
   id: "498828572325183489"
   color: "#aa32e6"
   text: "This role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\" [gav'ah]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -158,7 +165,7 @@
   id: "501658770389336084"
   color: "#843da4"
   text: "This is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"plurality\" [ribui]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -166,7 +173,7 @@
   id: "497830688175685643"
   color: "#b8ffdf"
   text: "Empath"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -174,7 +181,7 @@
   id: "505446232005541889"
   color: "#1d1d2f"
   text: "This role is for self-identified vampires who feed on psychic energy."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -182,7 +189,7 @@
   id: "505446530354774050"
   color: "#3d110a"
   text: "This role is for self-identified vampires who feed on animal and/or human blood."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "identity"
@@ -190,7 +197,7 @@
   id: "504971274431496194"
   color: "#ff9960"
   text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
-  show_button: true
+  show_button_member: true
 # ---
 # nsfw
 # ---
@@ -201,7 +208,7 @@
   id: "497961918519312386"
   color: "#b62e21"
   text: "This role is for determining whether access is granted to channels specifically designated as NSFW. The Hebrew simply means \"adults\" [mevugarim]."
-  show_button: false
+  show_button_member: false
 -
   type: "role"
   category_id: "nsfw"
@@ -209,7 +216,7 @@
   id: "500076544924975114"
   color: "#b62e21"
   text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\" [tzalamim eyromim]."
-  show_button: false
+  show_button_member: false
 # ---
 # belief
 # ---
@@ -224,7 +231,7 @@
   id: "520348477440655360"
   color: "#ff3333"
   text: "This is the role for people who have some kind of relationship with or interest in Baphomet. This role grants access to just the Baphomet channel if you don't want the LHP role."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -232,7 +239,7 @@
   id: "512052948747026443"
   color: "#ff3333"
   text: "This is the role for folks who work with demons, including but not limited to the Goetic demons. This role grants access to just the Demonology channel if you don't want the LHP role."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -240,7 +247,7 @@
   id: "497568843003199488"
   color: "#ff3333"
   text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The LHP section is role-locked, and this is the role necessary to gain access to it (whether because you're a practitioner or are curious enough to want to poke around and ask questions of our more experienced folks). The Hebrew literally means \"left hand path\" [nativ ah'yad smali]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -248,7 +255,7 @@
   id: "497734400352714752"
   color: "#ff3333"
   text: "This is the role for people who have some kind of relationship with or interest in Lilith. This role grants access to just the Lilith channel if you don't want the LHP role. The Hebrew is simply Her name [lilit]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -256,7 +263,7 @@
   id: "505155807583928364"
   color: "#ff3333"
   text: "This role is for people who work with Lovecraftian entities (Cthulhu, Hastur, etc.) or are interested in doing so. It grants access to its own channel even without the LHP role."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -264,7 +271,7 @@
   id: "511406657000177682"
   color: "#ff3333"
   text: "This role is for folks who work with Lucifer and/or consider themselves subscribing to Luciferianism and its associated practices / ways of thinking. It grants access to its own channel even without the LHP role."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -272,7 +279,7 @@
   id: "505123979074469909"
   color: "#ff3333"
   text: "This is the role for folks who work with the Qliphot. This role grants access to just the Qliphot channel if you don't want the LHP role."
-  show_button: true
+  show_button_member: true
 -
   type: "note"
   category_id: "belief"
@@ -284,7 +291,7 @@
   id: "505747462615728130"
   color: "#11806a"
   text: "This role is for those who engage in practices / worship related to Celtic Polytheism."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -292,7 +299,7 @@
   id: "505757620255326221"
   color: "#11806a"
   text: "Christianity"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -300,7 +307,7 @@
   id: "497604721121427456"
   color: "#11806a"
   text: "This role is for folks who subscribe to Discordianism and its associated ways of thinking. The Hebrew is a transliteration of Discordianism [diskordianizm]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -308,7 +315,7 @@
   id: "500412215011311626"
   color: "#11806a"
   text: "This is the role for folks who work with dragons. The Hebrew means \"draconic\" [drakoni]."
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -316,7 +323,7 @@
   id: "505744777904390146"
   color: "#11806a"
   text: "Egyptian Polytheism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -324,7 +331,7 @@
   id: "505119791284224000"
   color: "#11806a"
   text: "Greco-Roman Polytheism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -332,7 +339,7 @@
   id: "505757680443326474"
   color: "#11806a"
   text: "Islam"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -340,7 +347,7 @@
   id: "505757653545254912"
   color: "#11806a"
   text: "Judaism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -348,7 +355,7 @@
   id: "505734825076850698"
   color: "#11806a"
   text: "Norse Polytheism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -356,7 +363,7 @@
   id: "505122608623386630"
   color: "#11806a"
   text: "Qabalah"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -364,7 +371,7 @@
   id: "505793568049463306"
   color: "#11806a"
   text: "Slavic Polytheism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -372,7 +379,7 @@
   id: "505745773028311040"
   color: "#11806a"
   text: "Sumerian Polytheism"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "belief"
@@ -380,7 +387,7 @@
   id: "505748591831416833"
   color: "#11806a"
   text: "Wicca"
-  show_button: true
+  show_button_member: true
 # ---
 # domain
 # ---
@@ -391,7 +398,7 @@
   id: "497830434181349415"
   color: "#66ffff"
   text: "Astral Travel"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -399,7 +406,7 @@
   id: "497830231852449847"
   color: "#66ffff"
   text: "Astrology"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -407,7 +414,7 @@
   id: "515302873135841281"
   color: "#66ffff"
   text: "Baneful Magick"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -415,7 +422,7 @@
   id: "497830711496146954"
   color: "#66ffff"
   text: "Blood Magick"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -423,7 +430,7 @@
   id: "497830979767894023"
   color: "#66ffff"
   text: "Chaos Magick"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -431,7 +438,7 @@
   id: "497830512338141205"
   color: "#66ffff"
   text: "Crystals"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -439,7 +446,7 @@
   id: "497830908590686218"
   color: "#66ffff"
   text: "Death Work"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -447,7 +454,7 @@
   id: "497830296968757275"
   color: "#66ffff"
   text: "Divination"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -455,7 +462,7 @@
   id: "497830385590337546"
   color: "#66ffff"
   text: "Dream Work"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -463,7 +470,7 @@
   id: "497830634111107072"
   color: "#66ffff"
   text: "Element Work"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -471,7 +478,7 @@
   id: "497830473238708224"
   color: "#66ffff"
   text: "Energy Work"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -479,7 +486,7 @@
   id: "497831078653067264"
   color: "#66ffff"
   text: "Kitchen Magick"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -487,7 +494,7 @@
   id: "505450974907727872"
   color: "#66ffff"
   text: "Meditation"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -495,7 +502,7 @@
   id: "497831006104059915"
   color: "#66ffff"
   text: "Sigils"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "domain"
@@ -503,7 +510,7 @@
   id: "497829909192769536"
   color: "#66ffff"
   text: "Spirit Work"
-  show_button: true
+  show_button_member: true
 # ---
 # language
 # ---
@@ -514,7 +521,7 @@
   id: "505107963049148426"
   color: "#00ccff"
   text: "Arabic"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -522,7 +529,7 @@
   id: "505108546220982282"
   color: "#00ccff"
   text: "Chinese"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -530,7 +537,7 @@
   id: "505097859356557313"
   color: "#00ccff"
   text: "French"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -538,7 +545,7 @@
   id: "505105085043572746"
   color: "#00ccff"
   text: "German"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -546,7 +553,7 @@
   id: "505106627414851604"
   color: "#00ccff"
   text: "Greek"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -554,7 +561,7 @@
   id: "505041888441663489"
   color: "#00ccff"
   text: "Hebrew"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -562,7 +569,7 @@
   id: "505110446445953039"
   color: "#00ccff"
   text: "Japanese"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -570,7 +577,7 @@
   id: "506178327019520019"
   color: "#00ccff"
   text: "Korean"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -578,7 +585,7 @@
   id: "505107401205088258"
   color: "#00ccff"
   text: "Latin"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -586,7 +593,7 @@
   id: "505104067408953344"
   color: "#00ccff"
   text: "Polish"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -594,7 +601,7 @@
   id: "505111967288000553"
   color: "#00ccff"
   text: "Portuguese"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -602,7 +609,7 @@
   id: "505100756547010571"
   color: "#00ccff"
   text: "Romanian"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -610,7 +617,7 @@
   id: "505111216298000384"
   color: "#00ccff"
   text: "Russian"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "language"
@@ -618,7 +625,7 @@
   id: "505424154019889152"
   color: "#00ccff"
   text: "Spanish"
-  show_button: true
+  show_button_member: true
 # ---
 # zodiac
 # ---
@@ -629,7 +636,7 @@
   id: "505332679315554334"
   color: "#ffd700"
   text: "Aquarius"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -637,7 +644,7 @@
   id: "505331358831345674"
   color: "#ffd700"
   text: "Aries"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -645,7 +652,7 @@
   id: "505333004416319498"
   color: "#ffd700"
   text: "Cancer"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -653,7 +660,7 @@
   id: "505333024314097664"
   color: "#ffd700"
   text: "Capricorn"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -661,7 +668,7 @@
   id: "505333955285745665"
   color: "#ffd700"
   text: "Gemini"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -669,7 +676,7 @@
   id: "505334079647121440"
   color: "#ffd700"
   text: "Leo"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -677,7 +684,7 @@
   id: "505334178066333706"
   color: "#ffd700"
   text: "Libra"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -685,7 +692,7 @@
   id: "505334371016900610"
   color: "#ffd700"
   text: "Pisces"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -693,7 +700,7 @@
   id: "505334673962958859"
   color: "#ffd700"
   text: "Sagittarius"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -701,7 +708,7 @@
   id: "505334576030285825"
   color: "#ffd700"
   text: "Scorpio"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -709,7 +716,7 @@
   id: "505334870147465216"
   color: "#ffd700"
   text: "Taurus"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "zodiac"
@@ -717,7 +724,7 @@
   id: "505334963160219678"
   color: "#ffd700"
   text: "Virgo"
-  show_button: true
+  show_button_member: true
 # ---
 # color
 # ---
@@ -725,293 +732,293 @@
   type: "role"
   category_id: "color"
   id: "#0066ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#008080"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#009973"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#00ccff"
   text: "same color as !r!505107963049148426!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#0dcf4f"
   text: "same color as !r!497568507601485836!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#11806a"
   text: "same color as !r!505747462615728130!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#17ac86"
   text: "same color as !r!497610586750976020!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#1a7939"
   text: "same color as !r!504966239765135360!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#1a7de5"
   text: "same color as !r!476916976011444244!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#1d1d2f"
   text: "same color as !r!505446232005541889!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#3d110a"
   text: "same color as !r!505446530354774050!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#40bea2"
   text: "same color as !r!531315690217406494!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#42d7f4"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#4d6875"
   text: "same color as !r!504828346522140693!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#5911e8"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#63ced4"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#6600ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#66ffff"
   text: "same color as !r!497830231852449847!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#7dff00"
   text: "same color as !r!498208423524171796!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#808588"
   text: "same color as !r!497626822742376448!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#843da4"
   text: "same color as !r!501658770389336084!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#88cc00"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#8c0cc5"
   text: "same color as !r!499037360340598819!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#9933ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#9966ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#9999ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#aa32e6"
   text: "same color as !r!498828572325183489!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#b4570f"
   text: "same color as !r!499033497764233237!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#b62e21"
   text: "same color as !r!497961918519312386!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#b8ffdf"
   text: "same color as !r!497830688175685643!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#c5b3ff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#c87bff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#cb1a45"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#cc00cc"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ccccff"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#d9c8e4"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#dccbe7"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#deaddd"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#e4b400"
   text: "same color as !r!497584935234830366!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#e6b800"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#e91e63"
   text: "same color as !r!476916459470061569!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff0000"
   text: "same color as !r!498208466066866186!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff0090"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff3333"
   text: "same color as !r!520348477440655360!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff6505"
   text: "same color as !r!530956356539252736!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff6dd6"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff7503"
   text: "same color as !r!497580616817311745!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff7bfa"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ff9960"
   text: "same color as !r!504971274431496194!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ffc800"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ffcde9"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ffd200"
   text: "same color as !r!498207388890038274!r!"
-  show_button: true
+  show_button_member: true
 -
   type: "role"
   category_id: "color"
   id: "#ffd700"
   text: "same color as !r!505332679315554334!r!"
-  show_button: true
+  show_button_member: true
 ---

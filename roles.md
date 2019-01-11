@@ -18,4 +18,4 @@ These roles can be unassigned in the same manner by using the **red buttons** in
 
 **The role categories below are collapsed by default; to expand them, click/tap on the heading name**. Each click toggles the display of the category (show/hide).
 
-{% include organisms/roles.html %}
+{% include organisms/roles.html user="member" %}

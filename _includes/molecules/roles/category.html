@@ -3,7 +3,7 @@
 <div id="{{ heading_id }}-container" class="dn">
     {%- for node in include.nodes -%}
         {%- if node.type == "role" -%}
-            {%- include molecules/roles/role.html role=node -%}
+            {%- include molecules/roles/role.html role=node user=include.user -%}
         {%- elsif node.type == "note" -%}
             {%- include molecules/roles/note.html text=node.text -%}
         {%- elsif node.type == "text" -%}
