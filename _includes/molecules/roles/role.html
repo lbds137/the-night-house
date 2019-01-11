@@ -1,34 +1,56 @@
+{%- if include.user == "staff" -%}
+    {%- assign is_staff = true -%}
+{%- else -%}
+    {%- assign is_staff = false -%}
+{%- endif -%}
+{%- if include.user == "member" -%}
+    {%- assign is_member = true -%}
+{%- else -%}
+    {%- assign is_member = false -%}
+{%- endif -%}
+{%- capture mode -%}
+    {%- if is_staff -%}
+        {%- unless include.role.hide_button_staff -%}
+            staff
+        {%- else -%}
+            hide
+        {%- endunless -%}
+    {%- elsif is_member and include.role.show_button_member -%}
+        member
+    {%- else -%}
+        hide
+    {%- endif -%}
+{%- endcapture -%}
 {%- capture role_id -%}
-    {%- if include.role.show_button == true -%}
-        {%- if include.role.id.size > 7 -%}
-            <@&{{ include.role.id }}>
-        {%- elsif include.role.id.size == 7 -%}
-            {{ include.role.id }}
-        {%- endif -%}
+    {%- if include.role.id.size > 7 -%}
+        <@&{{ include.role.id }}>
+    {%- elsif include.role.id.size == 7 -%}
+        {{ include.role.id }}
     {%- endif -%}
 {%- endcapture -%}
-{%- capture assign_command -%}
-    {%- if role_id.size > 0 -%}
-        "n.iam {{role_id}}"
-    {%- endif -%}
-{%- endcapture -%}
-{%- capture unassign_command -%}
-    {%- if role_id.size > 0 -%}
-        "n.iamn {{role_id}}"
-    {%- endif -%}
-{%- endcapture -%}
-
 <div class="flex flex-wrap items-center justify-start">
-    {%- if assign_command.size > 0 -%}
+    {%- unless mode == "hide" -%}
+        {%- capture assign_command -%}
+            {%- if mode == "staff" -%}
+                "s.sr @user {{ role_id }}"
+            {%- elsif mode == "member" -%}
+                "n.iam {{ role_id }}"
+            {%- endif -%}
+        {%- endcapture -%}
+        {%- capture unassign_command -%}
+            {%- if mode == "staff" -%}
+                "s.rr @user {{ role_id }}"
+            {%- elsif mode == "member" -%}
+                "n.iamn {{ role_id }}"
+            {%- endif -%}
+        {%- endcapture -%}
         <div>
             <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-green" data-clipboard-text={{ assign_command }} href="#0">Add</a>
         </div>
-    {%- endif -%}
-    {%- if unassign_command.size > 0 -%}
         <div>
             <a class="a-btn link f6 dim ph1 pv1 mb1 mr2 dib white bg-dark-red" data-clipboard-text={{ unassign_command }} href="#0">Remove</a>
         </div>
-    {%- endif -%}
+    {%- endunless -%}
     <div>
         {%- include atoms/roles/role.html param=include.role.id -%}
     </div>
