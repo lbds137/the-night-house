@@ -238,7 +238,7 @@
   name: "Baphomet | באפומט"
   id: "520348477440655360"
   color: "#ff3333"
-  text: "This is the role for people who have some kind of relationship with or interest in Baphomet. This role grants access to just the Baphomet channel if you don't want the LHP role."
+  text: "This is the role for people who have some kind of relationship with or interest in Baphomet."
   show_button_member: true
 -
   type: "role"
@@ -246,7 +246,7 @@
   name: "Demonology | דמונולוגיה"
   id: "512052948747026443"
   color: "#ff3333"
-  text: "This is the role for folks who work with demons, including but not limited to the Goetic demons. This role grants access to just the Demonology channel if you don't want the LHP role."
+  text: "This is the role for folks who work with demons, including but not limited to the Goetic demons."
   show_button_member: true
 -
   type: "role"
@@ -254,7 +254,7 @@
   name: "Left Hand Path | נתיב היד שמאלי"
   id: "497568843003199488"
   color: "#ff3333"
-  text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The LHP section is role-locked, and this is the role necessary to gain access to it (whether because you're a practitioner or are curious enough to want to poke around and ask questions of our more experienced folks). The Hebrew literally means \"left hand path\" [nativ ah'yad smali]."
+  text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The Hebrew literally means \"left hand path\" [nativ ah'yad smali]."
   show_button_member: true
 -
   type: "role"
@@ -262,7 +262,7 @@
   name: "Lilit | לילית"
   id: "497734400352714752"
   color: "#ff3333"
-  text: "This is the role for people who have some kind of relationship with or interest in Lilith. This role grants access to just the Lilith channel if you don't want the LHP role. The Hebrew is simply Her name [lilit]."
+  text: "This is the role for people who have some kind of relationship with or interest in Lilith. The Hebrew is simply Her name [lilit]."
   show_button_member: true
 -
   type: "role"
@@ -270,7 +270,7 @@
   name: "Lovecraftian | לאבקראפטי"
   id: "505155807583928364"
   color: "#ff3333"
-  text: "This role is for people who work with Lovecraftian entities (Cthulhu, Hastur, etc.) or are interested in doing so. It grants access to its own channel even without the LHP role."
+  text: "This role is for people who work with Lovecraftian entities (Cthulhu, Hastur, etc.) or are interested in doing so."
   show_button_member: true
 -
   type: "role"
@@ -278,7 +278,7 @@
   name: "Luciferianism | לוציפריאניזם"
   id: "511406657000177682"
   color: "#ff3333"
-  text: "This role is for folks who work with Lucifer and/or consider themselves subscribing to Luciferianism and its associated practices / ways of thinking. It grants access to its own channel even without the LHP role."
+  text: "This role is for folks who work with Lucifer and/or consider themselves subscribing to Luciferianism and its associated practices / ways of thinking."
   show_button_member: true
 -
   type: "role"
@@ -286,7 +286,7 @@
   name: "Qliphot | קליפות"
   id: "505123979074469909"
   color: "#ff3333"
-  text: "This is the role for folks who work with the Qliphot. This role grants access to just the Qliphot channel if you don't want the LHP role."
+  text: "This is the role for folks who work with the Qliphot."
   show_button_member: true
 -
   type: "note"
