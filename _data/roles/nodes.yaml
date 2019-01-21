@@ -199,6 +199,14 @@
 -
   type: "role"
   category_id: "identity"
+  name: "Neopronouns | כינויי גוף חדשים"
+  id: "537047781739724803"
+  color: "#ffc800"
+  text: "This role signifies that the role holder intends to use neopronouns and would appreciate the opportunity to share their pronouns with the community."
+  show_button_member: true
+-
+  type: "role"
+  category_id: "identity"
   name: "She/Her | היא"
   id: "537038463879610380"
   color: "#e91e63"
@@ -213,10 +221,17 @@
 -
   type: "role"
   category_id: "identity"
+  name: "Xe/Xem | זה"
+  id: "537049683063996457"
+  color: "#c87bff"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "identity"
   name: "Ze/Hir | זה"
   id: "537038499069558784"
   color: "#9999ff"
-  show_button_member: true    
+  show_button_member: true 
 # ---
 # nsfw
 # ---
@@ -926,6 +941,7 @@
   type: "role"
   category_id: "color"
   id: "#c87bff"
+  text: "same color as !r!537049683063996457!r!"
   show_button_member: true
 -
   type: "role"
@@ -1024,6 +1040,7 @@
   type: "role"
   category_id: "color"
   id: "#ffc800"
+  text: "same color as !r!537047781739724803!r!"
   show_button_member: true
 -
   type: "role"
