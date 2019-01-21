@@ -74,7 +74,6 @@
   id: "504828346522140693"
   color: "#4d6875"
   text: "This role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\" [orkhim]."
-  hide_button_staff: true
   show_button_member: false
 # ---
 # messages
@@ -127,38 +126,18 @@
 # identity
 # ---
 -
-  type: "role"
+  type: "note"
   category_id: "identity"
-  name: "Enby/Other | אנשים"
-  id: "497568507601485836"
-  color: "#0dcf4f"
-  text: "This is the enby (short for non-binary) / catch-all role, for anyone who does not identify inside the binary gender boxes for whatever reason. The Hebrew means \"people\" [anashim]."
-  show_button_member: true
+  text: "Identities"
 -
   type: "role"
   category_id: "identity"
-  name: "Feminine | נשים"
-  id: "476916459470061569"
-  color: "#e91e63"
-  text: "This is the feminine gender identity role. The Hebrew literally means \"women\" [nashim]."
+  name: "Empath | אמפת"
+  id: "497830688175685643"
+  color: "#b8ffdf"
+  text: "Empath"
   show_button_member: true
--
-  type: "role"
-  category_id: "identity"
-  name: "Masculine | גברים"
-  id: "476916976011444244"
-  color: "#1a7de5"
-  text: "This is the masculine gender identity role. The Hebrew literally means \"men\" [gvarim]."
-  show_button_member: true
--
-  type: "role"
-  category_id: "identity"
-  name: "Pride | גאווה"
-  id: "498828572325183489"
-  color: "#aa32e6"
-  text: "This role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\" [gav'ah]."
-  show_button_member: true
--
+-  
   type: "role"
   category_id: "identity"
   name: "Plural | רבוי"
@@ -169,10 +148,10 @@
 -
   type: "role"
   category_id: "identity"
-  name: "Empath | אמפת"
-  id: "497830688175685643"
-  color: "#b8ffdf"
-  text: "Empath"
+  name: "Pride | גאווה"
+  id: "498828572325183489"
+  color: "#aa32e6"
+  text: "This role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\" [gav'ah]."
   show_button_member: true
 -
   type: "role"
@@ -206,6 +185,38 @@
   color: "#ff9960"
   text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
   show_button_member: true
+-
+  type: "note"
+  category_id: "identity"
+  text: "Pronouns"
+-
+  type: "role"
+  category_id: "identity"
+  name: "He/Him | הוא"
+  id: "537038437560352768"
+  color: "#1a7de5"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "identity"
+  name: "She/Her | היא"
+  id: "537038463879610380"
+  color: "#e91e63"
+  show_button_member: true  
+-
+  type: "role"
+  category_id: "identity"
+  name: "They/Them | הם"
+  id: "537038479616638988"
+  color: "#0dcf4f"
+  show_button_member: true  
+-
+  type: "role"
+  category_id: "identity"
+  name: "Ze/Hir | זה"
+  id: "537038499069558784"
+  color: "#9999ff"
+  show_button_member: true    
 # ---
 # nsfw
 # ---
@@ -761,7 +772,7 @@
   type: "role"
   category_id: "color"
   id: "#0dcf4f"
-  text: "same color as !r!497568507601485836!r!"
+  text: "same color as !r!537038479616638988!r!"
   show_button_member: true
 -
   type: "role"
@@ -785,7 +796,7 @@
   type: "role"
   category_id: "color"
   id: "#1a7de5"
-  text: "same color as !r!476916976011444244!r!"
+  text: "same color as !r!537038437560352768!r!"
   show_button_member: true
 -
   type: "role"
@@ -880,6 +891,7 @@
   type: "role"
   category_id: "color"
   id: "#9999ff"
+  text: "same color as !r!537038499069558784!r!"
   show_button_member: true
 -
   type: "role"
@@ -961,7 +973,7 @@
   type: "role"
   category_id: "color"
   id: "#e91e63"
-  text: "same color as !r!476916459470061569!r!"
+  text: "same color as !r!537038463879610380!r!"
   show_button_member: true
 -
   type: "role"
