@@ -765,6 +765,16 @@
 -
   type: "role"
   category_id: "color"
+  id: "#010101"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#0047ab"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
   id: "#0066ff"
   show_button_member: true
 -
@@ -822,6 +832,11 @@
 -
   type: "role"
   category_id: "color"
+  id: "#301055"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
   id: "#3d110a"
   text: "same color as !r!505446530354774050!r!"
   show_button_member: true
@@ -841,6 +856,11 @@
   category_id: "color"
   id: "#4d6875"
   text: "same color as !r!504828346522140693!r!"
+  show_button_member: true
+- 
+  type: "role"
+  category_id: "color"
+  id: "#5421d3"
   show_button_member: true
 -
   type: "role"
@@ -917,6 +937,11 @@
 -
   type: "role"
   category_id: "color"
+  id: "#aeb2dc"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
   id: "#b4570f"
   text: "same color as !r!499033497764233237!r!"
   show_button_member: true
@@ -958,6 +983,11 @@
   type: "role"
   category_id: "color"
   id: "#ccccff"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#cd2bea"
   show_button_member: true
 -
   type: "role"
