@@ -1,9 +1,9 @@
 ---
 ordinal: 0
-title: Introduction
+title: Welcome
 ---
 
-{% include atoms/heading.html size="2" text="Welcome to The Night House | בית הלילה" %} 
+{% include atoms/heading.html size="2" text="Welcome" %} 
 
 We are an occult / magick-focused Discord server that was created specifically to cater to the needs of adherents of spiritual practices / disciplines that broadly fall under the [Left Hand Path](https://en.wikipedia.org/wiki/Left-hand_path_and_right-hand_path){:target="_blank"} (LHP) umbrella. We strive to create a **comfortable, respectful, and non-judgmental space** for those who work with "dark" entities to discuss their respective practices without fear of ridicule or persecution.
 
