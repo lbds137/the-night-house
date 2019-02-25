@@ -1,3 +1,5 @@
+// credit: https://github.com/Aegis7Gaming/Discord-Invite-JS-HTML-CSS
+
 var discordInvite = discordInvite || function () {
     var i = {},
         e = "1.0";
