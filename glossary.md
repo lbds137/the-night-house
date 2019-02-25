@@ -1,5 +1,5 @@
 ---
-ordinal: 2
+ordinal: 3
 title: Glossary
 ---
 
