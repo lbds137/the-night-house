@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   {%- include atoms/head.html -%}
   <body>
     <!--
@@ -30,6 +30,7 @@
       discordInvite.init({
         inviteCode: 'wcUd2wm',
         title: 'The Night House | בית הלילה',
+        miniMode: window.matchMedia("only screen and (max-width: 760px)").matches
       });
       discordInvite.render();
     </script>
