@@ -4,22 +4,22 @@
         {%- unless link.exclude or link.url contains "/assets/" -%}
             {%- capture btn_class -%}
                 {%- if page.url == link.url -%}
-                    btn active
+                    {{ include.btn_class }} active
                 {%- else -%}
-                    btn
+                    {{ include.btn_class }}
                 {%- endif -%}
             {%- endcapture -%}
             <a href="{{ link.url }}" class="{{ btn_class }}">{{ link.title }}</a>
         {%- endunless -%}
     {%- endfor -%}
     {%- capture blog_link -%}
-        <a href="https://blog.thenighthouse.org/" class="btn">Blog</a>
+        <a href="https://blog.thenighthouse.org/" class="{{ include.btn_class }}">Blog</a>
     {%- endcapture -%}
     {%- capture stats_link -%}
-        <a href="https://www.statbot.net/guild/462036216909398026" class="btn" target="_blank">Stats</a>
+        <a href="https://www.statbot.net/guild/462036216909398026" class="{{ include.btn_class }}" target="_blank">Stats</a>
     {%- endcapture -%}
     {%- capture twitter_link -%}
-        <a href="https://twitter.com/TheNightHouse/" class="btn" target="_blank">Twitter</a>
+        <a href="https://twitter.com/TheNightHouse/" class="{{ include.btn_class }}" target="_blank">Twitter</a>
     {%- endcapture -%}
     {{ blog_link }}{{ stats_link }}{{ twitter_link }}
 </nav>
