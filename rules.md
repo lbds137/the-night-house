@@ -9,7 +9,7 @@ Although we strive to foster an environment where conversations can flow freely,
 
 ---
 
-1. **Do not promote harmful / violent ideologies**. This rule refers to (but is not limited to) things such as white supremacy, Nazism, mass murder, genocide, etc. *Note: it is acceptable to discuss these things (in the appropriate channel) provided that you do not express support for or affinity with them*. 
+1. **Do not promote discriminatory / violent ideologies**. This rule refers to (but is not limited to) things such as white supremacy, Nazism, mass murder, genocide, etc. *Note: it is acceptable to discuss these things (in the appropriate channel) provided that you do not express support for or affinity with them*. 
 
 2. **Do not use offensive slurs that target people's identities**. This server is sensitive to people's identities, whatever form they may take, and as such comments that are racist, homophobic, transphobic, etc. will not be tolerated.
 
