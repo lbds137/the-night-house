@@ -135,7 +135,7 @@
   name: "Alterhuman | לא אנושי"
   id: "569656106859757589"
   color: "#9966ff"
-  text: "This is a role for anyone who identifies as some kind of non-human being (typically referred to as "otherkin").
+  text: "This is a role for anyone who identifies as some kind of non-human being (typically referred to as \"otherkin\")."
   show_button_member: true
 -
   type: "role"
