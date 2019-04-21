@@ -132,6 +132,14 @@
 -
   type: "role"
   category_id: "identity"
+  name: "Alterhuman | לא אנושי"
+  id: "569656106859757589"
+  color: "#9966ff"
+  text: "This is a role for anyone who identifies as some kind of non-human being (typically referred to as "otherkin").
+  show_button_member: true
+-
+  type: "role"
+  category_id: "identity"
   name: "Empath | אמפת"
   id: "497830688175685643"
   color: "#b8ffdf"
@@ -921,6 +929,7 @@
   type: "role"
   category_id: "color"
   id: "#9966ff"
+  text: "same color as !r!569656106859757589!r!"
   show_button_member: true
 -
   type: "role"
