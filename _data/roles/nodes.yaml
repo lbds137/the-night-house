@@ -323,6 +323,14 @@
   text: "This is the role for folks who work with the Qliphot."
   show_button_member: true
 -
+  type: "role"
+  category_id: "belief"
+  name: "Satanism | שטניזם"
+  id: "576166031765143578"
+  color: "#ff3333"
+  text: "This is the role for folks who consider themselves Satanists of any variety."
+  show_button_member: true
+-
   type: "note"
   category_id: "belief"
   text: "Non-LHP"
@@ -583,6 +591,14 @@
 -
   type: "role"
   category_id: "language"
+  name: "Gaelic | גאלית"
+  id: "576171976498872320"
+  color: "#00ccff"
+  text: "Gaelic"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "language"
   name: "German | גרמנית"
   id: "505105085043572746"
   color: "#00ccff"
@@ -607,6 +623,14 @@
 -
   type: "role"
   category_id: "language"
+  name: "Icelandic | איסלנדית"
+  id: "576170476947374110"
+  color: "#00ccff"
+  text: "Icelandic"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "language"
   name: "Japanese | יפנית"
   id: "505110446445953039"
   color: "#00ccff"
@@ -627,6 +651,14 @@
   id: "505107401205088258"
   color: "#00ccff"
   text: "Latin"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "language"
+  name: "Norwegian | נורווגית"
+  id: "576171275844714517"
+  color: "#00ccff"
+  text: "Norwegian"
   show_button_member: true
 -
   type: "role"
@@ -659,6 +691,14 @@
   id: "505111216298000384"
   color: "#00ccff"
   text: "Russian"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "language"
+  name: "Scots | סקוטית"
+  id: "576172712037449788"
+  color: "#00ccff"
+  text: "Scots"
   show_button_member: true
 -
   type: "role"
@@ -806,6 +846,11 @@
   category_id: "color"
   id: "#0dcf4f"
   text: "same color as !r!537038479616638988!r!"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#104b67"
   show_button_member: true
 -
   type: "role"
@@ -969,6 +1014,11 @@
 -
   type: "role"
   category_id: "color"
+  id: "#c0c0c0"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
   id: "#c5b3ff"
   show_button_member: true
 -
@@ -1080,6 +1130,11 @@
   category_id: "color"
   id: "#ffc800"
   text: "same color as !r!537047781739724803!r!"
+  show_button_member: true
+-
+  type: "role"
+  category_id: "color"
+  id: "#ffcc99"
   show_button_member: true
 -
   type: "role"
