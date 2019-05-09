@@ -15,8 +15,12 @@
         {%- else -%}
             hide
         {%- endunless -%}
-    {%- elsif is_member and include.role.show_button_member -%}
-        member
+    {%- elsif is_member -%}
+        {%- unless include.role.hide_button_member -%}
+            member
+        {%- else -%}
+            hide
+        {%- endunless -%}
     {%- else -%}
         hide
     {%- endif -%}
