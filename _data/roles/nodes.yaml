@@ -231,7 +231,7 @@
   id: "497961918519312386"
   color: "#b62e21"
   text: "This role is for determining whether access is granted to channels specifically designated as NSFW. The Hebrew simply means \"adults\" [mevugarim]."
-  show_button_member: false
+  hide_button_member: true
 -
   type: "role"
   category_id: "nsfw"
@@ -239,7 +239,7 @@
   id: "500076544924975114"
   color: "#b62e21"
   text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\" [tzalamim eyromim]."
-  show_button_member: false
+  hide_button_member: true
 # ---
 # belief
 # ---
