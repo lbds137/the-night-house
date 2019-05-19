@@ -963,6 +963,10 @@
 -
   type: "role"
   category_id: "color"
+  id: "#ff44d6"
+-
+  type: "role"
+  category_id: "color"
   id: "#ff6505"
   text: "same color as !r!530956356539252736!r!"
 -
