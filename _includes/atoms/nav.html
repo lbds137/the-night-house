@@ -1,7 +1,7 @@
 <nav>
     {%- assign sorted_pages = site.pages | sort: "ordinal" -%}
     {%- for link in sorted_pages -%}
-        {%- unless link.exclude or link.url contains "/assets/" -%}
+        {%- unless link.exclude or link.url contains "/assets/" or link.url contains ".yml" -%}
             {%- capture btn_class -%}
                 {%- if page.url == link.url -%}
                     {{ include.btn_class }} active
