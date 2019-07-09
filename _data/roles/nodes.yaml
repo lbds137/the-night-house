@@ -193,6 +193,12 @@
 -
   type: "role"
   category_id: "identity"
+  name: "It/Its | זה"
+  id: "597961415264960513"
+  color: "#0047ab"
+-
+  type: "role"
+  category_id: "identity"
   name: "Neopronouns | כינויי גוף חדשים"
   id: "537047781739724803"
   color: "#ffc800"
@@ -733,6 +739,7 @@
   type: "role"
   category_id: "color"
   id: "#0047ab"
+  text: "same color as !r!597961415264960513!r!"
 -
   type: "role"
   category_id: "color"
