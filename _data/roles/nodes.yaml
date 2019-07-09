@@ -70,6 +70,14 @@
 -
   type: "role"
   category_id: "general"
+  name: "Defendant | נאשם"
+  id: "563774827668701200"
+  color: "#301055"
+  text: "This is a role for troublemakers, who get denied access to the main part of the server temporarily while they are taken to a special channel where the server staff can speak to them in private and confront them about the bad behavior. If the discussion goes well, access to the server is reinstated after a firm warning not to misbehave again; otherwise, either a kick or ban is issued, depending on the severity of the offense."
+  hide_button_member: true
+-
+  type: "role"
+  category_id: "general"
   name: "Guests | אורחים"
   id: "504828346522140693"
   color: "#4d6875"
@@ -795,6 +803,7 @@
   type: "role"
   category_id: "color"
   id: "#301055"
+  text: "same color as !r!563774827668701200!r!"
 -
   type: "role"
   category_id: "color"
