@@ -495,6 +495,13 @@
 -
   type: "role"
   category_id: "domain"
+  name: "Herbology | עשבולוגיה"
+  id: "604729479247691796"
+  color: "#66ffff"
+  text: "Herbology"
+-
+  type: "role"
+  category_id: "domain"
   name: "Kitchen Magick | קסם המטבח"
   id: "497831078653067264"
   color: "#66ffff"
@@ -537,6 +544,13 @@
   id: "505108546220982282"
   color: "#00ccff"
   text: "Chinese"
+-
+  type: "role"
+  category_id: "language"
+  name: "Finnish | פינית"
+  id: "604730337133592586"
+  color: "#00ccff"
+  text: "Finnish"
 -
   type: "role"
   category_id: "language"
@@ -649,6 +663,13 @@
   id: "505424154019889152"
   color: "#00ccff"
   text: "Spanish"
+-
+  type: "role"
+  category_id: "language"
+  name: "Swedish | שוודית"
+  id: "604730905990266911"
+  color: "#00ccff"
+  text: "Swedish"
 # ---
 # zodiac
 # ---
@@ -765,6 +786,10 @@
   category_id: "color"
   id: "#00ccff"
   text: "same color as !r!505107963049148426!r!"
+-
+  type: "role"
+  category_id: "color"
+  id: "#02f05d"
 -
   type: "role"
   category_id: "color"
@@ -948,6 +973,10 @@
   type: "role"
   category_id: "color"
   id: "#deaddd"
+-
+  type: "role"
+  category_id: "color"
+  id: "#e3e3e3"
 -
   type: "role"
   category_id: "color"
