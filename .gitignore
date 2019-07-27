@@ -2,3 +2,5 @@
 .directory
 .idea/
 *.iml
+log/
+tmp/
