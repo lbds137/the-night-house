@@ -5,37 +5,37 @@
 -
   type: "role"
   category_id: "staff"
-  name: "Administrator | מנהל ראש"
+  name: "Administrator | אדמין"
   id: "497584935234830366"
   color: "#e4b400"
-  text: "This is the admin role, and the Hebrew means \"head moderator\" [menahel rosh]."
+  text: "This is the admin role, and the Hebrew is a direct transliteration of \"admin\"."
   hide_button_staff: true
   hide_button_member: true
 -
   type: "role"
   category_id: "staff"
-  name: "Elder Moderators | מנהלים זקנים"
+  name: "Elder Moderators | מפקחים ותיקים"
   id: "497580616817311745"
   color: "#ff7503"
-  text: "This is the role for our most senior and trusted moderators, who must be over the age of 18 (legal majority). The Hebrew means \"senior moderators\" [menahlim zaknim]."
+  text: "This is the role for our most senior and trusted moderators, who must be over the age of 18 (legal majority). The Hebrew means \"veteran moderators\"."
   hide_button_staff: true
   hide_button_member: true
 -
   type: "role"
   category_id: "staff"
-  name: "Moderators | מנהלים"
+  name: "Moderators | מפקחים"
   id: "530956356539252736"
   color: "#ff6505"
-  text: "This is the role for our adult moderators, who must be over the age of 18 (legal majority). The Hebrew means \"moderators\" [menahlim]."
+  text: "This is the role for our adult moderators, who must be over the age of 18 (legal majority). The Hebrew means \"moderators\"."
   hide_button_staff: true
   hide_button_member: true
 -
   type: "role"
   category_id: "staff"
-  name: "Junior Moderators | מנהלים צעירים"
+  name: "Junior Moderators | מפקחים צעירים"
   id: "499033497764233237"
   color: "#b4570f"
-  text: "This is the role for junior moderators, who are under 18 but have been deemed sufficiently trustworthy to handle such duties. The Hebrew means \"junior moderators\" [menahlim tzayirim]."
+  text: "This is the role for junior moderators, who are under 18 but have been deemed sufficiently trustworthy to handle such duties. The Hebrew means \"junior moderators\"."
   hide_button_staff: true
   hide_button_member: true
 -
@@ -44,7 +44,7 @@
   name: "Staff | צוות"
   id: "499037360340598819"
   color: "#8c0cc5"
-  text: "This role is for server staff, so when you need help with something you can ping this role and everyone who helps manage the server will get pinged, rather than just one tier of moderators. The Hebrew means \"staff\" [tzevet]."
+  text: "This role is for server staff, so when you need help with something you can ping this role and everyone who helps manage the server will get pinged, rather than just one tier of moderators. The Hebrew means \"staff\"."
   hide_button_staff: true
   hide_button_member: true
 # ---
@@ -56,12 +56,12 @@
   name: "Members | חברים"
   id: "497610586750976020"
   color: "#17ac86"
-  text: "This is a general role for server members, and it is required to access the main part of the server. The Hebrew simply means \"members\" [khaverim]."
+  text: "This is a general role for server members, and it is required to access the main part of the server. The Hebrew simply means \"members\"."
   hide_button_member: true
 -
   type: "role"
   category_id: "general"
-  name: "Bots | רובוטים"
+  name: "Bots | בוטים"
   id: "497626822742376448"
   color: "#808588"
   text: "Bots"
@@ -81,7 +81,7 @@
   name: "Guests | אורחים"
   id: "504828346522140693"
   color: "#4d6875"
-  text: "This role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\" [orkhim]."
+  text: "This role is auto assigned to server members when they join. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the Members role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c! and !c!roles!c!, leaving an !c!introduction!c!, and visiting !c!role-request!c! to ask for roles. The Hebrew means \"guests\"."
   hide_button_member: true
 # ---
 # messages
@@ -96,35 +96,35 @@
   name: "Notify | להודיע"
   id: "504966239765135360"
   color: "#1a7939"
-  text: "This is an opt-out role for receiving announcements about server updates, contests, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon joining the server but you may unassign it yourself at any time. The Hebrew means \"inform\" [leho'dia]."
+  text: "This is an opt-out role for receiving announcements about server updates, events, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon joining the server but you may unassign it yourself at any time. The Hebrew means \"to inform\"."
 -
   type: "role"
   category_id: "messages"
   name: "Students | תלמידים"
   id: "531315690217406494"
   color: "#40bea2"
-  text: "This is an opt-in role for announcements regarding classes taking place on the server. The Hebrew means \"students\" [talmidim]."
+  text: "This is an opt-in role for announcements regarding classes taking place on the server. The Hebrew means \"students\"."
 -
   type: "role"
   category_id: "messages"
   name: "DM Friendly | בסדר לשלח הודעות"
   id: "498208423524171796"
   color: "#7dff00"
-  text: "This role is to signify that you are OK with receiving direct messages (DMs) from people on this server. The Hebrew means \"OK to send messages\" [beseder lishloakh hodaot]."
+  text: "This role is to signify that you are OK with receiving direct messages (DMs) from people on this server. The Hebrew means \"OK to send messages\"."
 -
   type: "role"
   category_id: "messages"
   name: "Ask To DM | שאל לפני לשלח הודעות"
   id: "498207388890038274"
   color: "#ffd200"
-  text: "This role is to signify that you might be OK with receiving direct messages, if you are asked first and reply in the affirmative. The Hebrew means \"ask before sending messages\" [she'el lifney lishloakh hodaot]."
+  text: "This role is to signify that you might be OK with receiving direct messages, if you are asked first and reply in the affirmative. The Hebrew means \"ask before sending messages\"."
 -
   type: "role"
   category_id: "messages"
   name: "Do Not DM | לא לשלח הודעות"
   id: "498208466066866186"
   color: "#ff0000"
-  text: "This role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you. The Hebrew means \"do not send messages\" [lo lishloakh hodaot]."
+  text: "This role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you. The Hebrew means \"do not send messages\"."
 # ---
 # identity
 # ---
@@ -152,14 +152,14 @@
   name: "Plural | רבוי"
   id: "501658770389336084"
   color: "#843da4"
-  text: "This is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"plurality\" [ribui]."
+  text: "This is a role for any plural members of the server, i.e. systems and any others experiencing a multiplicity of consciousnesses, for whatever reason. The Hebrew means \"plurality\"."
 -
   type: "role"
   category_id: "identity"
   name: "Pride | גאווה"
   id: "498828572325183489"
   color: "#aa32e6"
-  text: "This role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\" [gav'ah]."
+  text: "This role signifies that you identify under the LGBTQ+ umbrella. This role grants access to a role locked channel for discussing your LGBTQIA+ identity in a safe space. The Hebrew means \"pride\"."
 -
   type: "role"
   category_id: "identity"
@@ -170,14 +170,14 @@
 -
   type: "role"
   category_id: "identity"
-  name: "Sanguinarian | ערפד הדם"
+  name: "Sanguinarian | ערפד דם"
   id: "505446530354774050"
   color: "#3d110a"
   text: "This role is for self-identified vampires who feed on animal and/or human blood."
 -
   type: "role"
   category_id: "identity"
-  name: "Spirit Partner | בן/ת זוג רוח"
+  name: "Spirit Partner | בן/בת זוג רוח"
   id: "534917383824080927"
   color: "#cc00cc"
   text: "This role is for those who are romantic and / or sexual partners of spirits / gods / entities."
@@ -187,7 +187,7 @@
   name: "Spoonie | כפיות"
   id: "504971274431496194"
   color: "#ff9960"
-  text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\" [capiot]."
+  text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/){: target=\"_blank\"} for more details on the spoons paradigm. The Hebrew means \"teaspoons\"."
 -
   type: "note"
   category_id: "identity"
@@ -244,15 +244,15 @@
   name: "Adults/18+ | מבוגרים"
   id: "497961918519312386"
   color: "#b62e21"
-  text: "This role is for determining whether access is granted to channels specifically designated as NSFW. The Hebrew simply means \"adults\" [mevugarim]."
+  text: "This role is for determining whether access is granted to channels specifically designated as NSFW. The Hebrew simply means \"adults\"."
   hide_button_member: true
 -
   type: "role"
   category_id: "nsfw"
-  name: "Nudists | צלמים עירומים"
+  name: "Nudists | צלמי עירום"
   id: "500076544924975114"
   color: "#b62e21"
-  text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\" [tzalamim eyromim]."
+  text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their bodies in a safe space. The Hebrew means \"nude photographers\"."
   hide_button_member: true
 # ---
 # belief
@@ -281,14 +281,14 @@
   name: "Left Hand Path | נתיב היד שמאלי"
   id: "497568843003199488"
   color: "#ff3333"
-  text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The Hebrew literally means \"left hand path\" [nativ ah'yad smali]."
+  text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The Hebrew literally means \"left hand path\"."
 -
   type: "role"
   category_id: "belief"
   name: "Lilit | לילית"
   id: "497734400352714752"
   color: "#ff3333"
-  text: "This is the role for people who have some kind of relationship with or interest in Lilith. The Hebrew is simply Her name [lilit]."
+  text: "This is the role for people who have some kind of relationship with or interest in Lilith. The Hebrew is simply Her name."
 -
   type: "role"
   category_id: "belief"
@@ -341,14 +341,14 @@
   name: "Discordianism | דיסקורדיאניזם"
   id: "497604721121427456"
   color: "#11806a"
-  text: "This role is for folks who subscribe to Discordianism and its associated ways of thinking. The Hebrew is a transliteration of Discordianism [diskordianizm]."
+  text: "This role is for folks who subscribe to Discordianism and its associated ways of thinking. The Hebrew is a transliteration of Discordianism."
 -
   type: "role"
   category_id: "belief"
   name: "Draconic | דרקוני"
   id: "500412215011311626"
   color: "#11806a"
-  text: "This is the role for folks who work with dragons. The Hebrew means \"draconic\" [drakoni]."
+  text: "This is the role for folks who work with dragons. The Hebrew means \"draconic\"."
 -
   type: "role"
   category_id: "belief"
@@ -432,7 +432,7 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Baneful Magick | קסם ההרסני"
+  name: "Baneful Magick | קסם הרסני"
   id: "515302873135841281"
   color: "#66ffff"
   text: "Baneful Magick"
@@ -446,7 +446,7 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Chaos Magick | קסם האנדרלמוסיה"
+  name: "Chaos Magick | קסם אנדרלמוסיה"
   id: "497830979767894023"
   color: "#66ffff"
   text: "Chaos Magick"
@@ -460,7 +460,7 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Death Work | עבודת המוות"
+  name: "Death Work | עבודת מוות"
   id: "497830908590686218"
   color: "#66ffff"
   text: "Death Work"
@@ -474,21 +474,21 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Dream Work | עובדת החלום"
+  name: "Dream Work | עובדת חלומות"
   id: "497830385590337546"
   color: "#66ffff"
   text: "Dream Work"
 -
   type: "role"
   category_id: "domain"
-  name: "Element Work | עבודת היסודות"
+  name: "Element Work | עבודת יסודות"
   id: "497830634111107072"
   color: "#66ffff"
   text: "Element Work"
 -
   type: "role"
   category_id: "domain"
-  name: "Energy Work | עבודת המרץ"
+  name: "Energy Work | עבודת מרץ"
   id: "497830473238708224"
   color: "#66ffff"
   text: "Energy Work"
@@ -502,7 +502,7 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Kitchen Magick | קסם המטבח"
+  name: "Kitchen Magick | קסם מטבח"
   id: "497831078653067264"
   color: "#66ffff"
   text: "Kitchen Magick"
@@ -523,7 +523,7 @@
 -
   type: "role"
   category_id: "domain"
-  name: "Spirit Work | עבודת הרוח"
+  name: "Spirit Work | עבודת רוח"
   id: "497829909192769536"
   color: "#66ffff"
   text: "Spirit Work"
