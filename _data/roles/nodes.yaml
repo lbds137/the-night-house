@@ -1002,6 +1002,10 @@
 -
   type: "role"
   category_id: "color"
+  id: "#eb0040" 
+-
+  type: "role"
+  category_id: "color"
   id: "#ff0000"
   text: "same color as !r!498208466066866186!r!"
 -
