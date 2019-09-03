@@ -7,13 +7,13 @@ title: Roles
 
 {%- capture intro_note -%}
     To gain access to the main part of the server, you will need to **leave a quick introduction** in the {% include atoms/roles/text.html text="!c!introduction!c!" %} channel. Your introduction **must** contain the following information, unless otherwise specified:
-    - Preferred name and pronouns
-    - Age **or** mention of whether you are **over** or **under** 18 years of age (minors **are** allowed in the server)
-    - Confirmation that you have **read** the server rules and you **agree to abide** by them
-    - Occult interests and/or path
-    - Reason(s) for joining
-    - How you found us
-    - Anything else you'd like to tell us about yourself *(optional)*
+    * Preferred name and pronouns
+    * Age **or** mention of whether you are **over** or **under** 18 years of age (minors **are** allowed in the server)
+    * Confirmation that you have **read** the server rules and you **agree to abide** by them
+    * Occult interests and/or path
+    * Reason(s) for joining
+    * How you found us
+    * Anything else you'd like to tell us about yourself *(optional)*
     Once you are admitted, you may use the {% include atoms/roles/text.html text="!c!role-request!c!" %} channel to (optionally) self-assign a number of roles, listed out below. Please note that some channels are only visible to members with certain roles.
 {%- endcapture -%}
 {% include molecules/roles/note.html text=intro_note %}
