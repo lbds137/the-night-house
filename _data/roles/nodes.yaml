@@ -288,7 +288,7 @@
   name: "Lilit | לילית"
   id: "497734400352714752"
   color: "#ff3333"
-  text: "This is the role for people who have some kind of relationship with or interest in Lilith. The Hebrew is simply Her name."
+  text: "This is the role for people who have some kind of relationship with or interest in Lilith."
 -
   type: "role"
   category_id: "belief"
@@ -299,10 +299,10 @@
 -
   type: "role"
   category_id: "belief"
-  name: "Luciferianism | לוציפריאניזם"
+  name: "Lucifer | הילל"
   id: "511406657000177682"
   color: "#ff3333"
-  text: "This role is for folks who work with Lucifer and/or consider themselves subscribing to Luciferianism and its associated practices / ways of thinking."
+  text: "This is the role for people who have some kind of relationship with or interest in Lucifer / Heylel (as His name / epithet appears in the original Hebrew text of the Old Testament / Torah)."
 -
   type: "role"
   category_id: "belief"
@@ -310,6 +310,13 @@
   id: "505123979074469909"
   color: "#ff3333"
   text: "This is the role for folks who work with the Qliphot."
+-
+  type: "role"
+  category_id: "belief"
+  name: "Samael | סמאל"
+  id: "619328682871357440"
+  color: "#ff3333"
+  text: "This is the role for people who have some kind of relationship with or interest in Samael."
 -
   type: "role"
   category_id: "belief"
