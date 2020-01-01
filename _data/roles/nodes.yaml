@@ -32,15 +32,6 @@
 -
   type: "role"
   category_id: "staff"
-  name: "Junior Moderators | מפקחים צעירים"
-  id: "499033497764233237"
-  color: "#b4570f"
-  text: "This is the role for junior moderators, who are under 18 but have been deemed sufficiently trustworthy to handle such duties. The Hebrew means \"junior moderators\"."
-  hide_button_staff: true
-  hide_button_member: true
--
-  type: "role"
-  category_id: "staff"
   name: "Staff | צוות"
   id: "499037360340598819"
   color: "#8c0cc5"
