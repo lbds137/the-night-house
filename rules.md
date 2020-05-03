@@ -5,7 +5,7 @@ title: Rules
 
 {% include atoms/heading.html size="2" text="Rules" %}
 
-Although we strive to foster an environment where conversations can flow freely with minimal interference, we are a publicly accessible forum, and hence it is necessary to establish some ground rules / standards of conduct for the protection and comfort of our members. These rules also help streamline moderation of the server, such that everyone is on the same page about what is and is not permitted. **The primary theme of our rules is *"respect each other"*, in every sense of the word "respect".**
+Although we strive to foster an environment where conversations can flow freely with minimal interference, we are a publicly accessible forum, and hence it is necessary to establish some ground rules / standards of conduct for the protection and comfort of our members. These rules also help streamline moderation of the server, such that everyone is on the same page about what is and is not permitted. **The primary theme of our rules is *“respect each other”*, in every sense of the word “respect”.**
 
 ---
 
