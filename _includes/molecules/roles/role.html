@@ -26,26 +26,23 @@
     {%- endif -%}
 {%- endcapture -%}
 {%- capture role_id -%}
-    {%- if include.role.id.size > 7 -%}
-        <@&{{ include.role.id }}>
-    {%- elsif include.role.id.size == 7 -%}
-        {{ include.role.id }}
-    {%- endif -%}
+    <@&{{ include.role.id }}>
 {%- endcapture -%}
+{%- assign role_command = include.role.name | split: " | " | first -%}
 <div class="flex flex-wrap items-center justify-start">
     {%- unless mode == "hide" -%}
         {%- capture assign_command -%}
             {%- if mode == "staff" -%}
-                "s.sr @user {{ role_id }}"
+                "y^giverole @user {{ role_id }}"
             {%- elsif mode == "member" -%}
-                "n.iam {{ role_id }}"
+                "y^role {{ role_command }}"
             {%- endif -%}
         {%- endcapture -%}
         {%- capture unassign_command -%}
             {%- if mode == "staff" -%}
-                "s.rr @user {{ role_id }}"
+                "y^takerole @user {{ role_id }}"
             {%- elsif mode == "member" -%}
-                "n.iamn {{ role_id }}"
+                "y^role {{ role_command }}"
             {%- endif -%}
         {%- endcapture -%}
         <div>

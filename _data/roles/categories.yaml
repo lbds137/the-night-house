@@ -3,37 +3,69 @@
   name: "Staff"
   id: "staff"
 -
-  name: "General"
-  id: "general"
+  name: "Color"
+  id: "color"
 -
-  name: "Messaging Preferences"
-  id: "messages"
-  group_id: 3
+  name: "Age"
+  id: "age"
 -
-  name: "Identities / Pronouns"
+  name: "Access / Status"
+  id: "status"
+-
+  name: "Membership"
+  id: "membership"
+-
+  name: "Activity Level"
+  id: "activity"
+-
+  name: "RPG Campaigns"
+  id: "campaign"
+-
+  name: "Notification Preference"
+  id: "notification"
+-
+  name: "Direct Message Preference"
+  id: "dm"
+-
+  name: "Pronouns"
+  id: "pronouns"
+-
+  name: "Identities"
   id: "identity"
-  group_id: 2
 -
-  name: "NSFW"
-  id: "nsfw"
+  name: "Sun Sign"
+  id: "zodiac"
 -
-  name: "Spiritual Practices / Interests"
-  id: "belief"
-  group_id: 4
+  name: "MBTI"
+  id: "mbti"
 -
-  name: "Knowledge / Interest Domains"
-  id: "domain"
-  group_id: 5
+  name: "Enneagram (Base)"
+  id: "enneagram"
+-
+  name: "Enneagram (Wing)"
+  id: "wing"
+-
+  name: "Enneagram (Subtype)"
+  id: "instinct"
+-
+  name: "Element"
+  id: "element"
+-
+  name: "Hogwarts House"
+  id: "hogwarts"
 -
   name: "Languages"
   id: "language"
-  group_id: 6
 -
-  name: "Zodiac Sun Signs"
-  id: "zodiac"
-  group_id: 7
+  name: "Entities"
+  id: "entity"
 -
-  name: "Colors"
-  id: "color"
-  group_id: 1
+  name: "Beliefs / Paths"
+  id: "belief"
+-
+  name: "Polytheism"
+  id: "polytheism"
+-
+  name: "Disciplines"
+  id: "discipline"
 ---
