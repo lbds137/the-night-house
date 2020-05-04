@@ -526,7 +526,7 @@
 -
   type: "role"
   category_id: "notification"
-  name: "Voice Chat | שיחה קולית"
+  name: "Voice Chat | שיחת קולית"
   id: "701450213025644627"
   color: "bdb76b"
   text: "This is an opt-in role for being pinged when a person wishes to start a voice chat, in order to gather up folks to engage in that activity."
