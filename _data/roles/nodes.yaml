@@ -331,14 +331,6 @@
 -
   type: "role"
   category_id: "status"
-  name: "Astral Refuge | מקלט אסטרלי"
-  id: "705943344639115326"
-  color: "f08080"
-  text: "This role signifies that members have been granted access to the server's exclusive astral space."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "status"
   name: "Nitro Boosters | מאיצי ניטרו"
   id: "582217199217803284"
   color: "ee82ee"
@@ -472,25 +464,6 @@
   color: "8b0000"
   text: "This is a role that is automatically assigned via bot to users who have ***not*** sent at least one message within the activity monitoring period (currently 30 days). Users with this role will be ***pruned*** regularly (currently at every equinox and solstice during a calendar year)."
   hide_button_staff: true
-  hide_button_member: true
-# ---
-# campaign
-# ---
--
-  type: "role"
-  category_id: "campaign"
-  name: "Dungeons and Dragons | מבוכים ודרקונים"
-  id: "689894099314409578"
-  color: "ff0000"
-  text: "This is a role assigned to individuals participating in the currently active Dungeons and Dragons campaign."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "campaign"
-  name: "Vampire: The Masquerade | ערפד: נשף המסכות"
-  id: "701892271968092286"
-  color: "800000"
-  text: "This is a role assigned to individuals participating in the currently active Vampire: The Masquerade campaign."
   hide_button_member: true
 # ---
 # notification

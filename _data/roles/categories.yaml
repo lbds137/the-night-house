@@ -18,9 +18,6 @@
   name: "Activity Level"
   id: "activity"
 -
-  name: "RPG Campaigns"
-  id: "campaign"
--
   name: "Notification Preference"
   id: "notification"
 -
