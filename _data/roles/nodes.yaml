@@ -304,14 +304,6 @@
 -
   type: "role"
   category_id: "age"
-  name: "Age Verification | אימות גיל"
-  id: "500302191089680384"
-  color: "b22222"
-  text: "This is a role temporarily granted to individuals who have been cleared to apply for access to the !r!500076544924975114!r! role so that they can provide staff with the required documentation of their legal age (a government-issued ID with all personal information censored except for their photo and date of birth). All personal information is immediately deleted once the verification process is complete."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "age"
   name: "Adults | מבוגרים"
   id: "497961918519312386"
   color: "b22222"
