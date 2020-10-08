@@ -60,9 +60,32 @@ code {
 
 /* Page elements */
 
+.header-logo-container {
+  height: 25%;
+  width: 25%;
+}
+
 .header-logo {
-  height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
+}
+
+.stroke {
+  animation: stroke_animate 1s infinite alternate;
+}
+
+.fill {
+  animation: fill_animate 1s infinite alternate;
+}
+
+@keyframes stroke_animate {
+  from {stroke: red;}
+  to {stroke: magenta;}
+}
+
+@keyframes fill_animate {
+  from {fill: red;}
+  to {fill: magenta;}
 }
 
 .btn.active {
