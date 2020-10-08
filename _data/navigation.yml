@@ -2,11 +2,11 @@ main:
   - title: "Welcome"
     url: /
   - title: "Roles"
-    url: /roles
+    url: /roles/
   - title: "Rules"
-    url: /rules
+    url: /rules/
   - title: "Glossary"
-    url: /glossary
+    url: /glossary/
   - title: "Blog"
     url: https://blog.thenighthouse.org/
   - title: "Stats"
