@@ -2,7 +2,9 @@
 exclude: true
 ---
 
-@import "{{ site.theme }}";
+/* @import "{{ site.theme }}"; */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
 
 /* Theme overrides */
 

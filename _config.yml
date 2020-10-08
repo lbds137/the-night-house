@@ -3,6 +3,7 @@ encoding: UTF-8
 color: "#b62e21"
 #theme: jekyll-theme-cayman
 remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+minimal_mistakes_skin: "neon"
 markdown: kramdown
 baseurl: ""
 permalink: /:title/
