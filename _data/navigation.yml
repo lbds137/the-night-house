@@ -1,0 +1,15 @@
+main:
+  - title: "Welcome"
+    url: /
+  - title: "Roles"
+    url: /roles
+  - title: "Rules"
+    url: /rules
+  - title: "Glossary"
+    url: /glossary
+  - title: "Blog"
+    url: https://blog.thenighthouse.org/
+  - title: "Stats"
+    url: https://statbot.net/dashboard/462036216909398026
+  - title: "Twitter"
+    url: https://twitter.com/TheNightHouse/
