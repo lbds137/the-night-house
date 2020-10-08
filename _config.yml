@@ -1,13 +1,17 @@
 github: [metadata]
 encoding: UTF-8
 color: "#b62e21"
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 markdown: kramdown
 baseurl: ""
 permalink: /:title/
 
 title: "The Night House | בית הלילה"
 description: A friendly and inclusive Left Hand Path / Satanism focused server that is welcome to all, regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. and does not tolerate discrimination, bigotry, or harassment.
+
+plugins:
+  - jekyll-include-cache
 
 # for heroku
 exclude:
