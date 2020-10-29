@@ -965,33 +965,6 @@
   id: "636799843750117376"
   color: "4169e1"
 # ---
-# hogwarts
-# ---
--
-  type: "role"
-  category_id: "hogwarts"
-  name: "Gryffindor | גריפינדור"
-  id: "636768504611340288"
-  color: "ff1493"
--
-  type: "role"
-  category_id: "hogwarts"
-  name: "Hufflepuff | הפלפאף"
-  id: "636768685712867328"
-  color: "ff1493"
--
-  type: "role"
-  category_id: "hogwarts"
-  name: "Ravenclaw | ראוונקלוא"
-  id: "636769068078333953"
-  color: "ff1493"
--
-  type: "role"
-  category_id: "hogwarts"
-  name: "Slytherin | סלית'רין"
-  id: "636769320499937301"
-  color: "ff1493"
-# ---
 # language
 # ---
 -
@@ -1108,51 +1081,6 @@
   name: "Swedish | שוודית"
   id: "604730905990266911"
   color: "00bfff"
-# ---
-# entity
-# ---
--
-  type: "role"
-  category_id: "entity"
-  name: "Baphomet | באפומט"
-  id: "520348477440655360"
-  color: "ff0000"
-  text: "This is the role for people who have some kind of relationship with or interest in Baphomet."
--
-  type: "role"
-  category_id: "entity"
-  name: "Demons | שדים"
-  id: "512052948747026443"
-  color: "ff0000"
-  text: "This is the role for folks who work with demons, including but not limited to the Goetic demons."
--
-  type: "role"
-  category_id: "entity"
-  name: "Lilith | לילית"
-  id: "497734400352714752"
-  color: "ff0000"
-  text: "This is the role for people who have some kind of relationship with or interest in Lilith."
--
-  type: "role"
-  category_id: "entity"
-  name: "Lovecraftian | לאבקראפטי"
-  id: "505155807583928364"
-  color: "ff0000"
-  text: "This role is for people who work with Lovecraftian entities (Cthulhu, Hastur, etc.) or are interested in doing so."
--
-  type: "role"
-  category_id: "entity"
-  name: "Lucifer | הילל"
-  id: "511406657000177682"
-  color: "ff0000"
-  text: "This is the role for people who have some kind of relationship with or interest in Lucifer / Heylel (as His name / epithet appears in the original Hebrew text of the Old Testament / Torah)."
--
-  type: "role"
-  category_id: "entity"
-  name: "Samael | סמאל"
-  id: "619328682871357440"
-  color: "ff0000"
-  text: "This is the role for people who have some kind of relationship with or interest in Samael."
 # ---
 # belief
 # ---
