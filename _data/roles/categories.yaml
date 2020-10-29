@@ -48,14 +48,8 @@
   name: "Element"
   id: "element"
 -
-  name: "Hogwarts House"
-  id: "hogwarts"
--
   name: "Languages"
   id: "language"
--
-  name: "Entities"
-  id: "entity"
 -
   name: "Beliefs / Paths"
   id: "belief"
