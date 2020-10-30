@@ -938,6 +938,159 @@
   id: "658392581209587752"
   color: "ba55d3"
 # ---
+# hd
+# ---
+-
+  type: "role"
+  category_id: "hd"
+  name: "Generator | מחולל"
+  id: "771517092955947048"
+  color: "0000ff"
+-
+  type: "role"
+  category_id: "hd"
+  name: "Manifesting Generator | מחולל בצועיסט"
+  id: "771517623787716638"
+  color: "0000ff"
+-
+  type: "role"
+  category_id: "hd"
+  name: "Manifestor | בצועיסט"
+  id: "771518735138816002"
+  color: "0000ff"
+-
+  type: "role"
+  category_id: "hd"
+  name: "Projector | מקרן"
+  id: "771519632716070912"
+  color: "0000ff"
+-
+  type: "role"
+  category_id: "hd"
+  name: "Reflector | מחזירור"
+  id: "771520096681984021"
+  color: "0000ff"
+# ---
+# authority
+# ---
+-
+  type: "role"
+  category_id: "authority"
+  name: "Ego Authority | שליטת כוח רצוני"
+  id: "771521657109086258"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Emotional Authority | שליטה רגשית"
+  id: "771521888803487794"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Lunar Authority | שליטה ירחית"
+  id: "771522018662809630"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Mental Authority | שליטה נפשית"
+  id: "771522086916325426"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Sacral Authority | שליטה שורשי"
+  id: "771522249176907776"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Self Authority | שליטה אישית"
+  id: "771522180210098197"
+  color: "00008b"
+-
+  type: "role"
+  category_id: "authority"
+  name: "Splenic Authority | שליטת טחולית"
+  id: "771522299039842355"
+  color: "00008b"
+# ---
+# profile
+# ---
+-
+  type: "role"
+  category_id: "profile"
+  name: "1/3"
+  id: "771529570473082920"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "1/4"
+  id: "771529605697896470"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "2/4"
+  id: "771529635421880321"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "2/5"
+  id: "771529668935286785"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "3/5"
+  id: "771529697430601771"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "3/6"
+  id: "771529730818179104"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "4/6"
+  id: "771529761637269514"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "4/1"
+  id: "771529790749933578"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "5/1"
+  id: "771529844377780246"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "5/2"
+  id: "771529870349828096"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "6/2"
+  id: "771529913554698280"
+  color: "191970"
+-
+  type: "role"
+  category_id: "profile"
+  name: "6/3"
+  id: "771529938381701131"
+  color: "191970"
+# ---
 # element
 # ---
 -
@@ -1093,6 +1246,13 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Demonolatry | סגידת שדים"
+  id: "771535972650319874"
+  color: "cd853f"
+  text: "This role is for folks who practice Demonolatry, which is the worship of demons (although the definition of \"worship\" is generally different than it is for e.g. monotheistic practices)."
+-
+  type: "role"
+  category_id: "belief"
   name: "Discordianism | דיסקורדיאניזם"
   id: "497604721121427456"
   color: "cd853f"
@@ -1116,6 +1276,13 @@
   name: "Judaism | יהדות"
   id: "505757653545254912"
   color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
+  name: "Luciferianism | לוציפריאניזם"
+  id: "771536130185232384"
+  color: "cd853f"
+  text: "This role is for folks who practice Luciferianism, a belief system that venerates the essential characteristics that are affixed to Lucifer."
 -
   type: "role"
   category_id: "belief"
