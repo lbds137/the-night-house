@@ -1036,12 +1036,6 @@
 -
   type: "role"
   category_id: "language"
-  name: "Norwegian | נורווגית"
-  id: "576171275844714517"
-  color: "00bfff"
--
-  type: "role"
-  category_id: "language"
   name: "Polish | פולנית"
   id: "505104067408953344"
   color: "00bfff"
@@ -1122,13 +1116,6 @@
   name: "Judaism | יהדות"
   id: "505757653545254912"
   color: "cd853f"
--
-  type: "role"
-  category_id: "belief"
-  name: "Left Hand Path | נתיב היד השמאלית"
-  id: "497568843003199488"
-  color: "cd853f"
-  text: "This is the Left Hand Path role, which signifies interest and/or active practice in such matters. The Hebrew literally means \"left hand path\"."
 -
   type: "role"
   category_id: "belief"
