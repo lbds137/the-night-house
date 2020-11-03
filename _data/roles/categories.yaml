@@ -57,9 +57,6 @@
   name: "Element"
   id: "element"
 -
-  name: "Languages"
-  id: "language"
--
   name: "Beliefs / Paths"
   id: "belief"
 -
