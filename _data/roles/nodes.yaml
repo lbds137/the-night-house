@@ -1114,6 +1114,12 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Shintoism | שינטואיזם"
+  id: "775386747877982218"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
   name: "Wicca | ויקה"
   id: "505748591831416833"
   color: "cd853f"
