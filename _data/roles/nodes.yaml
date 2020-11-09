@@ -56,12 +56,6 @@
 -
   type: "role"
   category_id: "color"
-  name: "Firebrick"
-  id: "504686634252369942"
-  color: "b22222"
--
-  type: "role"
-  category_id: "color"
   name: "Dark Red"
   id: "604740881471242253"
   color: "8b0000"
@@ -77,12 +71,6 @@
   name: "Orange Red"
   id: "698239671792304218"
   color: "ff4500"
--
-  type: "role"
-  category_id: "color"
-  name: "Coral"
-  id: "505166994115395644"
-  color: "ff7f50"
 -
   type: "role"
   category_id: "color"
@@ -152,21 +140,9 @@
 -
   type: "role"
   category_id: "color"
-  name: "Light Blue"
-  id: "502160684688343041"
-  color: "add8e6"
--
-  type: "role"
-  category_id: "color"
   name: "Sky Blue"
   id: "505042949231345684"
   color: "87ceeb"
--
-  type: "role"
-  category_id: "color"
-  name: "Blue"
-  id: "502983471438888961"
-  color: "0000ff"
 -
   type: "role"
   category_id: "color"
