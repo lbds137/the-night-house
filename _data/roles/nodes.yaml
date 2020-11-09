@@ -98,12 +98,6 @@
 -
   type: "role"
   category_id: "color"
-  name: "Maroon"
-  id: "503937053826875413"
-  color: "800000"
--
-  type: "role"
-  category_id: "color"
   name: "Lime Green"
   id: "502151870014554112"
   color: "32cd32"
