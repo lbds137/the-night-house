@@ -1,4 +1,4 @@
 {% capture output %}
-    <div class="dib w-100 pa3 mb2 cb-3d110a">{%- include atoms/roles/text.html text=include.text -%}</div>
+    {%- include atoms/roles/text.html text=include.text -%}
 {% endcapture %}
-{{ output | markdownify }}
+<div class="dib w-100 pa3 mb2 cb-3d110a">{{ output | markdownify }}</div>
