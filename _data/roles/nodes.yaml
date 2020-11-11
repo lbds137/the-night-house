@@ -383,6 +383,13 @@
 -
   type: "role"
   category_id: "notification"
+  name: "Bump Crew | צוות דחיפה"
+  id: "776211371322900521"
+  color: "808000"
+  text: "This is an opt-in role for those who wish to help \"bump\" the server on [Disboard](https://disboard.org/server/462036216909398026). The YAGPDB bot pings this role every two hours when it's time for the server to be bumped, and it will continue to ping in 5 minute intervals until the server gets bumped."
+-
+  type: "role"
+  category_id: "notification"
   name: "Notify | להודיע"
   id: "504966239765135360"
   color: "006500"
