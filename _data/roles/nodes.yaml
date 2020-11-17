@@ -485,18 +485,6 @@
   name: "They/Them | הם"
   id: "537038479616638988"
   color: "32cd32"
--
-  type: "role"
-  category_id: "pronouns"
-  name: "Xe/Xem | זה"
-  id: "537049683063996457"
-  color: "ba55d3"
--
-  type: "role"
-  category_id: "pronouns"
-  name: "Ze/Hir | זה"
-  id: "537038499069558784"
-  color: "da70d6"
 # ---
 # identity
 # ---
