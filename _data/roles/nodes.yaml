@@ -1039,6 +1039,12 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Atheism | אתאיזם"
+  id: "784441238568435713"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
   name: "Buddhism | בודהיזם"
   id: "703434252083265656"
   color: "cd853f"
