@@ -372,6 +372,13 @@
 -
   type: "role"
   category_id: "notification"
+  name: "Announcement Notify | אודע להכרזות"
+  id: "739799057030971494"
+  color: "006500"
+  text: "This is an **opt-out** role for receiving pings for general server announcements and updates. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon being admitted to the server, but you may unassign it yourself at any time."
+-
+  type: "role"
+  category_id: "notification"
   name: "Book Club | קבוצת ספר"
   id: "651162187523686400"
   color: "008080"
@@ -386,10 +393,24 @@
 -
   type: "role"
   category_id: "notification"
-  name: "Notify | להודיע"
+  name: "Discussion Notify | אודע לדיונים"
   id: "504966239765135360"
   color: "006500"
-  text: "This is an **opt-out** role for receiving announcements about server updates, events, etc. We will try to not overuse this to spam people with annoying updates, but each person's definition of \"annoying\" is different. This role is automatically assigned to you upon joining the server but you may unassign it yourself at any time."
+  text: "This is an **opt-out** role for receiving pings for weekly discussion prompts. This role is automatically assigned to you upon being admitted to the server, but you may unassign it yourself at any time."
+-
+  type: "role"
+  category_id: "notification"
+  name: "Event Notify | אודע לאירועים"
+  id: "765263442650333224"
+  color: "006500"
+  text: "This is an **opt-out** role for receiving pings for server events. This role is automatically assigned to you upon being admitted to the server, but you may unassign it yourself at any time."
+-
+  type: "role"
+  category_id: "notification"
+  name: "Minecraft Realm Player | שחקן שרת מיינקראפט"
+  id: "504966239765135360"
+  color: "008000"
+  text: "This is an **opt-in** role for anyone who plays on the server's Minecraft Bedrock Edition Realm and would like to be pinged when other players wish to play as a group."
 -
   type: "role"
   category_id: "notification"
