@@ -38,12 +38,6 @@
 -
   type: "role"
   category_id: "color"
-  name: "Deep Pink"
-  id: "503961839957311489"
-  color: "ff1493"
--
-  type: "role"
-  category_id: "color"
   name: "Medium Violet Red"
   id: "502152364401229824"
   color: "c71585"
@@ -95,12 +89,6 @@
   name: "Goldenrod"
   id: "698248982002008064"
   color: "daa520"
--
-  type: "role"
-  category_id: "color"
-  name: "Lime Green"
-  id: "502151870014554112"
-  color: "32cd32"
 -
   type: "role"
   category_id: "color"
