@@ -1169,6 +1169,13 @@
 -
   type: "role"
   category_id: "polytheism"
+  name: "Pop Culture Polytheism | פוליתאיזם תרבות הפופ"
+  id: "788866478110801980"
+  color: "2e8b57"
+  text: "This role is for those who engage in practices / worship involving named entities / pantheons arising from popular culture."
+-
+  type: "role"
+  category_id: "polytheism"
   name: "Slavic Polytheism | פוליתאיזם סלאבי"
   id: "505793568049463306"
   color: "2e8b57"
