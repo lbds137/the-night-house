@@ -507,6 +507,13 @@
 -
   type: "role"
   category_id: "identity"
+  name: "Neurodiverse | מגוונוירולוגי"
+  id: "796048221713203240"
+  color: "f08080"
+  text: "This is a role for individuals identifying with any form of neurodiversity, such as autism spectrum, ADHD, etc."
+-
+  type: "role"
+  category_id: "identity"
   name: "Nonhuman | לא אנושי"
   id: "569656106859757589"
   color: "9932cc"
