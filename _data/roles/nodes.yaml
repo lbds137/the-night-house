@@ -197,7 +197,7 @@
 -
   type: "role"
   category_id: "age"
-  name: "Nudists | נודיסטים"
+  name: "Nudist | נודיסט"
   id: "500076544924975114"
   color: "b22222"
   text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their naked bodies in a safe space."
@@ -213,7 +213,7 @@
 -
   type: "role"
   category_id: "age"
-  name: "Adults | מבוגרים"
+  name: "Adult | מבוגר"
   id: "497961918519312386"
   color: "b22222"
   text: "This role signifies that members are ***over*** the age of 18 (legal majority)."
@@ -221,7 +221,7 @@
 -
   type: "role"
   category_id: "age"
-  name: "Minors | נערים"
+  name: "Minor | נער"
   id: "654838828250431488"
   color: "00ff00"
   text: "This role signifies that members are ***under*** the age of 18 (legal majority)."
@@ -232,7 +232,7 @@
 -
   type: "role"
   category_id: "status"
-  name: "Nitro Boosters | מאיצי ניטרו"
+  name: "Nitro Booster | מאיץ ניטרו"
   id: "582217199217803284"
   color: "ee82ee"
   text: "This is a vanity role signifying that members have boosted the server using Discord Nitro (which is much appreciated and deserves visual recognition). This role grants immunity from inactivity purges in the server."
@@ -241,7 +241,7 @@
 -
   type: "role"
   category_id: "status"
-  name: "Partners | שותפים"
+  name: "Partner | שותף"
   id: "624712102673907722"
   color: "483d8b"
   text: "This role signifies that members have been designated as official server partners, which means that there exists a bidirectional link between this server and a server in which they are an administrator or moderator. This role grants immunity from inactivity purges in the server."
@@ -250,7 +250,7 @@
 -
   type: "role"
   category_id: "status"
-  name: "Teachers | מורים"
+  name: "Teacher | מורה"
   id: "581606775988551682"
   color: "9acd32"
   text: "This role signifies that members have been designated as official teachers, which means that they can hold classes in the server (and have the required access to update the class schedule channel). This role grants immunity from inactivity purges in the server."
@@ -269,7 +269,7 @@
 -
   type: "role"
   category_id: "membership"
-  name: "Members | חברים"
+  name: "Member | חבר"
   id: "497610586750976020"
   color: "3cb371"
   text: "This is a general role for server members, and it is required to access the main part of the server."
@@ -295,7 +295,7 @@
 -
   type: "role"
   category_id: "membership"
-  name: "Guests | אורחים"
+  name: "Guest | אורח"
   id: "504828346522140693"
   color: "708090"
   text: "This role is automatically assigned to server members when they join, once they have been cleared by the AltDentifier bot. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the !r!497610586750976020!r! role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c!, certifying agreement to follow the rules in !c!agreement!c!, and leaving an !c!introduction!c!)."
@@ -303,7 +303,7 @@
 -
   type: "role"
   category_id: "membership"
-  name: "Bots | בוטים"
+  name: "Bot | בוט"
   id: "497626822742376448"
   color: "808080"
   text: "This is a utility role given to server bots in order to confine bot access to the appropriate section in the server, as well as to denote the difference between actual bots and PluralKit proxies (which appear as white rather than gray). For obvious reasons, this role is unavailable to human users."
@@ -351,7 +351,7 @@
 -
   type: "role"
   category_id: "activity"
-  name: "Active | פעילים"
+  name: "Active | פעיל"
   id: "624676327135641620"
   color: "228b22"
   text: "This is a role that is automatically assigned via bot to users who have sent at least one message within the activity monitoring period (currently 30 days)."
@@ -360,7 +360,7 @@
 -
   type: "role"
   category_id: "activity"
-  name: "Inactive | לא פעילים"
+  name: "Inactive | לא פעיל"
   id: "624676376058003483"
   color: "8b0000"
   text: "This is a role that is automatically assigned via bot to users who have ***not*** sent at least one message within the activity monitoring period (currently 30 days). Users with this role will be ***pruned*** regularly (currently at every equinox and solstice during a calendar year)."
@@ -407,21 +407,14 @@
 -
   type: "role"
   category_id: "notification"
-  name: "Minecraft Realm Player | שחקן שרת מיינקראפט"
-  id: "504966239765135360"
-  color: "008000"
-  text: "This is an **opt-in** role for anyone who plays on the server's Minecraft Bedrock Edition Realm and would like to be pinged when other players wish to play as a group."
--
-  type: "role"
-  category_id: "notification"
-  name: "Readees | מקבלי קריאות"
+  name: "Readee | מקבל קריאות"
   id: "654023856725426196"
   color: "20b2aa"
   text: "This is an opt-in role for being pinged when a person skilled in performing readings is willing to offer readings to server members."
 -
   type: "role"
   category_id: "notification"
-  name: "Students | תלמידים"
+  name: "Student | תלמיד"
   id: "531315690217406494"
   color: "40e0d0"
   text: "This is an opt-in role for announcements regarding classes taking place on the server."
