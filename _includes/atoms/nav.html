@@ -12,8 +12,8 @@
             <a href="{{ link.url }}" class="{{ btn_class }}">{{ link.title }}</a>
         {%- endunless -%}
     {%- endfor -%}
-    {%- capture blog_link -%}
-        <a href="https://blog.thenighthouse.org/" class="{{ include.btn_class }}">Blog</a>
+    {%- capture disboard_link -%}
+        <a href="https://disboard.org/server/462036216909398026" class="{{ include.btn_class }}">Disboard</a>
     {%- endcapture -%}
     {%- capture stats_link -%}
         <a href="https://statbot.net/dashboard/462036216909398026" class="{{ include.btn_class }}" target="_blank">Stats</a>
@@ -21,5 +21,5 @@
     {%- capture twitter_link -%}
         <a href="https://twitter.com/TheNightHouse/" class="{{ include.btn_class }}" target="_blank">Twitter</a>
     {%- endcapture -%}
-    {{ blog_link }}{{ stats_link }}{{ twitter_link }}
+    {{ disboard_link }}{{ stats_link }}{{ twitter_link }}
 </nav>
