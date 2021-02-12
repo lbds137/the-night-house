@@ -16,4 +16,4 @@ These roles can be unassigned in the same manner by using the **red buttons** in
 {% endcapture %}
 {% include molecules/roles/note.html text=intro_note %}
 
-{% include organisms/roles.html user="member" %}
+{% include organisms/roles.html %}
