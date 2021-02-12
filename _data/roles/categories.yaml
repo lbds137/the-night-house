@@ -60,6 +60,9 @@
   name: "Element"
   id: "element"
 -
+  name: "Continent"
+  id: "continent"
+-
   name: "Beliefs / Paths"
   id: "belief"
 -
