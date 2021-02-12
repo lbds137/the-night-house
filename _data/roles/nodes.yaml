@@ -1262,6 +1262,51 @@
   id: "636799843750117376"
   color: "4169e1"
 # ---
+# continent
+# ---
+-
+  type: "role"
+  category_id: "continent"
+  name: "Africa | אפריקה"
+  id: "809557848169906228"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "Antarctica | אנטארקטיקה"
+  id: "809557854519820378"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "Asia | אסיה"
+  id: "809557968659546135"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "Australia | אוסטרליה"
+  id: "809558014738169886"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "Europe | אירופה"
+  id: "809558138973323265"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "North America | צפון אמריקה"
+  id: "809558140839395378"
+  color: "deb887"
+-
+  type: "role"
+  category_id: "continent"
+  name: "South America | דרום אמריקה"
+  id: "809558579191349298"
+  color: "deb887"
+# ---
 # belief
 # ---
 -
