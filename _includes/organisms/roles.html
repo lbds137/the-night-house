@@ -2,6 +2,6 @@
     {%- assign nodes = site.data.roles.nodes | where: "category_id", category.id -%}
     {%- if nodes.size > 0 -%}
         <hr />
-        {%- include molecules/roles/category.html name=category.name nodes=nodes user=include.user -%}
+        {%- include molecules/roles/category.html name=category.name nodes=nodes -%}
     {%- endif -%}
 {%- endfor -%}
