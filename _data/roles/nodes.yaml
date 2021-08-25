@@ -232,14 +232,6 @@
 -
   type: "role"
   category_id: "age"
-  name: "Ritualism | טקסיות"
-  id: "777218328245960764"
-  color: "b22222"
-  text: "This role, available only to members who are ***over*** the age of 18 (legal majority), grants access to specialized voice chat channels (audio and text) in order to sequester any *live rituals or heavy magick work* away from the regular voice chat activities taking place in the server. **These channels are the *only* place in the server where live activities of this sort are permitted**, and the role is available by request only (manually assigned by staff) to any eligible members who wish to have access. ***Minors are not allowed to engage in any rituals or heavy magick work over any VC, regardless of whether the nature of the work is NSFW or not.***"
-  hide_button_member: true
--
-  type: "role"
-  category_id: "age"
   name: "Adult | מבוגר"
   id: "497961918519312386"
   color: "b22222"
