@@ -77,22 +77,12 @@ code {
   width: 100%;
 }
 
-.stroke {
-  animation: stroke_animate 1s infinite alternate;
+.animate {
+  animation: 1s linear 0s infinite alternate brightness_animate;
 }
-
-.fill {
-  animation: fill_animate 1s infinite alternate;
-}
-
-@keyframes stroke_animate {
-  from {stroke: red;}
-  to {stroke: magenta;}
-}
-
-@keyframes fill_animate {
-  from {fill: red;}
-  to {fill: magenta;}
+@keyframes brightness_animate {
+  from {filter: brightness(0.5);}
+  to {filter: brightness(1);}
 }
 
 .btn.active {
