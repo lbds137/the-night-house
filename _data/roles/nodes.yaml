@@ -101,15 +101,20 @@
 -
   type: "role"
   category_id: "color"
-  name: "Papaya Whip"
-  id: "502158909247586307"
-  color: "ffefd5"
--
-  type: "role"
-  category_id: "color"
   name: "Gold"
   id: "502969541567971338"
   color: "ffd700"
+-
+  type: "role"
+  category_id: "color"
+  name: "Papaya Whip"
+  id: "502158909247586307"
+  color: "ffefd5"
+- type: "role"
+  category_id: "color"
+  name: "Sienna"
+  id: "925112658699620392"
+  color: "a0522d"
 -
   type: "role"
   category_id: "color"
@@ -525,6 +530,20 @@
 # ---
 # identity
 # ---
+-
+  type: "role"
+  category_id: "identity"
+  name: "BIPOC | אדם בעל צבע"
+  id: "925113368606572604"
+  color: "a0522d"
+  text: "This is a role for members who are Black, Indigenous, and / or People of Color."
+-
+  type: "role"
+  category_id: "identity"
+  name: "Donor | תורם"
+  id: "740632433904451702"
+  color: "ffd700"
+  text: "This is a role for individuals who choose to donate their life force to vampires in need."
 -
   type: "role"
   category_id: "identity"
