@@ -1446,17 +1446,17 @@
 -
   type: "role"
   category_id: "polytheism"
+  name: "Germanic Polytheism | פוליתאיזם גרמני"
+  id: "505734825076850698"
+  color: "2e8b57"
+  text: "This role is for those who engage in practices / worship related to Germanic Polytheism."
+-
+  type: "role"
+  category_id: "polytheism"
   name: "Greco-Roman Polytheism | פוליתאיזם יווני-רומי"
   id: "505119791284224000"
   color: "2e8b57"
   text: "This role is for those who engage in practices / worship related to Greco-Roman Polytheism."
--
-  type: "role"
-  category_id: "polytheism"
-  name: "Norse Polytheism | פוליתאיזם נורדי"
-  id: "505734825076850698"
-  color: "2e8b57"
-  text: "This role is for those who engage in practices / worship related to Norse Polytheism."
 -
   type: "role"
   category_id: "polytheism"
