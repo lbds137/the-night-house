@@ -15,7 +15,7 @@ Although we strive to foster an environment where conversations can flow freely 
 
 2. **You may not promote violent or discriminatory ideologies.** This includes (but is not limited to) things such as white supremacy, Nazism, mass murder, genocide, etc. _Note: it is acceptable to **discuss** these things (in the appropriate channel) provided that you do not express **support for** or **affinity with** them._
 
-3. **You may not insult or belittle someone on the basis of their identity.** This covers the usage of slurs (with a *narrow* exemption for reclaimed slurs if they are used to describe *yourself*) and other language that insults an individual for their membership in a protected class / marginalized group.
+3. **You may not insult or belittle someone on the basis of their identity.** This includes the use of language that insults an individual for their membership in a protected class / marginalized group, such as slurs (with *narrow* exemptions for **(1)** slurs targeting a majority / privileged group and **(2)** reclaimed slurs if they are used to describe *yourself*).
 
 4. **You may not post NSFW content (i.e. content related to sex / drugs) in the presence of minors.** Occasional low-brow jokes / innuendo are permitted, as is language of a coarse nature, but the goal is for the bulk of the server to be **“PG-13”**. In accordance with this policy, you are expected to keep all **“R”** or **“NC-17”** content to the NSFW sections of the server. _Note: posting or expressing approval of lewd imagery of minors is an **instantly bannable offense**, and **ignorance is not a valid defense.**_
 
