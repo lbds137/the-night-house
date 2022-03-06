@@ -11,7 +11,7 @@ Unlike other servers that target the LHP demographic, we strive to be different 
  
 Although LHP is our theme and focus, **we value diversity of opinions, knowledge, and practices**, and as such we are welcoming to all who are interested in magick / the occult, whether pagan, eclectic, monotheistic, or even atheistic in orientation. We believe that the free exchange of ideas is crucial to fostering a productive conversation and learning from each other, and as such **we do not have specific policies regarding cultural appropriation**, although we do advise our members to be respectful of other cultures and make every effort to understand the full cultural and historical context of the practices they engage in.
  
-We strive to foster conversations about a variety of topics, included but not limited to astrology / divination, sigils / spells, baneful / offensive magick, demonology / Goetia, polytheistic pantheons (Egyptian, Greek, Norse, etc.), Discordianism / chaos magick, Qabalah / Qliphoth, and spiritworking / shamanism.
+We strive to foster conversations about a variety of topics, included but not limited to astrology / divination, sigils / spells, baneful / offensive magick, demonology / Goetia, polytheistic pantheons (Egyptian, Greek, Norse, etc.), Discordianism / chaos magick, Qabala / Qlipot, and spiritworking / shamanism.
  
 We hope that you will choose to join us!
 
