@@ -1405,6 +1405,12 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Omnism | אומניזם"
+  id: "968301563892363274"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
   name: "Qabalah | קבלה"
   id: "505122608623386630"
   color: "cd853f"
