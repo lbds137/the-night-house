@@ -240,23 +240,15 @@
   name: "Polemicist | פולמוסן"
   id: "950124578338910298"
   color: "b22222"
-  text: "This is an exclusive role that is only granted to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 6**."
+  text: "This is a role for to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 6**."
   hide_button_member: true
 -
   type: "role"
   category_id: "age"
-  name: "Adult | מבוגר"
+  name: "NSFW Access | גישה לתוכן למבוגרים"
   id: "497961918519312386"
   color: "b22222"
-  text: "This role signifies that members are ***over*** the age of 18 (legal majority)."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "age"
-  name: "Minor | נער"
-  id: "654838828250431488"
-  color: "00ff00"
-  text: "This role signifies that members are ***under*** the age of 18 (legal majority)."
+  text: "This role grants access to NSFW sections of the server."
   hide_button_member: true
 # ---
 # status
