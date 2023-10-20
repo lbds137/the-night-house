@@ -1339,6 +1339,12 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Animism | אנימיזם"
+  id: "1165054139500335124"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
   name: "Atheism | אתאיזם"
   id: "784441238568435713"
   color: "cd853f"
@@ -1375,6 +1381,18 @@
   id: "500412215011311626"
   color: "cd853f"
   text: "This is the role for folks who work with dragons. The Hebrew means \"draconic\"."
+-
+  type: "role"
+  category_id: "belief"
+  name: "Gnosticism | גנוסטיקה"
+  id: "1165054317867302953"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
+  name: "Hermeticism | ההרמטיציזם"
+  id: "1165054358765965413"
+  color: "cd853f"
 -
   type: "role"
   category_id: "belief"
