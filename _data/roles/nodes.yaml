@@ -223,12 +223,12 @@
   name: "Black"
   id: "546393036255526912"
   color: "1c1c1c"
-# ---
-# age
-# ---
+# ------
+# access
+# ------
 -
   type: "role"
-  category_id: "age"
+  category_id: "access"
   name: "Nudist | נודיסט"
   id: "500076544924975114"
   color: "b22222"
@@ -236,32 +236,31 @@
   hide_button_member: true
 -
   type: "role"
-  category_id: "age"
-  name: "Polemicist | פולמוסן"
-  id: "950124578338910298"
-  color: "b22222"
-  text: "This is a role for to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 6**."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "age"
+  category_id: "access"
   name: "NSFW Access | גישה לתוכן למבוגרים"
   id: "497961918519312386"
   color: "b22222"
   text: "This role grants access to NSFW sections of the server."
   hide_button_member: true
+-
+  type: "role"
+  category_id: "access"
+  name: "Polemicist | פולמוסן"
+  id: "950124578338910298"
+  color: "b22222"
+  text: "This is a role for to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 5**."
+  hide_button_member: true
+-
+  type: "role"
+  category_id: "access"
+  name: "Rare Archive Access | גישה לארכיון נדיר"
+  id: "1166927929008193627"
+  color: "b22222"
+  text: "This role grants access to channels that have been archived for longer than a year and have been moved out of the public archive sections."
+  hide_button_member: true
 # ---
 # status
 # ---
--
-  type: "role"
-  category_id: "status"
-  name: "Artist | אומן"
-  id: "885288223151095870"
-  color: "9932cc"
-  text: "This role signifies that members have been granted their own art channel, and it grants immunity from inactivity purges in the server."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "status"
@@ -1296,12 +1295,6 @@
   category_id: "continent"
   name: "Africa | אפריקה"
   id: "809557848169906228"
-  color: "deb887"
--
-  type: "role"
-  category_id: "continent"
-  name: "Antarctica | אנטארקטיקה"
-  id: "809557854519820378"
   color: "deb887"
 -
   type: "role"

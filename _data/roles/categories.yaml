@@ -6,10 +6,10 @@
   name: "Color"
   id: "color"
 -
-  name: "Age / Access"
-  id: "age"
+  name: "Access"
+  id: "access"
 -
-  name: "Permissions / Status"
+  name: "Status"
   id: "status"
 -
   name: "Membership"
