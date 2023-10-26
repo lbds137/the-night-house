@@ -7,7 +7,7 @@ title: Roles
 
 {%- capture roles -%}!c!roles!c!{%- endcapture -%}
 {% capture intro_note %}
-Listed below are the roles which are available in the server (with some limited exceptions, such as automatically managed bot integration roles). Some of these roles may be self-assigned via the {% include atoms/roles/text.html text=roles %} channel, while others require staff intervention (such as the Adult, Polemicist, and Nudist roles). 
+Listed below are the roles which are available in the server (with some limited exceptions, such as automatically managed bot integration roles). Some of these roles may be self-assigned via the {% include atoms/roles/text.html text=roles %} channel, while others require staff intervention (e.g. the Nudist role). 
 
 For the roles that **can** be self assigned, the mechanism for self assignment entails clicking on an emoji reaction in the {% include atoms/roles/text.html text=roles %} channel. 
 
