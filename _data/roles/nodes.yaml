@@ -1395,6 +1395,12 @@
 -
   type: "role"
   category_id: "belief"
+  name: "Islam | איסלאם"
+  id: "1224160643628662804"
+  color: "cd853f"
+-
+  type: "role"
+  category_id: "belief"
   name: "Judaism | יהדות"
   id: "505757653545254912"
   color: "cd853f"
