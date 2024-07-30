@@ -28,7 +28,7 @@ var discordInvite = discordInvite || function () {
                             var t = e.approximate_member_count.toLocaleString("en") + " Members",
                                 o = e.approximate_presence_count.toLocaleString("en") + " Online",
                                 n = e.guild.name,
-                                r = "https://cdn.discordapp.com/icons/" + e.guild.id + "/" + e.guild.icon + ".gif";
+                                r = "https://cdn.discordapp.com/icons/" + e.guild.id + "/" + e.guild.icon + ".png";
                             $("#serverName").html(n), $("#serverImg").css("background-image", "url(" + r + ")"), $("#numTotal").html(t), $("#numOnline").html(o), $(".discordLink").click(function () {
                                 $("#callToAction").html(d).attr("id", "callToAction-clicked"), url = "https://discord.com/invite/" + i.inviteCode, window.open(url, "_blank")
                             }), $(".loadHidden").show(), i.miniMode && $("#offlineInd, #numTotal").hide(), i.hideIntro && $("#introText").hide()
