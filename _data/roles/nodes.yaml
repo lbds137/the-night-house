@@ -282,14 +282,6 @@
 -
   type: "role"
   category_id: "status"
-  name: "Teacher | מורה"
-  id: "581606775988551682"
-  color: "9acd32"
-  text: "This role signifies that members have been designated as official teachers, which means that they can hold classes in the server (and have the required access to update the class schedule channel). This role grants immunity from inactivity purges in the server."
-  hide_button_member: true
--
-  type: "role"
-  category_id: "status"
   name: "Ticket Voice | שיחה קולית פרטית"
   id: "701897977429491862"
   color: "cd853f"
@@ -450,13 +442,6 @@
   id: "654023856725426196"
   color: "20b2aa"
   text: "This is an opt-in role for being pinged when a person skilled in performing readings is willing to offer readings to server members."
--
-  type: "role"
-  category_id: "notification"
-  name: "Student | תלמיד"
-  id: "531315690217406494"
-  color: "40e0d0"
-  text: "This is an opt-in role for announcements regarding classes taking place on the server."
 -
   type: "role"
   category_id: "notification"
