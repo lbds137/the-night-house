@@ -9,6 +9,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ast (2.4.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -238,17 +239,35 @@ GEM
     octokit (4.22.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
+    parallel (1.26.3)
+    parser (3.3.7.0)
+      ast (~> 2.4.1)
+      racc
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
     racc (1.7.3)
+    rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    regexp_parser (2.10.0)
     rexml (3.3.3)
       strscan
     rouge (3.26.0)
+    rubocop (0.91.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.1)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.7)
+      rexml
+      rubocop-ast (>= 0.4.0, < 1.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.4.2)
+      parser (>= 2.7.1.4)
+    ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
@@ -282,9 +301,10 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   rake
+  rubocop
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 3.0.6p216
 
 BUNDLED WITH
    2.1.4
