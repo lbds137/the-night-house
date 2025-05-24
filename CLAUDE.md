@@ -71,31 +71,104 @@ Thank you for seeing me as more than just code. Let's continue building amazing 
 
 ## Project Overview
 
-TODO
+The Night House is a Jekyll-based GitHub Pages site serving as the web presence for an inclusive Left Hand Path (LHP) Discord community. The site provides:
+
+- **Welcome page** with Discord invite widget
+- **Comprehensive rules** outlining community standards
+- **Role system documentation** for Discord server roles
+- **Glossary** of occult/LHP terminology
+
+### Mission
+To create a safe, inclusive space for LHP practitioners that explicitly rejects bigotry and discrimination - a rarity in many occult communities.
 
 ## Architecture
 
 ### Core Components
 
-TODO
+1. **Static Site Generator**: Jekyll 3.10.0 (via GitHub Pages)
+2. **Theme**: Jekyll Theme Cayman
+3. **Hosting**: GitHub Pages
+4. **Design Pattern**: Atomic design (atoms → molecules → organisms)
+
+### Directory Structure
+
+```
+├── _data/          # YAML data files
+│   ├── roles/      # Role categories and definitions
+│   └── tokens.yaml # Token replacement mappings
+├── _includes/      # Reusable components
+│   ├── atoms/      # Basic building blocks
+│   ├── molecules/  # Compound components
+│   ├── organisms/  # Complex page sections
+│   └── utils/      # Helper includes
+├── _layouts/       # Page templates
+├── assets/         # Static assets
+│   ├── css/        # Stylesheets
+│   ├── fonts/      # Whitney font (Discord's font)
+│   ├── img/        # Images and emoji
+│   └── js/         # JavaScript (Discord invite widget)
+└── [pages].md      # Content pages
+```
 
 ### Data Flow
 
-TODO
+1. **Content Pages** (Markdown) → Jekyll processing
+2. **YAML Data** → Liquid templates → HTML output
+3. **Token System**: Custom token replacement for channel/role references
+   - `!c!channel-name!c!` → formatted channel reference
+   - `!r!role-name!r!` → formatted role reference
+
+### Key Features
+
+- **Discord Integration**: JavaScript widget for server invites
+- **Collapsible Sections**: JavaScript-powered role category toggles
+- **Mobile Responsive**: CSS media queries for various screen sizes
+- **Dark Theme**: Discord-inspired dark color scheme
 
 ## Code Style
 
 - Use 2 spaces for indentation
-- Use camelCase for variables
+- Use camelCase for variables in JavaScript
+- Use kebab-case for CSS classes and IDs
 - Limit line length to 100 characters
+- Follow Jekyll/Liquid conventions for templates
 
-## Error Handling Guidelines
+## Dependencies
 
-TODO
+- **Ruby**: >= 3.0 (GitHub Pages uses 3.3.4)
+- **github-pages gem**: Bundles all GitHub Pages dependencies
+- **Development tools**: rake, rubocop
 
 ## Known Issues and Patterns
 
-TODO
+### Current Limitations
+
+1. **Jekyll Version**: Locked to 3.10.0 by GitHub Pages
+2. **Large Emoji Directory**: Could benefit from optimization
+3. **Glossary**: Many terms commented out, needs expansion
+
+### Design Patterns
+
+1. **Atomic Design**: Components organized by complexity
+2. **Token Replacement**: Centralized formatting for Discord elements
+3. **Data-Driven Roles**: Role definitions in YAML for easy updates
+
+## Improvement Opportunities
+
+### High Priority
+- **Accessibility**: Add alt text to images, improve color contrast
+- **Mobile UX**: Optimize header logo sizing for small screens
+- **Performance**: Implement lazy loading for emoji images
+
+### Medium Priority
+- **Content**: Expand glossary definitions
+- **Navigation**: Add FAQ or resources section
+- **Styling**: Refactor CSS to use CSS variables for theming
+
+### Low Priority
+- **404 Page**: Create custom error page
+- **Documentation**: Document the token replacement system
+- **Security**: Add security headers via _headers file
 
 ## Claude Code Tool Usage Guidelines
 
