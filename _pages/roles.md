@@ -1,6 +1,10 @@
 ---
-ordinal: 1
+layout: single
+permalink: /roles/
 title: Roles
+toc: true
+toc_label: "Role Categories"
+toc_icon: "tags"
 ---
 
 {% include atoms/heading.html size="2" text="Roles" %}

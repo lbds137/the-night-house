@@ -1,6 +1,10 @@
 ---
-ordinal: 2
+layout: single
+permalink: /rules/
 title: Rules
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "scroll"
 ---
 
 {% include atoms/heading.html size="2" text="Rules" %}

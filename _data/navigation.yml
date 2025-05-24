@@ -1,0 +1,27 @@
+main:
+  - title: "Welcome"
+    url: /
+  - title: "Community"
+    children:
+      - title: "Rules"
+        url: /rules/
+      - title: "Roles"
+        url: /roles/
+      - title: "Glossary"
+        url: /glossary/
+  - title: "Resources"
+    children:
+      - title: "Getting Started"
+        url: /resources/getting-started/
+      - title: "Books & Reading"
+        url: /resources/books/
+      - title: "Practices & Rituals"
+        url: /resources/practices/
+      - title: "External Links"
+        url: /resources/links/
+  - title: "Blog"
+    url: https://blog.thenighthouse.org/
+  - title: "Stats"
+    url: https://statbot.net/dashboard/462036216909398026
+  - title: "Twitter"
+    url: https://twitter.com/TheNightHouse/

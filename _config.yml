@@ -1,7 +1,23 @@
 github: [metadata]
 encoding: UTF-8
 color: "#b62e21"
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+minimal_mistakes_skin: "neon"
+
+plugins:
+  - jekyll-include-cache
+
+head_scripts:
+  - https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  - https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js
+  - https://cdn.jsdelivr.net/npm/@iconfu/svg-inject@1.2.3/dist/svg-inject.min.js
+  - https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js
+  - /assets/js/discordInvite.js
+  - /assets/js/script.js
+
+include:
+  - _pages
 markdown: kramdown
 baseurl: ""
 permalink: /:title/

@@ -1,6 +1,8 @@
 ---
-ordinal: 3
+layout: single
+permalink: /glossary/
 title: Glossary
+toc: false
 ---
 
 {% include atoms/heading.html size="2" text="Glossary" %} 
