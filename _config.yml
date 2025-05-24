@@ -9,6 +9,12 @@ permalink: /:title/
 title: "The Night House | בית הלילה"
 description: A friendly and inclusive Left Hand Path / Satanism focused server that is welcome to all, regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. and does not tolerate discrimination, bigotry, or harassment.
 
-# for heroku
+# Files and directories to exclude from Jekyll build
 exclude:
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - LICENSE
   - vendor
