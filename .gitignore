@@ -4,3 +4,8 @@
 *.iml
 log/
 tmp/
+.bundle/
+vendor/bundle/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
