@@ -1,0 +1,118 @@
+name: PR screenshots
+
+# Posts phone and desktop screenshots of every page on each PR, so a change can be seen without
+# reading its diff. `shoot` builds and runs the PR's code with a read-only token; `publish` runs
+# no PR code: it checks that the files are PNGs, stores them on the `screenshots` branch, and
+# comments with links to them.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: pr-screenshots-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  shoot:
+    # A fork's PR can't be given the write token the publish job needs.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v6
+      # No dependency cache: PR code runs in this job and could poison a shared cache entry.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+      - name: Screenshot every page
+        run: |
+          pnpm astro preview --port 4321 &
+          for _ in $(seq 30); do curl -sf http://localhost:4321/ > /dev/null && break; sleep 1; done
+          CHROME=google-chrome BASE_URL=http://localhost:4321 node scripts/screenshots.mjs shots
+      - uses: actions/upload-artifact@v7
+        with:
+          name: screenshots
+          path: shots/*.png
+          retention-days: 7
+
+  publish:
+    needs: shoot
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+      SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: screenshots
+          path: shots
+      - name: Check the files are plain PNGs
+        # The files came from a job that ran the PR's code; accept only what we expect.
+        run: |
+          for f in shots/*; do
+            name=$(basename "$f")
+            [[ "$name" =~ ^[a-z0-9-]+\.png$ ]] || { echo "::error::Unexpected file $name"; exit 1; }
+            [ "$(head -c 8 "$f" | od -An -tx1 | tr -d ' \n')" = 89504e470d0a1a0a ] ||
+              { echo "::error::$name is not a PNG"; exit 1; }
+          done
+      - name: Store on the screenshots branch
+        run: |
+          mkdir store && cd store
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          remote="https://github.com/$REPO"
+          if git -c http.extraheader="$auth" fetch -q --depth 1 "$remote" screenshots; then
+            git checkout -q FETCH_HEAD
+          else
+            git checkout -q --orphan screenshots
+          fi
+          rm -rf "pr-$PR" && mkdir "pr-$PR" && cp ../shots/*.png "pr-$PR/"
+          git add -A "pr-$PR"
+          # Identical screenshots (a docs-only push) leave nothing to commit; reuse the last one.
+          if ! git diff --cached --quiet; then
+            git commit -q -m "Screenshots for #$PR at ${SHA:0:7}"
+            git -c http.extraheader="$auth" push -q "$remote" HEAD:refs/heads/screenshots
+          fi
+          echo "STORED=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Comment on the PR
+        run: |
+          raw="https://raw.githubusercontent.com/$REPO/$STORED/pr-$PR"
+          {
+            echo "<!-- pr-screenshots -->"
+            echo "**Screenshots** of every page at \`${SHA:0:7}\`"
+            echo "(first screen of each; phone 390px, desktop 1280px)"
+            echo
+            for phone in shots/*-phone.png; do
+              page=$(basename "$phone" -phone.png)
+              echo "**$page**"
+              echo
+              echo "<img src=\"$raw/$page-phone.png\" width=\"195\">" \
+                "<img src=\"$raw/$page-desktop.png\" width=\"400\">"
+              echo
+            done
+          } > body.md
+          marker='<!-- pr-screenshots -->'
+          existing=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq "[.[] | select(.body | startswith(\"$marker\")) | .id] | first // empty")
+          if [ -n "$existing" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$existing" -F body=@body.md > /dev/null
+          else
+            gh pr comment "$PR" --repo "$REPO" --body-file body.md
+          fi
