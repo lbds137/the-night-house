@@ -1,0 +1,4 @@
+# Discord channel ids for `!c!name!c!` tokens in text that goes to the bot (scripts/discord-rules.ts).
+# Quote each id: they are larger than a JavaScript number can hold exactly.
+# In Discord (Developer Mode on): right-click the channel → Copy Channel ID.
+polemic-pit: "950127079695978598"

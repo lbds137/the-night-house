@@ -10,7 +10,8 @@
     "dev": "astro dev",
     "build": "astro check && vitest run && astro build",
     "preview": "astro preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "discord:rules": "node scripts/discord-rules.ts"
   },
   "dependencies": {
     "astro": "7.3.5",
