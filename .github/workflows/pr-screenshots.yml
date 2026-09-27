@@ -82,6 +82,8 @@ jobs:
           git init -q
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # The header holds the token base64-encoded, which log masking doesn't recognize:
+          # never add `set -x` or verbose git output to this step.
           auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
           remote="https://github.com/$REPO"
           # Each PR writes only its own pr-N/ folder, so when another PR's run pushed first, the
@@ -90,7 +92,9 @@ jobs:
             if git -c http.extraheader="$auth" fetch -q --depth 1 "$remote" screenshots; then
               git checkout -q -f FETCH_HEAD
             else
-              git checkout -q -f --orphan screenshots && git rm -rq --cached . 2>/dev/null || true
+              git checkout -q -f --orphan screenshots
+              # A new orphan branch in an empty repo has nothing staged; that failure is expected.
+              git rm -rq --cached . 2>/dev/null || true
             fi
             rm -rf "pr-$PR" && mkdir "pr-$PR" && cp ../shots/*.png "pr-$PR/"
             git add -A "pr-$PR"
