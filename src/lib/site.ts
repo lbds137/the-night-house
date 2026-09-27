@@ -1,0 +1,40 @@
+export const SITE_TITLE = 'The Night House | בית הלילה';
+// Jekyll's SEO tag dropped the pipe from the site name; page titles keep that form.
+export const SITE_NAME = 'The Night House בית הלילה';
+export const SITE_DESCRIPTION =
+  'A friendly and inclusive Left Hand Path / Satanism focused server that is welcome to all, ' +
+  'regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. ' +
+  'and does not tolerate discrimination, bigotry, or harassment.';
+export const DISCORD_INVITE_CODE = 'v4kjNpF';
+
+export interface NavLink {
+  title: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface NavGroup {
+  title: string;
+  children: NavLink[];
+}
+
+export type NavItem = NavLink | NavGroup;
+
+export const isNavGroup = (item: NavItem): item is NavGroup => 'children' in item;
+
+// The nested structure comes from the `experimental` branch (d7034d8). Its Resources pages were
+// empty stubs, so that group waits until it has content.
+export const MAIN_NAV: NavItem[] = [
+  { title: 'Welcome', href: '/' },
+  {
+    title: 'Community',
+    children: [
+      { title: 'Rules', href: '/rules/' },
+      { title: 'Roles', href: '/roles/' },
+      { title: 'Glossary', href: '/glossary/' },
+    ],
+  },
+  { title: 'Disboard', href: 'https://disboard.org/server/462036216909398026', external: true },
+  { title: 'Stats', href: 'https://statbot.net/dashboard/462036216909398026', external: true },
+  { title: 'Twitter', href: 'https://twitter.com/TheNightHouse/', external: true },
+];

@@ -1,5 +1,0 @@
-{%- assign role = site.data.roles.nodes | where: "type", "role" | where: "id", include.param | first -%}
-{%- capture output -%}
-    <span style="color: #{{ role.color }};">**@{{ role.name }}**</span>
-{%- endcapture -%}
-{{ output | markdownify | replace: "<p>", "" | replace: "</p>", "" }}

@@ -1,0 +1,529 @@
+/*
+ * Modeled on Discord's Onyx theme (called Midnight on mobile before the rename): true-black
+ * base, near-black raised surfaces, Discord's text grays and mention colors. Discord doesn't
+ * publish Onyx's exact values, so these are close approximations. The Night House red stays
+ * as the brand accent.
+ */
+
+:root {
+  --bg: #000000;
+  --surface-1: #0c0c0e;
+  --surface-2: #1a1a1e; /* keep in sync with MENTION_BACKGROUND in src/lib/markdown.ts */
+  --surface-3: #26262c;
+  --border: #25252b;
+  --border-strong: #34343b;
+
+  --text: #dbdee1;
+  --text-strong: #f2f3f5;
+  --text-muted: #949ba4;
+  --link: #00a8fc;
+
+  --accent: #b62e21;
+  --accent-strong: #d6402f;
+  --blurple: #5865f2;
+  --green: #248046;
+  --green-hover: #1a6334;
+  --status-online: #23a55a;
+  --status-offline: #80848e;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+
+  --font: 'Noto Sans', 'Noto Sans Hebrew', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blurple);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+  color: var(--text-strong);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 1.5rem;
+  text-align: center;
+  background: radial-gradient(ellipse at top, rgb(182 46 33 / 0.14), transparent 60%);
+}
+
+.site-logo {
+  width: clamp(88px, 18vw, 136px);
+  height: auto;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-logo {
+    animation: none;
+  }
+}
+
+.site-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.35em;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-strong);
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.site-title > span {
+  white-space: nowrap;
+}
+
+.site-tagline {
+  max-width: 44rem;
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+}
+
+/* Navigation */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+
+.nav-item:hover {
+  background: var(--surface-3);
+  color: var(--text-strong);
+  text-decoration: none;
+}
+
+.nav-item.active {
+  border-color: var(--accent-strong);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.nav-group {
+  position: relative;
+}
+
+.nav-group > summary {
+  list-style: none;
+}
+
+.nav-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-group > summary::after {
+  content: '';
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-left: 0.15rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.15s;
+}
+
+.nav-group[open] > summary::after {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  min-width: 11rem;
+  padding: 0.4rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.6);
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.nav-menu-item {
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-s);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nav-menu-item:hover {
+  background: var(--surface-3);
+  color: var(--text-strong);
+  text-decoration: none;
+}
+
+.nav-menu-item.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Page body */
+
+main {
+  padding: 0 1rem 3rem;
+}
+
+.panel {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--surface-1);
+}
+
+.page-title {
+  margin: 0 0 1.5rem;
+  color: var(--text-strong);
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 1rem;
+}
+
+.prose strong {
+  color: var(--text-strong);
+}
+
+.prose hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--border-strong);
+}
+
+.prose code {
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  font-size: 0.9em;
+}
+
+.rules ol {
+  padding-left: 1.75rem;
+}
+
+.rules li {
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+}
+
+.rules li::marker {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.glossary p {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+}
+
+.glossary ul {
+  margin-top: -0.75rem;
+  padding: 0 1rem 0.75rem 2.25rem;
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+  background: var(--surface-2);
+}
+
+.glossary p:has(+ ul) {
+  margin-bottom: 0;
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+}
+
+.glossary .more-to-come {
+  background: none;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Discord-style mentions and callouts */
+
+.mention {
+  padding: 0 0.2em;
+  border-radius: 3px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mention-channel {
+  background: rgb(88 101 242 / 0.3);
+  color: #c9cdfb;
+}
+
+.mention-role {
+  background: color-mix(in srgb, var(--role-color) 18%, transparent);
+  color: var(--role-text);
+}
+
+.callout {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-s) var(--radius-m) var(--radius-m) var(--radius-s);
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface-1));
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Roles */
+
+.role-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-category {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+}
+
+.role-category > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-m);
+  list-style: none;
+  cursor: pointer;
+}
+
+.role-category > summary::-webkit-details-marker {
+  display: none;
+}
+
+.role-category > summary::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
+}
+
+.role-category[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.role-category > summary:hover {
+  background: var(--surface-3);
+}
+
+.role-category h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.role-category-body {
+  padding: 0.25rem 1rem 1rem;
+}
+
+.role {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.role:first-child {
+  border-top: 0;
+}
+
+.role-name {
+  font-size: 1.05rem;
+}
+
+.role-text {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+}
+
+.role-category .callout {
+  margin: 0.75rem 0;
+}
+
+/* Discord invite card */
+
+.invite {
+  width: min(100%, 27rem);
+  margin: 2rem auto 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+}
+
+.invite-eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.invite-body {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.invite-icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-l);
+  background: var(--surface-3);
+  object-fit: cover;
+}
+
+.invite-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.invite-name {
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-strong);
+  font-size: 1rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.invite-stats {
+  margin: 0.15rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.invite-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.3rem 0 0;
+  border-radius: 50%;
+  vertical-align: 0.05em;
+}
+
+.invite-dot.online {
+  background: var(--status-online);
+}
+
+.invite-dot.members {
+  margin-left: 0.6rem;
+  background: var(--status-offline);
+}
+
+.invite-join {
+  flex: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-m);
+  background: var(--green);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.invite-join:hover {
+  background: var(--green-hover);
+  text-decoration: none;
+}

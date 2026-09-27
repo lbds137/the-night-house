@@ -1,7 +1,0 @@
----
--
-  token: "!c!"
-  file: "atoms/roles/channel.html"
--
-  token: "!r!"
-  file: "atoms/roles/role.html"

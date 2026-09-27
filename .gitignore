@@ -1,11 +1,10 @@
-/_site/
 .directory
 .idea/
 *.iml
 log/
 tmp/
-.bundle/
-vendor/bundle/
-.jekyll-cache/
-.jekyll-metadata
-.sass-cache/
+
+# Astro
+node_modules/
+dist/
+.astro/
