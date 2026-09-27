@@ -21,7 +21,11 @@
     ],
     "confidence": "medium",
     "notes": "A community self-identification term; there is little academic literature, so the sources are community wikis.",
-    "id": "alterhuman"
+    "id": "alterhuman",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Ásatrú",
@@ -45,7 +49,11 @@
     ],
     "confidence": "high",
     "notes": "How bluntly to flag folkish groups is your call. The researcher wrote \"most Heathen orgs\"; I changed it to \"many\" because \"most\" wasn't sourced.",
-    "id": "asatru"
+    "id": "asatru",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Ascension",
@@ -63,7 +71,11 @@
     ],
     "confidence": "medium",
     "notes": "Two senses: the doctrinal ascended-master teaching (Theosophy, Bailey, Ballard) and the generic New Age sense. The lineage is well documented; the loose modern sense is practitioner usage.",
-    "id": "ascension"
+    "id": "ascension",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "ATR",
@@ -83,14 +95,18 @@
     ],
     "confidence": "high",
     "notes": "Whether diaspora religions count as ATRs or as \"African diaspora religions\" varies by writer; the draft says \"by extension\".",
-    "id": "atr"
+    "id": "atr",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Bibliomancy",
     "kind": "existing",
     "existing": "**Bibliomancy**: a form of divination using books and text. Also called Stichomancy.",
     "issues": "Stichomancy is a narrower technique, not a strict synonym.",
-    "draft": "**Bibliomancy**: divination by opening a book, often a sacred or meaningful one, at random and reading the passage that appears as an answer or omen. Stichomancy, divination from a single line or verse chosen this way, is a closely related, narrower term.",
+    "draft": "**Bibliomancy**: divination by opening a book, often a sacred or meaningful one, at random and reading the passage that appears as an answer or omen. Stichomancy, divination from a single line or verse chosen this way, is a related term; some sources use it as a strict synonym for bibliomancy, others treat it as a narrower technique focused on one line rather than a whole passage.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Bibliomancy",
@@ -99,7 +115,11 @@
     ],
     "confidence": "high",
     "notes": "One strong source.",
-    "id": "bibliomancy"
+    "id": "bibliomancy",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Chaldean",
@@ -117,7 +137,11 @@
     ],
     "confidence": "medium",
     "notes": "The Babylonian origin of the numerology is practitioner lore, not verified by historians; the draft attributes it. Which sense your community means is your call (numerology put first as a guess).",
-    "id": "chaldean"
+    "id": "chaldean",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Channeling",
@@ -137,7 +161,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "channeling"
+    "id": "channeling",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Chaos Magick",
@@ -157,7 +185,11 @@
     ],
     "confidence": "high",
     "notes": "The existing entry is fine, so keeping it is also a reasonable choice.",
-    "id": "chaos-magick"
+    "id": "chaos-magick",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Clair-senses",
@@ -177,12 +209,16 @@
     ],
     "confidence": "medium-high",
     "notes": "Practitioner sources only, but they agree unanimously on the clairsentience correction.",
-    "id": "clair-senses"
+    "id": "clair-senses",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Current",
     "kind": "new",
-    "draft": "**Current**: a stream of magical practice, symbolism and energy that a tradition works with and passes on, such as the Draconian or Typhonian current associated with Kenneth Grant's Typhonian Order. Traditions describe currents differently, but practitioners generally hold that working within one connects them to its accumulated body of work.",
+    "draft": "**Current**: a stream of magical or esoteric practice, symbolism and energy that a tradition works with and passes on. The term is used both by practitioners and by scholars of Western esotericism (e.g. speaking of alchemy as a \"current\"); Kenneth Grant's Typhonian Order and Thomas Karlsson's Dragon Rouge both describe their own tradition as the \"Draconian current.\" Traditions describe currents differently, but practitioners generally hold that working within one connects them to its accumulated body of work.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Typhonian_Order",
@@ -195,7 +231,11 @@
     ],
     "confidence": "medium",
     "notes": "An insider term: no scholarly source defines the generic sense; the Typhonian specifics are well documented. Weakest-sourced entry in its batch.",
-    "id": "current"
+    "id": "current",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Death work",
@@ -215,7 +255,11 @@
     ],
     "confidence": "medium",
     "notes": "A practitioner term with blog sources only. The existing entry is also fine.",
-    "id": "death-work"
+    "id": "death-work",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Demonolatry",
@@ -235,7 +279,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "demonolatry"
+    "id": "demonolatry",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Demonology",
@@ -255,7 +303,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "demonology"
+    "id": "demonology",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Divination",
@@ -275,7 +327,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "divination"
+    "id": "divination",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Dowsing",
@@ -295,14 +351,18 @@
     ],
     "confidence": "high",
     "notes": "The researcher recommends keeping the chance-level line, and I agree.",
-    "id": "dowsing"
+    "id": "dowsing",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Egregore",
     "kind": "existing",
     "existing": "**Egregore**: a construct made by a collective of minds. An egregore will usually form when a concept is believed in by many people, thus being the target to a great amount of energy that is directed at it, becoming somewhat autonomous. Egregores may or may not be sentient.",
     "issues": "States occult claims (autonomy, sentience) as fact.",
-    "draft": "**Egregore**: in occultism, a non-physical entity said to arise from the shared thoughts, beliefs or energy of a group. The occult concept is associated with the 19th-century occultist Éliphas Lévi, and practitioners describe egregores as able to become autonomous or even sentient.",
+    "draft": "**Egregore**: in occultism, a non-physical entity said to arise from the shared thoughts, beliefs or energy of a group. The word comes from the Greek for \"watcher\" (as in the Book of Enoch's fallen Watchers); the occultist Éliphas Lévi used it in this sense in his 1868 *Le Grand Arcane*, and practitioners describe egregores as able to become autonomous or even sentient.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Egregore",
@@ -315,7 +375,11 @@
     ],
     "confidence": "high",
     "notes": "The word itself comes from the Greek for \"watchers\" (Book of Enoch).",
-    "id": "egregore"
+    "id": "egregore",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Eldritch",
@@ -335,7 +399,11 @@
     ],
     "confidence": "high",
     "notes": "Your call: confirm whether the \"Eldritch energy\" sense is your community's own usage. Keep it consistent with the Void entry.",
-    "id": "eldritch"
+    "id": "eldritch",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Entheogen",
@@ -353,7 +421,11 @@
     ],
     "confidence": "high",
     "notes": "Peyote (Native American Church) and iboga (Bwiti) are tied to specific traditions and regulated. I added the 1979 coinage (Ruck, Wasson et al.); verify before approving.",
-    "id": "entheogen"
+    "id": "entheogen",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Gematria",
@@ -375,7 +447,11 @@
     ],
     "confidence": "high",
     "notes": "A living Jewish practice; the draft sources it to Jewish tradition first.",
-    "id": "gematria"
+    "id": "gematria",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Godform",
@@ -395,7 +471,11 @@
     ],
     "confidence": "high",
     "notes": "YOUR DECISION: keep your community's meaning and label it, or switch to the documented meaning. The draft gives both, with the documented one first.",
-    "id": "godform"
+    "id": "godform",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Godphone",
@@ -415,7 +495,11 @@
     ],
     "confidence": "medium",
     "notes": "Practitioner sources only, which suits a slang term.",
-    "id": "godphone"
+    "id": "godphone",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Godspouse",
@@ -435,7 +519,11 @@
     ],
     "confidence": "high",
     "notes": "The Vodou detail came from a search snippet only; you can cut that clause.",
-    "id": "godspouse"
+    "id": "godspouse",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Hellenism",
@@ -453,12 +541,16 @@
     ],
     "confidence": "high",
     "notes": "Not closed. Some Hellenists dislike being grouped under \"neopaganism\"; relevant to the Neo Paganism and Reconstructionism entries.",
-    "id": "hellenism"
+    "id": "hellenism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Hermeticism",
     "kind": "new",
-    "draft": "**Hermeticism**: a philosophical and spiritual tradition based on writings attributed to Hermes Trismegistus, a legendary figure blending the Greek god Hermes and the Egyptian god Thoth. The texts date from Greco-Roman Egypt in late antiquity; their idea of correspondences between the small and the great (\"as above, so below\") shaped Renaissance thought and modern Western occultism.",
+    "draft": "**Hermeticism**: a philosophical and spiritual tradition based on writings attributed to Hermes Trismegistus, a legendary figure blending the Greek god Hermes and the Egyptian god Thoth. The core texts (the Corpus Hermeticum) date from Greco-Roman Egypt in late antiquity; the \"as above, so below\" line comes from the Emerald Tablet, a separate, later text only translated into Latin (from Arabic) in the 12th century. Its idea of correspondence between the small and the great shaped Renaissance thought and modern Western occultism.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Hermeticism",
@@ -471,7 +563,11 @@
     ],
     "confidence": "high",
     "notes": "\"As above, so below\" paraphrases the Emerald Tablet, which is later (Arabic, medieval) than the Corpus Hermeticum; the draft doesn't claim pharaonic age.",
-    "id": "hermeticism"
+    "id": "hermeticism",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Hoodoo",
@@ -489,12 +585,16 @@
     ],
     "confidence": "high",
     "notes": "The researcher's draft said flatly that it \"isn't something for non-Black practitioners to adopt\". Practitioners disagree on how closed it is, so I attributed the view. How firmly the site takes a side is your call.",
-    "id": "hoodoo"
+    "id": "hoodoo",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Horsing",
     "kind": "new",
-    "draft": "**Horsing**: spirit possession as described in Haitian Vodou and related traditions, where a spirit (lwa) is said to \"mount\" or \"ride\" a person, called its horse (chwal). Within those traditions it is a sacred event that happens in ceremony, so the term belongs to that context.",
+    "draft": "**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to \"mount\" or \"ride\" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted \"horse\"/\"horsing\" for deity possession outside those traditions, a borrowing not everyone in the traditions of origin welcomes.",
     "sources": [
       [
         "https://www.historymuseum.ca/vodou/possession/",
@@ -507,7 +607,11 @@
     ],
     "confidence": "medium",
     "notes": "Similar mounting language exists in Lucumí/Santería, but sourcing for \"horsing\" outside Vodou was weak. The museum source doesn't use the word itself.",
-    "id": "horsing"
+    "id": "horsing",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Hydromancy",
@@ -525,7 +629,11 @@
     ],
     "confidence": "high",
     "notes": "I removed the researcher's \"roots in ancient Babylon and Persia\" claim because neither cited source was read to support it.",
-    "id": "hydromancy"
+    "id": "hydromancy",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Kemeticism",
@@ -543,7 +651,11 @@
     ],
     "confidence": "high",
     "notes": "Also spelled Kemetism.",
-    "id": "kemeticism"
+    "id": "kemeticism",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Left Hand Path",
@@ -565,7 +677,11 @@
     ],
     "confidence": "medium-high",
     "notes": "Your community's core term. The three-trait definition is Granholm's framing, also found in Stephen Flowers; the researcher could not read a Faxneld text directly, so I cite Granholm only. I trimmed the draft to three sentences and dropped Chaos Magick from the examples (it is not usually classed as LHP).",
-    "id": "left-hand-path"
+    "id": "left-hand-path",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Luciferianism",
@@ -579,7 +695,11 @@
     ],
     "confidence": "medium-high",
     "notes": "Only one source was read directly, so a second source is still needed.",
-    "id": "luciferianism"
+    "id": "luciferianism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Magick",
@@ -597,7 +717,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "magick"
+    "id": "magick",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Middle Path",
@@ -615,7 +739,11 @@
     ],
     "confidence": "low",
     "notes": "Thinly documented: blogs only. The entry says so openly. You may prefer to drop it.",
-    "id": "middle-path"
+    "id": "middle-path",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Necromancy",
@@ -633,7 +761,11 @@
     ],
     "confidence": "high",
     "notes": "Overlaps with the existing Death work entry.",
-    "id": "necromancy"
+    "id": "necromancy",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Neo Druidry",
@@ -651,7 +783,11 @@
     ],
     "confidence": "medium-high",
     "notes": "The Britannica page couldn't be fetched, so its wording is secondhand. Some Druids are not polytheist, which is why the draft says \"often\".",
-    "id": "neo-druidry"
+    "id": "neo-druidry",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Neo Paganism",
@@ -669,7 +805,11 @@
     ],
     "confidence": "high",
     "notes": "Some reconstructionists (Hellenists, Heathens) reject the label for themselves.",
-    "id": "neo-paganism"
+    "id": "neo-paganism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Non-human",
@@ -687,7 +827,11 @@
     ],
     "confidence": "medium",
     "notes": "Community wikis use it almost interchangeably with Alterhuman. It could be folded into that entry instead.",
-    "id": "non-human"
+    "id": "non-human",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Oracle",
@@ -705,7 +849,11 @@
     ],
     "confidence": "high",
     "notes": "The draft leads with cards because the Divination entry lists oracles among physical tools. Flip the order if your members mean the person or shrine.",
-    "id": "oracle"
+    "id": "oracle",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Otherkin",
@@ -723,7 +871,11 @@
     ],
     "confidence": "high",
     "notes": "The researcher's draft said \"(see Therian)\", but there is no Therian entry, so I rewrote it inline.",
-    "id": "otherkin"
+    "id": "otherkin",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Pendulum",
@@ -741,7 +893,11 @@
     ],
     "confidence": "high",
     "notes": "I added the ideomotor explanation, which is the standard scientific account; drop it if it reads as preachy.",
-    "id": "pendulum"
+    "id": "pendulum",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "PluralKit",
@@ -761,7 +917,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "pluralkit"
+    "id": "pluralkit",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Psychic abilities",
@@ -779,7 +939,11 @@
     ],
     "confidence": "high",
     "notes": "States the belief and the scientific consensus side by side without mocking.",
-    "id": "psychic-abilities"
+    "id": "psychic-abilities",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Psychic vampirism",
@@ -797,7 +961,11 @@
     ],
     "confidence": "medium-high",
     "notes": "Keep consistent with the Sanguinarian and Tantric vampirism entries.",
-    "id": "psychic-vampirism"
+    "id": "psychic-vampirism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Qliphoth",
@@ -815,7 +983,11 @@
     ],
     "confidence": "high",
     "notes": "A Jewish mystical concept repurposed by non-Jewish occultists. The draft says so neutrally; whether to say more is your call. Also spelled Qlippoth.",
-    "id": "qliphoth"
+    "id": "qliphoth",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Reconstructionism",
@@ -833,7 +1005,11 @@
     ],
     "confidence": "high",
     "notes": "Some reconstructionists reject the Pagan label.",
-    "id": "reconstructionism"
+    "id": "reconstructionism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Right hand path",
@@ -851,7 +1027,11 @@
     ],
     "confidence": "high",
     "notes": "I attributed the classification to LHP writers, because most of the world's religions wouldn't describe themselves this way.",
-    "id": "right-hand-path"
+    "id": "right-hand-path",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Sanguinarian vampirism",
@@ -873,12 +1053,16 @@
     ],
     "confidence": "medium-high",
     "notes": "I removed the researcher's specific dose (\"a few drops to a spoonful\") because it wasn't sourced. The safety line reflects community practice, not medical advice. You could add a harder health caveat.",
-    "id": "sanguinarian-vampirism"
+    "id": "sanguinarian-vampirism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Santería",
     "kind": "new",
-    "draft": "**Santería**: an Afro-Cuban religion, also called Lucumí or Regla de Ocha, that grew from the Yoruba traditions of enslaved West Africans blended with Catholicism and Spiritism, and centers on the orishas. It is initiatory: it is learned through a house and its elders, not from books alone. Many practitioners prefer Lucumí or Regla de Ocha, since \"Santería\" began as an outsider's label.",
+    "draft": "**Santería**: an Afro-Cuban religion, also called Lucumí or Regla de Ocha, that grew from the Yoruba traditions of enslaved West Africans blended with Catholicism and Spiritism, and centers on the orishas. It is initiatory: it is learned through a house and its elders, not from books alone. Many practitioners prefer Lucumí or Regla de Ocha; some scholars (e.g. Miguel De La Torre) describe \"Santería\" as a derogatory name imposed by white Cuban Catholic clergy to distance the religion from Christianity, though other sources treat it as a neutral name.",
     "sources": [
       [
         "https://www.britannica.com/topic/Santeria",
@@ -895,7 +1079,11 @@
     ],
     "confidence": "high",
     "notes": "Some sources call the name pejorative and others don't, so I softened \"pejorative\" to \"outsider's label\". You could title the entry Lucumí instead.",
-    "id": "santeria"
+    "id": "santeria",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Satan",
@@ -917,7 +1105,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "satan"
+    "id": "satan",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Satanism",
@@ -939,7 +1131,11 @@
     ],
     "confidence": "high",
     "notes": "The most reputation-sensitive entry. I added TST's 2013 founding date, which you should verify before approving. It runs four sentences because the term is central.",
-    "id": "satanism"
+    "id": "satanism",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Servitor",
@@ -957,7 +1153,11 @@
     ],
     "confidence": "medium",
     "notes": "Practitioner sources only; no scholarly treatment exists.",
-    "id": "servitor"
+    "id": "servitor",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Shield",
@@ -975,7 +1175,11 @@
     ],
     "confidence": "low-medium",
     "notes": "Folk practice, practitioner blogs only. Related to Ward.",
-    "id": "shield"
+    "id": "shield",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Shufflemancy",
@@ -993,7 +1197,11 @@
     ],
     "confidence": "medium",
     "notes": "Low stakes; lifestyle-press sources only.",
-    "id": "shufflemancy"
+    "id": "shufflemancy",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Sigil",
@@ -1011,7 +1219,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "sigil"
+    "id": "sigil",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "SPG",
@@ -1029,7 +1241,11 @@
     ],
     "confidence": "medium-high",
     "notes": "The researcher equated SPG with PVPG (peer-verified personal gnosis). They are related but not identical, so I dropped that equation.",
-    "id": "spg"
+    "id": "spg",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Stregheria",
@@ -1047,12 +1263,16 @@
     ],
     "confidence": "medium-high",
     "notes": "Not closed.",
-    "id": "stregheria"
+    "id": "stregheria",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Tantric vampirism",
     "kind": "new",
-    "draft": "**Tantric vampirism**: in the real vampire community, a form of psychic vampirism that draws on sexual or romantic energy, ideally as a mutual exchange with a partner. It borrows the word \"Tantric\" loosely and has no connection to historical Hindu or Buddhist Tantra; the term is thinly documented outside a few community sources.",
+    "draft": "**Tantric vampirism**: in the real vampire community, a form of psychic vampirism that draws on sexual or romantic energy, ideally as a mutual exchange with a partner. Michelle Belanger's influential *Psychic Vampire Codex* names this a \"Tantric Exchange,\" centered on the root chakra; it borrows the word \"Tantric\" loosely and has no connection to historical Hindu or Buddhist Tantra, and it remains documented mainly within community and vampire-studies literature rather than independent scholarship.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Vampyre_Sanguinomicon:_The_Lexicon_of_the_Living_Vampire",
@@ -1065,7 +1285,11 @@
     ],
     "confidence": "low",
     "notes": "Thin, as you suspected. You may want to drop it or fold it into Psychic vampirism.",
-    "id": "tantric-vampirism"
+    "id": "tantric-vampirism",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Tarot",
@@ -1083,7 +1307,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "tarot"
+    "id": "tarot",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Tasseomancy",
@@ -1097,7 +1325,11 @@
     ],
     "confidence": "medium",
     "notes": "I removed the researcher's \"better documented in Persia\" claim because it came from a Medium post.",
-    "id": "tasseomancy"
+    "id": "tasseomancy",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Thelema",
@@ -1119,7 +1351,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "thelema"
+    "id": "thelema",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Thoughtform",
@@ -1133,7 +1369,11 @@
     ],
     "confidence": "low-medium",
     "notes": "Practitioner lore, one source. Annie Besant and C.W. Leadbeater's *Thought-Forms* (1901) is the classic Theosophical text if you want an older anchor.",
-    "id": "thoughtform"
+    "id": "thoughtform",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Tulpamancy",
@@ -1151,7 +1391,11 @@
     ],
     "confidence": "medium-high",
     "notes": "Whether the borrowed name is appropriation is debated inside the community itself. I shortened the researcher's draft.",
-    "id": "tulpamancy"
+    "id": "tulpamancy",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "UPG",
@@ -1169,7 +1413,11 @@
     ],
     "confidence": "high",
     "notes": "The Eldritch, Void and SPG entries refer to UPG.",
-    "id": "upg"
+    "id": "upg",
+    "library": {
+      "verdict": "nothing in library",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Vodou",
@@ -1191,7 +1439,11 @@
     ],
     "confidence": "medium-high",
     "notes": "YOUR DECISION: the placeholder spelled it \"Voudou\", which doesn't match any of the three traditions. I assumed you meant the Haitian religion and renamed it Vodou.",
-    "id": "vodou"
+    "id": "vodou",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Void",
@@ -1209,12 +1461,16 @@
     ],
     "confidence": "low",
     "notes": "Community belief, blog sources only. Make it consistent with your Eldritch entry, which describes Void energy.",
-    "id": "void"
+    "id": "void",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Ward",
     "kind": "new",
-    "draft": "**Ward**: a protective spell, symbol or magical barrier meant to guard a person, object or space against unwanted energy, entities or influence. Wards can be temporary, like a circle taken down after ritual, or long-lasting, like one placed on a home; they continue older apotropaic (evil-averting) folk magic found in many cultures.",
+    "draft": "**Ward**: most often, a protective spell, symbol or magical barrier placed on a location — a home, room or temple — to guard it against unwanted energy, entities or influence; some practitioners reserve the word specifically for this location-bound magic and use \"amulet\" or \"charm\" for protecting a person or object instead, though everyday usage often blurs the line. Wards can be temporary, like a circle taken down after ritual, or long-lasting, like one placed on a home; they continue older apotropaic (evil-averting) folk magic found in many cultures.",
     "sources": [
       [
         "http://witchipedia.wikidot.com/def:ward",
@@ -1227,7 +1483,11 @@
     ],
     "confidence": "medium",
     "notes": "Related to Shield.",
-    "id": "ward"
+    "id": "ward",
+    "library": {
+      "verdict": "needs change",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Wicca",
@@ -1247,7 +1507,11 @@
     ],
     "confidence": "high",
     "notes": "",
-    "id": "wicca"
+    "id": "wicca",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   },
   {
     "term": "Witchcraft",
@@ -1263,6 +1527,10 @@
     ],
     "confidence": "medium-high",
     "notes": "One source. The witch-trial sentence is heavier in tone than other entries.",
-    "id": "witchcraft"
+    "id": "witchcraft",
+    "library": {
+      "verdict": "supported",
+      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469"
+    }
   }
 ]
