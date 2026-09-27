@@ -6,7 +6,12 @@ import { DISCORD_INVITE_CODE, SITE_TITLE } from '../lib/site';
 const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
 ---
 
-<section class="invite" data-invite-code={DISCORD_INVITE_CODE} aria-label="Discord invite">
+<section
+  class="invite"
+  id="invite"
+  data-invite-code={DISCORD_INVITE_CODE}
+  aria-label="Discord invite"
+>
   <p class="invite-eyebrow">You've been invited to join a server</p>
   <div class="invite-body">
     <Image class="invite-icon" src={logo} alt="" width={56} densities={[1, 2, 3]} />
