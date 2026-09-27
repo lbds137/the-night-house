@@ -12,7 +12,21 @@ const description =
 
 <Base title="Roles" {description}>
   <div class="callout prose" set:html={renderMarkdown(intro)} />
-  <div class="role-categories">
+  <div class="roles-filter-bar">
+    <input
+      type="search"
+      id="roles-filter"
+      class="roles-filter"
+      placeholder="Filter roles"
+      aria-label="Filter roles by name, description or category"
+      aria-controls="role-categories"
+      aria-describedby="roles-filter-status"
+      autocomplete="off"
+      hidden
+    />
+    <p class="roles-filter-status" id="roles-filter-status" role="status"></p>
+  </div>
+  <div class="role-categories" id="role-categories">
     {categoriesWithNodes().map(({ category, nodes }) => <RoleCategory {category} {nodes} />)}
   </div>
 </Base>
@@ -34,4 +48,58 @@ const description =
   };
   openFromHash();
   window.addEventListener('hashchange', openFromHash);
+</script>
+
+<script>
+  import { filterMatches, foldForSearch } from '../lib/search';
+
+  const filter = document.getElementById('roles-filter') as HTMLInputElement;
+  const status = document.getElementById('roles-filter-status')!;
+  const categories = [...document.querySelectorAll<HTMLDetailsElement>('.role-category')].map(
+    (details) => {
+      const roles = [...details.querySelectorAll<HTMLElement>('.role')];
+      return {
+        details,
+        name: foldForSearch(details.querySelector('summary')?.textContent ?? ''),
+        roles,
+        texts: roles.map((role) => foldForSearch(role.textContent ?? '')),
+        notes: [...details.querySelectorAll<HTMLElement>('.role-category-body > .callout')],
+      };
+    },
+  );
+  // Which categories the reader had open before filtering, to restore when the filter clears.
+  let openBefore: boolean[] | undefined;
+
+  const applyFilter = () => {
+    const query = filter.value.trim();
+    if (query === '') {
+      categories.forEach((c, i) => {
+        c.details.hidden = false;
+        c.details.open = openBefore?.[i] ?? c.details.open;
+        c.roles.forEach((role) => (role.hidden = false));
+        c.notes.forEach((note) => (note.hidden = false));
+      });
+      openBefore = undefined;
+      status.textContent = '';
+      return;
+    }
+    openBefore ??= categories.map((c) => c.details.open);
+    let shown = 0;
+    for (const c of categories) {
+      // A matching category name shows the whole category.
+      const [nameMatches] = filterMatches([c.name], query);
+      const keep = nameMatches ? c.roles.map(() => true) : filterMatches(c.texts, query);
+      c.roles.forEach((role, i) => (role.hidden = !keep[i]));
+      c.notes.forEach((note) => (note.hidden = !nameMatches));
+      const count = keep.filter(Boolean).length;
+      c.details.hidden = count === 0;
+      c.details.open = count > 0;
+      shown += count;
+    }
+    if (shown === 0) status.textContent = 'No roles match that filter.';
+    else status.textContent = shown === 1 ? '1 role matches.' : `${shown} roles match.`;
+  };
+
+  filter.addEventListener('input', applyFilter);
+  filter.hidden = false;
 </script>

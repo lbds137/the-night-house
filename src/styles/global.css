@@ -444,7 +444,8 @@ main {
   opacity: 0.5;
 }
 
-.glossary-filter {
+.glossary-filter,
+.roles-filter {
   width: 100%;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border-strong);
@@ -454,7 +455,8 @@ main {
   font: inherit;
 }
 
-.glossary-filter::placeholder {
+.glossary-filter::placeholder,
+.roles-filter::placeholder {
   color: var(--text-muted);
 }
 
@@ -510,6 +512,20 @@ main {
 }
 
 /* Roles */
+
+.roles-filter-bar {
+  margin: 0 0 1rem;
+}
+
+.roles-filter-status {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.roles-filter-status:empty {
+  display: none;
+}
 
 .role-categories {
   display: flex;
