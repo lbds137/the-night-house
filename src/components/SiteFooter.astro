@@ -13,7 +13,11 @@ import { DISCORD_INVITE_URL, FOOTER_LINKS } from '../lib/site';
   <nav class="site-footer-links" aria-label="Elsewhere">
     {
       FOOTER_LINKS.map((link) => (
-        <a href={link.href} target="_blank" rel="noopener">
+        <a
+          href={link.href}
+          target={link.external ? '_blank' : undefined}
+          rel={link.external ? 'noopener' : undefined}
+        >
           {link.title}
         </a>
       ))
