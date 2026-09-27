@@ -8,3 +8,7 @@ tmp/
 node_modules/
 dist/
 .astro/
+
+# Local screenshot runs (scripts/screenshots.mjs)
+.chrome-profile/
+shots/
