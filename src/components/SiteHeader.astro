@@ -4,27 +4,55 @@ import NavMenu from './NavMenu.astro';
 import logo from '../assets/logo.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
+interface Props {
+  /** A one-row header (small logo, title linking home, no tagline), so the page starts sooner. */
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
 // Each language half wraps as a unit, so a narrow screen never splits "בית הלילה".
 const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 ---
 
-<header class="site-header">
-  {/* 136px is the CSS maximum; densities cover high-DPI screens. */}
-  <Image
-    class="site-logo"
-    src={logo}
-    alt=""
-    width={136}
-    densities={[1, 2, 3]}
-    loading="eager"
-    fetchpriority="high"
-  />
-  {/* Branding, not the page's heading: each page's own title is its <h1> (Base.astro). */}
-  <p class="site-title">
-    <span>{englishTitle}</span>
-    <span aria-hidden="true">|</span>
-    <span lang="he" dir="rtl">{hebrewTitle}</span>
-  </p>
-  <p class="site-tagline">{SITE_DESCRIPTION}</p>
+<header class:list={['site-header', { compact }]}>
+  {
+    compact ? (
+      <a class="site-brand" href="/">
+        <Image
+          class="site-logo"
+          src={logo}
+          alt=""
+          width={48}
+          densities={[1, 2, 3]}
+          loading="eager"
+        />
+        <span class="site-title">
+          <span>{englishTitle}</span>
+          <span aria-hidden="true">|</span>
+          <span lang="he" dir="rtl">{hebrewTitle}</span>
+        </span>
+      </a>
+    ) : (
+      <>
+        {/* 136px is the CSS maximum; densities cover high-DPI screens. */}
+        <Image
+          class="site-logo"
+          src={logo}
+          alt=""
+          width={136}
+          densities={[1, 2, 3]}
+          loading="eager"
+          fetchpriority="high"
+        />
+        {/* Branding, not the page's heading: each page's own title is its <h1> (Base.astro). */}
+        <p class="site-title">
+          <span>{englishTitle}</span>
+          <span aria-hidden="true">|</span>
+          <span lang="he" dir="rtl">{hebrewTitle}</span>
+        </p>
+        <p class="site-tagline">{SITE_DESCRIPTION}</p>
+      </>
+    )
+  }
   <NavMenu />
 </header>

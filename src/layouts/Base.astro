@@ -1,4 +1,5 @@
 ---
+import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { jsonLd } from '../lib/seo';
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from '../lib/site';
@@ -58,12 +59,14 @@ const ogImage = new URL(OG_IMAGE.path, Astro.site).href;
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
-    <SiteHeader />
+    {/* Only the Welcome page, where most visitors arrive, gets the full header and tagline. */}
+    <SiteHeader compact={Astro.url.pathname !== '/'} />
     <main id="content">
       <article class="panel">
         <h1 class="page-title">{title}</h1>
         <slot />
       </article>
     </main>
+    <SiteFooter />
   </body>
 </html>
