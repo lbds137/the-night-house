@@ -1,10 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
+import TitleParts from './TitleParts.astro';
 import { DISCORD_INVITE_CODE, DISCORD_INVITE_URL, SITE_TITLE } from '../lib/site';
-
-// As in the header, each language half wraps as a unit.
-const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 ---
 
 <section
@@ -17,11 +15,7 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
   <div class="invite-body">
     <Image class="invite-icon" src={logo} alt="" width={56} densities={[1, 2, 3]} />
     <div class="invite-info">
-      <h2 class="invite-name" data-name={SITE_TITLE}>
-        <span>{englishTitle}</span>
-        <span aria-hidden="true">|</span>
-        <span lang="he" dir="rtl">{hebrewTitle}</span>
-      </h2>
+      <h2 class="invite-name"><TitleParts title={SITE_TITLE} /></h2>
       <p class="invite-stats" hidden>
         <span class="invite-stat"
           ><span class="invite-dot online"></span><span data-online></span> Online</span
@@ -36,6 +30,8 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 </section>
 
 <script>
+  import { titleParts } from '../lib/site';
+
   // The card works as a plain link; live counts, name and icon are an enhancement.
   interface InviteResponse {
     approximate_member_count: number;
@@ -52,9 +48,18 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
         card.querySelector('[data-online]')!.textContent = format(invite.approximate_presence_count);
         card.querySelector('[data-members]')!.textContent = format(invite.approximate_member_count);
         card.querySelector('.invite-stats')!.removeAttribute('hidden');
-        // A renamed server shows its new name, as plain text.
-        const name = card.querySelector<HTMLElement>('.invite-name')!;
-        if (invite.guild.name !== name.dataset.name) name.textContent = invite.guild.name;
+        // The server's current name, in the same wrap-as-a-unit halves as TitleParts.astro.
+        const spans = titleParts(invite.guild.name).map((part) => {
+          const span = document.createElement('span');
+          span.textContent = part.text;
+          if (part.separator) span.setAttribute('aria-hidden', 'true');
+          if (part.hebrew) {
+            span.lang = 'he';
+            span.dir = 'rtl';
+          }
+          return span;
+        });
+        card.querySelector('.invite-name')!.replaceChildren(...spans);
         if (invite.guild.icon) {
           const icon = card.querySelector<HTMLImageElement>('.invite-icon')!;
           // srcset wins over src, so drop the local logo's densities first.
