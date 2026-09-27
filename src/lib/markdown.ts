@@ -1,6 +1,9 @@
 import { Marked } from 'marked';
 import { markedSmartypants } from 'marked-smartypants';
+import { stripComments } from './comments.ts';
 import { roleById } from './roles';
+
+export { stripComments };
 
 // Smart quotes match what kramdown produced on the Jekyll site. External links open in a new
 // tab, which the Jekyll content spelled out per link with kramdown's `{:target="_blank"}`.
@@ -77,29 +80,6 @@ export function replaceTokens(text: string): string {
   return text
     .replace(/!c!(.+?)!c!/g, (_, name: string) => channelMention(name))
     .replace(/!r!(\d+)!r!/g, (_, id: string) => roleMention(id));
-}
-
-// HTML comments hold not-yet-written entries (e.g. in glossary.md); keep them out of the page.
-// An opener left in the output (unclosed, or rebuilt from pieces like `<!<!---->--`) would hide
-// the rest of the page, so either case fails the build instead.
-export function stripComments(text: string): string {
-  let output = '';
-  let position = 0;
-  for (;;) {
-    const open = text.indexOf('<!--', position);
-    if (open === -1) break;
-    const close = text.indexOf('-->', open + 4);
-    if (close === -1) {
-      throw new Error(`Unclosed HTML comment near: ${text.slice(open, open + 60)}`);
-    }
-    output += text.slice(position, open);
-    position = close + 3;
-  }
-  output += text.slice(position);
-  if (output.includes('<!--')) {
-    throw new Error('HTML comment markers combine into a new `<!--` once comments are removed');
-  }
-  return output;
 }
 
 // marked has no attribute-list syntax, so kramdown's `{: ...}` would print as literal text.
