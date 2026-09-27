@@ -28,7 +28,8 @@ export const plainDefinition = (markdown: string) =>
   markdown
     .replace(/^\*\*[^*]+\*\*\s*(\([^)]*\))?\s*:\s*/, '')
     // Before the mark removal below, which would otherwise eat a URL's underscores.
-    .replace(/\[([^\]]+)\]\([^)\s]+\)/g, '$1')
+    // A URL may hold one level of parentheses (Wikipedia's "Foo_(bar)"); a title may follow it.
+    .replace(/\[([^\]]+)\]\((?:[^()\s]|\([^()\s]*\))+(?:\s+"[^"]*")?\)/g, '$1')
     .replace(/^\* /gm, '')
     .replace(/[*_`]/g, '')
     .replace(/\s+/g, ' ')
