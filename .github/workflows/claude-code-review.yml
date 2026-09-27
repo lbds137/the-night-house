@@ -145,10 +145,10 @@ jobs:
             exit 1
           }
       - uses: pnpm/action-setup@v6
+      # No dependency cache: PR code runs in this job and could poison a shared cache entry.
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: pnpm
       - name: Build the PR on top of current main
         run: |
           pnpm install --frozen-lockfile
