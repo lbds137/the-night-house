@@ -1,8 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import baseLayout from '../layouts/Base.astro?raw';
-import permalinkCopier from '../components/PermalinkCopier.astro?raw';
 import commandsPage from '../pages/commands.astro?raw';
 import { RESERVED_IDS, checkCommandGroups, commandGroups, type CommandGroup } from './commands';
+import { fixedIds } from './testing/fixed-ids';
 
 const group = (commands: CommandGroup['commands'], id = 'misc'): CommandGroup => ({
   id,
@@ -29,11 +28,10 @@ describe('commands.yaml', () => {
 
   // The page's own ids share the anchor space with the groups and commands.
   it('reserves every fixed id the Commands page renders', () => {
-    const source = [baseLayout, commandsPage, permalinkCopier].join('\n');
-    expect(commandsPage).toContain('PermalinkCopier');
-    const fixedIds = [...source.matchAll(/\bid="([^"{}]+)"/g)].map((m) => m[1]);
-    expect(fixedIds.length).toBeGreaterThan(0);
-    expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
+    const { ids, components } = fixedIds(commandsPage);
+    expect(components).toContain('PermalinkCopier.astro');
+    expect(ids.length).toBeGreaterThan(0);
+    expect(ids.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
   });
 });
 
@@ -54,10 +52,12 @@ describe('checkCommandGroups', () => {
     );
   });
 
-  it('refuses a slash command as a message example', () => {
-    expect(() => checkCommandGroups([group([command('hex', ['/hex'], true)])])).toThrow(
-      'should be an example message',
-    );
+  it('refuses a slash command or a blank line as a message example', () => {
+    for (const line of ['/hex', '', ' ']) {
+      expect(() => checkCommandGroups([group([command('hex', [line], true)])])).toThrow(
+        'should be an example message',
+      );
+    }
   });
 
   it('refuses reused and reserved anchors', () => {
