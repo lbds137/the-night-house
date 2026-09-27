@@ -39,10 +39,12 @@ export const nodes: CategoryNode[] = parse(nodesYaml);
 
 for (const node of nodes) {
   if (node.type !== 'role' && node.type !== 'note') {
-    throw new Error(`nodes.yaml: unknown node type ${JSON.stringify((node as { type: unknown }).type)}`);
+    const type = JSON.stringify((node as { type: unknown }).type);
+    throw new Error(`nodes.yaml: unknown node type ${type}`);
   }
   if (node.type === 'role' && !/^[0-9a-fA-F]{6}$/.test(String(node.color))) {
-    throw new Error(`nodes.yaml: role ${node.id} color must be 6 hex digits, got ${JSON.stringify(node.color)}`);
+    const color = JSON.stringify(node.color);
+    throw new Error(`nodes.yaml: role ${node.id} color must be 6 hex digits, got ${color}`);
   }
 }
 
@@ -76,14 +78,27 @@ export function categoriesWithNodes(): CategoryWithNodes[] {
     .filter(({ nodes }) => nodes.length > 0);
 }
 
-/** The page's groups, each with its categories; every category must be in exactly one. */
-export function groupsWithCategories(): { group: RoleGroup; categories: CategoryWithNodes[] }[] {
-  const byId = new Map(categoriesWithNodes().map((c) => [c.category.id, c]));
-  const known = new Set(categories.map((c) => c.id));
-  const anchors = new Set(categories.map(categoryAnchor));
+export interface GroupWithCategories {
+  group: RoleGroup;
+  categories: CategoryWithNodes[];
+}
+
+/**
+ * Sorts categories (the ones with roles in `withNodes`) into groups, checking that every such
+ * category is in exactly one group, that groups name only real categories, and that group ids
+ * are unique and differ from every category anchor.
+ */
+export function groupCategories(
+  groupList: RoleGroup[],
+  allCategories: RoleCategory[],
+  withNodes: CategoryWithNodes[],
+): GroupWithCategories[] {
+  const byId = new Map(withNodes.map((c) => [c.category.id, c]));
+  const known = new Set(allCategories.map((c) => c.id));
+  const anchors = new Set(allCategories.map(categoryAnchor));
   const placed = new Set<string>();
   const groupIds = new Set<string>();
-  for (const group of groups) {
+  for (const group of groupList) {
     if (anchors.has(group.id)) {
       throw new Error(`groups.yaml: group id "${group.id}" is also a category's anchor`);
     }
@@ -97,10 +112,14 @@ export function groupsWithCategories(): { group: RoleGroup; categories: Category
   }
   const missing = [...byId.keys()].filter((id) => !placed.has(id));
   if (missing.length > 0) throw new Error(`groups.yaml: no group for ${missing.join(', ')}`);
-  return groups
+  return groupList
     .map((group) => ({
       group,
       categories: group.categories.flatMap((id) => byId.get(id) ?? []),
     }))
     .filter(({ categories }) => categories.length > 0);
 }
+
+/** The Roles page's groups, each with its categories, from groups.yaml. */
+export const groupsWithCategories = () =>
+  groupCategories(groups, categories, categoriesWithNodes());
