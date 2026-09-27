@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderMarkdown } from '../lib/markdown';
+import guide from '../content/guide.md?raw';
+
+const description =
+  'A guide to The Night House for new members: getting in, finding your way around the ' +
+  'channels, opt-in areas, tickets, the inactivity prune, and what the name means.';
+---
+
+<Base title="Guide" {description}>
+  <div class="prose" set:html={renderMarkdown(guide)} />
+</Base>
