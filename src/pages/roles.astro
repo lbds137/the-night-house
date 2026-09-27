@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import RoleCategory from '../components/RoleCategory.astro';
 import { parseGlossary } from '../lib/glossary';
 import { renderMarkdown } from '../lib/markdown';
-import { categoriesWithNodes } from '../lib/roles';
+import { groupsWithCategories } from '../lib/roles';
 import glossary from '../content/glossary.md?raw';
 import intro from '../content/roles-intro.md?raw';
 
@@ -32,8 +32,15 @@ const description =
   </div>
   <div class="role-categories" id="role-categories">
     {
-      categoriesWithNodes().map(({ category, nodes }) => (
-        <RoleCategory {category} {nodes} {glossaryTerms} />
+      groupsWithCategories().map(({ group, categories }) => (
+        <section class="role-group" aria-labelledby={group.id}>
+          <h2 class="role-group-heading" id={group.id}>
+            {group.name}
+          </h2>
+          {categories.map(({ category, nodes }) => (
+            <RoleCategory {category} {nodes} {glossaryTerms} />
+          ))}
+        </section>
       ))
     }
   </div>
@@ -91,6 +98,14 @@ const description =
     announceTimer = setTimeout(() => (status.textContent = text), text ? 500 : 0);
   };
 
+  const groups = [...document.querySelectorAll<HTMLElement>('.role-group')];
+  // A group whose categories the filter has all hidden goes too, heading included.
+  const hideEmptyGroups = () => {
+    for (const group of groups) {
+      group.hidden = !group.querySelector('.role-category:not([hidden])');
+    }
+  };
+
   const applyFilter = () => {
     const query = filter.value.trim();
     if (query === '') {
@@ -101,6 +116,7 @@ const description =
         c.notes.forEach((note) => (note.hidden = false));
       });
       openBefore = undefined;
+      hideEmptyGroups();
       announce('');
       return;
     }
@@ -119,6 +135,7 @@ const description =
       c.details.open = visible;
       shown += count;
     }
+    hideEmptyGroups();
     if (shown === 0) announce('No roles match that filter.');
     else announce(shown === 1 ? '1 role matches.' : `${shown} roles match.`);
   };
