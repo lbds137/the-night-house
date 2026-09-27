@@ -42,4 +42,15 @@ describe('parseGlossary', () => {
   it('refuses two entries with the same anchor', () => {
     expect(() => parseGlossary('**Santeria**: one.\n\n**Santería**: two.')).toThrow(/santeria/);
   });
+
+  // CLAUDE.md: comments park unwritten text anywhere in content files.
+  it('ignores HTML comments between entries', () => {
+    const withComment = '**Ásatrú**: a revival.\n\n<!--\nAscension\n-->\n\n**Egregore**: a group.';
+    expect(parseGlossary(withComment).entries.map((e) => e.slug)).toEqual(['asatru', 'egregore']);
+  });
+
+  it('refuses a term the A–Z bar could not reach', () => {
+    expect(() => parseGlossary('**1st Degree**: an initiation.')).toThrow(/1st Degree/);
+    expect(() => parseGlossary('**…**: nothing.')).toThrow(/letter A–Z/);
+  });
 });

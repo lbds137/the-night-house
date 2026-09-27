@@ -344,22 +344,38 @@ main {
   background: var(--surface-1);
 }
 
-/* Two rows of 13 on phones (three on the narrowest), one row of 26 on wider screens. */
+/*
+ * Two rows of 13 on phones (three on the narrowest), one row of 26 on wider screens.
+ * --glossary-bar-estimate is the bar's height without JavaScript (letter rows only, no
+ * filter); the page script replaces it with the measured height.
+ */
 .glossary-index {
   display: grid;
   grid-template-columns: repeat(13, minmax(0, 1fr));
   gap: 0.2rem;
 }
 
+:root {
+  --glossary-bar-estimate: 4.8rem;
+}
+
 @media (max-width: 22rem) {
   .glossary-index {
     grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+
+  :root {
+    --glossary-bar-estimate: 6.75rem;
   }
 }
 
 @media (min-width: 44rem) {
   .glossary-index {
     grid-template-columns: repeat(26, minmax(0, 1fr));
+  }
+
+  :root {
+    --glossary-bar-estimate: 2.85rem;
   }
 }
 
@@ -404,7 +420,7 @@ main {
 
 .glossary-letter,
 .glossary-entry {
-  scroll-margin-top: calc(var(--glossary-tools-height, 0px) + 0.75rem);
+  scroll-margin-top: calc(var(--glossary-tools-height, var(--glossary-bar-estimate)) + 0.75rem);
 }
 
 .glossary-letter-heading {

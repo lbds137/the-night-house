@@ -55,26 +55,24 @@ const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 </Base>
 
 <script>
+  import { filterMatches, foldForSearch } from '../lib/search';
+
   const tools = document.getElementById('glossary-tools')!;
   const filter = document.getElementById('glossary-filter') as HTMLInputElement;
   const noMatch = document.getElementById('glossary-no-match')!;
   const sections = [...document.querySelectorAll<HTMLElement>('.glossary-letter')];
-  const fold = (text: string) =>
-    text.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/\s+/g, ' ');
-  const entries = [...document.querySelectorAll<HTMLElement>('.glossary-entry')].map((el) => ({
-    el,
-    text: fold(el.textContent ?? ''),
-  }));
+  const entries = [...document.querySelectorAll<HTMLElement>('.glossary-entry')];
+  const texts = entries.map((el) => foldForSearch(el.textContent ?? ''));
 
-  // Anchored entries land below the sticky bar instead of under it.
+  // Anchored entries land below the sticky bar; the measured height replaces the CSS estimate.
   new ResizeObserver(() => {
     const height = `${tools.offsetHeight}px`;
     document.documentElement.style.setProperty('--glossary-tools-height', height);
   }).observe(tools);
 
   const applyFilter = () => {
-    const query = fold(filter.value.trim());
-    for (const { el, text } of entries) el.hidden = query !== '' && !text.includes(query);
+    const keep = filterMatches(texts, filter.value);
+    entries.forEach((el, i) => (el.hidden = !keep[i]));
     for (const section of sections) {
       section.hidden = !section.querySelector('.glossary-entry:not([hidden])');
     }
