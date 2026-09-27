@@ -5,10 +5,9 @@ import { renderMarkdown } from '../lib/markdown';
 import welcome from '../content/welcome.md?raw';
 import { MAIN_NAV, SITE_DESCRIPTION, isNavGroup } from '../lib/site';
 
-const site = Astro.site!.href;
-// The community's own profiles elsewhere (the Stats link is a dashboard, not a profile).
+const site = new URL('/', Astro.site).href;
 const profiles = MAIN_NAV.flatMap((item) => (isNavGroup(item) ? item.children : [item]))
-  .filter((link) => ['Disboard', 'Twitter'].includes(link.title))
+  .filter((link) => link.profile)
   .map((link) => link.href);
 const structuredData = [
   {

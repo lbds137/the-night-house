@@ -22,7 +22,13 @@ describe('glossary sources', () => {
 
   // The parser refuses entry anchors in RESERVED_IDS, so it must list every fixed id on the page.
   it('reserves every fixed id the glossary page uses', () => {
-    const source = baseLayout + glossaryPage;
+    // Base renders the header and nav components on every page, so their ids count too.
+    const components = import.meta.glob<string>('../components/*.astro', {
+      query: '?raw',
+      import: 'default',
+      eager: true,
+    });
+    const source = [baseLayout, glossaryPage, ...Object.values(components)].join('\n');
     const fixedIds = [...source.matchAll(/\bid="([^"{}]+)"/g)].map((m) => m[1]);
     expect(fixedIds.length).toBeGreaterThan(0);
     expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);

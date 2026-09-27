@@ -19,6 +19,8 @@ export interface NavLink {
   title: string;
   href: string;
   external?: boolean;
+  /** The community's own profile elsewhere; listed as `sameAs` in the site's structured data. */
+  profile?: boolean;
 }
 
 export interface NavGroup {
@@ -42,7 +44,13 @@ export const MAIN_NAV: NavItem[] = [
       { title: 'Glossary', href: '/glossary/' },
     ],
   },
-  { title: 'Disboard', href: 'https://disboard.org/server/462036216909398026', external: true },
+  {
+    title: 'Disboard',
+    href: 'https://disboard.org/server/462036216909398026',
+    external: true,
+    profile: true,
+  },
+  // A stats dashboard about the server, not a profile of it.
   { title: 'Stats', href: 'https://statbot.net/dashboard/462036216909398026', external: true },
-  { title: 'Twitter', href: 'https://twitter.com/TheNightHouse/', external: true },
+  { title: 'Twitter', href: 'https://twitter.com/TheNightHouse/', external: true, profile: true },
 ];

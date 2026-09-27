@@ -102,7 +102,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 │   ├── data/roles/     # categories.yaml, nodes.yaml
 │   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
 │   ├── layouts/        # Base.astro (head + per-page description/OG/JSON-LD, page title as h1)
-│   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts
+│   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts, glossary.ts,
+│   │                   # search.ts (glossary filter, shipped to the browser: no imports),
+│   │                   # seo.ts (JSON-LD escaping, sitemap paths, plain-text definitions)
 │   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical),
 │   │                   # sitemap.xml.ts (lists every page but 404)
 │   └── styles/         # global.css
@@ -166,9 +168,6 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ## Improvement Opportunities
 
 - **Content**: add the Resources nav group once its pages have content
-- **Glossary metadata**: once the A–Z navigation (PR #47) is on main, give the glossary page its
-  own `description` and schema.org `DefinedTermSet` structured data (one `DefinedTerm` per entry,
-  with its `/glossary/#slug` URL)
 - Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines
