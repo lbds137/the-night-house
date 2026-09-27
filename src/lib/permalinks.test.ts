@@ -50,6 +50,12 @@ describe('withPermalink', () => {
   it('refuses an entry that does not open with a paragraph', () => {
     expect(() => withPermalink('<ul><li>x</li></ul>', 'x', 'X')).toThrow(/paragraph/);
   });
+
+  it('escapes the label so a quote in a term cannot end the attribute', () => {
+    expect(withPermalink('<p>x</p>', 'x', 'The "Void" & <more>')).toContain(
+      'aria-label="Link to The &quot;Void&quot; &amp; &lt;more>"',
+    );
+  });
 });
 
 describe('linkCrossReferences', () => {
@@ -68,6 +74,11 @@ describe('linkCrossReferences', () => {
 
   it('refuses a reference to a term that has no entry', () => {
     expect(() => linkCrossReferences('(see Therian)', slugs)).toThrow(/Therian/);
+  });
+
+  it('matches a reference within one line only', () => {
+    const md = 'first (see the notes\nbelow) and more';
+    expect(linkCrossReferences(md, slugs)).toBe(md);
   });
 
   it('resolves every reference in the real glossary', () => {
