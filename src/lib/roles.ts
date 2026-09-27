@@ -82,10 +82,13 @@ export function groupsWithCategories(): { group: RoleGroup; categories: Category
   const known = new Set(categories.map((c) => c.id));
   const anchors = new Set(categories.map(categoryAnchor));
   const placed = new Set<string>();
+  const groupIds = new Set<string>();
   for (const group of groups) {
     if (anchors.has(group.id)) {
       throw new Error(`groups.yaml: group id "${group.id}" is also a category's anchor`);
     }
+    if (groupIds.has(group.id)) throw new Error(`groups.yaml: two groups use id "${group.id}"`);
+    groupIds.add(group.id);
     for (const id of group.categories) {
       if (!known.has(id)) throw new Error(`groups.yaml: no category "${id}" in categories.yaml`);
       if (placed.has(id)) throw new Error(`groups.yaml: category "${id}" is in two groups`);
