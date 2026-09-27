@@ -22,7 +22,8 @@ export default function checkLinks(): AstroIntegration {
           const path = `/${relative(root, file).split(sep).join('/')}`;
           if (path.endsWith('.html')) {
             // A folder's index.html is served as the folder: /glossary/index.html → /glossary/.
-            const pagePath = path.endsWith('/index.html') ? path.slice(0, -'index.html'.length) : path;
+            const isIndex = path.endsWith('/index.html');
+            const pagePath = isIndex ? path.slice(0, -'index.html'.length) : path;
             pages.push({ path: pagePath, html: readFileSync(file, 'utf8') });
           } else {
             files.add(path);
