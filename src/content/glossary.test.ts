@@ -51,11 +51,17 @@ describe('glossary sources', () => {
   // The Discord `-define` command (lbds137/yagpdb-custom-commands, utility/define.gohtml) can't
   // do Unicode NFD, so it folds only these accented letters; any other would slug differently
   // there than here. Add the letter to define.gohtml's reReplace map, then to this list.
-  it('uses only accented letters the Discord -define command can fold', () => {
+  // Terms are checked in composed form (NFC); a combining mark still left over has no folded
+  // form in the bot, which would turn it into a stray "-".
+  it('uses only letters and marks the Discord -define command can fold', () => {
     const botFolds = 'àáâãäåāèéêëēìíîïīòóôõöōùúûūüñçýÿ';
-    const foldable = (c: string) => !/\p{L}/u.test(c) || /[a-z]/.test(c) || botFolds.includes(c);
-    const unfoldable = (term: string) => [...term.toLowerCase()].filter((c) => !foldable(c));
+    const foldable = (c: string) =>
+      !/[\p{L}\p{M}]/u.test(c) || /[a-z]/.test(c) || botFolds.includes(c);
+    const unfoldable = (term: string) =>
+      [...term.normalize('NFC').toLowerCase()].filter((c) => !foldable(c));
     expect(unfoldable('Čech')).toEqual(['č']);
+    expect(unfoldable('Ásatru')).toEqual([]); // decomposed "Á" composes to a folded letter
+    expect(unfoldable('q́')).toEqual(['́']); // no composed form: the mark remains
     expect(entries.flatMap((e) => unfoldable(e.term).map((c) => `${e.term}: ${c}`))).toEqual([]);
   });
 
