@@ -106,8 +106,59 @@ jobs:
   # needs required checks, and those need GitHub Pro on private repos. A merge made
   # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
   # dispatches the deploy and CodeQL runs itself (workflow_dispatch is exempt).
-  automerge:
+  #
+  # The checks ran on the PR as branched, but main may have moved since: two PRs that each
+  # pass alone can break the build together. combined-build rebases the PR onto current main,
+  # as the merge will, and builds that. It runs the PR's code, so it gets a read-only token and
+  # its own job: nothing it does (env vars, $GITHUB_ENV writes) can reach the merge job's token.
+  combined-build:
     needs: claude-review
+    if: >-
+      github.event.pull_request.user.login == github.repository_owner &&
+      !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    outputs:
+      main-sha: ${{ steps.rebase.outputs.main-sha }}
+    env:
+      SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      # Assumes a same-repo PR branch without merge commits, which is how this repo works:
+      # a fork's commit isn't on origin, and merge commits don't replay the way GitHub's
+      # rebase merge does. Either case fails here, which blocks the merge.
+      - name: Rebase the PR onto current main
+        id: rebase
+        run: |
+          echo "main-sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          git fetch origin "$SHA"
+          git -c user.name=automerge -c user.email=automerge@localhost \
+            rebase --onto HEAD "$(git merge-base HEAD "$SHA")" "$SHA" || {
+            echo "::error::The PR doesn't rebase cleanly onto current main. Rebase it and push."
+            exit 1
+          }
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Build the PR on top of current main
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build || {
+            echo "::error::The PR builds alone but not on top of current main. Rebase and fix it."
+            exit 1
+          }
+
+  automerge:
+    needs: [claude-review, combined-build]
     if: >-
       github.event.pull_request.user.login == github.repository_owner &&
       !github.event.pull_request.draft
@@ -147,43 +198,14 @@ jobs:
           done
           echo "::error::Checks still running after 40 minutes; merge by hand or re-run this job."
           exit 1
-      # The checks above ran on the PR as branched, but main may have moved since (two PRs
-      # that each pass alone can break the build together). Rebase the PR onto current main,
-      # as the merge will, and build that before merging.
-      - name: Check out current main
-        uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-          # PR code runs below; keep the write token out of its reach.
-          persist-credentials: false
-      - name: Rebase the PR onto current main
-        run: |
-          git fetch origin "$SHA"
-          echo "MAIN_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          git -c user.name=automerge -c user.email=automerge@localhost \
-            rebase --onto HEAD "$(git merge-base HEAD "$SHA")" "$SHA" || {
-            echo "::error::The PR doesn't rebase cleanly onto current main. Rebase it and push."
-            exit 1
-          }
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: pnpm
-      - name: Build the PR on top of current main
-        run: |
-          pnpm install --frozen-lockfile
-          pnpm build || {
-            echo "::error::The PR builds alone but not on top of current main. Rebase and fix it."
-            exit 1
-          }
       - name: Merge
         # --match-head-commit refuses if anything was pushed after the reviewed commit, and
-        # the main check refuses if another merge landed after the combined build above.
-        # The branch is deleted through the API, which needs no credentials in the checkout.
+        # the main check refuses if another merge landed after combined-build built on main.
+        # The branch is deleted through the API: this job has no checkout for gh's
+        # --delete-branch to work in.
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          MAIN_SHA: ${{ needs.combined-build.outputs.main-sha }}
         run: |
           now=$(gh api "repos/$REPO/git/ref/heads/main" --jq .object.sha)
           if [ "$now" != "$MAIN_SHA" ]; then
