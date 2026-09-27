@@ -27,8 +27,9 @@
       text: >-
         Works out the gematria of the text: the value of each word, each line and the whole,
         each reduced step by step to a single digit. It reads Hebrew, Paleo-Hebrew, Greek,
-        Arabic, Latin and runes. For a short text it also lists the Major Arcana its letters
-        correspond to, in both the Rider-Waite-Smith and Thoth decks.
+        Arabic, Latin, runes and the digits 1 to 9. When its letters correspond to 11 or fewer
+        different Major Arcana, it lists those cards too, in both the Rider-Waite-Smith and
+        Thoth decks.
     - name: "alefbet"
       usage: ["/alefbet <text>"]
       text: >-
@@ -95,7 +96,8 @@
     - name: "avatar_viewer"
       usage: ["/avatar_viewer [user ID or message link] [size]"]
       text: >-
-        Shows someone's avatar, with their ID, name and account age. With no user it shows
+        Shows someone's avatar, with their ID, name, nickname and when their account was
+        created. With no user it shows
         yours; a message link shows the avatar of whoever sent it. The size can be 32, 64,
         128, 256, 512 or 1024 (the default).
     - name: "timestamp"

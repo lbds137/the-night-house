@@ -48,7 +48,8 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       if (!command.usage?.length) throw new Error(`commands.yaml: ${command.name} has no usage`);
       for (const line of command.usage) {
         const typed = new RegExp(`^/${command.name}( |$)`).test(line);
-        if (command.message ? line.startsWith('/') : !typed) {
+        const example = line.trim() !== '' && !line.startsWith('/');
+        if (command.message ? !example : !typed) {
           const expected = command.message ? 'an example message' : `"/${command.name}"`;
           throw new Error(`commands.yaml: ${command.name}'s usage "${line}" should be ${expected}`);
         }

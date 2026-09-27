@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import sourcesRaw from '../../docs/glossary-sources.json?raw';
-import baseLayout from '../layouts/Base.astro?raw';
 import { RESERVED_IDS, parseGlossary } from '../lib/glossary';
 import { nodes } from '../lib/roles';
+import { fixedIds } from '../lib/testing/fixed-ids';
 import glossaryPage from '../pages/glossary.astro?raw';
 import glossary from './glossary.md?raw';
 
@@ -32,30 +32,10 @@ describe('glossary sources', () => {
 
   // The parser refuses entry anchors in RESERVED_IDS, so it must list every fixed id on the page.
   it('reserves every fixed id the glossary page uses', () => {
-    // Only the components the page actually renders: those the layout and page import, and
-    // whatever those import in turn.
-    const components = import.meta.glob<string>('../components/*.astro', {
-      query: '?raw',
-      import: 'default',
-      eager: true,
-    });
-    const rendered = new Set<string>();
-    const visit = (source: string) => {
-      for (const [, name] of source.matchAll(/(\w+)\.astro['"]/g)) {
-        const path = `../components/${name}.astro`;
-        if (components[path] !== undefined && !rendered.has(path)) {
-          rendered.add(path);
-          visit(components[path]);
-        }
-      }
-    };
-    visit(baseLayout + glossaryPage);
-    expect([...rendered]).toContain('../components/PermalinkCopier.astro');
-    const renderedSources = [...rendered].map((path) => components[path]);
-    const source = [baseLayout, glossaryPage, ...renderedSources].join('\n');
-    const fixedIds = [...source.matchAll(/\bid="([^"{}]+)"/g)].map((m) => m[1]);
-    expect(fixedIds.length).toBeGreaterThan(0);
-    expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
+    const { ids, components } = fixedIds(glossaryPage);
+    expect(components).toContain('PermalinkCopier.astro');
+    expect(ids.length).toBeGreaterThan(0);
+    expect(ids.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
   });
 
   // The Discord `/define` command (yagpdb-custom-commands, everyone/knowledge/define.gohtml) can't
