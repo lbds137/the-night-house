@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PermalinkCopier from '../components/PermalinkCopier.astro';
+import { commandGroups } from '../lib/commands';
+import { renderMarkdown } from '../lib/markdown';
+import { permalink } from '../lib/permalinks';
+import intro from '../content/commands-intro.md?raw';
+
+const description =
+  "The Night House's Discord bot commands: gematria, atbash and other Hebrew tools, glossary " +
+  'and rule lookups, color checks, emoji and avatars, and bumping the server.';
+---
+
+<Base title="Commands" {description}>
+  <div class="callout prose" set:html={renderMarkdown(intro)} />
+  <div class="prose commands">
+    {
+      commandGroups.map((group) => (
+        <section class="command-group" aria-labelledby={group.id}>
+          <h2 class="command-group-heading" id={group.id}>
+            {group.name}
+          </h2>
+          {group.commands.map((command) => (
+            <div class="command" id={command.name}>
+              <p class="command-usage">
+                <Fragment set:html={permalink(command.name, `the ${command.name} command`)} />
+                {command.usage.map((line) => (
+                  <code>{line}</code>
+                ))}
+              </p>
+              <div class="command-text" set:html={renderMarkdown(command.text)} />
+            </div>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+  <PermalinkCopier />
+</Base>

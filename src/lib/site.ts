@@ -62,6 +62,7 @@ export const MAIN_NAV: NavItem[] = [
   { title: 'Guide', href: '/guide/' },
   { title: 'Roles', href: '/roles/' },
   { title: 'Glossary', href: '/glossary/' },
+  { title: 'Commands', href: '/commands/' },
 ];
 
 /** The community elsewhere on the web, listed in the site footer. */

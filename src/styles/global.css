@@ -508,6 +508,64 @@ main {
   box-shadow: inset 3px 0 0 var(--accent-strong);
 }
 
+/* Commands */
+
+.command-group-heading {
+  margin: 1.5rem 0 0.75rem;
+  color: var(--accent-strong);
+  font-size: 1.25rem;
+  font-weight: 800;
+  scroll-margin-top: 1rem;
+}
+
+.command-group:first-child .command-group-heading {
+  margin-top: 0;
+}
+
+/* The "#" sits in the card's corner: at the start of a long usage line that wraps, it would be
+   left alone on a line of its own. */
+.command {
+  position: relative;
+  margin: 0 0 0.75rem;
+  padding: 0.75rem 2.25rem 0.75rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+  scroll-margin-top: 1rem;
+}
+
+.command:target {
+  box-shadow: inset 3px 0 0 var(--accent-strong);
+}
+
+.prose .command-usage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0 0 0.4rem;
+}
+
+/* On the command's own surface-2 card, code needs the next surface up to stand out. */
+.command code {
+  background: var(--surface-3);
+}
+
+.prose .command-usage a.permalink {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  margin: 0;
+}
+
+.command-usage code {
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+
+.command-text > :last-child {
+  margin-bottom: 0;
+}
+
 /* Discord-style mentions and callouts */
 
 .mention {

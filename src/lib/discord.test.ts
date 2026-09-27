@@ -30,7 +30,7 @@ describe('site rules → bot rules', () => {
   it('makes one paste-ready command per rule, each within Discord limits', () => {
     const lines = ruleEditLines(rulesMarkdown, channels);
     expect(lines).toHaveLength(Object.keys(botRules).length);
-    expect(lines[4]).toMatch(/^-rule_edit 5 \*\*You are expected.*<#950127079695978598>/);
+    expect(lines[4]).toMatch(/^\/rule_edit 5 \*\*You are expected.*<#950127079695978598>/);
     for (const line of lines) expect(line.length).toBeLessThanOrEqual(MESSAGE_LIMIT);
   });
 
