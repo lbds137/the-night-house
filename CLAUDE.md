@@ -164,7 +164,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   prints paste-ready `/rule_edit N <text>` lines (the server's text prefix is `/`;
   `src/lib/discord.ts`); `!c!name!c!` becomes `<#id>` from `src/data/discord-channels.yaml`
   (a missing id fails). Text the bot's argument parser would alter (`"`, backticks, `\`,
-  double spaces) is refused. `discord.test.ts` checks the output against a dump of the bot's copy; update that fixture after pasting a changed rule
+  double spaces) is refused. `discord.test.ts` checks the output against a dump of the bot's
+  copy; update that fixture after pasting a changed rule
 
 ## Code Style
 
