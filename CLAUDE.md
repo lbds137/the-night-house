@@ -114,7 +114,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
    - `!c!channel-name!c!` → channel mention pill
    - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast
    - An unknown role id, or kramdown `{: ...}` attribute syntax, fails the build on purpose
-3. HTML comments in content are stripped (the glossary keeps unwritten terms in them)
+3. HTML comments in content are stripped (the glossary keeps unwritten terms in them); an
+   unclosed `<!--` fails the build
 4. External links get `target="_blank" rel="noopener"` automatically
 
 ### Key Features
