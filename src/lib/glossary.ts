@@ -1,3 +1,6 @@
+import { stripComments } from './markdown';
+import { stripAccents } from './search';
+
 export interface GlossaryEntry {
   term: string;
   /** Anchor id, e.g. "chaos-magick"; also the entry's id in docs/glossary-sources.json. */
@@ -15,8 +18,6 @@ export interface GlossaryPage {
 
 const TERM = /^\*\*(.+?)\*\*/;
 
-const stripAccents = (text: string) => text.normalize('NFD').replace(/\p{Mn}/gu, '');
-
 export const slugify = (term: string) =>
   stripAccents(term)
     .toLowerCase()
@@ -25,7 +26,7 @@ export const slugify = (term: string) =>
 
 /** Each entry is one blank-line-separated block starting with its bold term. */
 export function parseGlossary(markdown: string): GlossaryPage {
-  const blocks = markdown.trim().split(/\n{2,}/);
+  const blocks = stripComments(markdown).trim().split(/\n{2,}/);
   const entries: GlossaryEntry[] = [];
   let i = 0;
   for (; i < blocks.length; i++) {
@@ -33,12 +34,17 @@ export function parseGlossary(markdown: string): GlossaryPage {
     if (!match) break;
     const term = match[1];
     const slug = slugify(term);
+    // The A–Z bar can only reach entries filed under a letter.
+    if (!/^[a-z]/.test(slug)) {
+      throw new Error(`glossary.md: "${term}" must start with a letter A–Z to be in the index`);
+    }
     entries.push({ term, slug, letter: slug[0].toUpperCase(), markdown: blocks[i] });
   }
   const rest = blocks.slice(i);
   const stray = rest.find((block) => TERM.test(block));
   if (stray) {
-    throw new Error(`glossary.md: entry after non-entry text, so it would be lost: ${stray.slice(0, 60)}`);
+    const start = stray.slice(0, 60);
+    throw new Error(`glossary.md: entry after non-entry text, so it would be lost: ${start}`);
   }
   const seen = new Set<string>();
   for (const { slug, term } of entries) {

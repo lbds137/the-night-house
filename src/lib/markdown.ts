@@ -82,7 +82,7 @@ export function replaceTokens(text: string): string {
 // HTML comments hold not-yet-written entries (e.g. in glossary.md); keep them out of the page.
 // An opener left in the output (unclosed, or rebuilt from pieces like `<!<!---->--`) would hide
 // the rest of the page, so either case fails the build instead.
-function stripComments(text: string): string {
+export function stripComments(text: string): string {
   let output = '';
   let position = 0;
   for (;;) {
