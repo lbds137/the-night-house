@@ -467,7 +467,7 @@
   name: "Bump Brigade | חטיבת דחיפה"
   id: "776211371322900521"
   color: "808000"
-  text: "This is an opt-in role for those who wish to help \"bump\" the server on [Disboard](https://disboard.org/server/462036216909398026). The YAGPDB bot pings this role every two hours when it's time for the server to be bumped, and it will continue to ping in 10 minute intervals until the server gets bumped."
+  text: "This is an opt-in role for those who wish to help \"bump\" the server on [Disboard](https://disboard.org/server/462036216909398026). The YAGPDB bot checks every 12 hours and pings this role in !c!disboard!c! if the server hasn't been bumped in the last two hours ([how to bump](/commands/#bump_check))."
 -
   type: "role"
   category_id: "notification"

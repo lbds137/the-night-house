@@ -1,0 +1,117 @@
+# The member commands of the server's YAGPDB bot, for the Commands page, in page order.
+# Source: github.com/lbds137/yagpdb-custom-commands, everyone/ (checked at 0186f43,
+# 2026-09-27). Each usage line follows the command's own usage text. Staff tools and the
+# commands other commands call (embed_exec, db, db_get_*, message_link, ...) stay off the page.
+#
+# A group's id is its /commands/# anchor, and so is each command's name. A command's usage
+# lines start with "/<name>"; a `message: true` command fires on what a message says instead,
+# so its usage lines are example messages. src/lib/commands.ts checks all of this.
+-
+  name: "Glossary and rules"
+  id: "glossary-and-rules"
+  commands:
+    - name: "define"
+      usage: ["/define <term>", "/define"]
+      text: >-
+        Links to the term's entry in this site's [glossary](/glossary/). With no term, links to
+        the whole glossary.
+    - name: "rule"
+      usage: ["/rule <number>"]
+      text: "Posts that rule from the [rules](/rules/), e.g. `/rule 5`."
+-
+  name: "Hebrew and gematria"
+  id: "hebrew-and-gematria"
+  commands:
+    - name: "gematria"
+      usage: ["/gematria <text>"]
+      text: >-
+        Works out the gematria of the text: the value of each word, each line and the whole,
+        each reduced step by step to a single digit. It reads Hebrew, Paleo-Hebrew, Greek,
+        Arabic, Latin and runes. For a short text it also lists the Major Arcana its letters
+        correspond to, in both the Rider-Waite-Smith and Thoth decks.
+    - name: "alefbet"
+      usage: ["/alefbet <text>"]
+      text: >-
+        Turns Paleo-Hebrew or Arabic letters into their Hebrew equivalents, with final forms at
+        the ends of words, then shows the gematria of the result.
+    - name: "atbash"
+      usage: ["/atbash <text>"]
+      text: >-
+        Enciphers the text with the atbash cipher, which swaps each letter for its mirror in
+        the alphabet (the first for the last, and so on), then shows its gematria. It works on
+        Hebrew, Paleo-Hebrew, Greek, Arabic, Latin, runes and digits.
+    - name: "pyramid"
+      usage: ["/pyramid <text>"]
+      text: >-
+        Builds a pyramid from each word, one more letter on every line, and shows its gematria.
+        Several words give one pyramid each, up to 10.
+    - name: "rand_hebrew"
+      usage: ["/rand_hebrew <letters>", "/rand_hebrew <groups>x<letters>"]
+      text: >-
+        Random Hebrew letters, with the gematria of the result: `/rand_hebrew 7` gives seven
+        letters, and `/rand_hebrew 3x4` gives three groups of four.
+-
+  name: "Colors"
+  id: "colors"
+  commands:
+    - name: "hex_to_int"
+      message: true
+      usage: ["#ff0000"]
+      text: >-
+        Send a message that is only a color code (a `#` and six hex digits) to see a swatch
+        of that color and its value as a number.
+    - name: "rand_color"
+      usage: ["/rand_color"]
+      text: "Shows a random color: its swatch, color code and value."
+    - name: "contrast"
+      usage: ["/contrast <color>", "/contrast <role ID>"]
+      text: >-
+        Checks how readable a color is, or a role's color: its contrast against black, against
+        Discord's dark theme and against white, and the average of the three.
+    - name: "contrasts"
+      usage: ["/contrasts <colors or role IDs>"]
+      text: "The same check for several colors or roles at once, up to 10."
+-
+  name: "Links, emoji and avatars"
+  id: "links-emoji-and-avatars"
+  commands:
+    - name: "channel_link"
+      message: true
+      usage: ["#channel-name"]
+      text: >-
+        In most channels, send a message that is only a channel mention to move the
+        conversation there: the bot
+        posts a link to that channel here, and a link back to this spot there. Mentioning the
+        channel you're in shows its details instead.
+    - name: "message_pointer"
+      usage: ["/message_pointer <message link> [comment]"]
+      text: "Posts a link to a message on the server, with your comment if you add one."
+    - name: "hugemoji"
+      usage: ["/hugemoji <emoji or message links>"]
+      text: >-
+        Shows custom emoji at full size: give the emoji themselves, or links to messages that
+        contain them, up to 10. Emoji from a message in an age-restricted channel only show in
+        an age-restricted channel.
+    - name: "avatar_viewer"
+      usage: ["/avatar_viewer [user ID or message link] [size]"]
+      text: >-
+        Shows someone's avatar, with their ID, name and account age. With no user it shows
+        yours; a message link shows the avatar of whoever sent it. The size can be 32, 64,
+        128, 256, 512 or 1024 (the default).
+    - name: "timestamp"
+      usage: ["/timestamp [ID]"]
+      text: >-
+        Shows when a Discord ID (a user, message, channel or role) was created. With no ID it
+        shows your account's creation date.
+-
+  name: "Bumping"
+  id: "bumping"
+  commands:
+    - name: "bump_check"
+      message: true
+      usage: ["👍"]
+      text: >-
+        Bumping moves the server up [Disboard](https://disboard.org/server/462036216909398026)'s
+        list. In !c!disboard!c!, run Disboard's own `/bump`, then send a message with a 👍 so
+        the bot records the bump. Every 12 hours, if the last bump is at least two hours old,
+        the bot reminds the channel and pings !r!776211371322900521!r!.

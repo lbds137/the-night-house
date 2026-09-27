@@ -1,10 +1,10 @@
-// Turns the site's rules into the bot's copy (YAGPDB's `Rules` entry, set by `-rule_edit`).
+// Turns the site's rules into the bot's copy (YAGPDB's `Rules` entry, set by `/rule_edit`).
 // Only relative `.ts` imports, so `node scripts/discord-rules.ts` can load it without Vite.
 import { stripComments } from './comments.ts';
 
 export type ChannelIds = Record<string, string>;
 
-// Discord's message limit for accounts without Nitro; the whole `-rule_edit` line must fit.
+// Discord's message limit for accounts without Nitro; the whole `/rule_edit` line must fit.
 export const MESSAGE_LIMIT = 2000;
 
 export function parseChannelIds(parsed: unknown): ChannelIds {
@@ -69,7 +69,7 @@ export function ruleEditLines(
   markdown: string,
   channels: ChannelIds,
   only: number[] = [],
-  prefix = '-',
+  prefix = '/',
 ): string[] {
   const rules = parseRules(markdown);
   for (const n of only) {

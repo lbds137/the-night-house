@@ -58,12 +58,12 @@ describe('glossary sources', () => {
     expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
   });
 
-  // The Discord `-define` command (lbds137/yagpdb-custom-commands, utility/define.gohtml) can't
+  // The Discord `/define` command (yagpdb-custom-commands, everyone/knowledge/define.gohtml) can't
   // do Unicode NFD, so it folds only these accented letters; any other would slug differently
   // there than here. Add the letter to define.gohtml's reReplace map, then to this list.
   // Terms are checked in composed form (NFC); a combining mark still left over has no folded
   // form in the bot, which would turn it into a stray "-".
-  it('uses only letters and marks the Discord -define command can fold', () => {
+  it('uses only letters and marks the Discord /define command can fold', () => {
     const botFolds = 'àáâãäåāèéêëēìíîïīòóôõöōùúûūüñçýÿ';
     const foldable = (c: string) =>
       !/[\p{L}\p{M}]/u.test(c) || /[a-z]/.test(c) || botFolds.includes(c);
