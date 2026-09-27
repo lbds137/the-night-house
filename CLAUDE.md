@@ -135,8 +135,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ## Dependencies
 
-- **Node.js** >= 22.12 and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && astro build`
-- **astro**, **marked**, **marked-smartypants**, **yaml**; dev: **@astrojs/check**, **typescript** 6
+- **Node.js** >= 22.12 and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && vitest run && astro build`
+- **astro**, **marked**, **marked-smartypants**, **yaml**; dev: **@astrojs/check**, **typescript** 6,
+  **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`)
   (`astro check` doesn't support TypeScript 7 yet)
 
 ## Known Issues and Patterns

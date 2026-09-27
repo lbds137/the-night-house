@@ -16,7 +16,13 @@ import intro from '../content/roles-intro.md?raw';
 <script>
   // A link to /roles/#some-category should land on that category already expanded.
   const openFromHash = () => {
-    const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    let id = location.hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // A malformed escape like `#%` just means no category matches.
+    }
+    const target = id && document.getElementById(id);
     if (target instanceof HTMLDetailsElement) {
       target.open = true;
       target.scrollIntoView();

@@ -17,10 +17,10 @@ const marked = new Marked(markedSmartypants(), {
   },
 });
 
-// The surface mentions sit on (--surface-raised in global.css); role colors are
+// The surface mentions sit on (--surface-2 in global.css); role colors are
 // lightened until they reach WCAG AA contrast against it.
-const MENTION_BACKGROUND = '#1a1a1e';
-const MIN_CONTRAST = 4.5;
+export const MENTION_BACKGROUND = '#1a1a1e';
+export const MIN_CONTRAST = 4.5;
 
 const escapeHtml = (text: string) =>
   text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -32,7 +32,8 @@ const parseHex = (hex: string): Rgb => {
   return [0, 2, 4].map((i) => parseInt(value.slice(i, i + 2), 16)) as Rgb;
 };
 
-const toHex = (rgb: Rgb) => '#' + rgb.map((c) => Math.round(c).toString(16).padStart(2, '0')).join('');
+const toHex = (rgb: Rgb) =>
+  '#' + rgb.map((c) => Math.round(c).toString(16).padStart(2, '0')).join('');
 
 const luminance = (rgb: Rgb) => {
   const [r, g, b] = rgb.map((c) => {
@@ -47,12 +48,15 @@ const contrast = (a: Rgb, b: Rgb) => {
   return (hi + 0.05) / (lo + 0.05);
 };
 
+export const contrastRatio = (hexA: string, hexB: string) =>
+  contrast(parseHex(hexA), parseHex(hexB));
+
 export function legibleRoleColor(hex: string): string {
   const base = parseHex(hex);
-  const background = parseHex(MENTION_BACKGROUND);
-  for (let t = 0; t <= 1; t += 0.05) {
-    const mixed = base.map((c) => c + (255 - c) * t) as Rgb;
-    if (contrast(mixed, background) >= MIN_CONTRAST) return toHex(mixed);
+  // Integer steps, and the check runs on the rounded hex, so rounding can't dip below the bar.
+  for (let step = 0; step <= 20; step++) {
+    const candidate = toHex(base.map((c) => c + ((255 - c) * step) / 20) as Rgb);
+    if (contrastRatio(candidate, MENTION_BACKGROUND) >= MIN_CONTRAST) return candidate;
   }
   return '#ffffff';
 }
