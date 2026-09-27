@@ -40,7 +40,7 @@ The server has a lot of channels, sorted into categories:
   thoughtforms, paths and beliefs, and polytheist pantheons.
 - **Spirits**: spirit work in general, plus a channel for each of many named spirits, from
   Abaddon to Verrine.
-- **Bots**: where bot commands go.
+- **Bots**: where bot commands go (see [Commands](/commands/) for what the bot can do).
 - **Archives**: older channels that are no longer in use.
 
 To get around, !c!directory!c! lists the channels and what each one is for (a bot refreshes it
