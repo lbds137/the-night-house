@@ -76,15 +76,26 @@ export function replaceTokens(text: string): string {
 }
 
 // HTML comments hold not-yet-written entries (e.g. in glossary.md); keep them out of the page.
-// An opener left over after stripping (unclosed, or rebuilt from pieces like `<!<!---->--`)
-// would hide the rest of the page, so it fails the build instead.
+// An opener left in the output (unclosed, or rebuilt from pieces like `<!<!---->--`) would hide
+// the rest of the page, so either case fails the build instead.
 function stripComments(text: string): string {
-  const stripped = text.replace(/<!--[\s\S]*?-->/g, '');
-  const opener = stripped.indexOf('<!--');
-  if (opener !== -1) {
-    throw new Error(`Unclosed HTML comment near: ${stripped.slice(opener, opener + 60)}`);
+  let output = '';
+  let position = 0;
+  for (;;) {
+    const open = text.indexOf('<!--', position);
+    if (open === -1) break;
+    const close = text.indexOf('-->', open + 4);
+    if (close === -1) {
+      throw new Error(`Unclosed HTML comment near: ${text.slice(open, open + 60)}`);
+    }
+    output += text.slice(position, open);
+    position = close + 3;
   }
-  return stripped;
+  output += text.slice(position);
+  if (output.includes('<!--')) {
+    throw new Error('HTML comment markers combine into a new `<!--` once comments are removed');
+  }
+  return output;
 }
 
 // marked has no attribute-list syntax, so kramdown's `{: ...}` would print as literal text.
