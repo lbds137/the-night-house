@@ -147,13 +147,49 @@ jobs:
           done
           echo "::error::Checks still running after 40 minutes; merge by hand or re-run this job."
           exit 1
+      # The checks above ran on the PR as branched, but main may have moved since (two PRs
+      # that each pass alone can break the build together). Rebase the PR onto current main,
+      # as the merge will, and build that before merging.
+      - name: Check out current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          # PR code runs below; keep the write token out of its reach.
+          persist-credentials: false
+      - name: Rebase the PR onto current main
+        run: |
+          git fetch origin "$SHA"
+          echo "MAIN_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          git -c user.name=automerge -c user.email=automerge@localhost \
+            rebase --onto HEAD "$(git merge-base HEAD "$SHA")" "$SHA" || {
+            echo "::error::The PR doesn't rebase cleanly onto current main. Rebase it and push."
+            exit 1
+          }
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Build the PR on top of current main
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build || {
+            echo "::error::The PR builds alone but not on top of current main. Rebase and fix it."
+            exit 1
+          }
       - name: Merge
-        # --match-head-commit refuses if anything was pushed after the reviewed commit.
-        # The branch is deleted through the API: this job has no checkout for gh's
-        # --delete-branch to work in.
+        # --match-head-commit refuses if anything was pushed after the reviewed commit, and
+        # the main check refuses if another merge landed after the combined build above.
+        # The branch is deleted through the API, which needs no credentials in the checkout.
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: |
+          now=$(gh api "repos/$REPO/git/ref/heads/main" --jq .object.sha)
+          if [ "$now" != "$MAIN_SHA" ]; then
+            echo "::error::main moved during the combined build; re-run this job to test it."
+            exit 1
+          fi
           gh pr merge "$PR" --repo "$REPO" --rebase --match-head-commit "$SHA"
           gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" ||
             echo "::warning::Merged, but deleting branch $HEAD_REF failed."
