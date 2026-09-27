@@ -95,16 +95,18 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ```
 ├── public/             # Served as-is: CNAME, favicons, robots.txt, og-card.png (link preview)
-├── scripts/            # og-card.mjs regenerates public/og-card.png (needs Noto fonts installed)
+├── scripts/            # og-card.mjs regenerates public/og-card.png (needs Noto fonts installed);
+│                       # screenshots.mjs (PR screenshots); discord-rules.ts (rules → bot)
 ├── src/
 │   ├── assets/         # logo.png (source; astro:assets serves resized WebP via sharp)
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
-│   ├── data/roles/     # categories.yaml, nodes.yaml
+│   ├── data/           # roles/categories.yaml, roles/nodes.yaml, discord-channels.yaml
 │   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
 │   ├── layouts/        # Base.astro (head + per-page description/OG/JSON-LD, page title as h1)
 │   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts, glossary.ts,
 │   │                   # search.ts (glossary filter, shipped to the browser: no imports),
-│   │                   # seo.ts (JSON-LD escaping, sitemap paths, plain-text definitions)
+│   │                   # seo.ts (JSON-LD escaping, sitemap paths, plain-text definitions),
+│   │                   # comments.ts + discord.ts (no Vite imports, so node scripts load them)
 │   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical),
 │   │                   # sitemap.xml.ts (lists every page but 404)
 │   └── styles/         # global.css
@@ -140,6 +142,11 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   page links to a page, file or `#anchor` that doesn't exist (`src/lib/linkcheck.ts`)
 - **Invite check**: `.github/workflows/invite-check.yml` checks `DISCORD_INVITE_CODE` weekly
   and opens an issue if Discord says the invite is gone (404)
+- **Rules → bot**: the site is the source for the YAGPDB bot's `Rules`. `pnpm discord:rules [N...]`
+  prints paste-ready `-rule_edit N <text>` lines (`src/lib/discord.ts`); `!c!name!c!` becomes
+  `<#id>` from `src/data/discord-channels.yaml` (a missing id fails). Text the bot's argument
+  parser would alter (`"`, backticks, `\`, double spaces) is refused. `discord.test.ts` checks the
+  output against a dump of the bot's copy; update that fixture after pasting a changed rule
 
 ## Code Style
 
