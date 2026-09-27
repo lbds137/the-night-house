@@ -146,9 +146,11 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ### Current Limitations
 
-1. **Glossary**: all 67 entries were researched against web sources (2026-09-27); a second pass
-   checking them against Lila's Google Drive occult library is pending. Edits must stay sourced:
-   no unverified claims about living traditions or closed practices
+1. **Glossary**: all 67 entries are sourced (web, Lila's Drive library, then primary texts for the
+   shakiest claims; 2026-09-27), with the trail in `docs/glossary-sources.json`. Edits must stay
+   sourced: no unverified claims about living traditions or closed practices. The repo is public:
+   cite Drive files only from `Knowledge/` (the shared library), never `Personal/`.
+   `src/content/glossary.test.ts` enforces that and keeps each entry's `draft` equal to the page
 2. **Onyx palette**: Discord doesn't publish Onyx's values; ours are approximations
 
 ### Design Patterns
