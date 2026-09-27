@@ -94,14 +94,15 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ### Directory Structure
 
 ```
-├── public/             # Served as-is: CNAME, favicons, logo
+├── public/             # Served as-is: CNAME, favicons
 ├── src/
+│   ├── assets/         # logo.png (source; astro:assets serves resized WebP via sharp)
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
 │   ├── data/roles/     # categories.yaml, nodes.yaml
 │   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
 │   ├── layouts/        # Base.astro (head, header, page panel)
 │   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts
-│   ├── pages/          # index, rules, roles, glossary
+│   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical)
 │   └── styles/         # global.css
 └── astro.config.mjs
 ```
@@ -136,7 +137,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ## Dependencies
 
 - **Node.js** >= 22.12 and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && vitest run && astro build`
-- **astro**, **marked**, **marked-smartypants**, **yaml**; dev: **@astrojs/check**, **typescript** 6,
+- **astro**, **marked**, **marked-smartypants**, **yaml**, **sharp** (astro:assets needs it as a
+  direct dependency under pnpm, or the image step fails with MissingSharp); dev: **@astrojs/check**, **typescript** 6,
   **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`)
   (`astro check` doesn't support TypeScript 7 yet)
 
@@ -155,8 +157,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ## Improvement Opportunities
 
 - **Content**: Expand glossary definitions; add the Resources nav group once its pages have content
-- **404 Page**: Create custom error page
-- **Performance**: `public/assets/img/logo.png` is a 1700px, 556 KB PNG shown at ≤136px
+- **Icon metadata**: `public/browserconfig.xml` points at `ms-icon-*.png` files that don't exist
+  and sets a white tile; `public/site.webmanifest` has an empty `name`/`short_name` and white
+  `theme_color`/`background_color` (the page's theme-color is `#000000`)
 - Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines

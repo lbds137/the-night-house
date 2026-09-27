@@ -5,10 +5,12 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  /** For pages served at URLs that aren't their own, like the 404 page. */
+  noindex?: boolean;
 }
 
-const { title } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const { title, noindex = false } = Astro.props;
+const canonical = noindex ? undefined : new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
@@ -18,10 +20,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} | {SITE_NAME}</title>
     <meta name="description" content={SITE_DESCRIPTION} />
-    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    {canonical && <link rel="canonical" href={canonical} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={SITE_DESCRIPTION} />
-    <meta property="og:url" content={canonical} />
+    {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />

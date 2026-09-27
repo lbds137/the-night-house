@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import NavMenu from './NavMenu.astro';
+import logo from '../assets/logo.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
 // Each language half wraps as a unit, so a narrow screen never splits "בית הלילה".
@@ -7,7 +9,16 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 ---
 
 <header class="site-header">
-  <img class="site-logo" src="/assets/img/logo.png" alt="" width="160" height="160" />
+  {/* 136px is the CSS maximum; densities cover high-DPI screens. */}
+  <Image
+    class="site-logo"
+    src={logo}
+    alt=""
+    width={136}
+    densities={[1, 2, 3]}
+    loading="eager"
+    fetchpriority="high"
+  />
   <h1 class="site-title">
     <span>{englishTitle}</span>
     <span aria-hidden="true">|</span>

@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
 import { DISCORD_INVITE_CODE, SITE_TITLE } from '../lib/site';
 
 const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
@@ -7,7 +9,7 @@ const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
 <section class="invite" data-invite-code={DISCORD_INVITE_CODE} aria-label="Discord invite">
   <p class="invite-eyebrow">You've been invited to join a server</p>
   <div class="invite-body">
-    <img class="invite-icon" src="/assets/img/logo.png" alt="" width="56" height="56" />
+    <Image class="invite-icon" src={logo} alt="" width={56} densities={[1, 2, 3]} />
     <div class="invite-info">
       <h3 class="invite-name">{SITE_TITLE}</h3>
       <p class="invite-stats" hidden>
@@ -39,6 +41,8 @@ const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
         card.querySelector('.invite-name')!.textContent = invite.guild.name;
         if (invite.guild.icon) {
           const icon = card.querySelector<HTMLImageElement>('.invite-icon')!;
+          // srcset wins over src, so drop the local logo's densities first.
+          icon.removeAttribute('srcset');
           icon.src = `https://cdn.discordapp.com/icons/${invite.guild.id}/${invite.guild.icon}.png?size=128`;
         }
       })

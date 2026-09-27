@@ -55,8 +55,9 @@ a check.
 ### Project Structure
 
 ```
-├── public/             # Served as-is: CNAME, favicons, images
+├── public/             # Served as-is: CNAME, favicons
 ├── src/
+│   ├── assets/         # Images Astro optimizes at build time (the logo)
 │   ├── content/        # Page text in Markdown (welcome, rules, roles intro, glossary)
 │   ├── data/roles/     # Role categories and role definitions (YAML)
 │   ├── components/     # Header, navigation, role category, Discord invite card
