@@ -24,7 +24,7 @@ The Night House is an 18+ occult/magick-focused Discord server created specifica
 
 ### Prerequisites
 
-- Node.js >= 22.12 (the deploy workflow uses Node 24)
+- Node.js >= 22.18 (the deploy workflow uses Node 24)
 - pnpm 10 (pinned in `package.json`'s `packageManager`)
 - Git
 
