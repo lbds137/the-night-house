@@ -94,15 +94,17 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ### Directory Structure
 
 ```
-├── public/             # Served as-is: CNAME, favicons
+├── public/             # Served as-is: CNAME, favicons, robots.txt, og-card.png (link preview)
+├── scripts/            # og-card.mjs regenerates public/og-card.png (needs Noto fonts installed)
 ├── src/
 │   ├── assets/         # logo.png (source; astro:assets serves resized WebP via sharp)
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
 │   ├── data/roles/     # categories.yaml, nodes.yaml
 │   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
-│   ├── layouts/        # Base.astro (head, header, page panel)
+│   ├── layouts/        # Base.astro (head + per-page description/OG/JSON-LD, page title as h1)
 │   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts
-│   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical)
+│   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical),
+│   │                   # sitemap.xml.ts (lists every page but 404)
 │   └── styles/         # global.css
 └── astro.config.mjs
 ```
@@ -161,9 +163,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ## Improvement Opportunities
 
 - **Content**: add the Resources nav group once its pages have content
-- **Icon metadata**: `public/browserconfig.xml` points at `ms-icon-*.png` files that don't exist
-  and sets a white tile; `public/site.webmanifest` has an empty `name`/`short_name` and white
-  `theme_color`/`background_color` (the page's theme-color is `#000000`)
+- **Glossary metadata**: once the A–Z navigation (PR #47) is on main, give the glossary page its
+  own `description` and schema.org `DefinedTermSet` structured data (one `DefinedTerm` per entry,
+  with its `/glossary/#slug` URL)
 - Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines

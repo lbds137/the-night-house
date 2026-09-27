@@ -19,11 +19,12 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
     loading="eager"
     fetchpriority="high"
   />
-  <h1 class="site-title">
+  {/* Branding, not the page's heading: each page's own title is its <h1> (Base.astro). */}
+  <p class="site-title">
     <span>{englishTitle}</span>
     <span aria-hidden="true">|</span>
     <span lang="he" dir="rtl">{hebrewTitle}</span>
-  </h1>
+  </p>
   <p class="site-tagline">{SITE_DESCRIPTION}</p>
   <NavMenu />
 </header>

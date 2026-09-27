@@ -2,8 +2,12 @@
 import Base from '../layouts/Base.astro';
 import { renderMarkdown } from '../lib/markdown';
 import rules from '../content/rules.md?raw';
+
+const description =
+  "The Night House's rules: respect each other, no bigotry or harassment, and how DMs, " +
+  'staff, tickets and moderation work on our Left Hand Path Discord server.';
 ---
 
-<Base title="Rules">
+<Base title="Rules" {description}>
   <div class="prose rules" set:html={renderMarkdown(rules)} />
 </Base>

@@ -4,9 +4,13 @@ import RoleCategory from '../components/RoleCategory.astro';
 import { renderMarkdown } from '../lib/markdown';
 import { categoriesWithNodes } from '../lib/roles';
 import intro from '../content/roles-intro.md?raw';
+
+const description =
+  "What every role on The Night House's Discord server means: staff, access, pronouns, " +
+  'identities, DM and ping preferences, paths, disciplines and more.';
 ---
 
-<Base title="Roles">
+<Base title="Roles" {description}>
   <div class="callout prose" set:html={renderMarkdown(intro)} />
   <div class="role-categories">
     {categoriesWithNodes().map(({ category, nodes }) => <RoleCategory {category} {nodes} />)}
