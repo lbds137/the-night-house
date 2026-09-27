@@ -18,13 +18,14 @@ export interface GlossaryPage {
 
 const TERM = /^\*\*(.+?)\*\*/;
 
-/** Fixed ids on the glossary page (Base.astro, glossary.astro); `letter-*` ids are reserved too. */
+/** Fixed ids on the glossary page and its components; `letter-*` ids are reserved too. */
 export const RESERVED_IDS = [
   'content',
   'glossary-tools',
   'glossary-filter',
   'glossary-entries',
   'glossary-no-match',
+  'permalink-status',
 ];
 
 export const slugify = (term: string) =>

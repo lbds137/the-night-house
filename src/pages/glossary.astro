@@ -1,17 +1,29 @@
 ---
 import Base from '../layouts/Base.astro';
+import PermalinkCopier from '../components/PermalinkCopier.astro';
 import { byLetter, parseGlossary } from '../lib/glossary';
 import { renderMarkdown } from '../lib/markdown';
+import { linkCrossReferences, withPermalink } from '../lib/permalinks';
 import { plainDefinition } from '../lib/seo';
 import glossary from '../content/glossary.md?raw';
 
 const { entries, trailer } = parseGlossary(glossary);
 const groups = byLetter(entries);
 const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+const slugByTerm = new Map(entries.map((entry) => [entry.term.toLowerCase(), entry.slug]));
+const entryHtml = (entry: (typeof entries)[number]) =>
+  withPermalink(
+    renderMarkdown(linkCrossReferences(entry.markdown, slugByTerm)),
+    entry.slug,
+    entry.term,
+  );
 
+const [first, last] = [entries.at(0), entries.at(-1)];
 const description =
-  `Sourced definitions of ${entries.length} occult and Left Hand Path terms, from ` +
-  `${entries[0].term} to ${entries.at(-1)!.term}, written for The Night House community.`;
+  first && last
+    ? `Sourced definitions of ${entries.length} occult and Left Hand Path terms, from ` +
+      `${first.term} to ${last.term}, written for The Night House community.`
+    : undefined;
 const pageUrl = new URL('/glossary/', Astro.site).href;
 const structuredData = [
   {
@@ -62,7 +74,7 @@ const structuredData = [
         <section class="glossary-letter" id={`letter-${letter.toLowerCase()}`}>
           <h2 class="glossary-letter-heading">{letter}</h2>
           {list.map((entry) => (
-            <div class="glossary-entry" id={entry.slug} set:html={renderMarkdown(entry.markdown)} />
+            <div class="glossary-entry" id={entry.slug} set:html={entryHtml(entry)} />
           ))}
         </section>
       ))
@@ -72,6 +84,7 @@ const structuredData = [
     </p>
     <Fragment set:html={renderMarkdown(trailer)} />
   </div>
+  <PermalinkCopier />
 </Base>
 
 <script>
