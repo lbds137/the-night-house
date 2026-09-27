@@ -70,7 +70,14 @@ const description =
         details,
         name: foldForSearch(details.querySelector('summary')?.textContent ?? ''),
         roles,
-        texts: roles.map((role) => foldForSearch(role.textContent ?? '')),
+        // A glossary link's term is searchable, its "In the glossary" label isn't.
+        texts: roles.map((role) =>
+          foldForSearch(
+            [...role.querySelectorAll('.role-name, .role-text, .role-glossary a')]
+              .map((el) => el.textContent)
+              .join(' '),
+          ),
+        ),
         notes: [...details.querySelectorAll<HTMLElement>('.role-category-body > .callout')],
       };
     },
