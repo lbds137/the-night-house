@@ -48,6 +48,17 @@ describe('glossary sources', () => {
     expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
   });
 
+  // The Discord `-define` command (lbds137/yagpdb-custom-commands, utility/define.gohtml) can't
+  // do Unicode NFD, so it folds only these accented letters; any other would slug differently
+  // there than here. Add the letter to define.gohtml's reReplace map, then to this list.
+  it('uses only accented letters the Discord -define command can fold', () => {
+    const botFolds = 'àáâãäåāèéêëēìíîïīòóôõöōùúûūüñçýÿ';
+    const foldable = (c: string) => !/\p{L}/u.test(c) || /[a-z]/.test(c) || botFolds.includes(c);
+    const unfoldable = (term: string) => [...term.toLowerCase()].filter((c) => !foldable(c));
+    expect(unfoldable('Čech')).toEqual(['č']);
+    expect(entries.flatMap((e) => unfoldable(e.term).map((c) => `${e.term}: ${c}`))).toEqual([]);
+  });
+
   // Anchors are public links (/glossary/#egregore); the sources file keys entries the same way.
   it('gives each entry the anchor its sources record uses', () => {
     expect(parseGlossary(glossary).entries.map((e) => e.slug)).toEqual(entries.map((e) => e.id));
