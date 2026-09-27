@@ -3,9 +3,35 @@ import Base from '../layouts/Base.astro';
 import DiscordInvite from '../components/DiscordInvite.astro';
 import { renderMarkdown } from '../lib/markdown';
 import welcome from '../content/welcome.md?raw';
+import { MAIN_NAV, SITE_DESCRIPTION, isNavGroup } from '../lib/site';
+
+const site = Astro.site!.href;
+// The community's own profiles elsewhere (the Stats link is a dashboard, not a profile).
+const profiles = MAIN_NAV.flatMap((item) => (isNavGroup(item) ? item.children : [item]))
+  .filter((link) => ['Disboard', 'Twitter'].includes(link.title))
+  .map((link) => link.href);
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The Night House',
+    alternateName: 'בית הלילה',
+    url: site,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'The Night House',
+    alternateName: 'בית הלילה',
+    url: site,
+    logo: new URL('/android-chrome-512x512.png', site).href,
+    description: SITE_DESCRIPTION,
+    sameAs: profiles,
+  },
+];
 ---
 
-<Base title="Welcome">
+<Base title="Welcome" structuredData={structuredData}>
   <div class="prose" set:html={renderMarkdown(welcome)} />
   <DiscordInvite />
 </Base>

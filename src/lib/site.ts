@@ -7,6 +7,14 @@ export const SITE_DESCRIPTION =
   'and does not tolerate discrimination, bigotry, or harassment.';
 export const DISCORD_INVITE_CODE = 'v4kjNpF';
 
+/** Link-preview image (Discord, social sites); rendered by scripts/og-card.mjs. */
+export const OG_IMAGE = {
+  path: '/og-card.png',
+  width: 1200,
+  height: 630,
+  alt: 'The Night House logo, a magenta sigil in a ring of Hebrew letters, beside the name',
+};
+
 export interface NavLink {
   title: string;
   href: string;
