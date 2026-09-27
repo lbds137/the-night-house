@@ -125,6 +125,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 - **Discord Integration**: invite card is a plain link that fetches live counts from Discord's API
 - **Collapsible Sections**: role categories are native `<details>`; `/roles/#anchor` opens one
+- **Glossary navigation**: sticky A–Z bar and a filter box (hidden without JS); every entry is
+  linkable at `/glossary/#<slug>` (slug = the entry's id in `docs/glossary-sources.json`).
+  `src/lib/glossary.ts` parses the page; entries must stay alphabetical (tested)
 - **Navigation**: nested "Community" dropdown (from the old `experimental` branch)
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 
