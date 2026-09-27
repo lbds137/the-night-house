@@ -508,6 +508,7 @@
   category_id: "identity"
   name: "Nonhuman | לא אנושי"
   id: "569656106859757589"
+  glossary: "non-human"
   color: "9932cc"
   text: "This is a role for anyone who identifies as some kind of nonhuman being (typically referred to as \"otherkin\")."
 -
@@ -529,6 +530,7 @@
   category_id: "identity"
   name: "Psivamp | ערפד נפשי"
   id: "505446232005541889"
+  glossary: "psychic-vampirism"
   color: "191970"
   text: "This role is for self-identified vampires who feed on psychic energy."
 -
@@ -536,6 +538,7 @@
   category_id: "identity"
   name: "Sanguinarian | ערפד דם"
   id: "505446530354774050"
+  glossary: "sanguinarian-vampirism"
   color: "800000"
   text: "This role is for self-identified vampires who feed on animal and/or human blood."
 -
@@ -1112,6 +1115,7 @@
   category_id: "belief"
   name: "Demonolatry | סגידת שדים"
   id: "771535972650319874"
+  glossary: "demonolatry"
   color: "cd853f"
   text: "This role is for folks who practice Demonolatry, which is the worship of demons (although the definition of \"worship\" is generally different than it is for e.g. monotheistic practices)."
 -
@@ -1139,6 +1143,7 @@
   category_id: "belief"
   name: "Hermeticism | ההרמטיציזם"
   id: "1165054358765965413"
+  glossary: "hermeticism"
   color: "cd853f"
 -
   type: "role"
@@ -1163,6 +1168,7 @@
   category_id: "belief"
   name: "Luciferianism | לוציפריאניזם"
   id: "771536130185232384"
+  glossary: "luciferianism"
   color: "cd853f"
   text: "This role is for folks who practice Luciferianism, a belief system that venerates the essential characteristics that are affixed to Lucifer."
 -
@@ -1182,6 +1188,7 @@
   category_id: "belief"
   name: "Qlipot | קליפות"
   id: "505123979074469909"
+  glossary: "qliphoth"
   color: "cd853f"
   text: "This is the role for folks who work with the Qlipot."
 -
@@ -1189,6 +1196,7 @@
   category_id: "belief"
   name: "Satanism | שטניזם"
   id: "576166031765143578"
+  glossary: "satanism"
   color: "cd853f"
   text: "This is the role for folks who consider themselves Satanists of any variety."
 -
@@ -1208,6 +1216,7 @@
   category_id: "belief"
   name: "Wicca | ויקה"
   id: "505748591831416833"
+  glossary: "wicca"
   color: "cd853f"
 # ---
 # polytheism
@@ -1293,6 +1302,7 @@
   category_id: "discipline"
   name: "Chaos Magick | קסם אנדרלמוסיה"
   id: "497830979767894023"
+  glossary: "chaos-magick"
   color: "add8e6"
 -
   type: "role"
@@ -1305,12 +1315,14 @@
   category_id: "discipline"
   name: "Death Work | עבודת מוות"
   id: "497830908590686218"
+  glossary: "death-work"
   color: "add8e6"
 -
   type: "role"
   category_id: "discipline"
   name: "Divination | נחוש"
   id: "497830296968757275"
+  glossary: "divination"
   color: "add8e6"
 -
   type: "role"
@@ -1353,6 +1365,7 @@
   category_id: "discipline"
   name: "Sigils | סיגילים"
   id: "497831006104059915"
+  glossary: "sigil"
   color: "add8e6"
 -
   type: "role"

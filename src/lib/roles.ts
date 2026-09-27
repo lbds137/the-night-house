@@ -14,6 +14,8 @@ export interface RoleNode {
   name: string;
   color: string;
   text?: string;
+  /** Slug of the glossary entry for this role's practice or identity, linked under its text. */
+  glossary?: string;
 }
 
 export interface NoteNode {
