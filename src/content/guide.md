@@ -4,7 +4,18 @@ The Night House is for adults: you must be **18 or older** to join. When you use
 Discord asks you a few screening questions, and staff read each application by hand. When
 they admit you, you get the !r!497610586750976020!r! role, which opens the server.
 
-<!-- Lila: the screening questions go here, once they're copied from Discord. -->
+The application asks you to:
+
+1. **Read and agree to the server rules.**
+2. **Give your name and pronouns**, and say exactly how you found us: a user, a server, a
+   website, or the search terms you used.
+3. **Certify that you're an adult.** We take the server's adult nature seriously, and lying
+   about your age means an immediate ban.
+4. **Describe your current path or practice and your occult interests**, with at least two
+   topics and why they interest you. If you're new to practice, explain what draws you here.
+   Write at least 3–5 full sentences.
+5. **Tell us what you hope to gain or contribute**, plus your non-occult interests or anything
+   else we should know about you. Again, at least 3–5 full sentences.
 
 Once you're in:
 
