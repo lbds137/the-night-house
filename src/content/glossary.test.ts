@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import sourcesRaw from '../../docs/glossary-sources.json?raw';
 import baseLayout from '../layouts/Base.astro?raw';
 import { RESERVED_IDS, parseGlossary } from '../lib/glossary';
+import { nodes } from '../lib/roles';
 import glossaryPage from '../pages/glossary.astro?raw';
 import glossary from './glossary.md?raw';
 
@@ -13,6 +14,15 @@ interface Entry {
 }
 
 const entries: Entry[] = JSON.parse(sourcesRaw);
+
+describe('role links into the glossary', () => {
+  it('name real entries', () => {
+    const slugs = new Set(parseGlossary(glossary).entries.map((e) => e.slug));
+    const linked = nodes.flatMap((n) => (n.type === 'role' && n.glossary ? [n.glossary] : []));
+    expect(linked.length).toBeGreaterThan(0);
+    expect(linked.filter((slug) => !slugs.has(slug))).toEqual([]);
+  });
+});
 
 describe('glossary sources', () => {
   it('holds exactly the entries on the page, in order', () => {
