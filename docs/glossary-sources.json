@@ -1986,6 +1986,26 @@
     ]
   },
   {
+    "term": "Seven Tenets",
+    "kind": "new",
+    "draft": "**Seven Tenets** (also the Seven Satanic Tenets): the seven fundamental tenets of The Satanic Temple (see Satanism), its statement of core values, which it presents as guiding principles rather than commandments. In [The Satanic Temple's words](https://thesatanictemple.com/blogs/the-satanic-temple-tenets/there-are-seven-fundamental-tenets):\n1. One should strive to act with compassion and empathy toward all creatures in accordance with reason.\n2. The struggle for justice is an ongoing and necessary pursuit that should prevail over laws and institutions.\n3. One's body is inviolable, subject to one's own will alone.\n4. The freedoms of others should be respected, including the freedom to offend. To willfully and unjustly encroach upon the freedoms of another is to forgo one's own.\n5. Beliefs should conform to one's best scientific understanding of the world. One should take care never to distort scientific facts to fit one's beliefs.\n6. People are fallible. If one makes a mistake, one should do one's best to rectify it and resolve any harm that might have been caused.\n7. Every tenet is a guiding principle designed to inspire nobility in action and thought. The spirit of compassion, wisdom, and justice should always prevail over the written or spoken word.",
+    "sources": [
+      [
+        "https://thesatanictemple.com/blogs/the-satanic-temple-tenets/there-are-seven-fundamental-tenets",
+        "the tenets, verbatim (checked 2026-09-27)"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Moved from the Discord bot's retired kb command (its Knowledge dict held the same text as both \"The Seven Tenets\" and \"The Seven Satanic Tenets\"), 2026-09-27. The list is TST's own text, quoted with attribution and checked word for word against TST's page; the framing sentence claims nothing beyond tenet 7's own wording.",
+    "id": "seven-tenets",
+    "library": {
+      "verdict": "not searched",
+      "report": "n/a",
+      "summary": "The primary source is TST's own published text; there is no secondary claim for the library to corroborate.",
+      "citations": []
+    }
+  },
+  {
     "term": "Shield",
     "kind": "new",
     "draft": "**Shield**: energetic or psychic protection, usually a barrier a practitioner visualizes or raises around themselves or a space to keep out unwanted energy or influence. It is one of the most common protective techniques in modern occult and energy work.",

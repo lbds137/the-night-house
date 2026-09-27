@@ -22,11 +22,13 @@ export function pagePaths(files: string[]): string[] {
 
 /**
  * A glossary entry's definition as plain text: the bold term (and an alias in parentheses right
- * after it), Markdown marks and list bullets removed.
+ * after it), Markdown marks and list bullets removed, and links reduced to their text.
  */
 export const plainDefinition = (markdown: string) =>
   markdown
     .replace(/^\*\*[^*]+\*\*\s*(\([^)]*\))?\s*:\s*/, '')
+    // Before the mark removal below, which would otherwise eat a URL's underscores.
+    .replace(/\[([^\]]+)\]\([^)\s]+\)/g, '$1')
     .replace(/^\* /gm, '')
     .replace(/[*_`]/g, '')
     .replace(/\s+/g, ' ')

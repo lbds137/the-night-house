@@ -40,4 +40,9 @@ describe('plainDefinition', () => {
       '**Clair-senses**: senses, such as:\n' + '* **Clairvoyance**, seeing;\n* **Clairaudience**.';
     expect(plainDefinition(md)).toBe('senses, such as: Clairvoyance, seeing; Clairaudience.');
   });
+
+  it('keeps a link text and drops its URL', () => {
+    const md = '**Tenets**: in [*its* words](https://example.org/a_b_c):\n1. First.';
+    expect(plainDefinition(md)).toBe('in its words: 1. First.');
+  });
 });

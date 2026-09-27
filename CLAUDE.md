@@ -169,7 +169,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ### Current Limitations
 
-1. **Glossary**: all 67 entries are sourced (web, Lila's Drive library, then primary texts for the
+1. **Glossary**: every entry is sourced (web, Lila's Drive library, then primary texts for the
    shakiest claims; 2026-09-27), with the trail in `docs/glossary-sources.json`. Edits must stay
    sourced: no unverified claims about living traditions or closed practices. The repo is public:
    cite Drive files only from `Knowledge/` (the shared library), never `Personal/`.
