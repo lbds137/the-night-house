@@ -14,8 +14,11 @@
     if (!link || !navigator.clipboard) return;
     navigator.clipboard.writeText(link.href).then(
       () => {
-        status.textContent = 'Link copied';
+        // Emptying first makes a second copy within the 2 s window a fresh change that screen
+        // readers announce again, rather than the same text set twice.
+        status.textContent = '';
         status.hidden = false;
+        requestAnimationFrame(() => (status.textContent = 'Link copied'));
         clearTimeout(hideTimer);
         hideTimer = setTimeout(() => (status.hidden = true), 2000);
       },
