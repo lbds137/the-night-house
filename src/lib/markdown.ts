@@ -2,6 +2,7 @@ import { Marked } from 'marked';
 import { markedSmartypants } from 'marked-smartypants';
 import { stripComments } from './comments.ts';
 import { roleById } from './roles';
+import { titleParts } from './site';
 
 export { stripComments };
 
@@ -64,14 +65,27 @@ export function legibleRoleColor(hex: string): string {
   return '#ffffff';
 }
 
+// A bilingual role name ("Rare Archive Access | גישה לארכיון נדיר") may wrap between its halves
+// but never inside one, so a long name fits a phone screen. Like the site title, the separator
+// isn't read aloud and the Hebrew half is marked as Hebrew.
+const mentionName = (name: string) =>
+  titleParts(name)
+    .map(({ text, separator, hebrew }) =>
+      separator
+        ? `<span aria-hidden="true">${escapeHtml(text)}</span>`
+        : `<span class="mention-part"${hebrew ? ' lang="he" dir="rtl"' : ''}>` +
+          `${escapeHtml(text)}</span>`,
+    )
+    .join(' ');
+
 export function roleMention(id: string): string {
   const role = roleById(id);
   if (role.color === undefined) {
-    return `<span class="mention mention-role-default">@${escapeHtml(role.name)}</span>`;
+    return `<span class="mention mention-role-default">@${mentionName(role.name)}</span>`;
   }
   return (
     `<span class="mention mention-role" style="--role-color: #${role.color}; ` +
-    `--role-text: ${legibleRoleColor(role.color)}">@${escapeHtml(role.name)}</span>`
+    `--role-text: ${legibleRoleColor(role.color)}">@${mentionName(role.name)}</span>`
   );
 }
 

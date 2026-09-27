@@ -29,22 +29,30 @@ describe('mention tokens', () => {
     const html = renderInline(`!r!${DARK_RED}!r!`);
     expect(html).toContain('class="mention mention-role"');
     expect(html).toContain('--role-color: #8b0000');
-    expect(html).toContain('@Dark Red');
+    expect(html).toContain('@<span class="mention-part">Dark Red</span></span>');
   });
 
   it('renders a role with no color as a default mention', () => {
     expect(renderInline(`!r!${MODERATOR}!r!`)).toBe(
-      '<span class="mention mention-role-default">@Moderator | מתווך</span>',
+      '<span class="mention mention-role-default">@<span class="mention-part">Moderator</span> ' +
+        '<span aria-hidden="true">|</span> ' +
+        '<span class="mention-part" lang="he" dir="rtl">מתווך</span></span>',
     );
+  });
+
+  it('keeps a one-language role name as a single unbreakable part', () => {
+    const html = renderInline(`!r!${DARK_RED}!r!`);
+    expect(html.match(/class="mention-part"/g)).toHaveLength(1);
+    expect(html).not.toContain('aria-hidden');
   });
 
   it('handles adjacent role and channel tokens', () => {
     const html = renderInline(`!r!${MODERATOR}!r!!c!roles!c!`);
-    expect(html).toContain('@Moderator | מתווך</span><span class="mention mention-channel">#roles');
+    expect(html).toContain('מתווך</span></span><span class="mention mention-channel">#roles');
   });
 
   it('applies smart quotes to role names', () => {
-    expect(renderInline(`!r!${DEAD_CHAT}!r!`)).toContain('@Dead Chat | צ&#8217;אט מת');
+    expect(renderInline(`!r!${DEAD_CHAT}!r!`)).toContain('lang="he" dir="rtl">צ&#8217;אט מת</span>');
   });
 
   it('fails on an unknown role id', () => {
