@@ -52,7 +52,9 @@ describe('mention tokens', () => {
   });
 
   it('applies smart quotes to role names', () => {
-    expect(renderInline(`!r!${DEAD_CHAT}!r!`)).toContain('lang="he" dir="rtl">צ&#8217;אט מת</span>');
+    expect(renderInline(`!r!${DEAD_CHAT}!r!`)).toContain(
+      'lang="he" dir="rtl">צ&#8217;אט מת</span>',
+    );
   });
 
   it('fails on an unknown role id', () => {
