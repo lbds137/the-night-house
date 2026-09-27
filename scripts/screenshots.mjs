@@ -11,6 +11,7 @@ const outDir = process.argv[2] ?? 'screenshots';
 const base = process.env.BASE_URL ?? 'http://localhost:4321';
 const [chromeCmd, ...chromeArgs] = (process.env.CHROME ?? 'google-chrome').split(' ');
 const port = 9444;
+const commandTimeoutMs = 15000;
 const sizes = [
   { name: 'phone', width: 390, height: 844, mobile: true },
   { name: 'desktop', width: 1280, height: 900, mobile: false },
@@ -29,12 +30,27 @@ const pages = walk('dist')
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const slug = (path) => path.replace(/^\/|\/$/g, '').replace(/[^a-z0-9]+/gi, '-') || 'home';
 
+// Every page must answer before any screenshot: a server that never came up fails here.
+for (const page of pages) {
+  const expected = page === '/404.html' ? 404 : 200;
+  const { status } = await fetch(base + page).catch((error) => {
+    throw new Error(`${base}${page} is unreachable: ${error.message}`);
+  });
+  if (status !== expected && status !== 200) {
+    throw new Error(`${base}${page} answered HTTP ${status}`);
+  }
+}
+
 const chrome = spawn(
   chromeCmd,
   [...chromeArgs, '--headless=new', `--remote-debugging-port=${port}`, '--hide-scrollbars',
     `--user-data-dir=${join(process.cwd(), '.chrome-profile')}`, 'about:blank'],
   { stdio: 'ignore' },
 );
+chrome.on('error', (error) => {
+  console.error(`Couldn't start Chrome ("${chromeCmd}"): ${error.message}. Set CHROME.`);
+  process.exit(1);
+});
 
 let target;
 for (let i = 0; i < 60 && !target; i++) {
@@ -54,14 +70,40 @@ let nextId = 0;
 const pending = new Map();
 ws.addEventListener('message', (event) => {
   const msg = JSON.parse(event.data);
-  pending.get(msg.id)?.(msg);
+  // Only replies to our own numbered commands; Chrome's events carry no id.
+  if (Number.isInteger(msg.id) && pending.has(msg.id)) {
+    const settle = pending.get(msg.id);
+    pending.delete(msg.id);
+    settle(msg);
+  }
 });
 const send = (method, params = {}) =>
   new Promise((resolve, reject) => {
     const id = ++nextId;
-    pending.set(id, (m) => (m.error ? reject(new Error(JSON.stringify(m.error))) : resolve(m.result)));
+    const timer = setTimeout(() => {
+      pending.delete(id);
+      reject(new Error(`Chrome didn't answer ${method} within ${commandTimeoutMs / 1000}s`));
+    }, commandTimeoutMs);
+    pending.set(id, (m) => {
+      clearTimeout(timer);
+      if (m.error) reject(new Error(`${method}: ${JSON.stringify(m.error)}`));
+      else resolve(m.result);
+    });
     ws.send(JSON.stringify({ id, method, params }));
   });
+
+// Waits for the page to finish loading (fonts and images included), then a moment for layout.
+const loaded = async () => {
+  for (let i = 0; i < 40; i++) {
+    const { result } = await send('Runtime.evaluate', {
+      expression: 'document.readyState === "complete" && document.fonts.status === "loaded"',
+      returnByValue: true,
+    });
+    if (result.value) return;
+    await sleep(250);
+  }
+  throw new Error('page did not finish loading within 10s');
+};
 
 mkdirSync(outDir, { recursive: true });
 for (const page of pages) {
@@ -72,8 +114,10 @@ for (const page of pages) {
       deviceScaleFactor: 1,
       mobile: size.mobile,
     });
-    await send('Page.navigate', { url: base + page });
-    await sleep(1500);
+    const { errorText } = await send('Page.navigate', { url: base + page });
+    if (errorText) throw new Error(`${page}: ${errorText}`);
+    await loaded();
+    await sleep(300);
     const { data } = await send('Page.captureScreenshot', { format: 'png' });
     const file = `${slug(page)}-${size.name}.png`;
     writeFileSync(join(outDir, file), Buffer.from(data, 'base64'));
