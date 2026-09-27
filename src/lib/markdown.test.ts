@@ -9,8 +9,9 @@ import {
 } from './markdown';
 import { nodes, type RoleNode } from './roles';
 
-const MODERATOR = '499037360340598819'; // color 8b0000
-const ADMIN = '804156307560071178'; // color 1c1c1c, near-black
+const DARK_RED = '604740881471242253'; // color 8b0000
+const BLACK = '546393036255526912'; // color 1c1c1c, near-black
+const MODERATOR = '499037360340598819'; // no color
 const DEAD_CHAT = '857988434454773770'; // name has a straight apostrophe
 
 describe('mention tokens', () => {
@@ -25,10 +26,16 @@ describe('mention tokens', () => {
   });
 
   it('renders a role mention in the role color', () => {
-    const html = renderInline(`!r!${MODERATOR}!r!`);
+    const html = renderInline(`!r!${DARK_RED}!r!`);
     expect(html).toContain('class="mention mention-role"');
     expect(html).toContain('--role-color: #8b0000');
-    expect(html).toContain('@Moderator | מתווך');
+    expect(html).toContain('@Dark Red');
+  });
+
+  it('renders a role with no color as a default mention', () => {
+    expect(renderInline(`!r!${MODERATOR}!r!`)).toBe(
+      '<span class="mention mention-role-default">@Moderator | מתווך</span>',
+    );
   });
 
   it('handles adjacent role and channel tokens', () => {
@@ -57,9 +64,11 @@ describe('role colors', () => {
   });
 
   it('gives every role in nodes.yaml an AA-contrast mention color', () => {
-    const roles = nodes.filter((node): node is RoleNode => node.type === 'role');
-    expect(roles.length).toBeGreaterThan(200);
-    for (const role of roles) {
+    const colored = nodes.filter(
+      (node): node is RoleNode & { color: string } => node.type === 'role' && !!node.color,
+    );
+    expect(colored.length).toBeGreaterThan(150);
+    for (const role of colored) {
       const color = legibleRoleColor(role.color);
       expect(contrastRatio(color, MENTION_BACKGROUND), role.name).toBeGreaterThanOrEqual(
         MIN_CONTRAST,
@@ -67,8 +76,8 @@ describe('role colors', () => {
     }
   });
 
-  it('uses the lightened color for the near-black Admin role', () => {
-    expect(renderInline(`!r!${ADMIN}!r!`)).toContain(`--role-text: ${legibleRoleColor('1c1c1c')}`);
+  it('uses the lightened color for the near-black Black role', () => {
+    expect(renderInline(`!r!${BLACK}!r!`)).toContain(`--role-text: ${legibleRoleColor('1c1c1c')}`);
   });
 });
 

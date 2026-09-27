@@ -66,6 +66,9 @@ export function legibleRoleColor(hex: string): string {
 
 export function roleMention(id: string): string {
   const role = roleById(id);
+  if (role.color === undefined) {
+    return `<span class="mention mention-role-default">@${escapeHtml(role.name)}</span>`;
+  }
   return (
     `<span class="mention mention-role" style="--role-color: #${role.color}; ` +
     `--role-text: ${legibleRoleColor(role.color)}">@${escapeHtml(role.name)}</span>`

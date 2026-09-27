@@ -20,7 +20,8 @@ export interface RoleNode {
   category_id: string;
   id: string;
   name: string;
-  color: string;
+  /** 6 hex digits; absent for a role with no color, which Discord shows as a default mention. */
+  color?: string;
   text?: string;
   /** Slug of the glossary entry for this role's practice or identity, linked under its text. */
   glossary?: string;
@@ -42,7 +43,7 @@ for (const node of nodes) {
     const type = JSON.stringify((node as { type: unknown }).type);
     throw new Error(`nodes.yaml: unknown node type ${type}`);
   }
-  if (node.type === 'role' && !/^[0-9a-fA-F]{6}$/.test(String(node.color))) {
+  if (node.type === 'role' && node.color !== undefined && !/^[0-9a-fA-F]{6}$/.test(node.color)) {
     const color = JSON.stringify(node.color);
     throw new Error(`nodes.yaml: role ${node.id} color must be 6 hex digits, got ${color}`);
   }
