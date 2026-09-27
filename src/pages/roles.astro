@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import RoleCategory from '../components/RoleCategory.astro';
+import { renderMarkdown } from '../lib/markdown';
+import { categoriesWithNodes } from '../lib/roles';
+import intro from '../content/roles-intro.md?raw';
+---
+
+<Base title="Roles">
+  <div class="callout prose" set:html={renderMarkdown(intro)} />
+  <div class="role-categories">
+    {categoriesWithNodes().map(({ category, nodes }) => <RoleCategory {category} {nodes} />)}
+  </div>
+</Base>
+
+<script>
+  // A link to /roles/#some-category should land on that category already expanded.
+  const openFromHash = () => {
+    const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target instanceof HTMLDetailsElement) {
+      target.open = true;
+      target.scrollIntoView();
+    }
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+</script>

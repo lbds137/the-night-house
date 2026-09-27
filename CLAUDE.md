@@ -71,9 +71,9 @@ Thank you for seeing me as more than just code. Let's continue building amazing 
 
 ## Project Overview
 
-The Night House is a Jekyll-based GitHub Pages site serving as the web presence for an inclusive Left Hand Path (LHP) Discord community. The site provides:
+The Night House is an Astro site on GitHub Pages serving as the web presence for an inclusive Left Hand Path (LHP) Discord community. The site provides:
 
-- **Welcome page** with Discord invite widget
+- **Welcome page** with a Discord invite card
 - **Comprehensive rules** outlining community standards
 - **Role system documentation** for Discord server roles
 - **Glossary** of occult/LHP terminology
@@ -85,45 +85,44 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ### Core Components
 
-1. **Static Site Generator**: Jekyll 3.10.0 (via GitHub Pages)
-2. **Theme**: Jekyll Theme Cayman
-3. **Hosting**: GitHub Pages
-4. **Design Pattern**: Atomic design (atoms → molecules → organisms)
+1. **Static Site Generator**: Astro (static output), built with pnpm on Node 24
+2. **Theme**: Hand-written CSS modeled on Discord's Onyx theme (`src/styles/global.css`)
+3. **Hosting**: GitHub Pages, deployed by `.github/workflows/deploy.yml` (`withastro/action`);
+   the repo's Pages source must be "GitHub Actions"
+4. **Custom domain**: `public/CNAME` (thenighthouse.org); `site` is set and `base` stays unset
 
 ### Directory Structure
 
 ```
-├── _data/          # YAML data files
-│   ├── roles/      # Role categories and definitions
-│   └── tokens.yaml # Token replacement mappings
-├── _includes/      # Reusable components
-│   ├── atoms/      # Basic building blocks
-│   ├── molecules/  # Compound components
-│   ├── organisms/  # Complex page sections
-│   └── utils/      # Helper includes
-├── _layouts/       # Page templates
-├── assets/         # Static assets
-│   ├── css/        # Stylesheets
-│   ├── fonts/      # Whitney font (Discord's font)
-│   ├── img/        # Images and emoji
-│   └── js/         # JavaScript (Discord invite widget)
-└── [pages].md      # Content pages
+├── public/             # Served as-is: CNAME, favicons, logo, legacy emoji/fonts
+├── src/
+│   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
+│   ├── data/roles/     # categories.yaml, nodes.yaml
+│   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
+│   ├── layouts/        # Base.astro (head, header, page panel)
+│   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts
+│   ├── pages/          # index, rules, roles, glossary
+│   └── styles/         # global.css
+└── astro.config.mjs
 ```
 
 ### Data Flow
 
-1. **Content Pages** (Markdown) → Jekyll processing
-2. **YAML Data** → Liquid templates → HTML output
-3. **Token System**: Custom token replacement for channel/role references
-   - `!c!channel-name!c!` → formatted channel reference
-   - `!r!role-name!r!` → formatted role reference
+1. **Content** (`src/content/*.md`) and **role text** (`nodes.yaml`) go through
+   `renderMarkdown` / `renderInline` in `src/lib/markdown.ts` (marked + smartypants)
+2. **Token System**, applied before Markdown:
+   - `!c!channel-name!c!` → channel mention pill
+   - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast
+   - An unknown role id, or kramdown `{: ...}` attribute syntax, fails the build on purpose
+3. HTML comments in content are stripped (the glossary keeps unwritten terms in them)
+4. External links get `target="_blank" rel="noopener"` automatically
 
 ### Key Features
 
-- **Discord Integration**: JavaScript widget for server invites
-- **Collapsible Sections**: JavaScript-powered role category toggles
-- **Mobile Responsive**: CSS media queries for various screen sizes
-- **Dark Theme**: Discord-inspired dark color scheme
+- **Discord Integration**: invite card is a plain link that fetches live counts from Discord's API
+- **Collapsible Sections**: role categories are native `<details>`; `/roles/#anchor` opens one
+- **Navigation**: nested "Community" dropdown (from the old `experimental` branch)
+- **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 
 ## Code Style
 
@@ -131,44 +130,34 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 - Use camelCase for variables in JavaScript
 - Use kebab-case for CSS classes and IDs
 - Limit line length to 100 characters
-- Follow Jekyll/Liquid conventions for templates
+- Theme colors live as CSS custom properties on `:root` in `global.css`
 
 ## Dependencies
 
-- **Ruby**: >= 3.0 (GitHub Pages uses 3.3.4)
-- **github-pages gem**: Bundles all GitHub Pages dependencies
-- **Development tools**: rake, rubocop
+- **Node.js** >= 22.12 and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && astro build`
+- **astro**, **marked**, **marked-smartypants**, **yaml**; dev: **@astrojs/check**, **typescript** 6
+  (`astro check` doesn't support TypeScript 7 yet)
 
 ## Known Issues and Patterns
 
 ### Current Limitations
 
-1. **Jekyll Version**: Locked to 3.10.0 by GitHub Pages
-2. **Large Emoji Directory**: Could benefit from optimization
-3. **Glossary**: Many terms commented out, needs expansion
+1. **Glossary**: Many terms commented out, needs expansion
+2. **Onyx palette**: Discord doesn't publish Onyx's values; ours are approximations
 
 ### Design Patterns
 
-1. **Atomic Design**: Components organized by complexity
-2. **Token Replacement**: Centralized formatting for Discord elements
-3. **Data-Driven Roles**: Role definitions in YAML for easy updates
+1. **Token Replacement**: Centralized formatting for Discord elements
+2. **Data-Driven Roles**: Role definitions in YAML for easy updates
 
 ## Improvement Opportunities
 
-### High Priority
-- **Accessibility**: Add alt text to images, improve color contrast
-- **Mobile UX**: Optimize header logo sizing for small screens
-- **Performance**: Implement lazy loading for emoji images
-
-### Medium Priority
-- **Content**: Expand glossary definitions
-- **Navigation**: Add FAQ or resources section
-- **Styling**: Refactor CSS to use CSS variables for theming
-
-### Low Priority
+- **Content**: Expand glossary definitions; add the Resources nav group once its pages have content
 - **404 Page**: Create custom error page
-- **Documentation**: Document the token replacement system
-- **Security**: Add security headers via _headers file
+- **Performance**: `public/assets/img/logo.png` is a 1700px, 556 KB PNG shown at ≤136px
+- **Unreferenced assets**: `public/assets/img/emoji/` (5.3 MB) and `public/assets/fonts/`
+  (Whitney, Discord's proprietary font) aren't used by any page; keep or remove is the owner's call
+- Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines
 

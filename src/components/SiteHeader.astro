@@ -1,0 +1,18 @@
+---
+import NavMenu from './NavMenu.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
+
+// Each language half wraps as a unit, so a narrow screen never splits "בית הלילה".
+const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
+---
+
+<header class="site-header">
+  <img class="site-logo" src="/assets/img/logo.png" alt="" width="160" height="160" />
+  <h1 class="site-title">
+    <span>{englishTitle}</span>
+    <span aria-hidden="true">|</span>
+    <span lang="he" dir="rtl">{hebrewTitle}</span>
+  </h1>
+  <p class="site-tagline">{SITE_DESCRIPTION}</p>
+  <NavMenu />
+</header>

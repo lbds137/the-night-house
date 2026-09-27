@@ -1,8 +1,0 @@
-{%- capture tagName -%}
-    {%- if include.size -%}
-        h{{ include.size }}
-    {%- else -%}
-        h1
-    {%- endif -%}
-{%- endcapture -%}
-<{{ tagName }} class="tc">{{ include.text }}</{{ tagName }}>

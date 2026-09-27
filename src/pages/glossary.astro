@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderMarkdown } from '../lib/markdown';
+import glossary from '../content/glossary.md?raw';
+---
+
+<Base title="Glossary">
+  <div class="prose glossary" set:html={renderMarkdown(glossary)} />
+</Base>

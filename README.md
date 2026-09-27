@@ -1,8 +1,8 @@
 # The Night House | בית הלילה
 
-A Jekyll-based GitHub Pages site for The Night House Discord server - an inclusive Left Hand Path (LHP) occult community.
+An Astro site, hosted on GitHub Pages, for The Night House Discord server - an inclusive Left Hand Path (LHP) occult community.
 
-🌙 **[Visit the Site](https://lbds137.github.io/the-night-house/)** | 🎮 **[Join our Discord](https://discord.gg/thenighthouse)**
+🌙 **[Visit the Site](https://thenighthouse.org/)** | 🎮 **[Join our Discord](https://discord.gg/thenighthouse)**
 
 ## About
 
@@ -24,8 +24,8 @@ The Night House is an 18+ occult/magick-focused Discord server created specifica
 
 ### Prerequisites
 
-- Ruby >= 3.0
-- Bundler gem
+- Node.js >= 22.12 (the deploy workflow uses Node 24)
+- pnpm 10 (pinned in `package.json`'s `packageManager`)
 - Git
 
 ### Local Setup
@@ -38,34 +38,43 @@ The Night House is an 18+ occult/magick-focused Discord server created specifica
 
 2. Install dependencies:
    ```bash
-   bundle install
+   pnpm install
    ```
 
 3. Run the site locally:
    ```bash
-   bundle exec jekyll serve
+   pnpm dev
    ```
 
-4. Visit `http://localhost:4000` in your browser
+4. Visit `http://localhost:4321` in your browser
+
+`pnpm build` type-checks (`astro check`) and builds the site into `dist/`; it's the same command
+the deploy workflow runs, and pull requests run it as a check.
 
 ### Project Structure
 
 ```
-├── _data/          # YAML data files (roles, tokens)
-├── _includes/      # Reusable components (atoms/molecules/organisms)
-├── _layouts/       # Page templates
-├── assets/         # CSS, JS, fonts, images
-├── _config.yml     # Jekyll configuration
-└── *.md           # Content pages
+├── public/             # Served as-is: CNAME, favicons, images
+├── src/
+│   ├── content/        # Page text in Markdown (welcome, rules, roles intro, glossary)
+│   ├── data/roles/     # Role categories and role definitions (YAML)
+│   ├── components/     # Header, navigation, role category, Discord invite card
+│   ├── layouts/        # Page shell
+│   ├── lib/            # Site config and nav, Markdown rendering, roles data
+│   ├── pages/          # One file per route
+│   └── styles/         # global.css (Discord Onyx-style theme)
+└── astro.config.mjs
 ```
+
+In Markdown and role text, `!c!channel-name!c!` renders a channel mention and `!r!<role id>!r!` a
+role mention in that role's color. External links open in a new tab automatically.
 
 ### Key Technologies
 
-- **Jekyll** (3.10.0) - Static site generator
-- **GitHub Pages** - Hosting
-- **Liquid** - Templating language
-- **SCSS** - Styling
-- **JavaScript** - Discord integration and interactivity
+- **Astro** - Static site generator
+- **GitHub Pages** - Hosting, deployed by the `withastro/action` workflow
+- **marked** - Markdown rendering for page text and role descriptions
+- **TypeScript** - Components and the Discord invite card's live member counts
 
 ## Contributing
 
@@ -86,7 +95,8 @@ We welcome contributions! Please:
 
 ## Deployment
 
-The site automatically deploys via GitHub Pages when changes are pushed to the `main` branch. No manual deployment needed!
+`.github/workflows/deploy.yml` builds and deploys the site to GitHub Pages on every push to `main`
+(the repository's Pages source must be set to "GitHub Actions"). No manual deployment needed!
 
 ## License
 
@@ -95,7 +105,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Discord community members who make The Night House special
-- Jekyll and GitHub Pages teams for excellent tools
+- Astro and GitHub Pages teams for excellent tools
 - All contributors who help improve this site
 
 ---

@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import { renderMarkdown } from '../lib/markdown';
+import rules from '../content/rules.md?raw';
+---
+
+<Base title="Rules">
+  <div class="prose rules" set:html={renderMarkdown(rules)} />
+</Base>

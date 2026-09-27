@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import DiscordInvite from '../components/DiscordInvite.astro';
+import { renderMarkdown } from '../lib/markdown';
+import welcome from '../content/welcome.md?raw';
+---
+
+<Base title="Welcome">
+  <div class="prose" set:html={renderMarkdown(welcome)} />
+  <DiscordInvite />
+</Base>

@@ -1,0 +1,31 @@
+---
+import { renderInline, renderMarkdown } from '../lib/markdown';
+import type { CategoryNode, RoleCategory } from '../lib/roles';
+
+interface Props {
+  category: RoleCategory;
+  nodes: CategoryNode[];
+}
+
+const { category, nodes } = Astro.props;
+// Same anchor as Jekyll's `slugify` of the name, so existing /roles/#... links keep working.
+const anchor = category.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+
+<details class="role-category" id={anchor}>
+  <summary><h3>{category.name}</h3></summary>
+  <div class="role-category-body">
+    {
+      nodes.map((node) =>
+        node.type === 'role' ? (
+          <div class="role">
+            <div class="role-name" set:html={renderInline(`!r!${node.id}!r!`)} />
+            {node.text && <p class="role-text" set:html={renderInline(node.text)} />}
+          </div>
+        ) : (
+          <div class="callout" set:html={renderMarkdown(node.text)} />
+        ),
+      )
+    }
+  </div>
+</details>
