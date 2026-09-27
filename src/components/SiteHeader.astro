@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import NavMenu from './NavMenu.astro';
+import TitleParts from './TitleParts.astro';
 import logo from '../assets/logo.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
@@ -10,8 +11,6 @@ interface Props {
 }
 
 const { compact = false } = Astro.props;
-// Each language half wraps as a unit, so a narrow screen never splits "בית הלילה".
-const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 ---
 
 <header class:list={['site-header', { compact }]}>
@@ -27,9 +26,7 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
           loading="eager"
         />
         <span class="site-title">
-          <span>{englishTitle}</span>
-          <span aria-hidden="true">|</span>
-          <span lang="he" dir="rtl">{hebrewTitle}</span>
+          <TitleParts title={SITE_TITLE} />
         </span>
       </a>
     ) : (
@@ -46,9 +43,7 @@ const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
         />
         {/* Branding, not the page's heading: each page's own title is its <h1> (Base.astro). */}
         <p class="site-title">
-          <span>{englishTitle}</span>
-          <span aria-hidden="true">|</span>
-          <span lang="he" dir="rtl">{hebrewTitle}</span>
+          <TitleParts title={SITE_TITLE} />
         </p>
         <p class="site-tagline">{SITE_DESCRIPTION}</p>
       </>

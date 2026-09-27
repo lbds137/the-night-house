@@ -1,0 +1,22 @@
+---
+import { titleParts } from '../lib/site';
+
+interface Props {
+  title: string;
+}
+
+// Keep in step with the DOM version in the DiscordInvite component's script.
+const parts = titleParts(Astro.props.title);
+---
+
+{
+  parts.map((part) =>
+    part.separator ? (
+      <span aria-hidden="true">{part.text}</span>
+    ) : part.hebrew ? (
+      <span lang="he" dir="rtl">{part.text}</span>
+    ) : (
+      <span>{part.text}</span>
+    ),
+  )
+}
