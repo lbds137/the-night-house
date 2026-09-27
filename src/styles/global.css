@@ -290,6 +290,13 @@ main {
   font-size: 0.9em;
 }
 
+/* Blue alone is only 1.94:1 against body text; WCAG 1.4.1 needs a non-color cue for links in
+   running text. */
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .rules ol {
   padding-left: 1.75rem;
 }
