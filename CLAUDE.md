@@ -115,8 +115,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
    - `!c!channel-name!c!` → channel mention pill
    - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast
    - An unknown role id, or kramdown `{: ...}` attribute syntax, fails the build on purpose
-3. HTML comments in content are stripped (the glossary keeps unwritten terms in them); an
-   unclosed `<!--` fails the build
+3. HTML comments in content are stripped (a place to park unwritten text); an unclosed
+   `<!--` fails the build
 4. External links get `target="_blank" rel="noopener"` automatically
 
 ### Key Features
@@ -146,7 +146,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ### Current Limitations
 
-1. **Glossary**: Many terms commented out, needs expansion
+1. **Glossary**: all 67 entries were researched against web sources (2026-09-27); a second pass
+   checking them against Lila's Google Drive occult library is pending. Edits must stay sourced:
+   no unverified claims about living traditions or closed practices
 2. **Onyx palette**: Discord doesn't publish Onyx's values; ours are approximations
 
 ### Design Patterns
@@ -156,7 +158,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ## Improvement Opportunities
 
-- **Content**: Expand glossary definitions; add the Resources nav group once its pages have content
+- **Content**: add the Resources nav group once its pages have content
 - **Icon metadata**: `public/browserconfig.xml` points at `ms-icon-*.png` files that don't exist
   and sets a white tile; `public/site.webmanifest` has an empty `name`/`short_name` and white
   `theme_color`/`background_color` (the page's theme-color is `#000000`)
