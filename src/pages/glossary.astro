@@ -1,9 +1,110 @@
 ---
 import Base from '../layouts/Base.astro';
+import { byLetter, parseGlossary } from '../lib/glossary';
 import { renderMarkdown } from '../lib/markdown';
 import glossary from '../content/glossary.md?raw';
+
+const { entries, trailer } = parseGlossary(glossary);
+const groups = byLetter(entries);
+const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 ---
 
 <Base title="Glossary">
-  <div class="prose glossary" set:html={renderMarkdown(glossary)} />
+  <div class="glossary-tools" id="glossary-tools">
+    <nav class="glossary-index" aria-label="Jump to letter">
+      {
+        alphabet.map((letter) =>
+          groups.has(letter) ? (
+            <a href={`#letter-${letter.toLowerCase()}`}>{letter}</a>
+          ) : (
+            <span class="glossary-index-empty" aria-hidden="true">
+              {letter}
+            </span>
+          ),
+        )
+      }
+    </nav>
+    <input
+      type="search"
+      id="glossary-filter"
+      class="glossary-filter"
+      placeholder={`Filter ${entries.length} terms`}
+      aria-label="Filter glossary terms"
+      aria-controls="glossary-entries"
+      autocomplete="off"
+      hidden
+    />
+  </div>
+
+  <div class="prose glossary" id="glossary-entries">
+    {
+      [...groups].map(([letter, list]) => (
+        <section class="glossary-letter" id={`letter-${letter.toLowerCase()}`}>
+          <h3 class="glossary-letter-heading">{letter}</h3>
+          {list.map((entry) => (
+            <div class="glossary-entry" id={entry.slug} set:html={renderMarkdown(entry.markdown)} />
+          ))}
+        </section>
+      ))
+    }
+    <p class="glossary-no-match" id="glossary-no-match" role="status" hidden>
+      No terms match that filter.
+    </p>
+    <Fragment set:html={renderMarkdown(trailer)} />
+  </div>
 </Base>
+
+<script>
+  const tools = document.getElementById('glossary-tools')!;
+  const filter = document.getElementById('glossary-filter') as HTMLInputElement;
+  const noMatch = document.getElementById('glossary-no-match')!;
+  const sections = [...document.querySelectorAll<HTMLElement>('.glossary-letter')];
+  const fold = (text: string) =>
+    text.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase().replace(/\s+/g, ' ');
+  const entries = [...document.querySelectorAll<HTMLElement>('.glossary-entry')].map((el) => ({
+    el,
+    text: fold(el.textContent ?? ''),
+  }));
+
+  // Anchored entries land below the sticky bar instead of under it.
+  new ResizeObserver(() => {
+    const height = `${tools.offsetHeight}px`;
+    document.documentElement.style.setProperty('--glossary-tools-height', height);
+  }).observe(tools);
+
+  const applyFilter = () => {
+    const query = fold(filter.value.trim());
+    for (const { el, text } of entries) el.hidden = query !== '' && !text.includes(query);
+    for (const section of sections) {
+      section.hidden = !section.querySelector('.glossary-entry:not([hidden])');
+    }
+    noMatch.hidden = sections.some((section) => !section.hidden);
+  };
+
+  const clearFilter = () => {
+    if (filter.value === '') return;
+    filter.value = '';
+    applyFilter();
+  };
+
+  // A letter or a shared link must never point at something the filter has hidden.
+  tools.addEventListener('click', (event) => {
+    if ((event.target as Element).closest('a')) clearFilter();
+  });
+  window.addEventListener('hashchange', () => {
+    let id = location.hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // A malformed escape like `#%` just means no entry matches.
+    }
+    const target = id && document.getElementById(id);
+    if (target && target.closest('[hidden]')) {
+      clearFilter();
+      target.scrollIntoView();
+    }
+  });
+
+  filter.addEventListener('input', applyFilter);
+  filter.hidden = false;
+</script>
