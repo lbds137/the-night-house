@@ -15,6 +15,13 @@ describe('internalLinks', () => {
       '/_astro/b.webp',
     ]);
   });
+
+  it('ignores look-alike attributes such as data-href, data-src and xlink:href', () => {
+    const html =
+      '<div data-href="/nowhere/"></div><img data-src="/lazy.png">' +
+      '<svg><use xlink:href="#icon"></use></svg>';
+    expect(internalLinks(html)).toEqual([]);
+  });
 });
 
 describe('findBrokenLinks', () => {
@@ -48,5 +55,17 @@ describe('findBrokenLinks', () => {
   it('reports a missing file', () => {
     const bad = [...pages, { path: '/x/', html: '<img src="/missing.png">' }];
     expect(findBrokenLinks(bad, files)).toEqual(['/x/: /missing.png (no such page or file)']);
+  });
+
+  it('resolves an anchor-only link against its own page', () => {
+    const own = [{ path: '/a/', html: '<a href="#top">t</a><h1 id="top">A</h1>' }];
+    expect(findBrokenLinks(own, files)).toEqual([]);
+    const missing = [{ path: '/a/', html: '<a href="#top">t</a>' }];
+    expect(findBrokenLinks(missing, files)).toEqual(['/a/: #top (no element with id "top")']);
+  });
+
+  it('does not count data-id as an id', () => {
+    const fake = [{ path: '/a/', html: '<a href="#x">x</a><div data-id="x"></div>' }];
+    expect(findBrokenLinks(fake, files)).toEqual(['/a/: #x (no element with id "x")']);
   });
 });
