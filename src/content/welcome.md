@@ -1,9 +1,9 @@
-We are an **18+** occult / magick-focused Discord server that was created with the specific aim to cater to the needs of adherents of spiritual practices / disciplines that broadly fall under the [Left Hand Path](/glossary/#left-hand-path) (LHP) umbrella. We strive to create a **comfortable, respectful, and non-judgmental space** for practitioners to discuss their spirituality without fear of ridicule or persecution.
+We are an **18+** Discord server for occultists and magick practitioners, centered on the [Left Hand Path](/glossary/#left-hand-path) (LHP). It's a **comfortable, respectful and non-judgmental space** to talk about your spirituality without fear of ridicule or persecution.
 
-Unlike other communities that serve the LHP demographic, we strive to be different by fostering a **friendly atmosphere that is respectful of people and the various facets of their identities**. This is in direct response to the proliferation of LHP communities that engage in bigotry against marginalized groups, particularly with regard to race, gender identity, sexual orientation, neurodiversity, and other such identities and backgrounds.
- 
-Although LHP is our theme and focus, **we value diversity of opinions, knowledge, and practices**, and as such we are welcoming to all who are interested in magick / the occult, whether pagan, eclectic, monotheistic, or even atheistic in orientation. We believe that the free exchange of ideas is crucial to fostering a productive conversation and learning from each other, and as such we encourage practitioners of varied backgrounds to come together and learn from each other, with the expectation that they will be respectful of other cultures and make every effort to understand the full cultural and historical context of the practices they engage in.
- 
-We strive to foster conversations about a variety of topics, including but not limited to astrology / [divination](/glossary/#divination), [sigils](/glossary/#sigil) / spells, baneful magick, [demonology](/glossary/#demonology) / [demonolatry](/glossary/#demonolatry), polytheistic pantheons (Egyptian, Greek, Norse, etc.), Discordianism / [chaos magick](/glossary/#chaos-magick), Qabala / [Qlipot](/glossary/#qliphoth), and spiritworking / shamanism.
- 
-We hope that you will choose to join us!
+Many LHP communities engage in bigotry against marginalized groups, and we exist in direct response to that. Here you are **respected in every facet of your identity**: your race, gender identity, sexual orientation, neurodiversity and background.
+
+LHP is our focus, but **we value diversity of opinions, knowledge and practices**. Whether you're pagan, eclectic, monotheistic or atheist, you're welcome. We learn from each other through the free exchange of ideas, and we ask everyone to respect other cultures and to make every effort to understand the full cultural and historical context of the practices they engage in.
+
+Conversations here range across astrology and [divination](/glossary/#divination), [sigils](/glossary/#sigil) and spells, baneful magick, [demonology](/glossary/#demonology) and [demonolatry](/glossary/#demonolatry), polytheistic pantheons (Egyptian, Greek, Norse and more), Discordianism and [chaos magick](/glossary/#chaos-magick), Qabala and the [Qlipot](/glossary/#qliphoth), spiritworking and shamanism, and much more.
+
+We hope you'll choose to join us!
