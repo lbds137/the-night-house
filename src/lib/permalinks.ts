@@ -1,6 +1,9 @@
 /** The small "#" link that points at its own anchor; PermalinkCopier also copies its URL. */
 export const permalink = (id: string, label: string) =>
-  `<a class="permalink" href="#${id}" aria-label="Link to ${label}">#</a>`;
+  `<a class="permalink" href="#${id}" aria-label="Link to ${escapeAttribute(label)}">#</a>`;
+
+const escapeAttribute = (text: string) =>
+  text.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 
 /**
  * Gives each item of the rules' single ordered list the anchor `rule-N` and a permalink, so
@@ -35,7 +38,7 @@ export function withPermalink(html: string, id: string, label: string): string {
  * leaving a dead pointer.
  */
 export function linkCrossReferences(markdown: string, slugByTerm: Map<string, string>): string {
-  return markdown.replace(/\((see|compare) ([^)]+)\)/g, (_, verb: string, term: string) => {
+  return markdown.replace(/\((see|compare) ([^)\n]+)\)/g, (_, verb: string, term: string) => {
     const slug = slugByTerm.get(term.toLowerCase());
     if (!slug) throw new Error(`glossary.md: "(${verb} ${term})" names no glossary entry`);
     return `(${verb} [${term}](#${slug}))`;
