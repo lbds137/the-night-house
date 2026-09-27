@@ -48,8 +48,9 @@ The Night House is an 18+ occult/magick-focused Discord server created specifica
 
 4. Visit `http://localhost:4321` in your browser
 
-`pnpm build` type-checks (`astro check`) and builds the site into `dist/`; it's the same command
-the deploy workflow runs, and pull requests run it as a check.
+`pnpm build` type-checks (`astro check`), runs the tests (`pnpm test` runs them alone) and builds
+the site into `dist/`; it's the same command the deploy workflow runs, and pull requests run it as
+a check.
 
 ### Project Structure
 

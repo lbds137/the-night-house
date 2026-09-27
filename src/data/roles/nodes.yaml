@@ -9,8 +9,6 @@
   id: "804170769856593930"
   color: "ff0000"
   text: "This role denotes the owner of the server, who possesses full rights over server operation / management."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "staff"
@@ -18,8 +16,6 @@
   id: "804156307560071178"
   color: "1c1c1c"
   text: "This role denotes server administrators, who have full rights over server operation / management, except for deleting the server."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "staff"
@@ -27,8 +23,6 @@
   id: "500005233892524032"
   color: "800000"
   text: "This role denotes server staff who have the power to kick people from the server, in addition to the rights granted to the !r!499037360340598819!r! role."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "staff"
@@ -36,8 +30,6 @@
   id: "499037360340598819"
   color: "8b0000"
   text: "This role denotes server staff who have the power to perform general moderation duties such as manage messages (pin or delete other users' messages in server channels) and mute users (blocking them from typing anywhere in the server except for the !c!muted-timeout-area!c! channel)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "staff"
@@ -45,8 +37,6 @@
   id: "703288137169895545"
   color: "b22222"
   text: "This role includes all tiers of server staff and may be tagged by any user who requires staff intervention."
-  hide_button_staff: true
-  hide_button_member: true
 # ---
 # color
 # ---
@@ -233,7 +223,6 @@
   id: "500076544924975114"
   color: "b22222"
   text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their naked bodies in a safe space."
-  hide_button_member: true
 -
   type: "role"
   category_id: "access"
@@ -241,7 +230,6 @@
   id: "497961918519312386"
   color: "b22222"
   text: "This role grants access to NSFW sections of the server."
-  hide_button_member: true
 -
   type: "role"
   category_id: "access"
@@ -249,7 +237,6 @@
   id: "950124578338910298"
   color: "b22222"
   text: "This is a role for to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 5**."
-  hide_button_member: true
 -
   type: "role"
   category_id: "access"
@@ -257,7 +244,6 @@
   id: "1166927929008193627"
   color: "b22222"
   text: "This role grants access to channels that have been archived for longer than a year and have been moved out of the public archive sections."
-  hide_button_member: true
 # ---
 # status
 # ---
@@ -268,8 +254,6 @@
   id: "582217199217803284"
   color: "ee82ee"
   text: "This is a vanity role signifying that members have boosted the server using Discord Nitro (which is much appreciated and deserves visual recognition). This role grants immunity from inactivity purges in the server."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "status"
@@ -277,8 +261,6 @@
   id: "624712102673907722"
   color: "483d8b"
   text: "This role signifies that members have been designated as official server partners, which means that there exists a bidirectional link between this server and a server in which they are an administrator or moderator. This role grants immunity from inactivity purges in the server."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "status"
@@ -286,7 +268,6 @@
   id: "701897977429491862"
   color: "cd853f"
   text: "This role grants access to the private voice channel in the ticket system section of the server. It is temporarily granted to members who have access to tickets and need to speak with staff over voice chat, and once the particular business is concluded it is removed by staff."
-  hide_button_member: true
 # ---
 # membership
 # ---
@@ -297,7 +278,6 @@
   id: "497610586750976020"
   color: "3cb371"
   text: "This is a general role for server members, and it is required to access the main part of the server."
-  hide_button_member: true
 -
   type: "role"
   category_id: "membership"
@@ -305,8 +285,6 @@
   id: "622594368498303016"
   color: "1c1c1c"
   text: "This is a role given to server members who are being disciplined for their conduct in the server by being prevented from sending messages anywhere except in the designated !c!muted-timeout-area!c! channel."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "membership"
@@ -314,8 +292,6 @@
   id: "700913447595933748"
   color: "cd853f"
   text: "This is a role given to individuals who have confirmed their agreement to the server rules as part of the admission process. This role is automatically assigned by bot when a user types the agreement command in the designated !c!agreement!c! channel."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "membership"
@@ -323,7 +299,6 @@
   id: "504828346522140693"
   color: "708090"
   text: "This role is automatically assigned to server members when they join, once they have been cleared by the AltDentifier bot. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the !r!497610586750976020!r! role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c!, certifying agreement to follow the rules in !c!agreement!c!, and leaving an !c!introduction!c!)."
-  hide_button_member: true
 -
   type: "role"
   category_id: "membership"
@@ -331,8 +306,6 @@
   id: "497626822742376448"
   color: "808080"
   text: "This is a utility role given to server bots in order to confine bot access to the appropriate section in the server, as well as to denote the difference between actual bots and PluralKit proxies (which appear as white rather than gray). For obvious reasons, this role is unavailable to human users."
-  hide_button_staff: true
-  hide_button_member: true
 # ---
 # activity
 # ---
@@ -343,8 +316,6 @@
   id: "701425124728897676"
   color: "4682b4"
   text: "This is a role that is automatically assigned via bot to users who have sent over 1000 messages within the activity monitoring period (currently 30 days)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "activity"
@@ -352,8 +323,6 @@
   id: "701425091078127658"
   color: "ffd700"
   text: "This is a role that is automatically assigned via bot to users who have sent between 500 and 1000 messages within the activity monitoring period (currently 30 days)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "activity"
@@ -361,8 +330,6 @@
   id: "701425053425860718"
   color: "c0c0c0"
   text: "This is a role that is automatically assigned via bot to users who have sent between 100 and 500 messages within the activity monitoring period (currently 30 days)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "activity"
@@ -370,8 +337,6 @@
   id: "701424988992962580"
   color: "a0522d"
   text: "This is a role that is automatically assigned via bot to users who have sent between 50 and 100 messages within the activity monitoring period (currently 30 days)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "activity"
@@ -379,8 +344,6 @@
   id: "624676327135641620"
   color: "228b22"
   text: "This is a role that is automatically assigned via bot to users who have sent at least one message within the activity monitoring period (currently 30 days)."
-  hide_button_staff: true
-  hide_button_member: true
 -
   type: "role"
   category_id: "activity"
@@ -388,8 +351,6 @@
   id: "624676376058003483"
   color: "8b0000"
   text: "This is a role that is automatically assigned via bot to users who have ***not*** sent at least one message within the activity monitoring period (currently 30 days). Users with this role will be ***pruned*** regularly (currently at every equinox and solstice during a calendar year)."
-  hide_button_staff: true
-  hide_button_member: true
 # ---
 # notification
 # ---
