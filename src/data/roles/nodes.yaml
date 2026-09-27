@@ -7,39 +7,142 @@
   category_id: "staff"
   name: "Owner | בעלים"
   id: "804170769856593930"
-  color: "ff0000"
   text: "This role denotes the owner of the server, who possesses full rights over server operation / management."
 -
   type: "role"
   category_id: "staff"
   name: "Admin | אדמין"
   id: "804156307560071178"
-  color: "1c1c1c"
   text: "This role denotes server administrators, who have full rights over server operation / management, except for deleting the server."
 -
   type: "role"
   category_id: "staff"
   name: "Enforcer | אוכף"
   id: "500005233892524032"
-  color: "800000"
   text: "This role denotes server staff who have the power to kick people from the server, in addition to the rights granted to the !r!499037360340598819!r! role."
 -
   type: "role"
   category_id: "staff"
   name: "Moderator | מתווך"
   id: "499037360340598819"
-  color: "8b0000"
   text: "This role denotes server staff who have the power to perform general moderation duties such as manage messages (pin or delete other users' messages in server channels) and mute users (blocking them from typing anywhere in the server except for the !c!muted-timeout-area!c! channel)."
 -
   type: "role"
   category_id: "staff"
   name: "Staff | צוות"
   id: "703288137169895545"
-  color: "b22222"
   text: "This role includes all tiers of server staff and may be tagged by any user who requires staff intervention."
 # ---
 # color
 # ---
+-
+  type: "role"
+  category_id: "color"
+  name: "Holographic"
+  id: "1375110719821058059"
+  color: "a9c9ff"
+-
+  type: "role"
+  category_id: "color"
+  name: "Celestial Dawn"
+  id: "1375107727067709460"
+  color: "99ee66"
+-
+  type: "role"
+  category_id: "color"
+  name: "Rose Quartz Shimmer"
+  id: "1375108096648548432"
+  color: "ffe4e1"
+-
+  type: "role"
+  category_id: "color"
+  name: "Golden Haze"
+  id: "1375108287049109625"
+  color: "ffffff"
+-
+  type: "role"
+  category_id: "color"
+  name: "Liminal Gold"
+  id: "1459060598817030248"
+  color: "191970"
+-
+  type: "role"
+  category_id: "color"
+  name: "Liminal Rose"
+  id: "1467655589034328154"
+  color: "4a1942"
+-
+  type: "role"
+  category_id: "color"
+  name: "Nocturne Deep"
+  id: "1375108455744143390"
+  color: "191970"
+-
+  type: "role"
+  category_id: "color"
+  name: "Embers of the Forge"
+  id: "1375108609876299848"
+  color: "800000"
+-
+  type: "role"
+  category_id: "color"
+  name: "Forest Veiled"
+  id: "1375108940265685213"
+  color: "556b2f"
+-
+  type: "role"
+  category_id: "color"
+  name: "Void-Touched Sigil"
+  id: "1375109650894160033"
+  color: "4b0082"
+-
+  type: "role"
+  category_id: "color"
+  name: "Azure Depths"
+  id: "1375109139558170675"
+  color: "4169e1"
+-
+  type: "role"
+  category_id: "color"
+  name: "Orchid's Heart"
+  id: "1375109339072827502"
+  color: "ba55d3"
+-
+  type: "role"
+  category_id: "color"
+  name: "Earthen Core"
+  id: "1375109510095700179"
+  color: "a0522d"
+-
+  type: "role"
+  category_id: "color"
+  name: "Terra Firma"
+  id: "1375159322480218143"
+  color: "556b2f"
+-
+  type: "role"
+  category_id: "color"
+  name: "Zephyr's Whisper"
+  id: "1375159841001177188"
+  color: "87cefa"
+-
+  type: "role"
+  category_id: "color"
+  name: "Inferno's Heart"
+  id: "1375160074657333278"
+  color: "ff4500"
+-
+  type: "role"
+  category_id: "color"
+  name: "Abyssal Flow"
+  id: "1375160279020605604"
+  color: "00bfff"
+-
+  type: "role"
+  category_id: "color"
+  name: "Aetherial Weave"
+  id: "1375160559586250813"
+  color: "4b0082"
 -
   type: "role"
   category_id: "color"
@@ -97,26 +200,9 @@
 -
   type: "role"
   category_id: "color"
-  name: "Papaya Whip"
-  id: "502158909247586307"
-  color: "ffefd5"
-- type: "role"
-  category_id: "color"
-  name: "Sienna"
-  id: "925112658699620392"
-  color: "a0522d"
--
-  type: "role"
-  category_id: "color"
   name: "Goldenrod"
   id: "698248982002008064"
   color: "daa520"
--
-  type: "role"
-  category_id: "color"
-  name: "Medium Sea Green"
-  id: "505120630648078348"
-  color: "3cb371"
 -
   type: "role"
   category_id: "color"
@@ -174,12 +260,6 @@
 -
   type: "role"
   category_id: "color"
-  name: "Blue Violet"
-  id: "502975529700556802"
-  color: "8a2be2"
--
-  type: "role"
-  category_id: "color"
   name: "Dark Orchid"
   id: "505168569676464133"
   color: "9932cc"
@@ -221,28 +301,28 @@
   category_id: "access"
   name: "Nudist | נודיסט"
   id: "500076544924975114"
-  color: "b22222"
+  color: "dc143c"
   text: "This is a highly exclusive role that is only granted to people who have demonstrated (1) that they are trustworthy and won't share photos outside this server, and (2) above the age of majority (for this server that is 18 years old), because this is decidedly not a server that wants to have anything to do with illegal content pertaining to minors. This role grants access to a special role locked channel where members can share photographs of their naked bodies in a safe space."
 -
   type: "role"
   category_id: "access"
   name: "NSFW Access | גישה לתוכן למבוגרים"
   id: "497961918519312386"
-  color: "b22222"
+  color: "dc143c"
   text: "This role grants access to NSFW sections of the server."
 -
   type: "role"
   category_id: "access"
   name: "Polemicist | פולמוסן"
   id: "950124578338910298"
-  color: "b22222"
+  color: "dc143c"
   text: "This is a role for people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 5**."
 -
   type: "role"
   category_id: "access"
   name: "Rare Archive Access | גישה לארכיון נדיר"
   id: "1166927929008193627"
-  color: "b22222"
+  color: "dc143c"
   text: "This role grants access to channels that have been archived for longer than a year and have been moved out of the public archive sections."
 # ---
 # status
@@ -285,20 +365,6 @@
   id: "622594368498303016"
   color: "1c1c1c"
   text: "This is a role given to server members who are being disciplined for their conduct in the server by being prevented from sending messages anywhere except in the designated !c!muted-timeout-area!c! channel."
--
-  type: "role"
-  category_id: "membership"
-  name: "Agreement | הסכם"
-  id: "700913447595933748"
-  color: "cd853f"
-  text: "This is a role given to individuals who have confirmed their agreement to the server rules as part of the admission process. This role is automatically assigned by bot when a user types the agreement command in the designated !c!agreement!c! channel."
--
-  type: "role"
-  category_id: "membership"
-  name: "Guest | אורח"
-  id: "504828346522140693"
-  color: "708090"
-  text: "This role is automatically assigned to server members when they join, once they have been cleared by the AltDentifier bot. It is a temporary role denoting that a user lacks access to the main part of the server, and will be removed and replaced with the !r!497610586750976020!r! role once the user demonstrates sufficient initiative / humanity to be admitted to the server (i.e. reading the !c!rules!c!, certifying agreement to follow the rules in !c!agreement!c!, and leaving an !c!introduction!c!)."
 -
   type: "role"
   category_id: "membership"
@@ -364,7 +430,7 @@
 -
   type: "role"
   category_id: "notification"
-  name: "Book Club | קבוצת ספר"
+  name: "Book Club | קבוצת ספרים"
   id: "651162187523686400"
   color: "008080"
   text: "This is an opt-in role for announcements regarding book club discussions taking place on the server."
@@ -406,7 +472,7 @@
 -
   type: "role"
   category_id: "notification"
-  name: "Voice Chat | שיחת קולית"
+  name: "Voice Chat | שיחה קולית"
   id: "701450213025644627"
   color: "bdb76b"
   text: "This is an opt-in role for being pinged when a person wishes to start a voice chat, in order to gather up folks to engage in that activity."
@@ -438,40 +504,6 @@
   id: "498208466066866186"
   color: "ff0000"
   text: "This role is to signify that you do not consent to receiving direct messages from anyone on this server, but please note that moderators may always message you for important communication, e.g. if you've broken a rule and disciplinary action needs to be taken against you."
-# ---
-# pronouns
-# ---
--
-  type: "role"
-  category_id: "pronouns"
-  name: "He/Him | הוא"
-  id: "537038437560352768"
-  color: "1e90ff"
--
-  type: "role"
-  category_id: "pronouns"
-  name: "It/Its | זה"
-  id: "597961415264960513"
-  color: "483d8b"
--
-  type: "role"
-  category_id: "pronouns"
-  name: "Neopronouns | כינויי גוף מודרניים"
-  id: "537047781739724803"
-  color: "daa520"
-  text: "This role signifies that the role holder intends to use neopronouns and would appreciate the opportunity to share their pronouns with the community."
--
-  type: "role"
-  category_id: "pronouns"
-  name: "She/Her | היא"
-  id: "537038463879610380"
-  color: "ff1493"
--
-  type: "role"
-  category_id: "pronouns"
-  name: "They/Them | הם"
-  id: "537038479616638988"
-  color: "32cd32"
 # ---
 # identity
 # ---
@@ -551,7 +583,7 @@
 -
   type: "role"
   category_id: "identity"
-  name: "Spoonie | ספוני"
+  name: "Disability | נכות"
   id: "504971274431496194"
   color: "ffa07a"
   text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/) for more details on the spoons paradigm."
@@ -787,84 +819,6 @@
   id: "636796938506862595"
   color: "ee82ee"
 # ---
-# wing
-# ---
--
-  type: "role"
-  category_id: "wing"
-  name: "w1"
-  id: "636796905141174285"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w2"
-  id: "636796972778520576"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w3"
-  id: "636792906203529216"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w4"
-  id: "636792997304074241"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w5"
-  id: "636793542001557504"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w6"
-  id: "636793650881232916"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w7"
-  id: "636794836921352193"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w8"
-  id: "636796813789102100"
-  color: "da70d6"
--
-  type: "role"
-  category_id: "wing"
-  name: "w9"
-  id: "636792669707829258"
-  color: "da70d6"
-# ---
-# instinct
-# ---
--
-  type: "role"
-  category_id: "instinct"
-  name: "so"
-  id: "658392571814477884"
-  color: "ba55d3"
--
-  type: "role"
-  category_id: "instinct"
-  name: "sp"
-  id: "658392498435260419"
-  color: "ba55d3"
--
-  type: "role"
-  category_id: "instinct"
-  name: "sx"
-  id: "658392581209587752"
-  color: "ba55d3"
-# ---
 # hd
 # ---
 -
@@ -897,126 +851,6 @@
   name: "Reflector | מחזירור"
   id: "771520096681984021"
   color: "0000ff"
-# ---
-# authority
-# ---
--
-  type: "role"
-  category_id: "authority"
-  name: "Ego Authority | שליטת כוח רצוני"
-  id: "771521657109086258"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Emotional Authority | שליטה רגשית"
-  id: "771521888803487794"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Lunar Authority | שליטה ירחית"
-  id: "771522018662809630"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Mental Authority | שליטה נפשית"
-  id: "771522086916325426"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Sacral Authority | שליטה שורשי"
-  id: "771522249176907776"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Self Authority | שליטה אישית"
-  id: "771522180210098197"
-  color: "00008b"
--
-  type: "role"
-  category_id: "authority"
-  name: "Splenic Authority | שליטת טחולית"
-  id: "771522299039842355"
-  color: "00008b"
-# ---
-# profile
-# ---
--
-  type: "role"
-  category_id: "profile"
-  name: "1/3"
-  id: "771529570473082920"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "1/4"
-  id: "771529605697896470"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "2/4"
-  id: "771529635421880321"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "2/5"
-  id: "771529668935286785"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "3/5"
-  id: "771529697430601771"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "3/6"
-  id: "771529730818179104"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "4/6"
-  id: "771529761637269514"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "4/1"
-  id: "771529790749933578"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "5/1"
-  id: "771529844377780246"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "5/2"
-  id: "771529870349828096"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "6/2"
-  id: "771529913554698280"
-  color: "191970"
--
-  type: "role"
-  category_id: "profile"
-  name: "6/3"
-  id: "771529938381701131"
-  color: "191970"
 # ---
 # element
 # ---
@@ -1266,10 +1100,10 @@
 -
   type: "role"
   category_id: "polytheism"
-  name: "Sumerian Polytheism | פוליתאיזם שומרי"
+  name: "Mesopotamian Polytheism | פוליתאיזם מסופוטמי"
   id: "505745773028311040"
   color: "2e8b57"
-  text: "This role is for those who engage in practices / worship related to Sumerian Polytheism."
+  text: "This role is for those who engage in practices / worship related to Mesopotamian Polytheism."
 # ---
 # discipline
 # ---
