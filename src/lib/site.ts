@@ -33,18 +33,19 @@ export type NavItem = NavLink | NavGroup;
 
 export const isNavGroup = (item: NavItem): item is NavGroup => 'children' in item;
 
-// The nested structure comes from the `experimental` branch (d7034d8). Its Resources pages were
-// empty stubs, so that group waits until it has content.
+export const DISCORD_INVITE_URL = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
+
+// Groups (a dropdown, from the `experimental` branch, d7034d8) are for the planned Resources
+// pages, which wait until they have content.
 export const MAIN_NAV: NavItem[] = [
   { title: 'Welcome', href: '/' },
-  {
-    title: 'Community',
-    children: [
-      { title: 'Rules', href: '/rules/' },
-      { title: 'Roles', href: '/roles/' },
-      { title: 'Glossary', href: '/glossary/' },
-    ],
-  },
+  { title: 'Rules', href: '/rules/' },
+  { title: 'Roles', href: '/roles/' },
+  { title: 'Glossary', href: '/glossary/' },
+];
+
+/** The community elsewhere on the web, listed in the site footer. */
+export const FOOTER_LINKS: NavLink[] = [
   {
     title: 'Disboard',
     href: 'https://disboard.org/server/462036216909398026',

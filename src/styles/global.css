@@ -136,6 +136,34 @@ a:hover {
   font-size: clamp(0.95rem, 2.2vw, 1.1rem);
 }
 
+/* Compact header (every page but Welcome): logo and title in one row, linking home. */
+
+.site-header.compact {
+  padding: 1.25rem 1rem 1.5rem;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.site-brand:hover {
+  text-decoration: none;
+}
+
+.site-header.compact .site-logo {
+  width: 48px;
+}
+
+.site-header.compact .site-title {
+  justify-content: flex-start;
+  margin: 0;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+
 /* Navigation */
 
 .site-nav {
@@ -638,6 +666,7 @@ main {
 /* Discord invite card */
 
 .invite {
+  container-type: inline-size;
   scroll-margin-top: 1rem;
   width: min(100%, 27rem);
   margin: 2rem auto 0;
@@ -677,12 +706,18 @@ main {
 }
 
 .invite-name {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3em;
   margin: 0;
-  overflow: hidden;
   color: var(--text-strong);
   font-size: 1rem;
   font-weight: 700;
-  text-overflow: ellipsis;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.invite-name > span {
   white-space: nowrap;
 }
 
@@ -706,8 +741,17 @@ main {
 }
 
 .invite-dot.members {
-  margin-left: 0.6rem;
   background: var(--status-offline);
+}
+
+/* A narrow card wraps between the two counts, never inside one. */
+.invite-stat {
+  white-space: nowrap;
+}
+
+/* On the first count, not the second, so a wrapped second count isn't indented. */
+.invite-stat:first-child {
+  margin-right: 0.35rem;
 }
 
 .invite-join {
@@ -722,4 +766,51 @@ main {
 .invite-join:hover {
   background: var(--green-hover);
   text-decoration: none;
+}
+
+/* On a narrow card (a phone), Join takes its own row so the name has room. */
+@container (max-width: 22rem) {
+  .invite-body {
+    flex-wrap: wrap;
+  }
+
+  .invite-join {
+    flex: 1 0 100%;
+    text-align: center;
+  }
+}
+
+.welcome-text {
+  margin-top: 2rem;
+}
+
+/* Footer */
+
+.site-footer {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 0 0.75rem;
+}
+
+.site-footer-join {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-footer-links a {
+  padding: 0.25rem; /* at least the 24px WCAG 2.2 target size */
 }

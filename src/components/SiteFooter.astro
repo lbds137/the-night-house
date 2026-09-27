@@ -1,0 +1,22 @@
+---
+import { DISCORD_INVITE_URL, FOOTER_LINKS } from '../lib/site';
+---
+
+<footer class="site-footer">
+  <p class="site-footer-join">
+    <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener">Join The Night House on Discord</a>
+  </p>
+  <p>
+    Need staff? Tag the Staff role in the server, or open a ticket for anything private (<a
+      href="/rules/#rule-12">rule 12</a>).
+  </p>
+  <nav class="site-footer-links" aria-label="Elsewhere">
+    {
+      FOOTER_LINKS.map((link) => (
+        <a href={link.href} target="_blank" rel="noopener">
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+</footer>

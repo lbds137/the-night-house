@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import DiscordInvite from '../components/DiscordInvite.astro';
 import PermalinkCopier from '../components/PermalinkCopier.astro';
 import { renderMarkdown } from '../lib/markdown';
 import { numberRules } from '../lib/permalinks';
@@ -12,5 +13,7 @@ const description =
 
 <Base title="Rules" {description}>
   <div class="prose rules" set:html={numberRules(renderMarkdown(rules))} />
+  {/* Welcome's How to join sends people here first; the way on is right below the rules. */}
+  <DiscordInvite />
   <PermalinkCopier />
 </Base>
