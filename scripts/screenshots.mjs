@@ -45,10 +45,20 @@ const chrome = spawn(
   chromeCmd,
   [...chromeArgs, '--headless=new', `--remote-debugging-port=${port}`, '--hide-scrollbars',
     `--user-data-dir=${join(process.cwd(), '.chrome-profile')}`, 'about:blank'],
-  { stdio: 'ignore' },
+  { stdio: ['ignore', 'ignore', 'pipe'] },
 );
+// Chrome's last words, reported if it dies before the run finishes.
+let chromeStderr = '';
+let finished = false;
+chrome.stderr.on('data', (chunk) => (chromeStderr = (chromeStderr + chunk).slice(-2000)));
 chrome.on('error', (error) => {
   console.error(`Couldn't start Chrome ("${chromeCmd}"): ${error.message}. Set CHROME.`);
+  process.exit(1);
+});
+chrome.on('exit', (code, signal) => {
+  if (finished) return;
+  console.error(`Chrome exited early (code ${code}, signal ${signal}). Its stderr:`);
+  console.error(chromeStderr);
   process.exit(1);
 });
 
@@ -126,6 +136,7 @@ for (const page of pages) {
 }
 
 // Stopping the browser through the protocol, since killing a wrapper (flatpak) can leave it up.
+finished = true;
 const browser = await (await fetch(`http://127.0.0.1:${port}/json/version`)).json();
 const browserWs = new WebSocket(browser.webSocketDebuggerUrl);
 await new Promise((resolve) => browserWs.addEventListener('open', resolve));
