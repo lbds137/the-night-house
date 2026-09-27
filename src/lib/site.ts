@@ -5,6 +5,25 @@ export const SITE_DESCRIPTION =
   'A friendly and inclusive Left Hand Path / Satanism focused server that is welcome to all, ' +
   'regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. ' +
   'and does not tolerate discrimination, bigotry, or harassment.';
+export interface TitlePart {
+  text: string;
+  /** The "|" or "·" between the halves: shown, but not read aloud. */
+  separator: boolean;
+  hebrew: boolean;
+}
+
+/**
+ * A bilingual name ("The Night House | בית הלילה", or a Discord server name that uses "·") as
+ * its halves and separators, so each half can wrap as a unit and the Hebrew one reads RTL.
+ * The browser script in DiscordInvite.astro imports this, so it must stay import-free.
+ */
+export const titleParts = (title: string): TitlePart[] =>
+  title.split(/\s+([|·])\s+/).map((text, i) => ({
+    text,
+    separator: i % 2 === 1,
+    hebrew: /[֐-׿]/.test(text),
+  }));
+
 // Keep this on one line: .github/workflows/invite-check.yml reads it with sed.
 export const DISCORD_INVITE_CODE = 'v4kjNpF';
 
