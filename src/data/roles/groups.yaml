@@ -1,0 +1,20 @@
+---
+# How the Roles page groups the categories in categories.yaml, in page order. Every category
+# belongs to exactly one group (src/lib/roles.ts checks). A group's id is its /roles/# anchor.
+-
+  name: "About you"
+  id: "about-you"
+  categories: ["pronouns", "dm", "notification", "identity", "continent", "color"]
+-
+  name: "Paths and practice"
+  id: "paths-and-practice"
+  categories: ["belief", "polytheism", "discipline"]
+-
+  name: "Signs and types"
+  id: "signs-and-types"
+  categories:
+    ["zodiac", "element", "mbti", "enneagram", "wing", "instinct", "hd", "authority", "profile"]
+-
+  name: "The server"
+  id: "the-server"
+  categories: ["staff", "access", "membership", "status", "activity"]

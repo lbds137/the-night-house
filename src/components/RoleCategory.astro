@@ -1,6 +1,6 @@
 ---
 import { renderInline, renderMarkdown } from '../lib/markdown';
-import type { CategoryNode, RoleCategory } from '../lib/roles';
+import { categoryAnchor, type CategoryNode, type RoleCategory } from '../lib/roles';
 
 interface Props {
   category: RoleCategory;
@@ -15,12 +15,11 @@ const glossaryTerm = (slug: string) => {
   if (!term) throw new Error(`nodes.yaml: no glossary entry "${slug}" (see glossary-sources.json)`);
   return term;
 };
-// Same anchor as Jekyll's `slugify` of the name, so existing /roles/#... links keep working.
-const anchor = category.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const anchor = categoryAnchor(category);
 ---
 
 <details class="role-category" id={anchor}>
-  <summary><h2>{category.name}</h2></summary>
+  <summary><h3>{category.name}</h3></summary>
   <div class="role-category-body">
     {
       nodes.map((node) =>

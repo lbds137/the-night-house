@@ -100,7 +100,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ├── src/
 │   ├── assets/         # logo.png (source; astro:assets serves resized WebP via sharp)
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
-│   ├── data/           # roles/categories.yaml, roles/nodes.yaml, discord-channels.yaml
+│   ├── data/           # roles/categories.yaml, roles/groups.yaml (page grouping),
+│   │                   # roles/nodes.yaml, discord-channels.yaml
 │   ├── components/     # SiteHeader, NavMenu, SiteFooter, RoleCategory, DiscordInvite
 │   ├── layouts/        # Base.astro (head + per-page description/OG/JSON-LD, page title as h1)
 │   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts, glossary.ts,
@@ -128,7 +129,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ### Key Features
 
 - **Discord Integration**: invite card is a plain link that fetches live counts from Discord's API
-- **Collapsible Sections**: role categories are native `<details>`; `/roles/#anchor` opens one
+- **Collapsible Sections**: role categories are native `<details>`; `/roles/#anchor` opens one.
+  `groups.yaml` sorts them under four headings, newcomer-first; every category with roles
+  must be in exactly one group, or the build fails
 - **Roles → glossary**: a role's `glossary: <slug>` in `nodes.yaml` adds an "In the glossary" link
   under its text; an unknown slug fails the build (and `src/content/glossary.test.ts`)
 - **Glossary navigation**: sticky A–Z bar and a filter box (hidden without JS); every entry is
