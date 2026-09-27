@@ -158,7 +158,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ## Dependencies
 
-- **Node.js** >= 24 (what CI, the deploy and the Deck run) and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && vitest run && astro build`
+- **Node.js** >= 24 (what CI and the deploy run) and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && vitest run && astro build`
 - **astro**, **marked**, **marked-smartypants**, **yaml**, **sharp** (astro:assets needs it as a
   direct dependency under pnpm, or the image step fails with MissingSharp); dev: **@astrojs/check**, **typescript** 6,
   **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`),
