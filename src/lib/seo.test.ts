@@ -45,4 +45,9 @@ describe('plainDefinition', () => {
     const md = '**Tenets**: in [*its* words](https://example.org/a_b_c):\n1. First.';
     expect(plainDefinition(md)).toBe('in its words: 1. First.');
   });
+
+  it('drops a URL with parentheses in it, and a link title', () => {
+    const md = '**X**: see [Set](https://en.wikipedia.org/wiki/Set_(deity) "Set") (the god).';
+    expect(plainDefinition(md)).toBe('see Set (the god).');
+  });
 });
