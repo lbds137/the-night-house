@@ -1,0 +1,50 @@
+name: Check the Discord invite
+
+# The site's whole job is to get people into the server; an expired or revoked invite breaks
+# that with no error anywhere. This checks the invite weekly and opens an issue if it's dead.
+on:
+  schedule:
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check the invite
+        run: |
+          code=$(sed -nE "s/^export const DISCORD_INVITE_CODE = '([^']+)';/\1/p" src/lib/site.ts)
+          if [ -z "$code" ]; then
+            echo "::error::Couldn't read DISCORD_INVITE_CODE from src/lib/site.ts"; exit 1
+          fi
+          status=$(curl -s -o invite.json -w '%{http_code}' \
+            "https://discord.com/api/v10/invites/$code?with_counts=true")
+          echo "Invite $code: HTTP $status"
+          if [ "$status" = 200 ]; then
+            jq -r '"Server: \(.guild.name); members: \(.approximate_member_count); expires: \(.expires_at)"' invite.json
+            exit 0
+          fi
+          if [ "$status" != 404 ]; then
+            # Rate limits and outages aren't evidence the invite is dead; try again next week.
+            echo "::warning::Discord answered HTTP $status; not treating that as a dead invite."
+            exit 0
+          fi
+          title="Discord invite $code no longer works"
+          open=$(gh issue list --repo "$REPO" --state open --search "\"$title\" in:title" --json number --jq length)
+          if [ "$open" = 0 ]; then
+            gh issue create --repo "$REPO" --title "$title" --body \
+              "The weekly check got HTTP 404 for \`https://discord.com/invite/$code\`, so the site's Join button leads nowhere. Create a new permanent invite in Discord and update \`DISCORD_INVITE_CODE\` in \`src/lib/site.ts\`."
+          fi
+          echo "::error::Invite $code is dead (HTTP 404)."
+          exit 1
