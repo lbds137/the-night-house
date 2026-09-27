@@ -18,6 +18,15 @@ export interface GlossaryPage {
 
 const TERM = /^\*\*(.+?)\*\*/;
 
+/** Fixed ids on the glossary page (Base.astro, glossary.astro); `letter-*` ids are reserved too. */
+export const RESERVED_IDS = [
+  'content',
+  'glossary-tools',
+  'glossary-filter',
+  'glossary-entries',
+  'glossary-no-match',
+];
+
 export const slugify = (term: string) =>
   stripAccents(term)
     .toLowerCase()
@@ -46,9 +55,12 @@ export function parseGlossary(markdown: string): GlossaryPage {
     const start = stray.slice(0, 60);
     throw new Error(`glossary.md: entry after non-entry text, so it would be lost: ${start}`);
   }
-  const seen = new Set<string>();
+  // Entry anchors share the page with these ids; a collision would break the link silently.
+  const seen = new Set<string>(RESERVED_IDS);
   for (const { slug, term } of entries) {
-    if (seen.has(slug)) throw new Error(`glossary.md: "${term}" reuses the anchor "${slug}"`);
+    if (seen.has(slug) || slug.startsWith('letter-')) {
+      throw new Error(`glossary.md: "${term}" reuses the anchor "${slug}"`);
+    }
     seen.add(slug);
   }
   return { entries, trailer: rest.join('\n\n') };

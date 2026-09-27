@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import sourcesRaw from '../../docs/glossary-sources.json?raw';
-import { parseGlossary } from '../lib/glossary';
+import baseLayout from '../layouts/Base.astro?raw';
+import { RESERVED_IDS, parseGlossary } from '../lib/glossary';
+import glossaryPage from '../pages/glossary.astro?raw';
 import glossary from './glossary.md?raw';
 
 interface Entry {
@@ -14,8 +16,16 @@ const entries: Entry[] = JSON.parse(sourcesRaw);
 
 describe('glossary sources', () => {
   it('holds exactly the entries on the page, in order', () => {
-    const paragraphs = glossary.split('\n\n').filter((p: string) => p.startsWith('**'));
-    expect(paragraphs).toEqual(entries.map((e) => e.draft));
+    const onPage = parseGlossary(glossary).entries.map((e) => e.markdown);
+    expect(onPage).toEqual(entries.map((e) => e.draft));
+  });
+
+  // The parser refuses entry anchors in RESERVED_IDS, so it must list every fixed id on the page.
+  it('reserves every fixed id the glossary page uses', () => {
+    const source = baseLayout + glossaryPage;
+    const fixedIds = [...source.matchAll(/\bid="([^"{}]+)"/g)].map((m) => m[1]);
+    expect(fixedIds.length).toBeGreaterThan(0);
+    expect(fixedIds.filter((id) => !RESERVED_IDS.includes(id))).toEqual([]);
   });
 
   // Anchors are public links (/glossary/#egregore); the sources file keys entries the same way.

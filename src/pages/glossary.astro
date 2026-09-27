@@ -40,7 +40,7 @@ const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
     {
       [...groups].map(([letter, list]) => (
         <section class="glossary-letter" id={`letter-${letter.toLowerCase()}`}>
-          <h3 class="glossary-letter-heading">{letter}</h3>
+          <h2 class="glossary-letter-heading">{letter}</h2>
           {list.map((entry) => (
             <div class="glossary-entry" id={entry.slug} set:html={renderMarkdown(entry.markdown)} />
           ))}
