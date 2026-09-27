@@ -529,6 +529,19 @@ main {
   color: var(--role-text);
 }
 
+/* Role names wrap between their halves (see mentionName in markdown.ts); each line of a
+   wrapped pill keeps its own padding and rounded corners. */
+.mention-role,
+.mention-role-default {
+  white-space: normal;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mention-part {
+  white-space: nowrap;
+}
+
 .callout {
   margin: 0 0 1.5rem;
   padding: 1rem 1.25rem;

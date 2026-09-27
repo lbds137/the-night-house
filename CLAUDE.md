@@ -108,7 +108,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 │   │                   # search.ts (glossary filter, shipped to the browser: no imports),
 │   │                   # seo.ts (JSON-LD escaping, sitemap paths, plain-text definitions),
 │   │                   # comments.ts + discord.ts (no Vite imports, so node scripts load them)
-│   ├── pages/          # index, rules, roles, glossary, 404 (noindex, no canonical),
+│   ├── pages/          # index, rules, guide, roles, glossary, 404 (noindex, no canonical),
 │   │                   # sitemap.xml.ts (lists every page but 404)
 │   └── styles/         # global.css
 └── astro.config.mjs
@@ -120,7 +120,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
    `renderMarkdown` / `renderInline` in `src/lib/markdown.ts` (marked + smartypants)
 2. **Token System**, applied before Markdown:
    - `!c!channel-name!c!` → channel mention pill
-   - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast
+   - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast;
+     a bilingual name wraps only between its halves, and the Hebrew half gets `lang="he"`
    - An unknown role id, or kramdown `{: ...}` attribute syntax, fails the build on purpose
 3. HTML comments in content are stripped (a place to park unwritten text); an unclosed
    `<!--` fails the build
@@ -145,6 +146,9 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   Resources pages); outside profiles and a join link sit in the footer (`FOOTER_LINKS`). Only
   Welcome gets the full header and tagline; other pages get a compact one. The invite card sits
   near the top of Welcome and at the end of Rules
+- **Guide** (`/guide/`, `src/content/guide.md`): the new-member guide (getting in, the channel
+  categories, opt-in areas, tickets, the prune, the name). It describes channels by category,
+  not one by one, and tickets generically, so a bot change only touches a line
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 - **Build-time link check**: `src/integrations/check-links.ts` fails `astro build` when a built
   page links to a page, file or `#anchor` that doesn't exist (`src/lib/linkcheck.ts`)

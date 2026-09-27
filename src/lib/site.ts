@@ -59,6 +59,7 @@ export const DISCORD_INVITE_URL = `https://discord.com/invite/${DISCORD_INVITE_C
 export const MAIN_NAV: NavItem[] = [
   { title: 'Welcome', href: '/' },
   { title: 'Rules', href: '/rules/' },
+  { title: 'Guide', href: '/guide/' },
   { title: 'Roles', href: '/roles/' },
   { title: 'Glossary', href: '/glossary/' },
 ];
