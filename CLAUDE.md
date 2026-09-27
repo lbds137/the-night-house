@@ -101,7 +101,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 │   ├── assets/         # logo.png (source; astro:assets serves resized WebP via sharp)
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
 │   ├── data/           # roles/categories.yaml, roles/nodes.yaml, discord-channels.yaml
-│   ├── components/     # SiteHeader, NavMenu, RoleCategory, DiscordInvite
+│   ├── components/     # SiteHeader, NavMenu, SiteFooter, RoleCategory, DiscordInvite
 │   ├── layouts/        # Base.astro (head + per-page description/OG/JSON-LD, page title as h1)
 │   ├── lib/            # site.ts (title, nav), markdown.ts, roles.ts, glossary.ts,
 │   │                   # search.ts (glossary filter, shipped to the browser: no imports),
@@ -136,7 +136,10 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   fails (`src/lib/permalinks.ts`)
 - **Permalinks**: glossary entries and rules (`/rules/#rule-N`) carry a "#" link;
   `PermalinkCopier.astro` also copies its URL on click. Rules must stay one flat list
-- **Navigation**: nested "Community" dropdown (from the old `experimental` branch)
+- **Navigation**: flat nav of the site's pages (`MAIN_NAV`; groups, a dropdown, wait for the
+  Resources pages); outside profiles and a join link sit in the footer (`FOOTER_LINKS`). Only
+  Welcome gets the full header and tagline; other pages get a compact one. The invite card sits
+  near the top of Welcome and at the end of Rules
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 - **Build-time link check**: `src/integrations/check-links.ts` fails `astro build` when a built
   page links to a page, file or `#anchor` that doesn't exist (`src/lib/linkcheck.ts`)

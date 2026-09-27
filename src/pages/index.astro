@@ -4,12 +4,10 @@ import DiscordInvite from '../components/DiscordInvite.astro';
 import { renderMarkdown } from '../lib/markdown';
 import welcome from '../content/welcome.md?raw';
 import howToJoin from '../content/how-to-join.md?raw';
-import { MAIN_NAV, SITE_DESCRIPTION, isNavGroup } from '../lib/site';
+import { FOOTER_LINKS, SITE_DESCRIPTION } from '../lib/site';
 
 const site = new URL('/', Astro.site).href;
-const profiles = MAIN_NAV.flatMap((item) => (isNavGroup(item) ? item.children : [item]))
-  .filter((link) => link.profile)
-  .map((link) => link.href);
+const profiles = FOOTER_LINKS.filter((link) => link.profile).map((link) => link.href);
 const structuredData = [
   {
     '@context': 'https://schema.org',
@@ -32,10 +30,11 @@ const structuredData = [
 ---
 
 <Base title="Welcome" structuredData={structuredData}>
-  <div class="prose" set:html={renderMarkdown(welcome)} />
+  {/* First, so it's on a phone's first screen: the header's tagline already says what we are. */}
+  <DiscordInvite />
+  <div class="prose welcome-text" set:html={renderMarkdown(welcome)} />
   <section class="how-to-join" aria-labelledby="how-to-join">
     <h2 id="how-to-join">How to join</h2>
     <div class="prose" set:html={renderMarkdown(howToJoin)} />
   </section>
-  <DiscordInvite />
 </Base>

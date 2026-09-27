@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
-import { DISCORD_INVITE_CODE, SITE_TITLE } from '../lib/site';
+import { DISCORD_INVITE_CODE, DISCORD_INVITE_URL, SITE_TITLE } from '../lib/site';
 
-const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
+// As in the header, each language half wraps as a unit.
+const [englishTitle, hebrewTitle] = SITE_TITLE.split(' | ');
 ---
 
 <section
@@ -16,13 +17,21 @@ const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
   <div class="invite-body">
     <Image class="invite-icon" src={logo} alt="" width={56} densities={[1, 2, 3]} />
     <div class="invite-info">
-      <h2 class="invite-name">{SITE_TITLE}</h2>
+      <h2 class="invite-name" data-name={SITE_TITLE}>
+        <span>{englishTitle}</span>
+        <span aria-hidden="true">|</span>
+        <span lang="he" dir="rtl">{hebrewTitle}</span>
+      </h2>
       <p class="invite-stats" hidden>
-        <span class="invite-dot online"></span><span data-online></span> Online
-        <span class="invite-dot members"></span><span data-members></span> Members
+        <span class="invite-stat"
+          ><span class="invite-dot online"></span><span data-online></span> Online</span
+        >
+        <span class="invite-stat"
+          ><span class="invite-dot members"></span><span data-members></span> Members</span
+        >
       </p>
     </div>
-    <a class="invite-join" href={inviteUrl} target="_blank" rel="noopener">Join</a>
+    <a class="invite-join" href={DISCORD_INVITE_URL} target="_blank" rel="noopener">Join</a>
   </div>
 </section>
 
@@ -43,7 +52,9 @@ const inviteUrl = `https://discord.com/invite/${DISCORD_INVITE_CODE}`;
         card.querySelector('[data-online]')!.textContent = format(invite.approximate_presence_count);
         card.querySelector('[data-members]')!.textContent = format(invite.approximate_member_count);
         card.querySelector('.invite-stats')!.removeAttribute('hidden');
-        card.querySelector('.invite-name')!.textContent = invite.guild.name;
+        // A renamed server shows its new name, as plain text.
+        const name = card.querySelector<HTMLElement>('.invite-name')!;
+        if (invite.guild.name !== name.dataset.name) name.textContent = invite.guild.name;
         if (invite.guild.icon) {
           const icon = card.querySelector<HTMLImageElement>('.invite-icon')!;
           // srcset wins over src, so drop the local logo's densities first.

@@ -236,7 +236,7 @@
   name: "Polemicist | פולמוסן"
   id: "950124578338910298"
   color: "b22222"
-  text: "This is a role for to people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 5**."
+  text: "This is a role for people who wish to participate in the !c!polemic-pit!c! channel, an opt-in venue for intense conversations / disputes to take place with limited moderation, particularly with regard to **Rule 5**."
 -
   type: "role"
   category_id: "access"
