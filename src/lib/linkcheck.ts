@@ -4,8 +4,9 @@ export interface BuiltPage {
   html: string;
 }
 
-const LINK = /\b(href|src|srcset)="([^"]*)"/g;
-const ID = /\bid="([^"]+)"/g;
+// Whitespace before the name, so data-href, data-src, xlink:href or data-id don't count.
+const LINK = /\s(href|src|srcset)="([^"]*)"/g;
+const ID = /\sid="([^"]+)"/g;
 
 const srcsetUrls = (value: string) => value.split(',').map((c) => c.trim().split(/\s+/)[0]);
 

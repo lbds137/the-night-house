@@ -24,12 +24,14 @@ jobs:
           persist-credentials: false
       - name: Check the invite
         run: |
-          code=$(sed -nE "s/^export const DISCORD_INVITE_CODE = '([^']+)';/\1/p" src/lib/site.ts)
+          code=$(sed -nE "s/^export const DISCORD_INVITE_CODE = ['\"]([^'\"]+)['\"];?$/\1/p" \
+            src/lib/site.ts)
           if [ -z "$code" ]; then
             echo "::error::Couldn't read DISCORD_INVITE_CODE from src/lib/site.ts"; exit 1
           fi
-          status=$(curl -s -o invite.json -w '%{http_code}' \
-            "https://discord.com/api/v10/invites/$code?with_counts=true")
+          # A network failure gives status 000, handled with the other non-404 answers below.
+          status=$(curl -s --max-time 15 -o invite.json -w '%{http_code}' \
+            "https://discord.com/api/v10/invites/$code?with_counts=true" || true)
           echo "Invite $code: HTTP $status"
           if [ "$status" = 200 ]; then
             jq -r '"Server: \(.guild.name); members: \(.approximate_member_count);" +

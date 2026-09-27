@@ -5,6 +5,7 @@ export const SITE_DESCRIPTION =
   'A friendly and inclusive Left Hand Path / Satanism focused server that is welcome to all, ' +
   'regardless of ethnicity/race, gender identity, sexual orientation, religious practice, etc. ' +
   'and does not tolerate discrimination, bigotry, or harassment.';
+// Keep this on one line: .github/workflows/invite-check.yml reads it with sed.
 export const DISCORD_INVITE_CODE = 'v4kjNpF';
 
 /** Link-preview image (Discord, social sites); rendered by scripts/og-card.mjs. */
