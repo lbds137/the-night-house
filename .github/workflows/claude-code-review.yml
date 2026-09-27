@@ -104,7 +104,8 @@ jobs:
   # Merges the PR once the review passed and every other check on the head commit
   # finished green. Done in-workflow rather than with GitHub's auto-merge, which
   # needs required checks, and those need GitHub Pro on private repos. A merge made
-  # with GITHUB_TOKEN triggers no push workflows on the default branch.
+  # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
+  # dispatches the deploy and CodeQL runs itself (workflow_dispatch is exempt).
   automerge:
     needs: claude-review
     if: >-
@@ -113,6 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
+      actions: write
       contents: write
       pull-requests: write
       checks: read
@@ -155,3 +157,9 @@ jobs:
           gh pr merge "$PR" --repo "$REPO" --rebase --match-head-commit "$SHA"
           gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" ||
             echo "::warning::Merged, but deleting branch $HEAD_REF failed."
+      - name: Deploy and scan main
+        # The merge's push to main starts nothing (see above), so without this the
+        # merged change never reaches the live site.
+        run: |
+          gh workflow run deploy.yml --repo "$REPO" --ref main
+          gh workflow run codeql.yml --repo "$REPO" --ref main
