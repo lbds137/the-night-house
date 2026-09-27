@@ -14,7 +14,9 @@ describe('slugify', () => {
 describe('parseGlossary', () => {
   const sample = [
     '**Ásatrú**: a revival.',
-    '**Clair-senses**: senses, such as:\n* **Clairvoyance**, seeing;\n* **Clairaudience**, hearing.',
+    '**Clair-senses**: senses, such as:\n' +
+      '* **Clairvoyance**, seeing;\n' +
+      '* **Clairaudience**, hearing.',
     '**Egregore**: a group entity.',
     '<p class="more-to-come">(more to come!)</p>',
   ].join('\n\n');
@@ -52,5 +54,17 @@ describe('parseGlossary', () => {
   it('refuses a term the A–Z bar could not reach', () => {
     expect(() => parseGlossary('**1st Degree**: an initiation.')).toThrow(/1st Degree/);
     expect(() => parseGlossary('**…**: nothing.')).toThrow(/letter A–Z/);
+  });
+
+  it("refuses an anchor the page's own ids already use", () => {
+    expect(() => parseGlossary('**Letter A**: a heading.')).toThrow(/letter-a/);
+    expect(() => parseGlossary('**Content**: stuff.')).toThrow(/"content"/);
+  });
+
+  it('handles a glossary with no entries yet', () => {
+    const { entries, trailer } = parseGlossary('<p>(more to come!)</p>');
+    expect(entries).toEqual([]);
+    expect(trailer).toBe('<p>(more to come!)</p>');
+    expect(byLetter(entries).size).toBe(0);
   });
 });
