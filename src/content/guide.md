@@ -1,8 +1,8 @@
 ## Getting in
 
 The Night House is for adults: you must be **18 or older** to join. When you use the invite,
-Discord asks you a few screening questions, and staff read each application by hand before
-letting you in.
+Discord asks you a few screening questions, and staff read each application by hand. When
+they admit you, you get the !r!497610586750976020!r! role, which opens the server.
 
 <!-- Lila: the screening questions go here, once they're copied from Discord. -->
 
@@ -31,6 +31,9 @@ The server has a lot of channels, sorted into categories:
 - **Bots**: where bot commands go.
 - **Archives**: older channels that are no longer in use.
 
+To get around, !c!directory!c! lists the channels by category (a bot refreshes it weekly), and
+in !c!elevator!c! you can post a channel to jump straight to it.
+
 ## Opt-in areas
 
 Some parts of the server open only with a role. The [roles page](/roles/#access) says what each
@@ -39,7 +42,7 @@ one is for:
 - **18+ areas**, marked 🔞, need the !r!497961918519312386!r! role.
 - **!c!polemic-pit!c!**, for intense debate with limited moderation, needs the
   !r!950124578338910298!r! role.
-- **The Pride channel**, for talking about your LGBTQIA+ identity, needs the
+- **!c!queer-gsrm-general!c!**, for talking about your LGBTQIA+ identity, needs the
   !r!498828572325183489!r! role.
 - **The rare archive**, channels archived for over a year, needs the
   !r!1166927929008193627!r! role.
@@ -59,7 +62,7 @@ ticket.
 
 A bot tracks who has sent at least one message in the last 30 days. Members who haven't get
 the !r!624676376058003483!r! role, and inactive members are currently pruned from the server
-at every equinox and solstice.
+at every equinox and solstice. A prune is a kick, not a ban, so you can join again.
 
 You're safe from the prune while you have the Neophyte role, and so are Nitro boosters and
 server partners. The server's owner can also grant !r!856522408394752060!r!, at their
