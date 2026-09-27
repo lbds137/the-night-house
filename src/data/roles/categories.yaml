@@ -24,9 +24,6 @@
   name: "Direct Message Preference"
   id: "dm"
 -
-  name: "Pronouns"
-  id: "pronouns"
--
   name: "Identities"
   id: "identity"
 -
@@ -39,20 +36,8 @@
   name: "Enneagram (Base)"
   id: "enneagram"
 -
-  name: "Enneagram (Wing)"
-  id: "wing"
--
-  name: "Enneagram (Subtype)"
-  id: "instinct"
--
   name: "Human Design (Type)"
   id: "hd"
--
-  name: "Human Design (Authority)"
-  id: "authority"
--
-  name: "Human Design (Profile)"
-  id: "profile"
 -
   name: "Element"
   id: "element"

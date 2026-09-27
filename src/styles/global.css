@@ -517,7 +517,9 @@ main {
   white-space: nowrap;
 }
 
-.mention-channel {
+/* A role with no color looks like a channel mention in Discord. */
+.mention-channel,
+.mention-role-default {
   background: rgb(88 101 242 / 0.3);
   color: #c9cdfb;
 }

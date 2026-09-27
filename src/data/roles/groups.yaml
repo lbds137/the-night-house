@@ -4,7 +4,7 @@
 -
   name: "About you"
   id: "about-you"
-  categories: ["pronouns", "dm", "notification", "identity", "continent", "color"]
+  categories: ["dm", "notification", "identity", "continent", "color"]
 -
   name: "Paths and practice"
   id: "paths-and-practice"
@@ -12,8 +12,7 @@
 -
   name: "Signs and types"
   id: "signs-and-types"
-  categories:
-    ["zodiac", "element", "mbti", "enneagram", "wing", "instinct", "hd", "authority", "profile"]
+  categories: ["zodiac", "element", "mbti", "enneagram", "hd"]
 -
   name: "The server"
   id: "the-server"
