@@ -5,9 +5,16 @@ import type { CategoryNode, RoleCategory } from '../lib/roles';
 interface Props {
   category: RoleCategory;
   nodes: CategoryNode[];
+  /** Glossary terms by slug, for roles that link to an entry. */
+  glossaryTerms: Map<string, string>;
 }
 
-const { category, nodes } = Astro.props;
+const { category, nodes, glossaryTerms } = Astro.props;
+const glossaryTerm = (slug: string) => {
+  const term = glossaryTerms.get(slug);
+  if (!term) throw new Error(`nodes.yaml: no glossary entry "${slug}" (see glossary-sources.json)`);
+  return term;
+};
 // Same anchor as Jekyll's `slugify` of the name, so existing /roles/#... links keep working.
 const anchor = category.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
@@ -21,6 +28,12 @@ const anchor = category.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/
           <div class="role">
             <div class="role-name" set:html={renderInline(`!r!${node.id}!r!`)} />
             {node.text && <p class="role-text" set:html={renderInline(node.text)} />}
+            {node.glossary && (
+              <p class="role-glossary">
+                In the glossary:{' '}
+                <a href={`/glossary/#${node.glossary}`}>{glossaryTerm(node.glossary)}</a>
+              </p>
+            )}
           </div>
         ) : (
           <div class="callout" set:html={renderMarkdown(node.text)} />

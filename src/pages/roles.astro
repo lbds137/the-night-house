@@ -1,9 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import RoleCategory from '../components/RoleCategory.astro';
+import { parseGlossary } from '../lib/glossary';
 import { renderMarkdown } from '../lib/markdown';
 import { categoriesWithNodes } from '../lib/roles';
+import glossary from '../content/glossary.md?raw';
 import intro from '../content/roles-intro.md?raw';
+
+const glossaryTerms = new Map(parseGlossary(glossary).entries.map((e) => [e.slug, e.term]));
 
 const description =
   "What every role on The Night House's Discord server means: staff, access, pronouns, " +
@@ -27,7 +31,11 @@ const description =
     <p class="roles-filter-status" id="roles-filter-status" role="status"></p>
   </div>
   <div class="role-categories" id="role-categories">
-    {categoriesWithNodes().map(({ category, nodes }) => <RoleCategory {category} {nodes} />)}
+    {
+      categoriesWithNodes().map(({ category, nodes }) => (
+        <RoleCategory {category} {nodes} {glossaryTerms} />
+      ))
+    }
   </div>
 </Base>
 
