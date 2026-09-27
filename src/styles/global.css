@@ -605,9 +605,40 @@ main {
   margin: 0.75rem 0;
 }
 
+/* How to join (Welcome page) */
+
+.how-to-join {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-strong);
+}
+
+.how-to-join h2 {
+  margin: 0 0 1rem;
+  color: var(--text-strong);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.how-to-join ol {
+  padding-left: 1.75rem;
+}
+
+.how-to-join li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.25rem;
+}
+
+.how-to-join li::marker {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
 /* Discord invite card */
 
 .invite {
+  scroll-margin-top: 1rem;
   width: min(100%, 27rem);
   margin: 2rem auto 0;
   padding: 1rem;
