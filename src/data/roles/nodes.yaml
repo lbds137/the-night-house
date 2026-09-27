@@ -337,10 +337,30 @@
 -
   type: "role"
   category_id: "status"
+  name: "Minimalist | מינימליסטי"
+  id: "892994515588222996"
+  text: "This role hides role icons for the members who have it. The server's boost level lets certain roles show an icon next to a member's name, and this role overrides those icons with a transparent one."
+-
+  type: "role"
+  category_id: "status"
   name: "Partner | שותף"
   id: "624712102673907722"
   color: "483d8b"
   text: "This role signifies that members have been designated as official server partners, which means that there exists a bidirectional link between this server and a server in which they are an administrator or moderator. This role grants immunity from inactivity purges in the server."
+-
+  type: "role"
+  category_id: "status"
+  name: "Permanent Immunity | חסינות נצחית"
+  id: "1313602460799078451"
+  color: "9932cc"
+  text: "This role grants lasting immunity from inactivity purges in the server. Unlike Temporary Immunity, it stays on the member, and it is given at the owner's discretion."
+-
+  type: "role"
+  category_id: "status"
+  name: "Temporary Immunity | חסינות זמנית"
+  id: "856522408394752060"
+  color: "cd5c5c"
+  text: "This role grants temporary immunity from inactivity purges in the server."
 -
   type: "role"
   category_id: "status"
@@ -358,6 +378,13 @@
   id: "497610586750976020"
   color: "3cb371"
   text: "This is a general role for server members, and it is required to access the main part of the server."
+-
+  type: "role"
+  category_id: "membership"
+  name: "Neophyte | טירון"
+  id: "988797413496066078"
+  color: "32cd32"
+  text: "This role marks members who are new to the server, and it keeps them safe from inactivity purges while they settle in."
 -
   type: "role"
   category_id: "membership"
@@ -586,7 +613,7 @@
   name: "Disability | נכות"
   id: "504971274431496194"
   color: "ffa07a"
-  text: "This is a role for anyone who identifies as a spoonie, which is a term for folks who experience chronic illness or some other situation that makes it difficult for them to function at times due to a limited reserve of energy (quantified as \"spoons\"). [Click here](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/) for more details on the spoons paradigm."
+  text: "This is a role for anyone who identifies as disabled or chronically ill, whether their disability is physical or mental, visible or invisible. Some members also call themselves \"spoonies\", after the [spoon theory](https://butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/) of living with a limited reserve of energy."
 # ---
 # zodiac
 # ---
