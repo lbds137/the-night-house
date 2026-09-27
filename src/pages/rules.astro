@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import PermalinkCopier from '../components/PermalinkCopier.astro';
 import { renderMarkdown } from '../lib/markdown';
+import { numberRules } from '../lib/permalinks';
 import rules from '../content/rules.md?raw';
 
 const description =
@@ -9,5 +11,6 @@ const description =
 ---
 
 <Base title="Rules" {description}>
-  <div class="prose rules" set:html={renderMarkdown(rules)} />
+  <div class="prose rules" set:html={numberRules(renderMarkdown(rules))} />
+  <PermalinkCopier />
 </Base>

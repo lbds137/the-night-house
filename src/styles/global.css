@@ -311,6 +311,42 @@ main {
   font-weight: 800;
 }
 
+.rules li {
+  scroll-margin-top: 1rem;
+}
+
+.rules li:target {
+  box-shadow: inset 3px 0 0 var(--accent-strong);
+}
+
+/* "#" links to an item's own anchor; PermalinkCopier also copies the URL on click. */
+.prose a.permalink {
+  margin-right: 0.15em;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.prose a.permalink:hover,
+.prose a.permalink:focus-visible {
+  color: var(--link);
+}
+
+.permalink-status {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  z-index: 10;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-m);
+  background: var(--surface-3);
+  color: var(--text-strong);
+  font-weight: 600;
+  transform: translateX(-50%);
+}
+
 .glossary p {
   padding: 0.75rem 1rem;
   border-radius: var(--radius-m);
