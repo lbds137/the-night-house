@@ -51,13 +51,13 @@
 
 **Hoodoo**: an African American folk magic tradition, also called rootwork or conjure, that blends West and Central African practices with Christian and other influences, including herbal work, ancestor veneration and protective charms. Many practitioners consider it a closed practice rooted in Black American history and lineage, and ask outsiders to learn about it respectfully rather than adopt it.
 
-**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to "mount" or "ride" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted "horse"/"horsing" for deity possession outside those traditions, a borrowing not everyone in the traditions of origin welcomes.
+**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to "mount" or "ride" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted "horse"/"horsing" for deity possession outside those traditions.
 
 **Hydromancy**: divination by water, reading ripples, reflections, currents or the color of a liquid in a bowl or pool. It is an ancient method described in classical sources, and variants have their own names, such as pegomancy (divination by springs).
 
 **Kemeticism**: modern religion based on the beliefs and practices of ancient Egypt (Kemet). It includes reconstructionist Kemetics, who rebuild ancient practice from the historical record, and Kemetic Orthodoxy, an organized movement founded in 1988 that teaches the Egyptian deities are aspects of one divine power called Netjer.
 
-**Left Hand Path**: an umbrella term for spiritual paths centered on the self, which scholars such as Kennet Granholm characterize by individualism, self-deification and antinomianism (questioning or breaking with inherited moral and religious norms). The name comes from the Sanskrit *vāmācāra* ("left-hand practice"), a Tantric current that used taboo-breaking ritual, and entered Western esotericism through Helena Blavatsky in the late 19th century, originally as a label for black magic. Today it describes currents such as modern Satanism and Luciferianism, and it does not mean "evil".
+**Left Hand Path**: an umbrella term for spiritual paths centered on the self, which scholars such as Kennet Granholm characterize by individualism, self-deification and antinomianism (questioning or breaking with inherited moral and religious norms). The name comes from the Sanskrit *vāmācāra* ("left-hand practice"), a Tantric current that used taboo-breaking ritual. English scholars of Hinduism had translated it as "left-hand" since the early 19th century, and Helena Blavatsky, in *The Secret Doctrine* (1888) and *The Theosophical Glossary* (1892), carried it into Western esotericism as a label for black magic. Today it describes currents such as modern Satanism and Luciferianism, and it does not mean "evil".
 
 **Luciferianism**: a range of beliefs that honor Lucifer as a bringer of light, knowledge and liberation rather than as the Christian Devil; he is often compared to Prometheus. It is distinct from Satanism, though the two overlap and are often confused. Some Luciferians regard Lucifer as a real being, while others treat him as a symbol of the pursuit of wisdom and self-liberation.
 
@@ -71,11 +71,11 @@
 
 **Neo Paganism**: an umbrella term for modern religious movements, such as Wicca, Druidry, Heathenry, Hellenism and Kemeticism, that draw on pre-Christian traditions. They are new religious movements rather than unbroken survivals of ancient religions. Common threads include reverence for nature and polytheism or pantheism, though traditions vary widely.
 
-**Non-human**: a broad term, close in meaning to alterhuman, for identifying as something other than human in spirit, soul or experience, without necessarily naming a specific kind of being. As with other alterhuman identities, the community understands it as an identity, not a disorder.
+**Non-human**: identifying as something other than human in spirit, soul or experience, without necessarily naming a specific kind of being. It is narrower than alterhuman, which was coined in 2014 to also cover atypical human experiences such as walk-ins, though many people use the two interchangeably. As with other alterhuman identities, the community understands it as an identity, not a disorder.
 
 **Oracle**: in modern divination, usually a deck of oracle cards, which work like tarot but have no fixed structure or number of cards; each deck follows its creator's own themes. Originally the word meant a shrine or person through whom a god was believed to speak, most famously the Oracle of Delphi.
 
-**Otherkin**: people who identify as partly or wholly non-human, most often as beings from myth and folklore such as elves, fae or dragons; those who identify with real animals usually call themselves therians. The community understands this as an identity, not a belief to argue over or a disorder.
+**Otherkin**: people who identify as partly or wholly non-human, often as beings from myth and folklore such as elves, fae, vampires or dragons; those who identify with real animals usually call themselves therians. The community understands this as an identity, not a belief to argue over or a disorder.
 
 **Pendulum**: a weighted object, often a crystal, hung on a chain or string and used for divination, usually to get "yes" or "no" answers from how it swings. Practitioners variously attribute the movement to the user's subconscious, to spirits or to energy; researchers explain it by the ideomotor effect (small unconscious muscle movements). It is a form of dowsing.
 

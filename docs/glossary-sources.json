@@ -28,7 +28,23 @@
       "summary": "No library book uses \"alterhuman\", \"walk-in\", or a broader \"human in an atypical way\" framing; the community-wiki sourcing in the draft is appropriate for a term with essentially no scholarly literature.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown (full text read; no 'alterhuman', 'walk-in', 'non-human'); 04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/EilWood - Kin Awakening 101.pdf (full text read; same result); grepped 'alterhuman' and 'walk-in/walkin' against both spiritual-listing.tsv and personal-spiritual-listing.tsv filenames: no hits"
-    }
+    },
+    "research": [
+      {
+        "source": "Joanna Ziemna, \"Self-Creation of Other-Than-Human Identities\", Avant 15(2), 2024",
+        "location": "PDF p. 3",
+        "quote": "\"Alterhuman\" is, however, a rather recent term, coined in 2014 (phasmovore, 2014b)... it is now considered broader and more inclusive to the variety of other-than-human experiences.",
+        "url": "https://doi.org/10.26913/ava2202406",
+        "checked": "quote re-read by the orchestrating session"
+      },
+      {
+        "source": "Joseph P. Laycock, \"We Are Spirits of Another Sort\", Nova Religio 15(3), 2012",
+        "location": "p. 70",
+        "quote": "Nineteenth-century mediums coined the term \"walk-ins\"... Today, the Otherkin community claims walk-ins as a variety of Otherkin.",
+        "url": "https://archive.org/details/pdfy-kWtLdyW6qEJefGUy",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Ásatrú",
@@ -193,7 +209,8 @@
           "stance": "contradicts",
           "quote": "Stichomancy -- Another term for bibliomancy (divination through random choice of words in a book)."
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -384,7 +401,8 @@
           "stance": "supports",
           "quote": "The lodge should act loyal and in unity with the whole of Dragon Rouge and the Draconian current"
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -588,7 +606,8 @@
           "stance": "nuances",
           "quote": "Less than a decade later, in 1868, it appears in the writings of Eliphas Levi, in Le Grand Arcane (The Great Mystery)."
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -614,14 +633,8 @@
       "verdict": "supported",
       "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
       "summary": "Two Cthulhu Mythos reference works in the library (a dedicated encyclopedia and a mythos dictionary) have no \"Eldritch\" entry at all, consistent with the draft's claim that Lovecraft used the word only as a descriptive adjective, never as a named force. Separately, a community member's own document in the owner's library uses \"eldritch\" exactly the way the draft describes: a consuming/corrosive force distinct from but linked to \"the void\" — confirming that sense is practitioner usage, not Lovecraftian or older-occult canon.",
-      "citations": [
-        {
-          "file": "Personal/Spiritual/An_Intuitive_Atlas_to_the_Outer_Gnosis.txt",
-          "location": "section \"An Essay On Insanity\" / \"A Glitch in the Void\"",
-          "stance": "supports",
-          "quote": "The eldritch is a force which originates outside of humanity... The void as the ice and the eldritch as the burning black flame of its Will."
-        }
-      ]
+      "citations": [],
+      "private_sources": "Also corroborated by a private document in the owner's Drive, not cited publicly."
     }
   },
   {
@@ -890,7 +903,8 @@
           "stance": "supports",
           "quote": "Hermeticism has been the benchmark of traditional Western esotericism for nearly 1,000 years. Since its inception in the First Century A.D."
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -939,7 +953,7 @@
   {
     "term": "Horsing",
     "kind": "new",
-    "draft": "**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to \"mount\" or \"ride\" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted \"horse\"/\"horsing\" for deity possession outside those traditions, a borrowing not everyone in the traditions of origin welcomes.",
+    "draft": "**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to \"mount\" or \"ride\" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted \"horse\"/\"horsing\" for deity possession outside those traditions.",
     "sources": [
       [
         "https://www.historymuseum.ca/vodou/possession/",
@@ -976,8 +990,18 @@
           "stance": "nuances",
           "quote": "Some were also uncomfortable with the implied elitism of horsing"
         }
-      ]
-    }
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
+    },
+    "research": [
+      {
+        "source": "Raven Kaldera and Kenaz Filan, Drawing Down the Spirits",
+        "location": "PDF p. 85, full paragraph",
+        "quote": "The \"uncomfortable with the implied elitism of horsing\" line is about Wiccan objections to deity possession, not about the traditions of origin; the clause claiming those traditions object to the borrowing was removed as unsourced.",
+        "url": "",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Hydromancy",
@@ -1039,12 +1063,21 @@
           "quote": "Similar groups exist for Kemetic (Egyptian) beliefs and other non-European religions as well."
         }
       ]
-    }
+    },
+    "research": [
+      {
+        "source": "Wikipedia, Kemetic Orthodoxy",
+        "location": "",
+        "quote": "It was founded in 1988 by Tamara Siuda",
+        "url": "https://en.wikipedia.org/wiki/Kemetic_Orthodoxy",
+        "checked": "read by the research agent only"
+      }
+    ]
   },
   {
     "term": "Left Hand Path",
     "kind": "new",
-    "draft": "**Left Hand Path**: an umbrella term for spiritual paths centered on the self, which scholars such as Kennet Granholm characterize by individualism, self-deification and antinomianism (questioning or breaking with inherited moral and religious norms). The name comes from the Sanskrit *vāmācāra* (\"left-hand practice\"), a Tantric current that used taboo-breaking ritual, and entered Western esotericism through Helena Blavatsky in the late 19th century, originally as a label for black magic. Today it describes currents such as modern Satanism and Luciferianism, and it does not mean \"evil\".",
+    "draft": "**Left Hand Path**: an umbrella term for spiritual paths centered on the self, which scholars such as Kennet Granholm characterize by individualism, self-deification and antinomianism (questioning or breaking with inherited moral and religious norms). The name comes from the Sanskrit *vāmācāra* (\"left-hand practice\"), a Tantric current that used taboo-breaking ritual. English scholars of Hinduism had translated it as \"left-hand\" since the early 19th century, and Helena Blavatsky, in *The Secret Doctrine* (1888) and *The Theosophical Glossary* (1892), carried it into Western esotericism as a label for black magic. Today it describes currents such as modern Satanism and Luciferianism, and it does not mean \"evil\".",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Left-hand_path_and_right-hand_path",
@@ -1059,8 +1092,8 @@
         "Granholm on contemporary LHP magic (seen in search, not fully read)"
       ]
     ],
-    "confidence": "medium-high",
-    "notes": "Your community's core term. The three-trait definition is Granholm's framing, also found in Stephen Flowers; the researcher could not read a Faxneld text directly, so I cite Granholm only. I trimmed the draft to three sentences and dropped Chaos Magick from the examples (it is not usually classed as LHP).",
+    "confidence": "high",
+    "notes": "Blavatsky clause checked against her own texts (2026-09-27): the term is in The Secret Doctrine and The Theosophical Glossary, not Isis Unveiled; English scholars used \"left-hand\" for Tantric sects before her (Wilson). See research.",
     "id": "left-hand-path",
     "library": {
       "verdict": "supported",
@@ -1086,7 +1119,51 @@
           "quote": "The terms originate from India and are mainly used in a Tantric context"
         }
       ]
-    }
+    },
+    "research": [
+      {
+        "source": "H. P. Blavatsky, The Secret Doctrine (1888)",
+        "location": "Vol. 1, p. 192-193",
+        "quote": "humanity branched off into its two diametrically opposite paths: the RIGHT- and the LEFT-hand paths of knowledge or of Vidya. \"Thus were the germs of the White and the Black Magic sown in those days.\"",
+        "url": "https://archive.org/stream/TheSecretDoctrineByH.P.Blavatsky/",
+        "checked": "quote re-read by the orchestrating session"
+      },
+      {
+        "source": "H. P. Blavatsky, The Theosophical Glossary (1892)",
+        "location": "entry \"Tantrika\"",
+        "quote": "the Saktas are divided into two classes, the Dakshinacharis and Vamacharis, or the right-hand and the left-hand Saktas, i.e., \"white\" and \"black\" magicians.",
+        "url": "https://archive.org/stream/theosophical00blav/theosophical00blav_djvu.txt",
+        "checked": "quote re-read by the orchestrating session"
+      },
+      {
+        "source": "H. P. Blavatsky, Isis Unveiled (1877)",
+        "location": "whole text, both volumes",
+        "quote": "No use of \"left-hand path\" or vamachara in the path sense (6 hits for left hand/vama are literal hands or the name Vamadeva). Wikipedia's attribution to Isis Unveiled does not hold.",
+        "url": "https://archive.org/stream/isis-unveiled-volume-1-and-2-by-helena-blavatsky-1877/",
+        "checked": "quote re-read by the orchestrating session"
+      },
+      {
+        "source": "H. H. Wilson, Sketch of the Religious Sects of the Hindus (Asiatic Researches 16-17, 1828/1832; 1846 reprint)",
+        "location": "Sakta section",
+        "quote": "The worshippers of Sakti were then, as now, divided into two classes, a right and left hand order",
+        "url": "https://archive.org/details/sketchreligious01wilsgoog",
+        "checked": "quote re-read by the orchestrating session"
+      },
+      {
+        "source": "Stephen E. Flowers, Lords of the Left-Hand Path",
+        "location": "PDF p. 133-136 (Drive library scan)",
+        "quote": "It was in this body of information [the Theosophical Society] that the ideas of left-hand path tantrism... entered into the western world on a wide scale",
+        "url": "",
+        "checked": "read by the research agent only"
+      },
+      {
+        "source": "Kennet Granholm, \"Approaches to Nature in Contemporary Left-Hand Path Magic\"",
+        "location": "",
+        "quote": "late nineteenth century occultism used [it] as a pejorative term... black magic",
+        "url": "https://kennetgranholm.com/wp-content/uploads/2018/09/granholm-nature.pdf",
+        "checked": "read by the research agent only"
+      }
+    ]
   },
   {
     "term": "Luciferianism",
@@ -1119,7 +1196,16 @@
           "quote": "Satan (as ruler of the fire), Lucifer (as ruler of the air), Belial (as ruler of the earth) and Leviathan (as ruler of the water)"
         }
       ]
-    }
+    },
+    "research": [
+      {
+        "source": "Gedaliahu G. Stroumsa, \"Myth into Metaphor: The Case of Prometheus\", in Gilgul (Brill, 1987)",
+        "location": "p. 311 (via Wikipedia, \"Lucifer and Prometheus\")",
+        "quote": "Scholarly source for the Lucifer/Prometheus comparison (secondhand).",
+        "url": "https://en.wikipedia.org/wiki/Lucifer_and_Prometheus",
+        "checked": "read by the research agent only"
+      }
+    ]
   },
   {
     "term": "Magick",
@@ -1181,7 +1267,16 @@
       "summary": "No library source (scholarly or practitioner) uses \"Middle Path\" for a position between LHP and RHP; the term did not surface in any of the eight books searched, including the two academic LHP studies (Granholm, Introvigne) and the two Qliphoth/Kabbalah primary sources. This matches the researcher's own note that the concept is blog-sourced only.",
       "citations": [],
       "searched": "Kennet Granholm - Embracing the Dark (Dragon Rouge); Thomas Karlsson - Qabalah, Qliphoth and Goetic Magic; Gershom Scholem - Kabbalah; Massimo Introvigne - Satanism, A Social History; T. J. Wray and Gregory Mobley - The Birth of Satan; Per Faxneld - From Milton to Modern Satanism; Satan and Suns - Demonosophy; Nienke Vos & Willemien Otten (eds.) - Demons and the Devil in Ancient and Medieval Christianity; regex: \"middle path\" (case-insensitive) across all of the above"
-    }
+    },
+    "research": [
+      {
+        "source": "Flowers, Lords of the Left-Hand Path; Webb, Uncle Setnakt's Essential Guide; Wikipedia, Left-hand path and right-hand path",
+        "location": "whole texts searched",
+        "quote": "No use of \"middle path\", \"grey path\" or \"middle way\"; the entry's \"informal practitioner term\" framing stands.",
+        "url": "",
+        "checked": "read by the research agent only"
+      }
+    ]
   },
   {
     "term": "Necromancy",
@@ -1303,7 +1398,7 @@
   {
     "term": "Non-human",
     "kind": "new",
-    "draft": "**Non-human**: a broad term, close in meaning to alterhuman, for identifying as something other than human in spirit, soul or experience, without necessarily naming a specific kind of being. As with other alterhuman identities, the community understands it as an identity, not a disorder.",
+    "draft": "**Non-human**: identifying as something other than human in spirit, soul or experience, without necessarily naming a specific kind of being. It is narrower than alterhuman, which was coined in 2014 to also cover atypical human experiences such as walk-ins, though many people use the two interchangeably. As with other alterhuman identities, the community understands it as an identity, not a disorder.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Otherkin",
@@ -1323,7 +1418,16 @@
       "summary": "Same folder checked as for Otherkin/Alterhuman; \"nonhuman\" appears only as an ordinary adjective (e.g. describing entities), never as the community's umbrella identity term, so there's nothing to confirm or deny the draft's specific framing.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown and EilWood - Kin Awakening 101.pdf (both read in full; 'nonhuman' used adjectivally only)"
-    }
+    },
+    "research": [
+      {
+        "source": "Joanna Ziemna, \"Self-Creation of Other-Than-Human Identities\", Avant 15(2), 2024",
+        "location": "footnote 3",
+        "quote": "According to the person who coined the term \"alterhuman\" (phasmovore, 2014b), it was not originally meant to be used as a synonym for \"non-human\" (X-RDS, 2023b) because the latter is more narrow in meaning.",
+        "url": "https://doi.org/10.26913/ava2202406",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Oracle",
@@ -1359,7 +1463,7 @@
   {
     "term": "Otherkin",
     "kind": "new",
-    "draft": "**Otherkin**: people who identify as partly or wholly non-human, most often as beings from myth and folklore such as elves, fae or dragons; those who identify with real animals usually call themselves therians. The community understands this as an identity, not a belief to argue over or a disorder.",
+    "draft": "**Otherkin**: people who identify as partly or wholly non-human, often as beings from myth and folklore such as elves, fae, vampires or dragons; those who identify with real animals usually call themselves therians. The community understands this as an identity, not a belief to argue over or a disorder.",
     "sources": [
       [
         "https://en.wikipedia.org/wiki/Otherkin",
@@ -1379,7 +1483,16 @@
       "summary": "The library's Otherkin & Therianthropic Spirituality folder (only 3 files) holds practitioner material that frames otherkin identity through energy-work/soul verification rather than the elves/fae/dragons vs. therian distinction or the identity-vs-disorder framing the draft states; it doesn't corroborate or contradict those specific claims, so this stays an honest gap.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown (Discord lecture transcript, 2019, one practitioner's energy-based verification theory; no mention of elves/fae/dragons, no 'disorder' framing); 04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/EilWood - Kin Awakening 101.pdf (practitioner guide; possession/energy framing, no therian distinction); positive control: grep for 'otherkin' itself hits repeatedly in both files, confirming the search mechanics work; the specific claims just aren't there"
-    }
+    },
+    "research": [
+      {
+        "source": "Joseph P. Laycock, \"We Are Spirits of Another Sort\", Nova Religio 15(3), 2012",
+        "location": "p. 69",
+        "quote": "some of the most common include faeries and elves, vampires, therianthropes (individuals who identify with animals and shapeshifters), angels and demons, and \"mythologicals\" (legendary creatures such as dragons and phoenixes).",
+        "url": "https://archive.org/details/pdfy-kWtLdyW6qEJefGUy",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Pendulum",
@@ -1721,7 +1834,8 @@
           "stance": "supports",
           "quote": "Yoruba remains the root of Santeria... rituals and practices... show many instances of cultural borrowing from Catholicism, other African traditions, and spiritism"
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -1853,7 +1967,23 @@
           "quote": "Egregore: These are more experienced than complex servitors, and often have multiple people working with them."
         }
       ]
-    }
+    },
+    "research": [
+      {
+        "source": "Phil Hine, Condensed Chaos (1995)",
+        "location": "",
+        "quote": "A Servitor is an entity consciously created or generated, using evocatory techniques, to perform a task or service",
+        "url": "",
+        "checked": "read by the research agent only"
+      },
+      {
+        "source": "Peter J. Carroll, Liber Null (1978)",
+        "location": "whole text",
+        "quote": "No use of \"servitor\" (the book says \"elemental\"); do not cite it as an early source for the term.",
+        "url": "",
+        "checked": "read by the research agent only"
+      }
+    ]
   },
   {
     "term": "Shield",
@@ -1958,18 +2088,9 @@
     "term": "SPG",
     "kind": "new",
     "draft": "**SPG**: Shared Personal Gnosis, a spiritual insight (see UPG) that several people report having received independently. Many polytheists give SPG more weight than one person's UPG, though it still isn't the same as knowledge backed by historical sources.",
-    "sources": [
-      [
-        "https://en.wikipedia.org/wiki/Unverified_personal_gnosis",
-        "UPG and related terms"
-      ],
-      [
-        "https://wildhunt.org/2019/03/column-in-defense-of-unverified-personal-gnosis.html",
-        "community usage"
-      ]
-    ],
+    "sources": [],
     "confidence": "medium-high",
-    "notes": "The researcher equated SPG with PVPG (peer-verified personal gnosis). They are related but not identical, so I dropped that equation.",
+    "notes": "The researcher equated SPG with PVPG (peer-verified personal gnosis). They are related but not identical, so I dropped that equation. Neither earlier source mentions SPG (checked 2026-09-27); see research. Some writers expand SPG as \"Substantiated Personal Gnosis\" (unconfirmed).",
     "id": "spg",
     "library": {
       "verdict": "nothing in library",
@@ -1977,7 +2098,16 @@
       "summary": "Same two books checked for UPG have no mention of SPG, PVPG, or \"shared personal gnosis\" either, so there's no library evidence bearing on the researcher's decision to un-equate SPG from PVPG. Nothing found to contradict; the web sourcing already used is appropriate for this term.",
       "citations": [],
       "searched": "02 Traditions/Norse/T. Sheil and A. Sheil - What Is Heathenism.pdf; 03 Practices/Devotional Practice/Raven Kaldera - Dealing with Deities...pdf; no dedicated Heathen reconstructionist SPG/PVPG source in the library's Norse or Reference folders"
-    }
+    },
+    "research": [
+      {
+        "source": "The HPedia: UPG, Naturalistic Paganism (2013)",
+        "location": "\"Related terms\"",
+        "quote": "SPG (Shared Personal Gnosis) - indicating a mystical vision shared by a number of unrelated people, preferably, one arrived at independently of one another.",
+        "url": "https://naturalisticpaganism.org/2013/09/19/the-hpedia-upg/",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Stregheria",
@@ -2062,7 +2192,8 @@
           "stance": "contradicts",
           "quote": "Belanger's The Psychic Vampire Codex...discerns a number of techniques...They include: ambient, surface, contact, tantric, and deep feeding"
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
@@ -2201,7 +2332,16 @@
           "quote": "the idea of the tulpa—an animated thoughtform that takes on autonomous existence—entered the vocabulary of Western esotericism"
         }
       ]
-    }
+    },
+    "research": [
+      {
+        "source": "Annie Besant and C. W. Leadbeater, Thought-Forms (1901)",
+        "location": "",
+        "quote": "We have then a thought-form pure and simple, and it is a living entity of intense activity animated by the one idea that generated it.",
+        "url": "https://www.gutenberg.org/files/16269/16269-8.txt",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Tulpamancy",
@@ -2246,16 +2386,12 @@
     "draft": "**UPG**: Unverified Personal Gnosis, a term from modern polytheist and pagan communities for a personal spiritual insight about a deity, spirit or practice that comes from experience, intuition or divination rather than historical sources. The term seems to have begun in Heathen reconstructionist circles, and how much weight to give UPG remains debated.",
     "sources": [
       [
-        "https://en.wikipedia.org/wiki/Unverified_personal_gnosis",
-        "definition, origin"
-      ],
-      [
         "https://wildhunt.org/2019/03/column-in-defense-of-unverified-personal-gnosis.html",
         "community debate"
       ]
     ],
     "confidence": "high",
-    "notes": "The Eldritch, Void and SPG entries refer to UPG.",
+    "notes": "The Eldritch, Void and SPG entries refer to UPG. Wikipedia's UPG article has no origin section (checked 2026-09-27), so it was dropped as a source; see research.",
     "id": "upg",
     "library": {
       "verdict": "nothing in library",
@@ -2263,7 +2399,16 @@
       "summary": "Neither of the two most relevant library books (a Heathenry primer, and Kaldera's polytheist theology book) uses \"UPG\" or \"gnosis\" at all, so the library doesn't confirm or contradict the term's Heathen-reconstructionist origin or the weight-debate the draft describes; Wikipedia and The Wild Hunt (already cited) remain the right sourcing for this internet-era term of art.",
       "citations": [],
       "searched": "02 Traditions/Norse/T. Sheil and A. Sheil - What Is Heathenism.pdf (regex 'UPG|personal gnosis|unverified' = 0 hits); 03 Practices/Devotional Practice/Raven Kaldera - Dealing with Deities...pdf (regex '\\bUPG\\b' and '\\bgnosis\\b' = 0 hits)"
-    }
+    },
+    "research": [
+      {
+        "source": "The HPedia: UPG, Naturalistic Paganism (2013)",
+        "location": "\"Origin\"",
+        "quote": "The term appears to have originally appeared in print in Kaatryn MacMorgan's book Wicca 333... but seems to have originated in Germano-Scandinavian Reconstructionist groups in the 1970s or 1980s.",
+        "url": "https://naturalisticpaganism.org/2013/09/19/the-hpedia-upg/",
+        "checked": "quote re-read by the orchestrating session"
+      }
+    ]
   },
   {
     "term": "Vodou",
@@ -2345,14 +2490,9 @@
           "location": "p.6",
           "stance": "supports",
           "quote": "In researching the term \"void magick\" suddenly everything becomes diluted by everything else. Material is scarce..."
-        },
-        {
-          "file": "Personal/Spiritual/Of_the_Abyssal_Void.pdf",
-          "location": "p.1-2",
-          "stance": "supports",
-          "quote": "The Void like the Abyss has no bounds or directions... the Void became a sort of refuge within."
         }
-      ]
+      ],
+      "private_sources": "Also corroborated by a private document in the owner's Drive, not cited publicly."
     }
   },
   {
@@ -2389,7 +2529,8 @@
           "stance": "supports",
           "quote": "A ward is literally a protective shield that you place around a particular parameter to divert negative energy, entities and in many cases, people"
         }
-      ]
+      ],
+      "stances_refer_to": "the draft before the library pass, since replaced by the suggested wording"
     }
   },
   {
