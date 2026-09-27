@@ -9,8 +9,9 @@ they admit you, you get the !r!497610586750976020!r! role, which opens the serve
 Once you're in:
 
 1. **Read the rules** in !c!about-rules!c! or on the [rules page](/rules/).
-2. **Introduce yourself** in !c!introduction!c!.
-3. **Pick your roles** in !c!roles!c!. The [roles page](/roles/) explains each one.
+2. **Introduce yourself** in !c!introduction!c!, so others can get to know you.
+3. **Pick your roles** in !c!roles!c!. They're optional, and some open more channels. The
+   [roles page](/roles/) explains each one.
 
 New members get the !r!988797413496066078!r! role, which keeps them safe from the inactivity
 prune while they settle in.
@@ -31,8 +32,9 @@ The server has a lot of channels, sorted into categories:
 - **Bots**: where bot commands go.
 - **Archives**: older channels that are no longer in use.
 
-To get around, !c!directory!c! lists the channels by category (a bot refreshes it weekly), and
-in !c!elevator!c! you can post a channel to jump straight to it.
+To get around, !c!directory!c! lists the channels and what each one is for (a bot refreshes it
+weekly), and in !c!elevator!c! you can search for a channel and jump straight to it. It helps
+to collapse the categories, and to mute or hide the channels you're not interested in.
 
 ## Opt-in areas
 
