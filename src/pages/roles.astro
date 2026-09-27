@@ -69,6 +69,12 @@ const description =
   );
   // Which categories the reader had open before filtering, to restore when the filter clears.
   let openBefore: boolean[] | undefined;
+  // The count is announced once typing pauses, not on every keystroke.
+  let announceTimer: ReturnType<typeof setTimeout> | undefined;
+  const announce = (text: string) => {
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(() => (status.textContent = text), text ? 500 : 0);
+  };
 
   const applyFilter = () => {
     const query = filter.value.trim();
@@ -80,7 +86,7 @@ const description =
         c.notes.forEach((note) => (note.hidden = false));
       });
       openBefore = undefined;
-      status.textContent = '';
+      announce('');
       return;
     }
     openBefore ??= categories.map((c) => c.details.open);
@@ -92,12 +98,14 @@ const description =
       c.roles.forEach((role, i) => (role.hidden = !keep[i]));
       c.notes.forEach((note) => (note.hidden = !nameMatches));
       const count = keep.filter(Boolean).length;
-      c.details.hidden = count === 0;
-      c.details.open = count > 0;
+      // A category matched by name stays visible even if it holds only notes.
+      const visible = count > 0 || (nameMatches && c.notes.length > 0);
+      c.details.hidden = !visible;
+      c.details.open = visible;
       shown += count;
     }
-    if (shown === 0) status.textContent = 'No roles match that filter.';
-    else status.textContent = shown === 1 ? '1 role matches.' : `${shown} roles match.`;
+    if (shown === 0) announce('No roles match that filter.');
+    else announce(shown === 1 ? '1 role matches.' : `${shown} roles match.`);
   };
 
   filter.addEventListener('input', applyFilter);
