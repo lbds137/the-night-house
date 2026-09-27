@@ -1,0 +1,33 @@
+/**
+ * JSON for a `<script type="application/ld+json">` element. `<` becomes `<` (still the
+ * same JSON value) so no string in the data can close the script element early.
+ */
+export const jsonLd = (data: object) => JSON.stringify(data).replaceAll('<', '\\u003c');
+
+/**
+ * Site paths for page files from `import.meta.glob('./**\/*.astro')` in src/pages: nested
+ * index pages map to their folder. The 404 page and dynamic routes (`[slug].astro`) are left
+ * out, since they aren't pages a search engine should list.
+ */
+export function pagePaths(files: string[]): string[] {
+  return files
+    .map((file) => file.replace(/^\.\//, '').replace(/\.astro$/, ''))
+    .filter((name) => name !== '404' && !name.includes('['))
+    .map((name) => {
+      const path = name.replace(/(^|\/)index$/, '');
+      return path === '' ? '/' : `/${path}/`;
+    })
+    .sort();
+}
+
+/**
+ * A glossary entry's definition as plain text: the bold term (and an alias in parentheses right
+ * after it), Markdown marks and list bullets removed.
+ */
+export const plainDefinition = (markdown: string) =>
+  markdown
+    .replace(/^\*\*[^*]+\*\*\s*(\([^)]*\))?\s*:\s*/, '')
+    .replace(/^\* /gm, '')
+    .replace(/[*_`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();

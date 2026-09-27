@@ -1,5 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
+import { jsonLd } from '../lib/seo';
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from '../lib/site';
 import '../styles/global.css';
 
@@ -16,8 +17,6 @@ interface Props {
 const { title, description = SITE_DESCRIPTION, noindex = false, structuredData = [] } = Astro.props;
 const canonical = noindex ? undefined : new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(OG_IMAGE.path, Astro.site).href;
-// `<` would let a string in the data close the script element early.
-const jsonLd = (data: object) => JSON.stringify(data).replaceAll('<', '\\u003c');
 ---
 
 <!doctype html>

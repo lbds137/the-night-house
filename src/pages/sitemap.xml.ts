@@ -1,11 +1,8 @@
 import type { APIRoute } from 'astro';
+import { pagePaths } from '../lib/seo';
 
-// Every page in src/pages except the 404 page, which search engines shouldn't list.
-const pages = Object.keys(import.meta.glob('./*.astro'))
-  .map((file) => file.slice(2, -'.astro'.length))
-  .filter((name) => name !== '404')
-  .map((name) => (name === 'index' ? '/' : `/${name}/`))
-  .sort();
+// Every page under src/pages, nested folders included; pagePaths drops the 404 page.
+const pages = pagePaths(Object.keys(import.meta.glob('./**/*.astro')));
 
 export const GET: APIRoute = ({ site }) => {
   const urls = pages.map((path) => `  <url><loc>${new URL(path, site).href}</loc></url>`);
