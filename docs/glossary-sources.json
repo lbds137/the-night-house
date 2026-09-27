@@ -1,0 +1,1268 @@
+[
+  {
+    "term": "Alterhuman",
+    "kind": "existing",
+    "existing": "**Alterhuman**: someone who identifies as something other than human, such as but not limited to: incarnated non-human spirits, walk-ins, otherkin, therian, etc.",
+    "issues": "Too narrow: the community also uses it for identifying as human in an atypical way. Walk-ins (a different soul in a body) aren't necessarily non-human.",
+    "draft": "**Alterhuman**: an umbrella term for identities beyond the ordinary human experience, including identifying as wholly or partly non-human (such as otherkin and therians) or as human in an atypical way (such as walk-ins, who describe a different soul or self occupying their body). It is a self-identification, not a clinical diagnosis.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Otherkin",
+        "otherkin and therian subculture"
+      ],
+      [
+        "https://lgbtqia.wiki/wiki/Alterhuman",
+        "broader \"human in an atypical way\" framing"
+      ],
+      [
+        "https://pluralpedia.org/w/Alterhuman",
+        "umbrella term, walk-ins"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "A community self-identification term; there is little academic literature, so the sources are community wikis.",
+    "id": "alterhuman"
+  },
+  {
+    "term": "Ásatrú",
+    "kind": "existing",
+    "existing": "**Asatru**: a religion with beliefs based around the Norse/Germanic paradigm and deities.",
+    "issues": "Vague. It leaves out that Ásatrú is a modern revival and says nothing of the folkish/universalist split, where folkish groups tie the religion to ethnicity in ways widely documented as racist. That gap matters for an anti-bigotry community.",
+    "draft": "**Ásatrú** (also Asatru): a modern revival of pre-Christian Norse and Germanic polytheism, honoring deities such as Odin, Thor and Freyja; Heathenry is the wider umbrella term for these traditions. Many Heathen organizations, such as The Troth, are explicitly inclusive, while \"folkish\" groups restrict the religion by ancestry in ways widely criticized as racist.",
+    "sources": [
+      [
+        "https://thetroth.org/asatru-our-religion/",
+        "inclusive definition, rejection of folkish claims"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Heathenry_in_the_United_States",
+        "folkish vs. universalist split"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Asatru_Folk_Assembly",
+        "folkish branch"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "How bluntly to flag folkish groups is your call. The researcher wrote \"most Heathen orgs\"; I changed it to \"many\" because \"most\" wasn't sourced.",
+    "id": "asatru"
+  },
+  {
+    "term": "Ascension",
+    "kind": "new",
+    "draft": "**Ascension**: in occult and New Age contexts, the idea that a person can spiritually evolve into an \"ascended master\", a highly evolved being beyond ordinary human limits. The concept comes from Theosophy and was popularized by 20th-century movements like the \"I AM\" Activity; today it's also used loosely for raising one's consciousness through spiritual practice.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Ascended_master",
+        "Theosophical origin, \"I AM\" Activity"
+      ],
+      [
+        "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/ascended-masters",
+        "lineage and modern usage"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Two senses: the doctrinal ascended-master teaching (Theosophy, Bailey, Ballard) and the generic New Age sense. The lineage is well documented; the loose modern sense is practitioner usage.",
+    "id": "ascension"
+  },
+  {
+    "term": "ATR",
+    "kind": "existing",
+    "existing": "**ATR**: the acronym for \"African Traditional Religion\". Term used to encompass religions and religious traditions of African origin or relation.",
+    "issues": "Broadly accurate. It doesn't say that many of these traditions are initiatory, which matters when people ask to \"learn\" them.",
+    "draft": "**ATR**: short for African Traditional Religions, an umbrella term for the indigenous religious traditions of Africa and, by extension, the religions of the African diaspora (such as Vodou and Lucumí), as distinct from Islam and Christianity in Africa. Many of these traditions are initiatory: they are learned through a lineage, community and elders rather than self-taught.",
+    "sources": [
+      [
+        "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/african-traditional-religions",
+        "scope, definition"
+      ],
+      [
+        "https://study.com/academy/lesson/african-traditional-religion-history-beliefs-facts.html",
+        "general definition"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Whether diaspora religions count as ATRs or as \"African diaspora religions\" varies by writer; the draft says \"by extension\".",
+    "id": "atr"
+  },
+  {
+    "term": "Bibliomancy",
+    "kind": "existing",
+    "existing": "**Bibliomancy**: a form of divination using books and text. Also called Stichomancy.",
+    "issues": "Stichomancy is a narrower technique, not a strict synonym.",
+    "draft": "**Bibliomancy**: divination by opening a book, often a sacred or meaningful one, at random and reading the passage that appears as an answer or omen. Stichomancy, divination from a single line or verse chosen this way, is a closely related, narrower term.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Bibliomancy",
+        "definition, sortes, stichomancy"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "One strong source.",
+    "id": "bibliomancy"
+  },
+  {
+    "term": "Chaldean",
+    "kind": "new",
+    "draft": "**Chaldean**: most often refers to Chaldean numerology, a system that assigns numbers to letters by their sound and that practitioners trace back to ancient Babylon. It can also mean the Chaldean Oracles, fragmentary Greek mystical verses from around the 2nd century CE that shaped Neoplatonist philosophy and were revived by 19th-century occultists such as the Golden Dawn.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Chaldean_Oracles",
+        "origin, Neoplatonist use, Golden Dawn revival"
+      ],
+      [
+        "https://www.howstuffworks.com/",
+        "Chaldean numerology system (non-scholarly numerology sources)"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "The Babylonian origin of the numerology is practitioner lore, not verified by historians; the draft attributes it. Which sense your community means is your call (numerology put first as a guess).",
+    "id": "chaldean"
+  },
+  {
+    "term": "Channeling",
+    "kind": "existing",
+    "existing": "**Channeling**: the act of letting a deity's or an entity's energy pass through you in order to receive/deliver messages and form an energetic bond.",
+    "issues": "States the mechanism as fact rather than as practitioners' description.",
+    "draft": "**Channeling**: a practice in which a person opens themselves to a deity, spirit or other entity and lets it communicate through them in speech, writing or other forms. Practitioners describe the entity's consciousness or energy moving through them; it is a modern name for what has historically been called mediumship.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Mediumship",
+        "channeling and mediumship"
+      ],
+      [
+        "https://www.livescience.com/38561-channeling.html",
+        "New Age context"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "channeling"
+  },
+  {
+    "term": "Chaos Magick",
+    "kind": "existing",
+    "existing": "**Chaos Magick**: a contemporary magical practice that dates back roughly to the 1970s. Its focus is on belief as a tool rather than traditions and/or ritual practices, which are also tools. Practitioners tend to change theories frequently, use experimental methods to test magick, and occasionally build their own belief system based on their results.",
+    "issues": "Accurate; no errors. Polish and attribution only.",
+    "draft": "**Chaos Magick**: a magical approach that emerged in England in the late 1970s, associated with Peter J. Carroll and Ray Sherwin, who founded the Illuminates of Thanateros. It treats belief as a tool to take up and set down for a given working rather than committing to one tradition, and practitioners mix methods experimentally, judging them by results.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Chaos_magic",
+        "origin, founders, belief as a tool"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Illuminates_of_Thanateros",
+        "organizational history"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The existing entry is fine, so keeping it is also a reasonable choice.",
+    "id": "chaos-magick"
+  },
+  {
+    "term": "Clair-senses",
+    "kind": "existing",
+    "existing": "**Clair-senses**: intuitive or psychic abilities that allow one to feel things about their environment and people around them, such as but not limited to:\n* **Clairvoyance**, the ability to see without using one's physical eyes;\n* **Clairsentience**, the ability to know or feel things before or while they're happening based solely on intuition;\n* **Clairaudience**, the ability to hear with one's intuition noises or sounds that aren't physical, etc.",
+    "issues": "Clairsentience is defined wrongly as knowing things before they happen, which is precognition. Common usage is \"clear feeling\", sensing emotions or energy.",
+    "draft": "**Clair-senses**: intuitive or psychic senses that practitioners describe as reaching beyond the five physical senses, such as but not limited to:\n* **Clairvoyance** (\"clear seeing\"), perceiving images or visions in the mind's eye;\n* **Clairsentience** (\"clear feeling\"), sensing emotions, energy or physical sensations that aren't one's own;\n* **Clairaudience** (\"clear hearing\"), perceiving words or sounds that aren't physically audible.",
+    "sources": [
+      [
+        "https://thecrystalcouncil.com/blog/clairvoyance-clairaudience-all-the-clair-s",
+        "definitions"
+      ],
+      [
+        "https://www.mindbodygreen.com/articles/the-4-types-of-intuition-and-how-to-tap-into-each",
+        "clairsentience as feeling"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Practitioner sources only, but they agree unanimously on the clairsentience correction.",
+    "id": "clair-senses"
+  },
+  {
+    "term": "Current",
+    "kind": "new",
+    "draft": "**Current**: a stream of magical practice, symbolism and energy that a tradition works with and passes on, such as the Draconian or Typhonian current associated with Kenneth Grant's Typhonian Order. Traditions describe currents differently, but practitioners generally hold that working within one connects them to its accumulated body of work.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Typhonian_Order",
+        "Grant, Typhonian and Draconian current"
+      ],
+      [
+        "https://cliftond.substack.com/",
+        "Kenneth Grant and the Typhonian current (blog)"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "An insider term: no scholarly source defines the generic sense; the Typhonian specifics are well documented. Weakest-sourced entry in its batch.",
+    "id": "current"
+  },
+  {
+    "term": "Death work",
+    "kind": "existing",
+    "existing": "**Death work**: any type of spiritual or magickal work that involves death and the dead. It usually consists of honoring the dead and using death as an important pillar to one's personal philosophy.",
+    "issues": "No errors; it could use examples.",
+    "draft": "**Death work**: spiritual or magical practice centered on death and the dead, such as honoring ancestors, tending graves, guiding spirits of the dead (psychopomp work) or using mortality as a touchstone for one's philosophy. It can also include grief ritual and necromancy.",
+    "sources": [
+      [
+        "https://legacycoven.substack.com/p/the-death-witch-guardian-of-the-threshold",
+        "psychopomp framing"
+      ],
+      [
+        "https://horrorobsessive.com/2021/05/11/death-witchcraft/",
+        "scope"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "A practitioner term with blog sources only. The existing entry is also fine.",
+    "id": "death-work"
+  },
+  {
+    "term": "Demonolatry",
+    "kind": "existing",
+    "existing": "**Demonolatry**: the act of worshiping or working with demons or demonic entities.",
+    "issues": "\"Working with\" blurs demonolatry, which means worship or veneration, with demon work in general.",
+    "draft": "**Demonolatry**: the religious veneration of demons as divine or semi-divine beings worthy of devotion rather than as enemies to fear. It is distinct from demonology (the study of demons) and from Satanism, though the two overlap for some practitioners.",
+    "sources": [
+      [
+        "https://demonolatry.org/wp-content/uploads/2019/10/whatdemonolatry.pdf",
+        "the tradition's own primer (S. Connolly)"
+      ],
+      [
+        "https://thekeeperspath.com/2025/04/04/d-is-for-difference-between-demonology-and-demonolatry/",
+        "distinctions"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "demonolatry"
+  },
+  {
+    "term": "Demonology",
+    "kind": "existing",
+    "existing": "**Demonology**: the act of studying and understanding demons/demonic entities and their behaviors.",
+    "issues": "No errors; narrow framing.",
+    "draft": "**Demonology**: the study of demons: their origins, natures, hierarchies and behavior. It covers academic study in religion and folklore as well as occult traditions that catalog individual demons and work with them.",
+    "sources": [
+      [
+        "https://dictionary.cambridge.org/dictionary/english/demonology",
+        "definition"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Demonology",
+        "academic and occult scope"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "demonology"
+  },
+  {
+    "term": "Divination",
+    "kind": "existing",
+    "existing": "**Divination**: a practice involving the foretelling of one's fate, consequences to actions, or simply seeking advice with the aid of physical tools (such as pendulums, tarot cards, oracles, etc) and/or one's intuition.",
+    "issues": "Minor: narrower than the standard definition.",
+    "draft": "**Divination**: seeking knowledge of hidden or future things, such as one's fate, the outcome of a choice or general guidance, through supernatural or intuitive means. It is found in nearly every culture and era, using tools such as tarot, pendulums and oracle cards, or intuition alone.",
+    "sources": [
+      [
+        "https://www.britannica.com/dictionary/divination",
+        "definition"
+      ],
+      [
+        "https://www.britannica.com/topic/divination",
+        "cross-cultural scope"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "divination"
+  },
+  {
+    "term": "Dowsing",
+    "kind": "existing",
+    "existing": "**Dowsing**: a type of divination used to find things such as water, metal, oil, and other similar things.",
+    "issues": "Presents dowsing as a working way to find water or metal. Controlled tests find it no better than chance.",
+    "draft": "**Dowsing**: a form of divination that uses rods or a pendulum to search for water, metals, lost objects and similar things. Controlled tests have found it no more accurate than chance, and researchers attribute the rods' movement to the ideomotor effect; practitioners generally describe it as an intuitive skill.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Dowsing",
+        "definition, test results"
+      ],
+      [
+        "https://www.mcgill.ca/oss/article/pseudoscience-environment/dowsing-dowse-it-work",
+        "McGill Office for Science and Society"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The researcher recommends keeping the chance-level line, and I agree.",
+    "id": "dowsing"
+  },
+  {
+    "term": "Egregore",
+    "kind": "existing",
+    "existing": "**Egregore**: a construct made by a collective of minds. An egregore will usually form when a concept is believed in by many people, thus being the target to a great amount of energy that is directed at it, becoming somewhat autonomous. Egregores may or may not be sentient.",
+    "issues": "States occult claims (autonomy, sentience) as fact.",
+    "draft": "**Egregore**: in occultism, a non-physical entity said to arise from the shared thoughts, beliefs or energy of a group. The occult concept is associated with the 19th-century occultist Éliphas Lévi, and practitioners describe egregores as able to become autonomous or even sentient.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Egregore",
+        "definition, Lévi"
+      ],
+      [
+        "https://www.theosophical.org/publications/quest-magazine/egregores-the-occult-entities-that-watch-over-human-destiny",
+        "occult context"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The word itself comes from the Greek for \"watchers\" (Book of Enoch).",
+    "id": "egregore"
+  },
+  {
+    "term": "Eldritch",
+    "kind": "existing",
+    "existing": "**Eldritch**: Type of energy similar to Void energy that looks to expand and consume. Beings made out of Eldritch energy can be found in the works of H.P. Lovecraft.",
+    "issues": "Wrong attribution. \"Eldritch\" is an old Scots/English adjective meaning weird or uncanny; Lovecraft used it descriptively and never wrote of \"Eldritch energy\". The energy sense is community usage.",
+    "draft": "**Eldritch**: an old Scots and English word, in use since around 1500, meaning weird, uncanny or otherworldly, which H.P. Lovecraft's fiction made famous for describing incomprehensible cosmic horrors. In some occult communities, including ours, it also names a kind of consuming, expanding energy similar to Void energy; that sense is practitioner usage, not something found in Lovecraft or older occult literature.",
+    "sources": [
+      [
+        "https://www.etymonline.com/word/eldritch",
+        "etymology, meaning"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Eldritch",
+        "Lovecraft's popularization"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Your call: confirm whether the \"Eldritch energy\" sense is your community's own usage. Keep it consistent with the Void entry.",
+    "id": "eldritch"
+  },
+  {
+    "term": "Entheogen",
+    "kind": "new",
+    "draft": "**Entheogen**: a psychoactive substance used to bring about a religious or spiritual experience; the word was coined in 1979 from Greek roots meaning roughly \"becoming divine within\". Examples include peyote, ayahuasca, iboga and psilocybin mushrooms, many of which belong to specific traditions and are legally restricted.",
+    "sources": [
+      [
+        "https://www.merriam-webster.com/dictionary/entheogen",
+        "definition"
+      ],
+      [
+        "https://www.newworldencyclopedia.org/entry/Entheogen",
+        "etymology, historical and religious use"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Peyote (Native American Church) and iboga (Bwiti) are tied to specific traditions and regulated. I added the 1979 coinage (Ruck, Wasson et al.); verify before approving.",
+    "id": "entheogen"
+  },
+  {
+    "term": "Gematria",
+    "kind": "new",
+    "draft": "**Gematria**: a Jewish method, used notably in Kabbalah, that assigns numerical values to Hebrew letters so words and phrases can be compared by their totals. It is used to find hidden connections between words, especially in interpreting scripture; Greek isopsephy is a similar system.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/gematria",
+        "definition, Kabbalah"
+      ],
+      [
+        "https://www.myjewishlearning.com/article/gematria/",
+        "mechanism, Jewish usage"
+      ],
+      [
+        "https://www.chabad.org/",
+        "What Is Gematria? (Jewish usage)"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "A living Jewish practice; the draft sources it to Jewish tradition first.",
+    "id": "gematria"
+  },
+  {
+    "term": "Godform",
+    "kind": "existing",
+    "existing": "**Godform**: an Egregore that has become sentient and/or conscious, as well as independent, not needing the collective energetic effort of the minds that believed it into existence, and usually exercising its power over those who brought it to life.",
+    "issues": "Doesn't match the documented meaning. In Golden Dawn ceremonial magic, \"assuming a godform\" means visualizing yourself in a deity's form during ritual. The current meaning (an egregore that has become sentient) wasn't found in any source.",
+    "draft": "**Godform**: in ceremonial magic, especially the Golden Dawn tradition, the image of a deity that a magician visualizes and \"assumes\" during ritual to attune with that deity's qualities. Some communities also use the word for an egregore that has become independent and self-aware; that sense is community usage.",
+    "sources": [
+      [
+        "https://hermetic.com/stavish/rituals/godform",
+        "Golden Dawn assumption of godforms"
+      ],
+      [
+        "https://solascendans.com/2024/03/15/what-is-a-godform",
+        "corroborating definition"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "YOUR DECISION: keep your community's meaning and label it, or switch to the documented meaning. The draft gives both, with the documented one first.",
+    "id": "godform"
+  },
+  {
+    "term": "Godphone",
+    "kind": "existing",
+    "existing": "**Godphone**: a direct line of contact established between a spirit (deity, entity, etc) and a human person, allowing this person to receive messages directly from that spirit and understand them, and respond to it.",
+    "issues": "Presents informal slang as a neutral technical fact.",
+    "draft": "**Godphone**: pagan and polytheist slang for a clear, direct line of communication with a deity or spirit, as if you had their phone number. Even within those communities a clear two-way connection is described as rare, and how reliable it is gets debated.",
+    "sources": [
+      [
+        "https://thetwistedrope.wordpress.com/2013/07/13/gods-and-god-phones-101/",
+        "definition, rarity"
+      ],
+      [
+        "https://thepaganstudygrouppage.tumblr.com/post/132235708723/is-the-god-phone-a-real-thing",
+        "community debate"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Practitioner sources only, which suits a slang term.",
+    "id": "godphone"
+  },
+  {
+    "term": "Godspouse",
+    "kind": "existing",
+    "existing": "**Godspouse**: a relationship, usually a marriage, between a human person and a deity. Catholic Nuns, as an example, are godspoused, since they’re married to God.",
+    "issues": "Calling Catholic nuns \"godspoused\" applies a modern pagan term to a tradition that doesn't use it.",
+    "draft": "**Godspouse**: a modern pagan and polytheist term for a person in a committed, often romantic relationship with a deity, sometimes formalized as a marriage. Other traditions have comparable ideas, such as nuns as \"brides of Christ\" or spiritual marriage to a lwa in Haitian Vodou, though they don't use this word.",
+    "sources": [
+      [
+        "https://wildhunt.org/2021/12/column-godspouses-in-conversation-part-one.html",
+        "modern definition"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Spiritual_marriage",
+        "cross-tradition comparison"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The Vodou detail came from a search snippet only; you can cut that clause.",
+    "id": "godspouse"
+  },
+  {
+    "term": "Hellenism",
+    "kind": "new",
+    "draft": "**Hellenism**: also called Hellenismos or Hellenic polytheism, a modern religion that worships the ancient Greek gods and reconstructs their rituals and festivals from surviving texts and archaeology. Most Hellenists emphasize correct practice over shared belief, and many practice alone or in small local groups.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Hellenism_(modern_religion)",
+        "definition, reconstructionist method"
+      ],
+      [
+        "https://www.hellenion.org/",
+        "Hellenism 101 (Hellenion, a Hellenic religious organization)"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Not closed. Some Hellenists dislike being grouped under \"neopaganism\"; relevant to the Neo Paganism and Reconstructionism entries.",
+    "id": "hellenism"
+  },
+  {
+    "term": "Hermeticism",
+    "kind": "new",
+    "draft": "**Hermeticism**: a philosophical and spiritual tradition based on writings attributed to Hermes Trismegistus, a legendary figure blending the Greek god Hermes and the Egyptian god Thoth. The texts date from Greco-Roman Egypt in late antiquity; their idea of correspondences between the small and the great (\"as above, so below\") shaped Renaissance thought and modern Western occultism.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Hermeticism",
+        "Hermes Trismegistus, Corpus Hermeticum, Emerald Tablet"
+      ],
+      [
+        "https://www.thecollector.com/",
+        "Hermes Trismegistus history and influence"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "\"As above, so below\" paraphrases the Emerald Tablet, which is later (Arabic, medieval) than the Corpus Hermeticum; the draft doesn't claim pharaonic age.",
+    "id": "hermeticism"
+  },
+  {
+    "term": "Hoodoo",
+    "kind": "new",
+    "draft": "**Hoodoo**: an African American folk magic tradition, also called rootwork or conjure, that blends West and Central African practices with Christian and other influences, including herbal work, ancestor veneration and protective charms. Many practitioners consider it a closed practice rooted in Black American history and lineage, and ask outsiders to learn about it respectfully rather than adopt it.",
+    "sources": [
+      [
+        "https://www.nps.gov/articles/000/hoodoo-in-st-louis-an-african-american-religious-tradition.htm",
+        "origins, syncretism (National Park Service)"
+      ],
+      [
+        "https://womenscenter.umbc.edu/",
+        "Intro to Hoodoo, closed-practice framing"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The researcher's draft said flatly that it \"isn't something for non-Black practitioners to adopt\". Practitioners disagree on how closed it is, so I attributed the view. How firmly the site takes a side is your call.",
+    "id": "hoodoo"
+  },
+  {
+    "term": "Horsing",
+    "kind": "new",
+    "draft": "**Horsing**: spirit possession as described in Haitian Vodou and related traditions, where a spirit (lwa) is said to \"mount\" or \"ride\" a person, called its horse (chwal). Within those traditions it is a sacred event that happens in ceremony, so the term belongs to that context.",
+    "sources": [
+      [
+        "https://www.historymuseum.ca/vodou/possession/",
+        "possession in Vodou (Canadian Museum of History)"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Manbo_(Vodou)",
+        "chwal / mounting terminology"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Similar mounting language exists in Lucumí/Santería, but sourcing for \"horsing\" outside Vodou was weak. The museum source doesn't use the word itself.",
+    "id": "horsing"
+  },
+  {
+    "term": "Hydromancy",
+    "kind": "new",
+    "draft": "**Hydromancy**: divination by water, reading ripples, reflections, currents or the color of a liquid in a bowl or pool. It is an ancient method described in classical sources, and variants have their own names, such as pegomancy (divination by springs).",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Hydromancy",
+        "definition, etymology, history"
+      ],
+      [
+        "https://www.britannica.com/topic/hydromancy",
+        "encyclopedic definition (search snippet)"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "I removed the researcher's \"roots in ancient Babylon and Persia\" claim because neither cited source was read to support it.",
+    "id": "hydromancy"
+  },
+  {
+    "term": "Kemeticism",
+    "kind": "new",
+    "draft": "**Kemeticism**: modern religion based on the beliefs and practices of ancient Egypt (Kemet). It includes reconstructionist Kemetics, who rebuild ancient practice from the historical record, and Kemetic Orthodoxy, an organized movement founded in 1988 that teaches the Egyptian deities are aspects of one divine power called Netjer.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Kemetism",
+        "reconstructionist vs. Orthodoxy"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Kemetic_Orthodoxy",
+        "1988 founding by Tamara Siuda, Netjer theology"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Also spelled Kemetism.",
+    "id": "kemeticism"
+  },
+  {
+    "term": "Left Hand Path",
+    "kind": "new",
+    "draft": "**Left Hand Path**: an umbrella term for spiritual paths centered on the self, which scholars such as Kennet Granholm characterize by individualism, self-deification and antinomianism (questioning or breaking with inherited moral and religious norms). The name comes from the Sanskrit *vāmācāra* (\"left-hand practice\"), a Tantric current that used taboo-breaking ritual, and entered Western esotericism through Helena Blavatsky in the late 19th century, originally as a label for black magic. Today it describes currents such as modern Satanism and Luciferianism, and it does not mean \"evil\".",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Left-hand_path_and_right-hand_path",
+        "vāmācāra origin, Blavatsky, modern usage"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Vamachara",
+        "Tantric vāmācāra"
+      ],
+      [
+        "https://kennetgranholm.com/wp-content/uploads/2018/09/granholm-nature.pdf",
+        "Granholm on contemporary LHP magic (seen in search, not fully read)"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Your community's core term. The three-trait definition is Granholm's framing, also found in Stephen Flowers; the researcher could not read a Faxneld text directly, so I cite Granholm only. I trimmed the draft to three sentences and dropped Chaos Magick from the examples (it is not usually classed as LHP).",
+    "id": "left-hand-path"
+  },
+  {
+    "term": "Luciferianism",
+    "kind": "new",
+    "draft": "**Luciferianism**: a range of beliefs that honor Lucifer as a bringer of light, knowledge and liberation rather than as the Christian Devil; he is often compared to Prometheus. It is distinct from Satanism, though the two overlap and are often confused. Some Luciferians regard Lucifer as a real being, while others treat him as a symbol of the pursuit of wisdom and self-liberation.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Luciferianism",
+        "definition, distinction from Satanism"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Only one source was read directly, so a second source is still needed.",
+    "id": "luciferianism"
+  },
+  {
+    "term": "Magick",
+    "kind": "new",
+    "draft": "**Magick**: the spelling Aleister Crowley popularized to set occult magic apart from stage conjuring; he defined it as \"the Science and Art of causing Change to occur in conformity with Will.\" Many occultists keep the \"k\" for magical practice in general, whether or not they follow Crowley's Thelema.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Magick_(Book_4)",
+        "Crowley's definition, Book 4"
+      ],
+      [
+        "https://simple.wikipedia.org/wiki/Magick",
+        "stage-magic distinction"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "magick"
+  },
+  {
+    "term": "Middle Path",
+    "kind": "new",
+    "draft": "**Middle Path**: in discussions of the Left and Right Hand Paths, a practitioner term for an approach that balances the two rather than choosing one. It is used informally in occult communities rather than as a scholarly category, and is unrelated to the Buddhist Middle Way.",
+    "sources": [
+      [
+        "https://www.ecosophia.net/the-path-between-the-pillars/",
+        "blog discussing a path between LHP and RHP"
+      ],
+      [
+        "https://esotericwitch.com/left-hand-path-vs-right-hand-path",
+        "blog framing three paths"
+      ]
+    ],
+    "confidence": "low",
+    "notes": "Thinly documented: blogs only. The entry says so openly. You may prefer to drop it.",
+    "id": "middle-path"
+  },
+  {
+    "term": "Necromancy",
+    "kind": "new",
+    "draft": "**Necromancy**: divination by communicating with the dead, historically used to gain hidden knowledge or foresee the future; it is attested in ancient Mesopotamia, Greece and Rome. Since the Middle Ages the word has also taken on a broader sinister sense (black magic in general, or raising corpses in fiction) that differs from its original meaning.",
+    "sources": [
+      [
+        "https://www.newworldencyclopedia.org/entry/Necromancy",
+        "etymology, ancient practice"
+      ],
+      [
+        "https://www.encyclopedia.com/philosophy-and-religion/other-religious-beliefs-and-general-terms/miscellaneous-religion/necromancy",
+        "historical and divinatory framing"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Overlaps with the existing Death work entry.",
+    "id": "necromancy"
+  },
+  {
+    "term": "Neo Druidry",
+    "kind": "new",
+    "draft": "**Neo Druidry**: a modern religious movement inspired by the ancient Celtic druids and developed in Britain from the 18th century onward. It is not a direct continuation of ancient druidry, about which very little is known. Modern Druids are often animist or polytheist, and honor nature through ritual, poetry and seasonal festivals.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/modern-Druidry",
+        "not a direct survival, 18th-century revival (read via search summary; direct fetch 403)"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Druidry_(modern)",
+        "modern reconstruction"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "The Britannica page couldn't be fetched, so its wording is secondhand. Some Druids are not polytheist, which is why the draft says \"often\".",
+    "id": "neo-druidry"
+  },
+  {
+    "term": "Neo Paganism",
+    "kind": "new",
+    "draft": "**Neo Paganism**: an umbrella term for modern religious movements, such as Wicca, Druidry, Heathenry, Hellenism and Kemeticism, that draw on pre-Christian traditions. They are new religious movements rather than unbroken survivals of ancient religions. Common threads include reverence for nature and polytheism or pantheism, though traditions vary widely.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Modern_paganism",
+        "definition, common themes"
+      ],
+      [
+        "https://www.encyclopedia.com/philosophy-and-religion/other-religious-beliefs-and-general-terms/miscellaneous-religion/neopaganism",
+        "no direct lineage"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Some reconstructionists (Hellenists, Heathens) reject the label for themselves.",
+    "id": "neo-paganism"
+  },
+  {
+    "term": "Non-human",
+    "kind": "new",
+    "draft": "**Non-human**: a broad term, close in meaning to alterhuman, for identifying as something other than human in spirit, soul or experience, without necessarily naming a specific kind of being. As with other alterhuman identities, the community understands it as an identity, not a disorder.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Otherkin",
+        "identity framing (Jay Johnston)"
+      ],
+      [
+        "https://alterhumanity.fandom.com/",
+        "community usage of non-human / alterhuman"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Community wikis use it almost interchangeably with Alterhuman. It could be folded into that entry instead.",
+    "id": "non-human"
+  },
+  {
+    "term": "Oracle",
+    "kind": "new",
+    "draft": "**Oracle**: in modern divination, usually a deck of oracle cards, which work like tarot but have no fixed structure or number of cards; each deck follows its creator's own themes. Originally the word meant a shrine or person through whom a god was believed to speak, most famously the Oracle of Delphi.",
+    "sources": [
+      [
+        "https://www.learnreligions.com/oracle-cards-4779899",
+        "oracle cards"
+      ],
+      [
+        "https://www.britannica.com/place/Delphi-ancient-city-Greece",
+        "Oracle of Delphi"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The draft leads with cards because the Divination entry lists oracles among physical tools. Flip the order if your members mean the person or shrine.",
+    "id": "oracle"
+  },
+  {
+    "term": "Otherkin",
+    "kind": "new",
+    "draft": "**Otherkin**: people who identify as partly or wholly non-human, most often as beings from myth and folklore such as elves, fae or dragons; those who identify with real animals usually call themselves therians. The community understands this as an identity, not a belief to argue over or a disorder.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Otherkin",
+        "definition, identity framing"
+      ],
+      [
+        "https://otherkin.fandom.com/wiki/Alterhuman",
+        "otherkin within alterhuman"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The researcher's draft said \"(see Therian)\", but there is no Therian entry, so I rewrote it inline.",
+    "id": "otherkin"
+  },
+  {
+    "term": "Pendulum",
+    "kind": "new",
+    "draft": "**Pendulum**: a weighted object, often a crystal, hung on a chain or string and used for divination, usually to get \"yes\" or \"no\" answers from how it swings. Practitioners variously attribute the movement to the user's subconscious, to spirits or to energy; researchers explain it by the ideomotor effect (small unconscious muscle movements). It is a form of dowsing.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/dowsing",
+        "dowsing, pendulum use"
+      ],
+      [
+        "https://lonerwolf.com/dowsing-pendulum/",
+        "practitioner use"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "I added the ideomotor explanation, which is the standard scientific account; drop it if it reads as preachy.",
+    "id": "pendulum"
+  },
+  {
+    "term": "PluralKit",
+    "kind": "existing",
+    "existing": "**PluralKit**: A Discord bot meant for plural communities. It has features like message proxying through webhooks, switch tracking, system and member profiles, and more.",
+    "issues": "Accurate. It could say what \"plural\" means.",
+    "draft": "**PluralKit**: a Discord bot designed for plural systems (multiple people or identities sharing one body), also used for roleplay. It lets each member post under their own name and avatar through webhook proxying, and tracks switches and system and member profiles.",
+    "sources": [
+      [
+        "https://pluralkit.me/faq/",
+        "purpose, features"
+      ],
+      [
+        "https://github.com/PluralKit/PluralKit",
+        "feature list"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "pluralkit"
+  },
+  {
+    "term": "Psychic abilities",
+    "kind": "new",
+    "draft": "**Psychic abilities**: claimed abilities to perceive or affect things beyond the physical senses, such as telepathy, clairvoyance or precognition (see Clair-senses). Many practitioners believe in them from personal experience, but controlled studies have not produced reproducible evidence, and mainstream science regards parapsychology as a pseudoscience.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Parapsychology",
+        "scientific consensus"
+      ],
+      [
+        "https://www.thefreedictionary.com/Psychic+ability",
+        "definition"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "States the belief and the scientific consensus side by side without mocking.",
+    "id": "psychic-abilities"
+  },
+  {
+    "term": "Psychic vampirism",
+    "kind": "new",
+    "draft": "**Psychic vampirism**: the belief or practice of drawing life force or energy from people, places or other sources rather than blood (compare Sanguinarian vampirism). Within the real vampire community it is usually described as a need the person has in order to feel well, and there is no scientific evidence for the energy involved.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Psychic_vampire",
+        "definition, alternate terms"
+      ],
+      [
+        "https://www.bu.edu/articles/2010/real-life-vampires/",
+        "Laycock's research on the vampire community"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Keep consistent with the Sanguinarian and Tantric vampirism entries.",
+    "id": "psychic-vampirism"
+  },
+  {
+    "term": "Qliphoth",
+    "kind": "new",
+    "draft": "**Qliphoth**: in Kabbalah, the \"shells\" or \"husks\" of impure spiritual force that stand opposite the sefirot of the Tree of Life; in Lurianic Kabbalah they arise when the vessels holding divine light shatter. Modern Left Hand Path currents, notably Kenneth Grant's Typhonian Order and Thomas Karlsson's Dragon Rouge, reinterpret them as a \"Tree of Death\" for initiatory work, well outside their original Jewish mystical context.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Qlippoth",
+        "Zohar and Lurianic origin, modern occult use"
+      ],
+      [
+        "https://www.goodreads.com/",
+        "Karlsson, Qabalah, Qliphoth and Goetic Magic (summary)"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "A Jewish mystical concept repurposed by non-Jewish occultists. The draft says so neutrally; whether to say more is your call. Also spelled Qlippoth.",
+    "id": "qliphoth"
+  },
+  {
+    "term": "Reconstructionism",
+    "kind": "new",
+    "draft": "**Reconstructionism**: an approach to modern polytheism that tries to rebuild the beliefs and practices of a specific pre-Christian religion (such as Greek, Norse, Celtic or Egyptian) from historical, archaeological and linguistic research, rather than mixing traditions freely. It is often contrasted with eclectic paths such as Wicca.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Polytheistic_reconstructionism",
+        "definition, contrast with eclectic paths"
+      ],
+      [
+        "https://religionfacts.com/neopaganism/branches/hellenic-reconstructionism",
+        "Hellenic example"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Some reconstructionists reject the Pagan label.",
+    "id": "reconstructionism"
+  },
+  {
+    "term": "Right hand path",
+    "kind": "new",
+    "draft": "**Right hand path**: the counterpart to the Left Hand Path. Writers who use the pair describe it as paths that seek union with, or submission to, the divine and follow established religious and moral conventions, a category that on this view includes most mainstream religions. The terms describe different orientations toward the self, although some occultists do use them to mean good and evil.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Left-hand_path_and_right-hand_path",
+        "origin, contrast, Dave Evans"
+      ],
+      [
+        "https://www.learnreligions.com/left-hand-and-right-hand-paths-95827",
+        "overview"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "I attributed the classification to LHP writers, because most of the world's religions wouldn't describe themselves this way.",
+    "id": "right-hand-path"
+  },
+  {
+    "term": "Sanguinarian vampirism",
+    "kind": "new",
+    "draft": "**Sanguinarian vampirism**: within the real vampire community, the experience of needing to take small amounts of blood, from willing donors, to feel physically or mentally well; it contrasts with psychic vampirism, which draws energy instead. The community treats it as an identity rather than a supernatural claim, and its organizations stress donor consent, testing for bloodborne diseases and sterile technique.",
+    "sources": [
+      [
+        "https://www.goodreads.com/en/book/show/6401616-vampires-today",
+        "Laycock, Vampires Today: identity-group framing"
+      ],
+      [
+        "https://www.bu.edu/articles/2010/real-life-vampires/",
+        "coverage of Laycock's research"
+      ],
+      [
+        "https://www.suscitatio.com/",
+        "community research organization"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "I removed the researcher's specific dose (\"a few drops to a spoonful\") because it wasn't sourced. The safety line reflects community practice, not medical advice. You could add a harder health caveat.",
+    "id": "sanguinarian-vampirism"
+  },
+  {
+    "term": "Santería",
+    "kind": "new",
+    "draft": "**Santería**: an Afro-Cuban religion, also called Lucumí or Regla de Ocha, that grew from the Yoruba traditions of enslaved West Africans blended with Catholicism and Spiritism, and centers on the orishas. It is initiatory: it is learned through a house and its elders, not from books alone. Many practitioners prefer Lucumí or Regla de Ocha, since \"Santería\" began as an outsider's label.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/Santeria",
+        "origins, alternate names"
+      ],
+      [
+        "https://pluralism.org/%E2%80%9Csanter%C3%ADa%E2%80%9D-the-lucumi-way",
+        "naming preferences (Harvard Pluralism Project)"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Santer%C3%ADa",
+        "overview"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "Some sources call the name pejorative and others don't, so I softened \"pejorative\" to \"outsider's label\". You could title the entry Lucumí instead.",
+    "id": "santeria"
+  },
+  {
+    "term": "Satan",
+    "kind": "new",
+    "draft": "**Satan**: in the Hebrew Bible, *ha-satan* (\"the adversary\" or \"the accuser\") is a title for a member of God's heavenly court, not an independent evil power, as in the Book of Job. Christianity later developed the figure into the Devil, a fallen angel opposed to God. Modern Satanists read Satan in yet other ways, often as a symbol of pride, rebellion or liberation.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/Satan",
+        "ha-satan, development of the concept"
+      ],
+      [
+        "https://www.myjewishlearning.com/article/satan-the-adversary/",
+        "Jewish understanding"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Devil_in_Christianity",
+        "Christian development"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "satan"
+  },
+  {
+    "term": "Satanism",
+    "kind": "new",
+    "draft": "**Satanism**: an umbrella term for several different modern movements that take Satan as a central symbol. The Church of Satan, founded by Anton LaVey in 1966, is atheistic and treats Satan as a symbol of human nature; The Satanic Temple, founded in 2013, is also nontheistic and uses Satan as a symbol of rebellion in activism for religious pluralism and secular government; theistic Satanists regard Satan as a real being to revere. Scholars of religion study Satanism as a real and diverse religious phenomenon, separate from the unfounded \"Satanic ritual abuse\" panic of the 1980s.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Church_of_Satan",
+        "LaVey, 1966, atheistic"
+      ],
+      [
+        "https://thesatanictemple.com/pages/church-of-satan-vs-satanic-temple",
+        "TST self-description"
+      ],
+      [
+        "https://global.oup.com/academic/product/the-invention-of-satanism-9780195181104",
+        "Dyrendal, Lewis & Petersen, The Invention of Satanism"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The most reputation-sensitive entry. I added TST's 2013 founding date, which you should verify before approving. It runs four sentences because the term is central.",
+    "id": "satanism"
+  },
+  {
+    "term": "Servitor",
+    "kind": "new",
+    "draft": "**Servitor**: in chaos magick, a thoughtform a practitioner deliberately creates, usually with a name, a sigil and one narrow task, such as guarding a space or reinforcing a habit. Practitioners usually plan a way to dissolve it once its task is done.",
+    "sources": [
+      [
+        "http://www.chaosmatrix.org/library/chaos/texts/servitors.html",
+        "chaos magick text on servitors"
+      ],
+      [
+        "https://grimoire.love/encyclopedia/thoughtforms/",
+        "servitor vs. thoughtform"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Practitioner sources only; no scholarly treatment exists.",
+    "id": "servitor"
+  },
+  {
+    "term": "Shield",
+    "kind": "new",
+    "draft": "**Shield**: energetic or psychic protection, usually a barrier a practitioner visualizes or raises around themselves or a space to keep out unwanted energy or influence. It is one of the most common protective techniques in modern occult and energy work.",
+    "sources": [
+      [
+        "https://glassewitchcottage.com/2019/01/07/shielding-a-crash-course-in-safe-hex/",
+        "practitioner description"
+      ],
+      [
+        "https://annereith.com/psychic-protection-how-to-use-energy-shielding/",
+        "practitioner techniques"
+      ]
+    ],
+    "confidence": "low-medium",
+    "notes": "Folk practice, practitioner blogs only. Related to Ward.",
+    "id": "shield"
+  },
+  {
+    "term": "Shufflemancy",
+    "kind": "new",
+    "draft": "**Shufflemancy**: divination by asking a question and shuffling a music playlist, treating the song or lyric that comes up as the answer, much like drawing a tarot card. It is a recent, internet-era practice.",
+    "sources": [
+      [
+        "https://takeasonictrip.com/2024/05/06/shufflemancy-your-new-favorite-divination-tool/",
+        "definition"
+      ],
+      [
+        "https://www.yourtango.com/self/what-is-shufflemancy-how-to-use-divination-playlist",
+        "mechanism, origin"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Low stakes; lifestyle-press sources only.",
+    "id": "shufflemancy"
+  },
+  {
+    "term": "Sigil",
+    "kind": "new",
+    "draft": "**Sigil**: a symbol charged with a specific intent or meaning. In older grimoires such as the *Goetia*, sigils are the seals of individual spirits, used to identify and call on them; the artist and occultist Austin Osman Spare popularized a different method, condensing a written statement of intent into an abstract glyph, which chaos magick later adopted.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Sigil",
+        "grimoire and Spare senses"
+      ],
+      [
+        "https://hermetic.com/chaos/austin-osman-spare-and-his-theory-of-sigils",
+        "Spare's method"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "sigil"
+  },
+  {
+    "term": "SPG",
+    "kind": "new",
+    "draft": "**SPG**: Shared Personal Gnosis, a spiritual insight (see UPG) that several people report having received independently. Many polytheists give SPG more weight than one person's UPG, though it still isn't the same as knowledge backed by historical sources.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Unverified_personal_gnosis",
+        "UPG and related terms"
+      ],
+      [
+        "https://wildhunt.org/2019/03/column-in-defense-of-unverified-personal-gnosis.html",
+        "community usage"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "The researcher equated SPG with PVPG (peer-verified personal gnosis). They are related but not identical, so I dropped that equation.",
+    "id": "spg"
+  },
+  {
+    "term": "Stregheria",
+    "kind": "new",
+    "draft": "**Stregheria**: a modern Italian-inspired witchcraft tradition popularized by the American author Raven Grimassi from the 1980s, drawing on Charles Leland's *Aradia* (1899) and Italian folklore. Grimassi presented it as a surviving ancient religion, but scholars find no evidence of that and regard it as a modern revival related to Wicca. It is distinct from *stregoneria*, the everyday Italian word for witchcraft or sorcery.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Stregheria",
+        "Grimassi, Magliocco's and Doyle White's views"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Raven_Grimassi",
+        "biography"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Not closed.",
+    "id": "stregheria"
+  },
+  {
+    "term": "Tantric vampirism",
+    "kind": "new",
+    "draft": "**Tantric vampirism**: in the real vampire community, a form of psychic vampirism that draws on sexual or romantic energy, ideally as a mutual exchange with a partner. It borrows the word \"Tantric\" loosely and has no connection to historical Hindu or Buddhist Tantra; the term is thinly documented outside a few community sources.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Vampyre_Sanguinomicon:_The_Lexicon_of_the_Living_Vampire",
+        "community typology"
+      ],
+      [
+        "https://tantricvampirism.blogspot.com/p/about.html",
+        "community definition"
+      ]
+    ],
+    "confidence": "low",
+    "notes": "Thin, as you suspected. You may want to drop it or fold it into Psychic vampirism.",
+    "id": "tantric-vampirism"
+  },
+  {
+    "term": "Tarot",
+    "kind": "new",
+    "draft": "**Tarot**: a deck of cards created in 15th-century Italy for a card game (*tarocchi*), with no occult meaning at first. Divinatory and occult use began in 18th-century France, when Antoine Court de Gébelin wrongly claimed the cards held ancient Egyptian wisdom and Jean-Baptiste Alliette (\"Etteilla\") published a deck and system for fortune-telling.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Tarot_card_reading",
+        "Italian origin, 18th-century shift"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Etteilla",
+        "Etteilla's divination deck"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "tarot"
+  },
+  {
+    "term": "Tasseomancy",
+    "kind": "new",
+    "draft": "**Tasseomancy** (tasseography): divination by reading the patterns of tea leaves, coffee grounds or wine sediment. Its origins are uncertain; it spread in Europe after tea arrived in the 17th century and was especially popular in Victorian Britain.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Tasseography",
+        "etymology, European history"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "I removed the researcher's \"better documented in Persia\" claim because it came from a Medium post.",
+    "id": "tasseomancy"
+  },
+  {
+    "term": "Thelema",
+    "kind": "new",
+    "draft": "**Thelema**: a religious and philosophical system founded by Aleister Crowley, who said *The Book of the Law* was dictated to him by an entity called Aiwass in Cairo in 1904. Its central maxims are \"Do what thou wilt shall be the whole of the Law\" and \"Love is the law, love under will\", which Thelemites understand as finding and following one's true Will, not as permission for whim.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/Thelema",
+        "founding"
+      ],
+      [
+        "https://www.britannica.com/topic/The-Book-of-the-Law",
+        "Book of the Law, 1904"
+      ],
+      [
+        "http://www.thelemapedia.org/index.php/The_Book_of_the_Law",
+        "Thelemic account"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "thelema"
+  },
+  {
+    "term": "Thoughtform",
+    "kind": "new",
+    "draft": "**Thoughtform**: a mental construct that practitioners believe can gain some independent existence through focused will or emotion. A servitor is a thoughtform made by one person for a narrow task, while an egregore arises from a group; how autonomous a thoughtform can become is a matter of belief.",
+    "sources": [
+      [
+        "https://thalira.com/blogs/quantum-codex/thoughtform-egregore-creation",
+        "servitor, thoughtform and egregore distinctions"
+      ]
+    ],
+    "confidence": "low-medium",
+    "notes": "Practitioner lore, one source. Annie Besant and C.W. Leadbeater's *Thought-Forms* (1901) is the classic Theosophical text if you want an older anchor.",
+    "id": "thoughtform"
+  },
+  {
+    "term": "Tulpamancy",
+    "kind": "new",
+    "draft": "**Tulpamancy**: the practice of creating a tulpa, a persistent inner companion formed through sustained visualization and attention, which practitioners experience as having its own thoughts and voice. The name borrows loosely from a Tibetan Buddhist term via Alexandra David-Néel's 1920s writing, but the modern practice grew in online communities in the 2010s and has been studied by the anthropologist Samuel Veissière.",
+    "sources": [
+      [
+        "https://www.researchgate.net/publication/278671032",
+        "Veissière, Varieties of Tulpa Experiences"
+      ],
+      [
+        "https://savageminds.org/2016/02/13/",
+        "anthropological view of the borrowing"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "Whether the borrowed name is appropriation is debated inside the community itself. I shortened the researcher's draft.",
+    "id": "tulpamancy"
+  },
+  {
+    "term": "UPG",
+    "kind": "new",
+    "draft": "**UPG**: Unverified Personal Gnosis, a term from modern polytheist and pagan communities for a personal spiritual insight about a deity, spirit or practice that comes from experience, intuition or divination rather than historical sources. The term seems to have begun in Heathen reconstructionist circles, and how much weight to give UPG remains debated.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Unverified_personal_gnosis",
+        "definition, origin"
+      ],
+      [
+        "https://wildhunt.org/2019/03/column-in-defense-of-unverified-personal-gnosis.html",
+        "community debate"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "The Eldritch, Void and SPG entries refer to UPG.",
+    "id": "upg"
+  },
+  {
+    "term": "Vodou",
+    "kind": "new",
+    "draft": "**Vodou**: a Haitian religion rooted in West African Vodún, blended with Catholicism, that serves the lwa (spirits) through community ritual. Related traditions are spelled differently: Vodún for the West African religion and Voodoo for the Louisiana tradition, which is also the pop-culture spelling many consider inaccurate for Haitian Vodou. Vodou is initiatory: its inner teachings are passed on through initiation (kanzo) under initiated clergy.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/West_African_Vod%C3%BAn",
+        "Vodún"
+      ],
+      [
+        "https://louisianavoodoo.com/voodoo-or-vodou",
+        "spelling distinctions"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/History_of_Haitian_Vodou",
+        "kanzo initiation"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "YOUR DECISION: the placeholder spelled it \"Voudou\", which doesn't match any of the three traditions. I assumed you meant the Haitian religion and renamed it Vodou.",
+    "id": "vodou"
+  },
+  {
+    "term": "Void",
+    "kind": "new",
+    "draft": "**Void**: in some modern occult and witchcraft practice, the formless state that all things, energy included, are said to come from and return to; some practitioners work with it in meditation or shadow work as a force that both creates and destroys. There is no agreed definition, and its meaning varies between traditions and individuals.",
+    "sources": [
+      [
+        "https://naturalisticpaganism.org/2016/02/26/the-void-wicca-becoming-atheopagan-by-pat-mosley/",
+        "practitioner discussion"
+      ],
+      [
+        "https://sidneyeileen.com/2020/06/30/contemplations-of-the-void/",
+        "\"comes from and returns to\" framing"
+      ]
+    ],
+    "confidence": "low",
+    "notes": "Community belief, blog sources only. Make it consistent with your Eldritch entry, which describes Void energy.",
+    "id": "void"
+  },
+  {
+    "term": "Ward",
+    "kind": "new",
+    "draft": "**Ward**: a protective spell, symbol or magical barrier meant to guard a person, object or space against unwanted energy, entities or influence. Wards can be temporary, like a circle taken down after ritual, or long-lasting, like one placed on a home; they continue older apotropaic (evil-averting) folk magic found in many cultures.",
+    "sources": [
+      [
+        "http://witchipedia.wikidot.com/def:ward",
+        "definition"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Apotropaic_magic",
+        "cross-cultural history"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Related to Shield.",
+    "id": "ward"
+  },
+  {
+    "term": "Wicca",
+    "kind": "existing",
+    "existing": "**Wicca**: a form of modern paganism, especially a tradition founded in England in the mid 20th century and claiming its origins in pre-Christian religions.",
+    "issues": "Already hedged; it could name Gardner and the scholarly view.",
+    "draft": "**Wicca**: a modern Pagan religion that emerged publicly in England in the 1950s, largely through Gerald Gardner. It draws on pre-Christian and folk-magic themes; historians such as Ronald Hutton regard it as a 20th-century new religious movement rather than a survival of an ancient religion, though some practitioners hold to the survival story.",
+    "sources": [
+      [
+        "https://en.wikipedia.org/wiki/Wicca",
+        "Gardner, 1950s"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/The_Triumph_of_the_Moon",
+        "Hutton's history"
+      ]
+    ],
+    "confidence": "high",
+    "notes": "",
+    "id": "wicca"
+  },
+  {
+    "term": "Witchcraft",
+    "kind": "existing",
+    "existing": "**Witchcraft**: (in a modern context) a practice involving magic and affinity with nature, usually within a pagan tradition.",
+    "issues": "Too narrow: modern witchcraft includes secular and non-pagan practice.",
+    "draft": "**Witchcraft**: broadly, the use of magic to influence people or events. Historically the word named alleged harmful magic, as in the European witch trials; in modern, reclaimed use it covers a wide range of practices, many pagan or nature-focused and some entirely secular.",
+    "sources": [
+      [
+        "https://www.britannica.com/topic/witchcraft",
+        "historical and modern senses"
+      ]
+    ],
+    "confidence": "medium-high",
+    "notes": "One source. The witch-trial sentence is heavier in tone than other entries.",
+    "id": "witchcraft"
+  }
+]
