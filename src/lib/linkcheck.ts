@@ -39,11 +39,16 @@ export function findBrokenLinks(pages: BuiltPage[], files: Set<string>): string[
   const broken: string[] = [];
   for (const page of pages) {
     for (const link of new Set(internalLinks(page.html))) {
-      const [rawPath, fragment] = link.split('#', 2);
+      // Everything after the first "#" is the fragment, even if it holds another "#".
+      const hash = link.indexOf('#');
+      const rawPath = hash === -1 ? link : link.slice(0, hash);
+      const fragment = hash === -1 ? '' : link.slice(hash + 1);
       const path = rawPath === '' ? page.path : rawPath.split('?')[0];
       const ids = idsByPage.get(path);
       if (!ids && !files.has(path)) {
         broken.push(`${page.path}: ${link} (no such page or file)`);
+      } else if (fragment && !ids) {
+        broken.push(`${page.path}: ${link} (an #anchor on a file, which has no ids)`);
       } else if (fragment && !ids?.has(decode(fragment))) {
         broken.push(`${page.path}: ${link} (no element with id "${fragment}")`);
       }

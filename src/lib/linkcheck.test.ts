@@ -68,4 +68,16 @@ describe('findBrokenLinks', () => {
     const fake = [{ path: '/a/', html: '<a href="#x">x</a><div data-id="x"></div>' }];
     expect(findBrokenLinks(fake, files)).toEqual(['/a/: #x (no element with id "x")']);
   });
+
+  it('keeps a second "#" as part of the fragment', () => {
+    const page = [{ path: '/a/', html: '<a href="#a#b">x</a><div id="a#b"></div>' }];
+    expect(findBrokenLinks(page, files)).toEqual([]);
+  });
+
+  it('says so plainly when an anchor points into a file', () => {
+    const page = [{ path: '/a/', html: '<a href="/og-card.png#top">x</a>' }];
+    expect(findBrokenLinks(page, files)).toEqual([
+      '/a/: /og-card.png#top (an #anchor on a file, which has no ids)',
+    ]);
+  });
 });
