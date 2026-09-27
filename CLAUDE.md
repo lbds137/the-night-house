@@ -94,7 +94,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ### Directory Structure
 
 ```
-├── public/             # Served as-is: CNAME, favicons, logo, legacy emoji/fonts
+├── public/             # Served as-is: CNAME, favicons, logo
 ├── src/
 │   ├── content/        # Page text (Markdown, rendered by src/lib/markdown.ts)
 │   ├── data/roles/     # categories.yaml, nodes.yaml
@@ -157,8 +157,6 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 - **Content**: Expand glossary definitions; add the Resources nav group once its pages have content
 - **404 Page**: Create custom error page
 - **Performance**: `public/assets/img/logo.png` is a 1700px, 556 KB PNG shown at ≤136px
-- **Unreferenced assets**: `public/assets/img/emoji/` (5.3 MB) and `public/assets/fonts/`
-  (Whitney, Discord's proprietary font) aren't used by any page; keep or remove is the owner's call
 - Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines
