@@ -1,0 +1,61 @@
+---
+import { MAIN_NAV, isNavGroup, type NavLink } from '../lib/site';
+
+const current = Astro.url.pathname;
+const isCurrent = (link: NavLink) => !link.external && link.href === current;
+---
+
+<nav class="site-nav" aria-label="Main">
+  {
+    MAIN_NAV.map((item) =>
+      isNavGroup(item) ? (
+        <details class="nav-group">
+          <summary class:list={['nav-item', { active: item.children.some(isCurrent) }]}>
+            {item.title}
+          </summary>
+          <div class="nav-menu">
+            {item.children.map((child) => (
+              <a
+                href={child.href}
+                class:list={['nav-menu-item', { active: isCurrent(child) }]}
+                aria-current={isCurrent(child) ? 'page' : undefined}
+              >
+                {child.title}
+              </a>
+            ))}
+          </div>
+        </details>
+      ) : (
+        <a
+          href={item.href}
+          class:list={['nav-item', { active: isCurrent(item) }]}
+          aria-current={isCurrent(item) ? 'page' : undefined}
+          target={item.external ? '_blank' : undefined}
+          rel={item.external ? 'noopener' : undefined}
+        >
+          {item.title}
+        </a>
+      ),
+    )
+  }
+</nav>
+
+<script>
+  // Dropdowns close on an outside click or Escape, like a menu rather than a disclosure.
+  const groups = [...document.querySelectorAll<HTMLDetailsElement>('.nav-group')];
+
+  document.addEventListener('click', (event) => {
+    for (const group of groups) {
+      if (group.open && !group.contains(event.target as Node)) group.open = false;
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    for (const group of groups) {
+      if (!group.open) continue;
+      group.open = false;
+      group.querySelector('summary')?.focus();
+    }
+  });
+</script>
