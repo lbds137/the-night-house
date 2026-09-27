@@ -6,7 +6,7 @@
 
 **ATR**: short for African Traditional Religions, an umbrella term for the indigenous religious traditions of Africa and, by extension, the religions of the African diaspora (such as Vodou and Lucumí), as distinct from Islam and Christianity in Africa. Many of these traditions are initiatory: they are learned through a lineage, community and elders rather than self-taught.
 
-**Bibliomancy**: divination by opening a book, often a sacred or meaningful one, at random and reading the passage that appears as an answer or omen. Stichomancy, divination from a single line or verse chosen this way, is a closely related, narrower term.
+**Bibliomancy**: divination by opening a book, often a sacred or meaningful one, at random and reading the passage that appears as an answer or omen. Stichomancy, divination from a single line or verse chosen this way, is a related term; some sources use it as a strict synonym for bibliomancy, others treat it as a narrower technique focused on one line rather than a whole passage.
 
 **Chaldean**: most often refers to Chaldean numerology, a system that assigns numbers to letters by their sound and that practitioners trace back to ancient Babylon. It can also mean the Chaldean Oracles, fragmentary Greek mystical verses from around the 2nd century CE that shaped Neoplatonist philosophy and were revived by 19th-century occultists such as the Golden Dawn.
 
@@ -19,7 +19,7 @@
 * **Clairsentience** ("clear feeling"), sensing emotions, energy or physical sensations that aren't one's own;
 * **Clairaudience** ("clear hearing"), perceiving words or sounds that aren't physically audible.
 
-**Current**: a stream of magical practice, symbolism and energy that a tradition works with and passes on, such as the Draconian or Typhonian current associated with Kenneth Grant's Typhonian Order. Traditions describe currents differently, but practitioners generally hold that working within one connects them to its accumulated body of work.
+**Current**: a stream of magical or esoteric practice, symbolism and energy that a tradition works with and passes on. The term is used both by practitioners and by scholars of Western esotericism (e.g. speaking of alchemy as a "current"); Kenneth Grant's Typhonian Order and Thomas Karlsson's Dragon Rouge both describe their own tradition as the "Draconian current." Traditions describe currents differently, but practitioners generally hold that working within one connects them to its accumulated body of work.
 
 **Death work**: spiritual or magical practice centered on death and the dead, such as honoring ancestors, tending graves, guiding spirits of the dead (psychopomp work) or using mortality as a touchstone for one's philosophy. It can also include grief ritual and necromancy.
 
@@ -31,7 +31,7 @@
 
 **Dowsing**: a form of divination that uses rods or a pendulum to search for water, metals, lost objects and similar things. Controlled tests have found it no more accurate than chance, and researchers attribute the rods' movement to the ideomotor effect; practitioners generally describe it as an intuitive skill.
 
-**Egregore**: in occultism, a non-physical entity said to arise from the shared thoughts, beliefs or energy of a group. The occult concept is associated with the 19th-century occultist Éliphas Lévi, and practitioners describe egregores as able to become autonomous or even sentient.
+**Egregore**: in occultism, a non-physical entity said to arise from the shared thoughts, beliefs or energy of a group. The word comes from the Greek for "watcher" (as in the Book of Enoch's fallen Watchers); the occultist Éliphas Lévi used it in this sense in his 1868 *Le Grand Arcane*, and practitioners describe egregores as able to become autonomous or even sentient.
 
 **Eldritch**: an old Scots and English word, in use since around 1500, meaning weird, uncanny or otherworldly, which H.P. Lovecraft's fiction made famous for describing incomprehensible cosmic horrors. In some occult communities, including ours, it also names a kind of consuming, expanding energy similar to Void energy; that sense is practitioner usage, not something found in Lovecraft or older occult literature.
 
@@ -47,11 +47,11 @@
 
 **Hellenism**: also called Hellenismos or Hellenic polytheism, a modern religion that worships the ancient Greek gods and reconstructs their rituals and festivals from surviving texts and archaeology. Most Hellenists emphasize correct practice over shared belief, and many practice alone or in small local groups.
 
-**Hermeticism**: a philosophical and spiritual tradition based on writings attributed to Hermes Trismegistus, a legendary figure blending the Greek god Hermes and the Egyptian god Thoth. The texts date from Greco-Roman Egypt in late antiquity; their idea of correspondences between the small and the great ("as above, so below") shaped Renaissance thought and modern Western occultism.
+**Hermeticism**: a philosophical and spiritual tradition based on writings attributed to Hermes Trismegistus, a legendary figure blending the Greek god Hermes and the Egyptian god Thoth. The core texts (the Corpus Hermeticum) date from Greco-Roman Egypt in late antiquity; the "as above, so below" line comes from the Emerald Tablet, a separate, later text only translated into Latin (from Arabic) in the 12th century. Its idea of correspondence between the small and the great shaped Renaissance thought and modern Western occultism.
 
 **Hoodoo**: an African American folk magic tradition, also called rootwork or conjure, that blends West and Central African practices with Christian and other influences, including herbal work, ancestor veneration and protective charms. Many practitioners consider it a closed practice rooted in Black American history and lineage, and ask outsiders to learn about it respectfully rather than adopt it.
 
-**Horsing**: spirit possession as described in Haitian Vodou and related traditions, where a spirit (lwa) is said to "mount" or "ride" a person, called its horse (chwal). Within those traditions it is a sacred event that happens in ceremony, so the term belongs to that context.
+**Horsing**: spirit possession as described in Haitian Vodou and related Afro-diasporic traditions, where a spirit (lwa or other) is said to "mount" or "ride" a person, called its horse (chwal in Haitian Creole). Within those traditions it is a sacred event that happens in ceremony. Some modern Pagan and polytheist practitioners have also adopted "horse"/"horsing" for deity possession outside those traditions, a borrowing not everyone in the traditions of origin welcomes.
 
 **Hydromancy**: divination by water, reading ripples, reflections, currents or the color of a liquid in a bowl or pool. It is an ancient method described in classical sources, and variants have their own names, such as pegomancy (divination by springs).
 
@@ -93,7 +93,7 @@
 
 **Sanguinarian vampirism**: within the real vampire community, the experience of needing to take small amounts of blood, from willing donors, to feel physically or mentally well; it contrasts with psychic vampirism, which draws energy instead. The community treats it as an identity rather than a supernatural claim, and its organizations stress donor consent, testing for bloodborne diseases and sterile technique.
 
-**Santería**: an Afro-Cuban religion, also called Lucumí or Regla de Ocha, that grew from the Yoruba traditions of enslaved West Africans blended with Catholicism and Spiritism, and centers on the orishas. It is initiatory: it is learned through a house and its elders, not from books alone. Many practitioners prefer Lucumí or Regla de Ocha, since "Santería" began as an outsider's label.
+**Santería**: an Afro-Cuban religion, also called Lucumí or Regla de Ocha, that grew from the Yoruba traditions of enslaved West Africans blended with Catholicism and Spiritism, and centers on the orishas. It is initiatory: it is learned through a house and its elders, not from books alone. Many practitioners prefer Lucumí or Regla de Ocha; some scholars (e.g. Miguel De La Torre) describe "Santería" as a derogatory name imposed by white Cuban Catholic clergy to distance the religion from Christianity, though other sources treat it as a neutral name.
 
 **Satan**: in the Hebrew Bible, *ha-satan* ("the adversary" or "the accuser") is a title for a member of God's heavenly court, not an independent evil power, as in the Book of Job. Christianity later developed the figure into the Devil, a fallen angel opposed to God. Modern Satanists read Satan in yet other ways, often as a symbol of pride, rebellion or liberation.
 
@@ -111,7 +111,7 @@
 
 **Stregheria**: a modern Italian-inspired witchcraft tradition popularized by the American author Raven Grimassi from the 1980s, drawing on Charles Leland's *Aradia* (1899) and Italian folklore. Grimassi presented it as a surviving ancient religion, but scholars find no evidence of that and regard it as a modern revival related to Wicca. It is distinct from *stregoneria*, the everyday Italian word for witchcraft or sorcery.
 
-**Tantric vampirism**: in the real vampire community, a form of psychic vampirism that draws on sexual or romantic energy, ideally as a mutual exchange with a partner. It borrows the word "Tantric" loosely and has no connection to historical Hindu or Buddhist Tantra; the term is thinly documented outside a few community sources.
+**Tantric vampirism**: in the real vampire community, a form of psychic vampirism that draws on sexual or romantic energy, ideally as a mutual exchange with a partner. Michelle Belanger's influential *Psychic Vampire Codex* names this a "Tantric Exchange," centered on the root chakra; it borrows the word "Tantric" loosely and has no connection to historical Hindu or Buddhist Tantra, and it remains documented mainly within community and vampire-studies literature rather than independent scholarship.
 
 **Tarot**: a deck of cards created in 15th-century Italy for a card game (*tarocchi*), with no occult meaning at first. Divinatory and occult use began in 18th-century France, when Antoine Court de Gébelin wrongly claimed the cards held ancient Egyptian wisdom and Jean-Baptiste Alliette ("Etteilla") published a deck and system for fortune-telling.
 
@@ -129,7 +129,7 @@
 
 **Void**: in some modern occult and witchcraft practice, the formless state that all things, energy included, are said to come from and return to; some practitioners work with it in meditation or shadow work as a force that both creates and destroys. There is no agreed definition, and its meaning varies between traditions and individuals.
 
-**Ward**: a protective spell, symbol or magical barrier meant to guard a person, object or space against unwanted energy, entities or influence. Wards can be temporary, like a circle taken down after ritual, or long-lasting, like one placed on a home; they continue older apotropaic (evil-averting) folk magic found in many cultures.
+**Ward**: most often, a protective spell, symbol or magical barrier placed on a location — a home, room or temple — to guard it against unwanted energy, entities or influence; some practitioners reserve the word specifically for this location-bound magic and use "amulet" or "charm" for protecting a person or object instead, though everyday usage often blurs the line. Wards can be temporary, like a circle taken down after ritual, or long-lasting, like one placed on a home; they continue older apotropaic (evil-averting) folk magic found in many cultures.
 
 **Wicca**: a modern Pagan religion that emerged publicly in England in the 1950s, largely through Gerald Gardner. It draws on pre-Christian and folk-magic themes; historians such as Ronald Hutton regard it as a 20th-century new religious movement rather than a survival of an ancient religion, though some practitioners hold to the survival story.
 
