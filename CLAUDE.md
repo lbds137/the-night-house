@@ -129,7 +129,11 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 - **Collapsible Sections**: role categories are native `<details>`; `/roles/#anchor` opens one
 - **Glossary navigation**: sticky A–Z bar and a filter box (hidden without JS); every entry is
   linkable at `/glossary/#<slug>` (slug = the entry's id in `docs/glossary-sources.json`).
-  `src/lib/glossary.ts` parses the page; entries must stay alphabetical (tested)
+  `src/lib/glossary.ts` parses the page; entries must stay alphabetical (tested). In an entry,
+  "(see X)" / "(compare X)" becomes a link to entry X, and must name a real entry or the build
+  fails (`src/lib/permalinks.ts`)
+- **Permalinks**: glossary entries and rules (`/rules/#rule-N`) carry a "#" link;
+  `PermalinkCopier.astro` also copies its URL on click. Rules must stay one flat list
 - **Navigation**: nested "Community" dropdown (from the old `experimental` branch)
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 

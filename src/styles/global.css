@@ -304,15 +304,12 @@ main {
 .rules li {
   margin-bottom: 1rem;
   padding-left: 0.25rem;
+  scroll-margin-top: 1rem;
 }
 
 .rules li::marker {
   color: var(--accent-strong);
   font-weight: 800;
-}
-
-.rules li {
-  scroll-margin-top: 1rem;
 }
 
 .rules li:target {
