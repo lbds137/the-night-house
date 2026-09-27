@@ -136,6 +136,10 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   `PermalinkCopier.astro` also copies its URL on click. Rules must stay one flat list
 - **Navigation**: nested "Community" dropdown (from the old `experimental` branch)
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
+- **Build-time link check**: `src/integrations/check-links.ts` fails `astro build` when a built
+  page links to a page, file or `#anchor` that doesn't exist (`src/lib/linkcheck.ts`)
+- **Invite check**: `.github/workflows/invite-check.yml` checks `DISCORD_INVITE_CODE` weekly
+  and opens an issue if Discord says the invite is gone (404)
 
 ## Code Style
 
@@ -150,7 +154,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 - **Node.js** >= 22.12 and **pnpm** 10 (`packageManager` pin); `pnpm build` = `astro check && vitest run && astro build`
 - **astro**, **marked**, **marked-smartypants**, **yaml**, **sharp** (astro:assets needs it as a
   direct dependency under pnpm, or the image step fails with MissingSharp); dev: **@astrojs/check**, **typescript** 6,
-  **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`)
+  **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`),
+  **@types/node** 24 (for the Node-side integration in `src/integrations/`)
   (`astro check` doesn't support TypeScript 7 yet)
 
 ## Known Issues and Patterns

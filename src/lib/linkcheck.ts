@@ -1,0 +1,52 @@
+/** A built page: its site path ("/glossary/") and HTML. */
+export interface BuiltPage {
+  path: string;
+  html: string;
+}
+
+const LINK = /\b(href|src|srcset)="([^"]*)"/g;
+const ID = /\bid="([^"]+)"/g;
+
+const srcsetUrls = (value: string) => value.split(',').map((c) => c.trim().split(/\s+/)[0]);
+
+/** Site-internal URLs in a page: `/...` paths and `#anchors`, from href, src and srcset. */
+export function internalLinks(html: string): string[] {
+  const links: string[] = [];
+  for (const [, attribute, value] of html.matchAll(LINK)) {
+    const urls = attribute === 'srcset' ? srcsetUrls(value) : [value];
+    links.push(...urls.filter((url) => /^[/#]/.test(url) && !url.startsWith('//')));
+  }
+  return links;
+}
+
+const decode = (fragment: string) => {
+  try {
+    return decodeURIComponent(fragment);
+  } catch {
+    return fragment;
+  }
+};
+
+/**
+ * Internal links that lead nowhere: a page or file that wasn't built, or an `#anchor` that no
+ * element on the target page has as its id. `files` holds every other built file's path.
+ */
+export function findBrokenLinks(pages: BuiltPage[], files: Set<string>): string[] {
+  const idsByPage = new Map(
+    pages.map((page) => [page.path, new Set([...page.html.matchAll(ID)].map((m) => m[1]))]),
+  );
+  const broken: string[] = [];
+  for (const page of pages) {
+    for (const link of new Set(internalLinks(page.html))) {
+      const [rawPath, fragment] = link.split('#', 2);
+      const path = rawPath === '' ? page.path : rawPath.split('?')[0];
+      const ids = idsByPage.get(path);
+      if (!ids && !files.has(path)) {
+        broken.push(`${page.path}: ${link} (no such page or file)`);
+      } else if (fragment && !ids?.has(decode(fragment))) {
+        broken.push(`${page.path}: ${link} (no element with id "${fragment}")`);
+      }
+    }
+  }
+  return broken;
+}
