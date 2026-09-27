@@ -152,7 +152,7 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   not one by one, and tickets generically, so a bot change only touches a line
 - **Commands** (`/commands/`, `src/data/commands.yaml`): the member-facing YAGPDB custom
   commands (Lila's scope: no staff tools, no internal services like embed_exec or db), each
-  linkable at `/commands/#<name>`. Source: lbds137/yagpdb-custom-commands `everyone/`; the
+  linkable at `/commands/#<name>`. Source: lbds137/yagpdb-custom-commands `commands/`; the
   YAGPDB session messages this one when a member command changes. `src/lib/commands.ts`
   fails the build on a duplicate anchor or a usage line that doesn't start with `/<name>`
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
