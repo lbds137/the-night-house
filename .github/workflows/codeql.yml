@@ -7,6 +7,8 @@ on:
     branches: [main]
   schedule:
     - cron: '0 12 * * 0'
+  # The review workflow's automerge dispatches this after merging (its push starts nothing).
+  workflow_dispatch:
 
 permissions:
   contents: read
