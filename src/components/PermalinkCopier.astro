@@ -1,0 +1,27 @@
+---
+// Clicking a "#" permalink jumps to it as usual and also copies its full URL, for pasting into
+// Discord. Without JavaScript, or without clipboard access, the link still just jumps.
+---
+
+<p class="permalink-status" id="permalink-status" role="status" hidden></p>
+
+<script>
+  const status = document.getElementById('permalink-status')!;
+  let hideTimer: ReturnType<typeof setTimeout> | undefined;
+
+  document.addEventListener('click', (event) => {
+    const link = (event.target as Element).closest<HTMLAnchorElement>('a.permalink');
+    if (!link || !navigator.clipboard) return;
+    navigator.clipboard.writeText(link.href).then(
+      () => {
+        status.textContent = 'Link copied';
+        status.hidden = false;
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => (status.hidden = true), 2000);
+      },
+      () => {
+        // Clipboard permission denied: the jump already happened, which is enough.
+      },
+    );
+  });
+</script>
