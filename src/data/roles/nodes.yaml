@@ -408,42 +408,42 @@
   name: "Platinum Tier | רמת פלטינה"
   id: "701425124728897676"
   color: "4682b4"
-  text: "This is a role that is automatically assigned via bot to users who have sent over 1000 messages within the activity monitoring period (currently 30 days)."
+  text: "This is a role that is automatically assigned via bot to users who have sent over 1000 messages within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
   name: "Gold Tier | רמת זהב"
   id: "701425091078127658"
   color: "ffd700"
-  text: "This is a role that is automatically assigned via bot to users who have sent between 500 and 1000 messages within the activity monitoring period (currently 30 days)."
+  text: "This is a role that is automatically assigned via bot to users who have sent between 500 and 1000 messages within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
   name: "Silver Tier | רמת כסף"
   id: "701425053425860718"
   color: "c0c0c0"
-  text: "This is a role that is automatically assigned via bot to users who have sent between 100 and 500 messages within the activity monitoring period (currently 30 days)."
+  text: "This is a role that is automatically assigned via bot to users who have sent between 100 and 500 messages within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
   name: "Bronze Tier | רמת ארד"
   id: "701424988992962580"
   color: "a0522d"
-  text: "This is a role that is automatically assigned via bot to users who have sent between 50 and 100 messages within the activity monitoring period (currently 30 days)."
+  text: "This is a role that is automatically assigned via bot to users who have sent between 50 and 100 messages within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
   name: "Active | פעיל"
   id: "624676327135641620"
   color: "228b22"
-  text: "This is a role that is automatically assigned via bot to users who have sent at least one message within the activity monitoring period (currently 30 days)."
+  text: "This is a role that is automatically assigned via bot to users who have sent at least one message within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
   name: "Inactive | לא פעיל"
   id: "624676376058003483"
   color: "8b0000"
-  text: "This is a role that is automatically assigned via bot to users who have ***not*** sent at least one message within the activity monitoring period (currently 30 days). Users with this role will be ***pruned*** regularly (currently at every equinox and solstice during a calendar year)."
+  text: "This is a role that is automatically assigned via bot to users who have ***not*** sent at least 30 messages ***or*** spent at least 15 minutes in voice chat within each 90-day activity season. Users with this role will be ***pruned*** regularly (currently at every equinox and solstice during a calendar year)."
 # ---
 # notification
 # ---
