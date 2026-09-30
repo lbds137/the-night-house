@@ -436,7 +436,7 @@
   name: "Active | פעיל"
   id: "624676327135641620"
   color: "228b22"
-  text: "This is a role that is automatically assigned via bot to users who have sent at least one message within each 90-day activity season."
+  text: "This is a role that is automatically assigned via bot to users who have sent at least 30 messages ***or*** spent at least 15 minutes in voice chat within each 90-day activity season."
 -
   type: "role"
   category_id: "activity"
