@@ -73,12 +73,15 @@ ticket.
 
 ## Activity and the prune
 
-A bot tracks who has sent at least one message in the last 30 days. Members who haven't get
-the !r!624676376058003483!r! role, and inactive members are currently pruned from the server
-at every equinox and solstice. A prune is a kick, not a ban, so you can join again.
+StatBot tracks activity over each 90-day season. You count as active if you've sent at
+least 30 messages (bot-channel posts don't count) or spent 15 minutes in voice (time spent
+AFK, muted or deafened doesn't count). Members who stay inactive get the
+!r!624676376058003483!r! role, and inactive members are currently pruned from the server at
+every equinox and solstice. A prune is a kick, not a ban, so you can join again.
 
 You're safe from the prune while you have the Neophyte role, and so are Nitro boosters and
-server partners. The server's owner can also grant !r!856522408394752060!r!, at their
+server partners. New members get the Neophyte protection automatically, for their first 90
+days after joining. The server's owner can also grant !r!856522408394752060!r!, at their
 discretion, as an amnesty for someone who has shown recent signs of life.
 
 ## About the name
