@@ -66,7 +66,10 @@ describe('toDiscord', () => {
 
   it('refuses a channel without an id and tokens it cannot convert', () => {
     expect(() => toDiscord('!c!nowhere!c!', channels)).toThrow('channel "nowhere"');
-    expect(() => toDiscord('!r!123!r!', channels)).toThrow('token !r!123!r!');
+    expect(() => toDiscord('!r!123!r!', channels)).toThrow('token !r!');
+    // A lone marker (no closing !r!) escapes the pair-shaped token regex; it must still fail.
+    expect(() => toDiscord('!r!123 no closer', channels)).toThrow('token !r!');
+    expect(() => toDiscord('!c!constructor!c!', channels)).toThrow('channel "constructor"');
   });
 });
 

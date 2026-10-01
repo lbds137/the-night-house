@@ -17,7 +17,9 @@ export function parseChannelIds(parsed: unknown): ChannelIds {
       throw new Error(`discord-channels.yaml: ${name} needs a quoted numeric id, got ${id}`);
     }
   }
-  return parsed as ChannelIds;
+  // Null prototype, so a pill named like an Object.prototype member (constructor, toString)
+  // can't pose as a channel in a `channels[name]` lookup.
+  return Object.assign(Object.create(null), parsed) as ChannelIds;
 }
 
 // Each rule is one line of rules.md's single ordered list, numbered 1, 2, 3… in order. The list
@@ -50,7 +52,9 @@ export function toDiscord(text: string, channels: ChannelIds): string {
     if (!id) throw new Error(`No Discord id for channel "${name}" in discord-channels.yaml`);
     return `<#${id}>`;
   });
-  const leftover = converted.match(/!r!.*?!r!|!c!/);
+  // Any surviving marker is an unclosed or unconvertible token: valid tokens were consumed
+  // above with both markers included, so even a lone `!r!` must fail.
+  const leftover = converted.match(/!c!|!r!/);
   if (leftover) throw new Error(`No Discord form for the token ${leftover[0]}`);
   return converted;
 }
