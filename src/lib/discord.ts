@@ -1,11 +1,13 @@
-// Turns the site's rules into the bot's copy (YAGPDB's `Rules` entry, set by `/rule_edit`).
-// Only relative `.ts` imports, so `node scripts/discord-rules.ts` can load it without Vite.
+// Turns the site's rules into the bot's copy (YAGPDB's `Rules` entry, set through the
+// `/edit rule` modal). Only relative `.ts` imports, so `node scripts/discord-rules.ts` can
+// load it without Vite.
 import { stripComments } from './comments.ts';
 
 export type ChannelIds = Record<string, string>;
 
-// Discord's message limit for accounts without Nitro; the whole `/rule_edit` line must fit.
-export const MESSAGE_LIMIT = 2000;
+// Discord caps a modal text-input field at 4000 characters; staff paste each rule's text
+// into the `/edit rule` modal's one field.
+export const MODAL_LIMIT = 4000;
 
 export function parseChannelIds(parsed: unknown): ChannelIds {
   if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
@@ -45,7 +47,8 @@ export function parseRules(markdown: string): string[] {
   return rules;
 }
 
-// Site tokens → Discord syntax: `!c!name!c!` becomes a channel mention `<#id>`.
+// Site tokens → Discord syntax: `!c!name!c!` becomes a channel mention `<#id>`. There is no bot
+// form for `!r!` role pills — the Rules copy holds no role ids — so any `!r!` fails below.
 export function toDiscord(text: string, channels: ChannelIds): string {
   const converted = text.replace(/!c!(.+?)!c!/g, (_, name: string) => {
     const id = channels[name];
@@ -59,21 +62,12 @@ export function toDiscord(text: string, channels: ChannelIds): string {
   return converted;
 }
 
-// YAGPDB splits a command on single spaces, eats `\` as an escape and groups words in `"` or
-// `` ` ``, then rejoins the last argument with single spaces. Text free of those characters and of
-// doubled spaces comes through unchanged; anything else would be stored altered.
-export function checkBotSafe(text: string): void {
-  const bad = text.match(/["`\\]| {2}|^\s|\s$/);
-  if (bad) {
-    throw new Error(`The bot's argument parser would alter ${JSON.stringify(bad[0])} in: ${text}`);
-  }
-}
-
-export function ruleEditLines(
+// One block per rule: a header naming the `/edit` invocation, then the text to paste over the
+// modal field's contents. Modal values are stored verbatim, so there is nothing to escape.
+export function ruleEditBlocks(
   markdown: string,
   channels: ChannelIds,
   only: number[] = [],
-  prefix = '/',
 ): string[] {
   const rules = parseRules(markdown);
   for (const n of only) {
@@ -84,11 +78,10 @@ export function ruleEditLines(
   const wanted = only.length ? only : rules.map((_, i) => i + 1);
   return wanted.map((n) => {
     const text = toDiscord(rules[n - 1], channels);
-    checkBotSafe(text);
-    const line = `${prefix}rule_edit ${n} ${text}`;
-    if (line.length > MESSAGE_LIMIT) {
-      throw new Error(`Rule ${n} is ${line.length} characters as a command (max ${MESSAGE_LIMIT})`);
+    const runes = [...text].length;
+    if (runes > MODAL_LIMIT) {
+      throw new Error(`Rule ${n} is ${runes} characters in the modal field (max ${MODAL_LIMIT})`);
     }
-    return line;
+    return `Rule ${n} — /edit rule rule:${n}, paste over the field's text:\n${text}`;
   });
 }
