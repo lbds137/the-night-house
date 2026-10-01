@@ -1,6 +1,9 @@
 import { Marked } from 'marked';
 import { markedSmartypants } from 'marked-smartypants';
+import { parse } from 'yaml';
+import channelsYaml from '../data/discord-channels.yaml?raw';
 import { stripComments } from './comments.ts';
+import { parseChannelIds } from './discord';
 import { roleById } from './roles';
 import { titleParts } from './site';
 
@@ -89,8 +92,19 @@ export function roleMention(id: string): string {
   );
 }
 
-export const channelMention = (name: string) =>
+export const channelPill = (name: string) =>
   `<span class="mention mention-channel">#${escapeHtml(name)}</span>`;
+
+// A pill may only name a channel in discord-channels.yaml; anything else fails the build
+// like an unknown role id, so a channel rename or a pill typo can't ship silently.
+const channelIds = parseChannelIds(parse(channelsYaml));
+
+export const channelMention = (name: string) => {
+  if (!channelIds[name]) {
+    throw new Error(`No Discord id for channel "${name}" in discord-channels.yaml`);
+  }
+  return channelPill(name);
+};
 
 // `!c!name!c!` is a channel mention and `!r!<role id>!r!` a role mention (see nodes.yaml).
 export function replaceTokens(text: string): string {
@@ -105,7 +119,12 @@ function prepare(text: string): string {
   if (kramdownAttr) {
     throw new Error(`Kramdown attribute syntax isn't supported: ${kramdownAttr[0]}`);
   }
-  return replaceTokens(stripComments(text));
+  const prepared = replaceTokens(stripComments(text));
+  // A complete token always converted above, so a leftover opener means an unclosed or
+  // mistyped token that would print raw. Same check the bot copy makes in discord.ts.
+  const leftover = prepared.match(/!r!.*?!r!|!c!/);
+  if (leftover) throw new Error(`Unmatched token marker in content: ${leftover[0]}`);
+  return prepared;
 }
 
 export const renderMarkdown = (text: string) => marked.parse(prepare(text)) as string;
