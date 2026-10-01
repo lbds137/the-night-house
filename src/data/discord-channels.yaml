@@ -1,8 +1,8 @@
 # The server channels a `!c!name!c!` pill may name, on the site (content pages,
 # roles/nodes.yaml, commands.yaml) and in rules text for the bot (scripts/discord-rules.ts).
 # markdown.ts fails the build on any other name, so a channel rename or a pill typo can't
-# ship silently; discord.ts refuses them in the bot copy too. Names and ids come from the
-# live channel directory (claude-memory/roles/night-house-channels-2026-09-27.md).
+# ship silently; discord.ts refuses them in the bot copy too. Names and ids were verified
+# against the server's live channel directory on 2026-09-27.
 # Quote each id: they are larger than a JavaScript number can hold exactly.
 # In Discord (Developer Mode on): right-click the channel → Copy Channel ID.
 about-rules: "497573342430232577"

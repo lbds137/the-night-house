@@ -120,9 +120,9 @@ function prepare(text: string): string {
     throw new Error(`Kramdown attribute syntax isn't supported: ${kramdownAttr[0]}`);
   }
   const prepared = replaceTokens(stripComments(text));
-  // A complete token always converted above, so a leftover opener means an unclosed or
-  // mistyped token that would print raw. Same check the bot copy makes in discord.ts.
-  const leftover = prepared.match(/!r!.*?!r!|!c!/);
+  // Any surviving marker is an unclosed or mistyped token that would print raw — valid
+  // tokens were consumed above with both markers included, so even a lone `!r!` must fail.
+  const leftover = prepared.match(/!c!|!r!/);
   if (leftover) throw new Error(`Unmatched token marker in content: ${leftover[0]}`);
   return prepared;
 }

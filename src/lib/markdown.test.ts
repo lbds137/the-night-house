@@ -34,6 +34,16 @@ describe('mention tokens', () => {
     expect(() => renderInline('oops !c! unclosed')).toThrow('Unmatched token marker');
   });
 
+  it('fails on a lone role marker', () => {
+    expect(() => renderInline('!r!497610586750976020 unclosed')).toThrow('Unmatched token marker');
+  });
+
+  it('refuses a name that collides with Object.prototype', () => {
+    expect(() => renderInline('!c!constructor!c!')).toThrow(
+      'No Discord id for channel "constructor"',
+    );
+  });
+
   it('renders a role mention in the role color', () => {
     const html = renderInline(`!r!${DARK_RED}!r!`);
     expect(html).toContain('class="mention mention-role"');
