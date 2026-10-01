@@ -24,9 +24,11 @@ const description =
             <div class="command" id={command.name}>
               <p class="command-usage">
                 <Fragment set:html={permalink(command.name, `the ${command.name} command`)} />
-                {command.usage.map((line) => (
-                  <code>{line}</code>
-                ))}
+                {command.invoked ? (
+                  <code>{command.invoked}</code>
+                ) : (
+                  command.usage?.map((line) => <code>{line}</code>)
+                )}
               </p>
               <div class="command-text" set:html={renderMarkdown(command.text)} />
             </div>
