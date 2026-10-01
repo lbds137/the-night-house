@@ -25,7 +25,7 @@
   category_id: "staff"
   name: "Moderator | מתווך"
   id: "499037360340598819"
-  text: "This role denotes server staff who have the power to perform general moderation duties such as manage messages (pin or delete other users' messages in server channels) and mute users (blocking them from typing anywhere in the server except for the !c!muted-timeout-area!c! channel)."
+  text: "This role denotes server staff who have the power to perform general moderation duties such as manage messages (pin or delete other users' messages in server channels) and mute users (blocking them from typing anywhere in the server except for the !c!timeout!c! channel)."
 -
   type: "role"
   category_id: "staff"
@@ -391,7 +391,7 @@
   name: "Muted | מושתק"
   id: "622594368498303016"
   color: "1c1c1c"
-  text: "This is a role given to server members who are being disciplined for their conduct in the server by being prevented from sending messages anywhere except in the designated !c!muted-timeout-area!c! channel."
+  text: "This is a role given to server members who are being disciplined for their conduct in the server by being prevented from sending messages anywhere except in the designated !c!timeout!c! channel."
 -
   type: "role"
   category_id: "membership"
