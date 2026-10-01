@@ -123,7 +123,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
    - `!c!channel-name!c!` → channel mention pill
    - `!r!<role id>!r!` → role mention in the role's color, lightened to WCAG AA contrast;
      a bilingual name wraps only between its halves, and the Hebrew half gets `lang="he"`
-   - An unknown role id, or kramdown `{: ...}` attribute syntax, fails the build on purpose
+   - An unknown role id or channel name, or kramdown `{: ...}` attribute syntax, fails the
+     build on purpose; so does a leftover `!c!`/`!r!` marker (unclosed token)
 3. HTML comments in content are stripped (a place to park unwritten text); an unclosed
    `<!--` fails the build
 4. External links get `target="_blank" rel="noopener"` automatically

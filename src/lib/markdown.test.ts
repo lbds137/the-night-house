@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   MENTION_BACKGROUND,
   MIN_CONTRAST,
+  channelPill,
   contrastRatio,
   legibleRoleColor,
   renderInline,
@@ -22,7 +23,15 @@ describe('mention tokens', () => {
   });
 
   it('escapes HTML in channel names', () => {
-    expect(renderInline('!c!<b>!c!')).toContain('#&lt;b&gt;');
+    expect(channelPill('<b>')).toContain('#&lt;b&gt;');
+  });
+
+  it('fails on a channel name that is not in discord-channels.yaml', () => {
+    expect(() => renderInline('!c!nowhere!c!')).toThrow('No Discord id for channel "nowhere"');
+  });
+
+  it('fails on a lone channel marker', () => {
+    expect(() => renderInline('oops !c! unclosed')).toThrow('Unmatched token marker');
   });
 
   it('renders a role mention in the role color', () => {
