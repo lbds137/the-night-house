@@ -1,4 +1,17 @@
-# Discord channel ids for `!c!name!c!` tokens in text that goes to the bot (scripts/discord-rules.ts).
+# The server channels a `!c!name!c!` pill may name, on the site (content pages,
+# roles/nodes.yaml, commands.yaml) and in rules text for the bot (scripts/discord-rules.ts).
+# markdown.ts fails the build on any other name, so a channel rename or a pill typo can't
+# ship silently; discord.ts refuses them in the bot copy too. Names and ids come from the
+# live channel directory (claude-memory/roles/night-house-channels-2026-09-27.md).
 # Quote each id: they are larger than a JavaScript number can hold exactly.
 # In Discord (Developer Mode on): right-click the channel → Copy Channel ID.
+about-rules: "497573342430232577"
+disboard: "539975760761585665"
+directory: "498251903831113739"
+elevator: "502155311822667801"
+introduction: "629809106126897182"
 polemic-pit: "950127079695978598"
+queer-gsrm-general: "498827782219104266"
+roles: "636716079695003648"
+ticket-submission: "637513204733444106"
+timeout: "690339911508951375"
