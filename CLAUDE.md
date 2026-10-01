@@ -155,7 +155,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   commands (Lila's scope: no staff tools, no internal services like embed_exec or db), each
   linkable at `/commands/#<name>`. Source: lbds137/yagpdb-custom-commands `commands/`; the
   YAGPDB session messages this one when a member command changes. `src/lib/commands.ts`
-  fails the build on a duplicate anchor or a usage line that doesn't start with `/<name>`
+  fails the build on a duplicate anchor or a usage line that doesn't start with `/<name>`;
+  a context-menu command carries an `invoked:` path instead of usage lines
 - **Mobile Responsive**: fluid type and wrapping nav, checked at 320–1280px
 - **Build-time link check**: `src/integrations/check-links.ts` fails `astro build` when a built
   page links to a page, file or `#anchor` that doesn't exist (`src/lib/linkcheck.ts`)

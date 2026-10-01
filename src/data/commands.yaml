@@ -1,6 +1,6 @@
 # The member commands of the server's YAGPDB bot, for the Commands page, in page order.
 # Source: github.com/lbds137/yagpdb-custom-commands, commands/<topic>/, the files whose
-# header says `Group: Utility` (checked at da50d58, 2026-09-27). Each usage line follows the
+# header says `Group: Utility` (checked at 656abfb, 2026-10-01). Each usage line follows the
 # command's own usage text. Staff tools and the commands other commands call (embed_exec, db,
 # db_get_*, message_link, ...) stay off the page.
 # When related commands become one slash command with subcommands (planned, not live:
@@ -8,7 +8,8 @@
 #
 # A group's id is its /commands/# anchor, and so is each command's name. A command's usage
 # lines start with "/<name>"; a `message: true` command fires on what a message says instead,
-# so its usage lines are example messages. src/lib/commands.ts checks all of this.
+# so its usage lines are example messages. A context-menu command carries `invoked:` — how
+# it's invoked — instead of usage lines. src/lib/commands.ts checks all of this.
 -
   name: "Glossary and rules"
   id: "glossary-and-rules"
@@ -23,7 +24,8 @@
       text: >-
         Posts that rule from the [rules](/rules/), e.g. `/rule 5`. With `browse`, opens an
         interactive rulebook browser instead: one rule per page, a jump-to-rule menu, and
-        paging buttons on a message that stays, so you can keep browsing.
+        paging buttons on a message that stays, so you can keep browsing. A 🗑 Dismiss under
+        it closes the browser — only whoever opened it can press it.
 -
   name: "Hebrew and gematria"
   id: "hebrew-and-gematria"
@@ -99,6 +101,12 @@
         Shows custom emoji at full size: give the emoji themselves, or links to messages that
         contain them, up to 10. Emoji from a message in an age-restricted channel only show in
         an age-restricted channel.
+    - name: "expand_emoji"
+      invoked: "right-click a message → Apps → Expand Emoji"
+      text: >-
+        The right-click twin of [hugemoji](#hugemoji): shows every distinct custom emoji in
+        that message at full size, in the order they appear, up to 10, each with a link back
+        to the message. If the message has no custom emoji, the bot says so.
     - name: "avatar_viewer"
       usage: ["/avatar_viewer [user ID or message link] [size]"]
       text: >-
@@ -106,6 +114,12 @@
         created. With no user it shows
         yours; a message link shows the avatar of whoever sent it. The size can be 32, 64,
         128, 256, 512 or 1024 (the default).
+    - name: "view_avatar"
+      invoked: "right-click a user → Apps → View Avatar"
+      text: >-
+        The right-click twin of [avatar_viewer](#avatar_viewer): shows someone's avatar, with
+        their ID, name, nickname and when their account was created, and an Open image button
+        for the full-size file.
     - name: "timestamp"
       usage: ["/timestamp [ID]"]
       text: >-
