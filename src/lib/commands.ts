@@ -4,10 +4,13 @@ import commandsYaml from '../data/commands.yaml?raw';
 export interface BotCommand {
   /** The command's name in the bot, which is also its /commands/# anchor. */
   name: string;
-  /** Ways to use it: `/name ...` lines, or example messages for a `message` command. */
-  usage: string[];
+  /** Ways to use it: `/name ...` lines, or example messages for a `message` command. An
+   * invoked (context-menu) command carries none. */
+  usage?: string[];
   /** Fires on what a message says rather than on `/name`. */
   message?: boolean;
+  /** A context-menu path: how the member invokes it instead of typing or sending a message. */
+  invoked?: string;
   /** Markdown: what it does. */
   text: string;
 }
@@ -45,13 +48,30 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       }
       claim(command.name, `command "${command.name}"`);
       if (!command.text?.trim()) throw new Error(`commands.yaml: ${command.name} has no text`);
-      if (!command.usage?.length) throw new Error(`commands.yaml: ${command.name} has no usage`);
-      for (const line of command.usage) {
-        const typed = new RegExp(`^/${command.name}( |$)`).test(line);
-        const example = line.trim() !== '' && !line.startsWith('/');
-        if (command.message ? !example : !typed) {
-          const expected = command.message ? 'an example message' : `"/${command.name}"`;
-          throw new Error(`commands.yaml: ${command.name}'s usage "${line}" should be ${expected}`);
+      if (command.invoked?.trim()) {
+        // A context-menu command is neither typed nor fired by a message, so it takes an
+        // invoked path and no usage lines.
+        if (command.usage?.length) {
+          throw new Error(
+            `commands.yaml: ${command.name} has both usage lines and an invoked form`,
+          );
+        }
+        if (command.message) {
+          throw new Error(
+            `commands.yaml: ${command.name} is both a message command and an invoked one`,
+          );
+        }
+      } else {
+        if (!command.usage?.length) throw new Error(`commands.yaml: ${command.name} has no usage`);
+        for (const line of command.usage) {
+          const typed = new RegExp(`^/${command.name}( |$)`).test(line);
+          const example = line.trim() !== '' && !line.startsWith('/');
+          if (command.message ? !example : !typed) {
+            const expected = command.message ? 'an example message' : `"/${command.name}"`;
+            throw new Error(
+              `commands.yaml: ${command.name}'s usage "${line}" should be ${expected}`,
+            );
+          }
         }
       }
     }

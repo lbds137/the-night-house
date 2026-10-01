@@ -20,6 +20,8 @@ describe('commands.yaml', () => {
     const names = commandGroups.flatMap((g) => g.commands.map((c) => c.name));
     expect(names).toContain('define');
     expect(names).toContain('gematria');
+    expect(names).toContain('view_avatar');
+    expect(names).toContain('expand_emoji');
     // Staff tools and the commands other commands call stay off the page.
     for (const hidden of ['embed_exec', 'db', 'message_link', 'log_user', 'rule_edit']) {
       expect(names).not.toContain(hidden);
@@ -58,6 +60,21 @@ describe('checkCommandGroups', () => {
         'should be an example message',
       );
     }
+  });
+
+  it('accepts an invoked form instead of usage lines', () => {
+    const menu = 'right-click a user → Apps → View Avatar';
+    const groups = [group([{ name: 'view_avatar', text: 'Does a thing.', invoked: menu }])];
+    expect(checkCommandGroups(groups)).toBe(groups);
+  });
+
+  it('refuses an invoked form with usage lines or message mode', () => {
+    expect(() =>
+      checkCommandGroups([group([{ name: 'x', text: 't', invoked: 'a menu', usage: ['/x'] }])]),
+    ).toThrow('both usage lines and an invoked form');
+    expect(() =>
+      checkCommandGroups([group([{ name: 'x', text: 't', invoked: 'a menu', message: true }])]),
+    ).toThrow('both a message command and an invoked one');
   });
 
   it('refuses reused and reserved anchors', () => {
