@@ -19,8 +19,11 @@
         Links to the term's entry in this site's [glossary](/glossary/). With no term, links to
         the whole glossary.
     - name: "rule"
-      usage: ["/rule <number>"]
-      text: "Posts that rule from the [rules](/rules/), e.g. `/rule 5`."
+      usage: ["/rule <number>", "/rule browse"]
+      text: >-
+        Posts that rule from the [rules](/rules/), e.g. `/rule 5`. With `browse`, opens an
+        interactive rulebook browser instead: one rule per page, a jump-to-rule menu, and
+        paging buttons on a message that stays, so you can keep browsing.
 -
   name: "Hebrew and gematria"
   id: "hebrew-and-gematria"
