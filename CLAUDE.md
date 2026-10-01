@@ -162,11 +162,12 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 - **Invite check**: `.github/workflows/invite-check.yml` checks `DISCORD_INVITE_CODE` weekly
   and opens an issue if Discord says the invite is gone (404)
 - **Rules → bot**: the site is the source for the YAGPDB bot's `Rules`. `pnpm discord:rules [N...]`
-  prints paste-ready `/rule_edit N <text>` lines (the server's text prefix is `/`;
-  `src/lib/discord.ts`); `!c!name!c!` becomes `<#id>` from `src/data/discord-channels.yaml`
-  (a missing id fails). Text the bot's argument parser would alter (`"`, backticks, `\`,
-  double spaces) is refused. `discord.test.ts` checks the output against a dump of the bot's
-  copy; update that fixture after pasting a changed rule
+  prints modal-ready blocks — the `/edit rule rule:N` invocation, then the text to paste over
+  the modal field's contents (`src/lib/discord.ts`); `!c!name!c!` becomes `<#id>` from
+  `src/data/discord-channels.yaml` (a missing id fails), and `!r!` role pills have no bot form
+  (any leftover marker fails). The modal field caps at 4000 characters. `discord.test.ts`
+  checks the converted text against a dump of the bot's copy; update that fixture after
+  pasting a changed rule
 
 ## Code Style
 
