@@ -1166,6 +1166,96 @@
     ]
   },
   {
+    "term": "Lilith",
+    "kind": "new",
+    "draft": "**Lilith**: a female demon of Jewish folklore. Her name is often connected with the Mesopotamian *lilītu* demons, though the link is debated. The Hebrew word *lilit* appears once in the Hebrew Bible (Isaiah 34:14), among the creatures of a desolate ruin, and translators disagree on how to render it. The best-known story comes from the medieval, satirical *Alphabet of Ben Sira*: made from earth like Adam as his first wife, she refused to lie beneath him, spoke God's name and flew away. In Kabbalah, notably the Zohar, she is Samael's consort and a queen of the demonic \"other side\" (compare Qliphoth). Since the early 1970s Jewish feminists have reclaimed her as a symbol of women's independence, and some Left Hand Path and Luciferian practitioners honor her as a goddess or dark mother.",
+    "sources": [
+      [
+        "https://www.jewishvirtuallibrary.org/lilith",
+        "Encyclopaedia Judaica: Isaiah 34:14 the only Bible reference, Babylonian lilitu, medieval Ben Sira, Samael's partner and queen of the evil realm"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Lilith",
+        "debated lilitu etymology, Isaiah 34:14 translation variants, Ben Sira dating, modern reinterpretations"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Judith_Plaskow",
+        "\"The Coming of Lilith\" (1972), early Jewish feminist reclamation"
+      ]
+    ],
+    "confidence": "medium",
+    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). Not checked: Typhonian or Dragon Rouge specifics and Lilith magazine's founding year, so the draft names neither.",
+    "id": "lilith",
+    "library": {
+      "verdict": "supported",
+      "report": "the-night-house glossary-lilith PR, library check 2026-10-04 (quotes and PDF pages re-checked with pdftotext)",
+      "summary": "Patai covers the Mesopotamian background, calls the single Isaiah reference doubtful, and gives the Ben Sira dialogue, the flight by God's name and the Zohar's Samael pairing. Dan and von Stuckrad date the first Samael-Lilith marriage to 13th-century Castile, before the Zohar; von Stuckrad calls Ben Sira satiric and the modern Lilith a cipher for female power. Barzai's LHP anthology supports modern veneration as a goddess and dark mother.",
+      "citations": [
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 1",
+          "stance": "supports",
+          "quote": "Lilitu (Lilith), a she-demon; Ardat Lili (or Lilith's handmaid)"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 2",
+          "stance": "nuances",
+          "quote": "One brief reference to Lilith, and a doubtful one at that, is all that is found in the entire Bible."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 2",
+          "stance": "supports",
+          "quote": "Why should I lie beneath you... when I am your equal, since both of us were created from dust?"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 2",
+          "stance": "supports",
+          "quote": "she uttered the magic name of God, rose into the air, and flew away to the Red Sea"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 6",
+          "stance": "supports",
+          "quote": "The male is called Samael, and his female (Lilith) is always contained in him."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/02 Traditions/Kabbalah/Joseph Dan - Samael, Lilith, and the Concept of Evil in Early Kabbalah.pdf",
+          "location": "PDF p. 3",
+          "stance": "nuances",
+          "quote": "for the first time in a dated Jewish work, Samael and Lilith are described as husband and wife"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Kocku von Stuckrad - Constructing Femininity - The Lilith Case.pdf",
+          "location": "PDF p. 10",
+          "stance": "supports",
+          "quote": "The Alphabet of Ben Sira is a satiric text from early Islamic times"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Kocku von Stuckrad - Constructing Femininity - The Lilith Case.pdf",
+          "location": "PDF p. 5",
+          "stance": "supports",
+          "quote": "Lilith has become the chiffre for a certain aspect of female power."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Daemon Barzai - Lilith - Goddess of Sitra Ahra.pdf",
+          "location": "PDF p. 9",
+          "stance": "supports",
+          "quote": "Lilith is one of the most well known Goddesses within the Left Hand Path magic"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Daemon Barzai - Lilith - Goddess of Sitra Ahra.pdf",
+          "location": "PDF p. 10",
+          "stance": "supports",
+          "quote": "Ama Lilith is the Dark Mother. The progenitor of demons."
+        }
+      ],
+      "searched": "Patai, Lilith (full text); Dan, Samael, Lilith, and the Concept of Evil in Early Kabbalah (full text); von Stuckrad, Constructing Femininity (full-text grep); Barzai, Lilith - Goddess of Sitra Ahra (grep and foreword)"
+    }
+  },
+  {
     "term": "Luciferianism",
     "kind": "new",
     "draft": "**Luciferianism**: a range of beliefs that honor Lucifer as a bringer of light, knowledge and liberation rather than as the Christian Devil; he is often compared to Prometheus. It is distinct from Satanism, though the two overlap and are often confused. Some Luciferians regard Lucifer as a real being, while others treat him as a symbol of the pursuit of wisdom and self-liberation.",
