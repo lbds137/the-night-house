@@ -86,8 +86,8 @@ discretion, as an amnesty for someone who has shown recent signs of life.
 
 ## About the name
 
-The Night House, or House of the Night (בית הלילה), is an homage to Lilith in particular and
-to the [Left Hand Path](/glossary/#left-hand-path) in general. For Pride Month the server became
+The Night House, or House of the Night (בית הלילה), is an homage to [Lilith](/glossary/#lilith) in
+particular and to the [Left Hand Path](/glossary/#left-hand-path) in general. For Pride Month the server became
 the Gay Night House (בית לילה גאה), and the name stayed.
 
 In [gematria](/glossary/#gematria), בית לילה גאה adds up to 496: the same as מלכות (Malkuth)
