@@ -248,7 +248,10 @@ describe('checkCommandGroups', () => {
       expect(() =>
         checkCommandGroups([
           group([
-            fromYaml({ name: 'color', subcommands: [{ name: 'hex', usage: '/color hex', text: 't' }] }),
+            fromYaml({
+              name: 'color',
+              subcommands: [{ name: 'hex', usage: '/color hex', text: 't' }],
+            }),
           ]),
         ]),
       ).toThrow("color hex's usage must be a list of strings");
