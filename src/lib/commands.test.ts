@@ -1,7 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import commandsPage from '../pages/commands.astro?raw';
-import { RESERVED_IDS, checkCommandGroups, commandGroups, type CommandGroup } from './commands';
+import {
+  RESERVED_IDS,
+  checkCommandGroups,
+  commandGroups,
+  type BotCommand,
+  type CommandGroup,
+} from './commands';
 import { fixedIds } from './testing/fixed-ids';
+
+// Malformed data the way the YAML parser would hand it over: the declared types don't hold.
+const fromYaml = (v: unknown) => v as BotCommand;
 
 const group = (commands: CommandGroup['commands'], id = 'misc'): CommandGroup => ({
   id,
@@ -27,7 +36,16 @@ describe('commands.yaml', () => {
     expect(names).toContain('view_avatar');
     expect(names).toContain('expand_emoji');
     // Staff tools and the commands other commands call stay off the page.
-    for (const hidden of ['embed_exec', 'db', 'message_link', 'log_user', 'rule_edit']) {
+    for (const hidden of [
+      'embed_exec',
+      'db',
+      'message_link',
+      'log_user',
+      'rule_edit',
+      'hiatus',
+      'staff',
+      'setup',
+    ]) {
       expect(names).not.toContain(hidden);
     }
     // The fleet is slash-first: the text twins are gone as entries.
@@ -199,7 +217,9 @@ describe('checkCommandGroups', () => {
 
     it('refuses a bad or colliding alias', () => {
       expect(() =>
-        checkCommandGroups([group([{ name: 'rule', usage: ['/rule'], text: 't', aliases: ['Rand Color'] }])]),
+        checkCommandGroups([
+          group([fromYaml({ name: 'rule', usage: ['/rule'], text: 't', aliases: ['Rand Color'] })]),
+        ]),
       ).toThrow('is not an anchor alias');
       expect(() =>
         checkCommandGroups([
@@ -207,6 +227,28 @@ describe('checkCommandGroups', () => {
           group([{ name: 'color', aliases: ['rule'], subcommands: [] }], 'b'),
         ]),
       ).toThrow('alias "rule" of "color" reuses the anchor "rule"');
+    });
+
+    // A YAML scalar where a list belongs must fail naming the field, not one character of it.
+    it('refuses a scalar where a list belongs', () => {
+      expect(() =>
+        checkCommandGroups([
+          group([fromYaml({ name: 'rule', usage: ['/rule'], text: 't', aliases: 'rule' })]),
+        ]),
+      ).toThrow("rule's aliases must be a list");
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'rule', usage: '/rule', text: 't' })])]),
+      ).toThrow("rule's usage must be a list of strings");
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'color', subcommands: 'hex' })])]),
+      ).toThrow("color's subcommands must be a list");
+      expect(() =>
+        checkCommandGroups([
+          group([
+            fromYaml({ name: 'color', subcommands: [{ name: 'hex', usage: '/color hex', text: 't' }] }),
+          ]),
+        ]),
+      ).toThrow("color hex's usage must be a list of strings");
     });
   });
 });

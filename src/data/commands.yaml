@@ -113,7 +113,8 @@
       text: >-
         Shows custom emoji at full size: give the emoji themselves, or links to messages that
         contain them, up to 10. Emoji from a message in an age-restricted channel only show in
-        an age-restricted channel.
+        an age-restricted channel. Type this one as an ordinary message — Discord's slash list
+        doesn't offer it.
     - name: "expand_emoji"
       invoked: "right-click a message → Apps → Expand Emoji"
       text: >-
@@ -126,7 +127,8 @@
         Shows someone's avatar, with their ID, name, nickname and when their account was
         created. With no user it shows
         yours; a message link shows the avatar of whoever sent it. The size can be 32, 64,
-        128, 256, 512 or 1024 (the default).
+        128, 256, 512 or 1024 (the default). Type this one as an ordinary message — Discord's
+        slash list doesn't offer it.
     - name: "view_avatar"
       invoked: "right-click a user → Apps → View Avatar"
       text: >-
@@ -157,6 +159,6 @@
     - name: "unhiatus"
       usage: ["/unhiatus"]
       text: >-
-        Coming back from a staff hiatus, this restores the staff roles you set aside. It only
-        does something if the bot has you recorded as on hiatus — for anyone else there is
-        nothing to restore.
+        Coming back from a staff hiatus, this gives you back the staff roles you set aside —
+        any that are no longer staff roles stay off. It only does something if the bot has you
+        recorded as on hiatus; for anyone else there is nothing to restore.

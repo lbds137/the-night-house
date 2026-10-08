@@ -63,7 +63,15 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
         throw new Error(`commands.yaml: ${name} is not a command name (lowercase, digits, _)`);
       }
       claim(command.name, `command "${command.name}"`);
-      for (const alias of command.aliases ?? []) {
+      const aliases = command.aliases ?? [];
+      // YAML accepts `aliases: pyramid` as a scalar; iterating it would check it one character
+      // at a time and fail far from the cause.
+      if (!Array.isArray(aliases)) {
+        throw new Error(
+          `commands.yaml: ${command.name}'s aliases must be a list, e.g. ["old_name"]`,
+        );
+      }
+      for (const alias of aliases) {
         if (!/^[a-z][a-z0-9_]*$/.test(alias ?? '')) {
           throw new Error(
             `commands.yaml: ${JSON.stringify(alias)} is not an anchor alias (lowercase, digits, _)`,
@@ -74,6 +82,9 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       if (command.subcommands) {
         // A grouped slash command renders one row per subcommand, so the entry itself carries
         // no usage, message form, invoked path or text.
+        if (!Array.isArray(command.subcommands)) {
+          throw new Error(`commands.yaml: ${command.name}'s subcommands must be a list`);
+        }
         if (!command.subcommands.length) {
           throw new Error(`commands.yaml: ${command.name} has no subcommands`);
         }
@@ -114,6 +125,11 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
           if (!sub.usage?.length) {
             throw new Error(`commands.yaml: ${command.name} ${sub.name} has no usage`);
           }
+          if (!Array.isArray(sub.usage)) {
+            throw new Error(
+              `commands.yaml: ${command.name} ${sub.name}'s usage must be a list of strings`,
+            );
+          }
           for (const line of sub.usage) {
             if (!new RegExp(`^/${command.name} ${sub.name}( |$)`).test(line)) {
               throw new Error(
@@ -140,6 +156,11 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       } else {
         if (!command.text?.trim()) throw new Error(`commands.yaml: ${command.name} has no text`);
         if (!command.usage?.length) throw new Error(`commands.yaml: ${command.name} has no usage`);
+        if (!Array.isArray(command.usage)) {
+          throw new Error(
+            `commands.yaml: ${command.name}'s usage must be a list of strings`,
+          );
+        }
         for (const line of command.usage) {
           const typed = new RegExp(`^/${command.name}( |$)`).test(line);
           const example = line.trim() !== '' && !line.startsWith('/');

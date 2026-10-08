@@ -533,7 +533,9 @@ main {
   scroll-margin-top: 1rem;
 }
 
-.command:target {
+.command:target,
+/* An old anchor (#rand_color) lands on an alias inside the card: highlight the card too. */
+.command:has(.anchor-alias:target) {
   box-shadow: inset 3px 0 0 var(--accent-strong);
 }
 
@@ -571,6 +573,13 @@ main {
 .anchor-alias {
   display: block;
   height: 0;
+  scroll-margin-top: 1rem;
+}
+
+/* A grouped slash entry's usage paragraph holds only the corner "#", so it keeps no bottom
+   margin — that would open a gap above the first subcommand row. */
+.prose .command-usage:not(:has(code)) {
+  margin-bottom: 0;
 }
 
 /* Rows of a grouped slash command (/color contrast, /color random, ...), one per subcommand. */
