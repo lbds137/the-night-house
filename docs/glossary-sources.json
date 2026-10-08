@@ -24,7 +24,7 @@
     "id": "alterhuman",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "No library book uses \"alterhuman\", \"walk-in\", or a broader \"human in an atypical way\" framing; the community-wiki sourcing in the draft is appropriate for a term with essentially no scholarly literature.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown (full text read; no 'alterhuman', 'walk-in', 'non-human'); 04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/EilWood - Kin Awakening 101.pdf (full text read; same result); grepped 'alterhuman' and 'walk-in/walkin' against both spiritual-listing.tsv and personal-spiritual-listing.tsv filenames: no hits"
@@ -71,7 +71,7 @@
     "id": "asatru",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library strongly corroborates the folkish/universalist split and the umbrella-term claim. T. Sheil & A. Sheil's Heathen primer explicitly frames Heathenism as the umbrella over Asatru/Odinism/Troth/etc. and describes the ethnic-vs-open split in the same terms as the draft; an anonymous Asatru/Odinism pamphlet independently confirms the 'folkish' vs. 'universalist' vocabulary and that the Ring of Troth (predecessor of The Troth) is explicitly open regardless of race. The AFA's own 2009 ritual book, in founder Stephen McNallen's foreword, uses exactly the kind of ancestry-restricted language ('European-descended kin,' 'the innermost soul of the Northern European peoples') that critics call folkish/racist, corroborating the draft without needing to state it as the researcher's opinion.",
       "citations": [
         {
@@ -120,7 +120,7 @@
     "id": "ascension",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The Cambridge Handbook of Western Mysticism and Esotericism (2016) confirms the Theosophical origin and sharpens it: the hierarchical \"ascended master\"/Inner Government doctrine was elaborated by later Theosophists (Besant, Leadbeater, Bailey), not present in Blavatsky's founding work, which is consistent with the draft's framing without needing a change. The library has no book on Guy Ballard's \"I AM\" Activity specifically, so that part of the draft still rests on the cited web sources only.",
       "citations": [
         {
@@ -153,7 +153,7 @@
     "id": "atr",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Murrell's academic survey confirms both halves of the draft: ATR/Yoruba religion blending with Catholicism is explicitly described as producing Haitian Vodou, and diaspora faiths (Vodou, Santeria, Orisha) are repeatedly discussed as morphed/creole forms of ATR. The added initiatory-lineage framing is corroborated by the same book's detailed kanzo (Vodou) and orisha (Candomble/Santeria) initiation accounts.",
       "citations": [
         {
@@ -194,7 +194,7 @@
     "id": "bibliomancy",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's own encyclopedia (citing Waite 1891) calls stichomancy simply 'another term for bibliomancy,' not a narrower one -- the draft's clean distinction (whole book vs. single line/verse) reflects Wikipedia's etymological reading (Greek stichos, 'line of verse') and is defensible, but it overstates how settled the distinction is; older occult reference works treat the terms as straight synonyms.",
       "citations": [
         {
@@ -232,7 +232,7 @@
     "id": "chaldean",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Both senses check out with appropriate hedging already in the draft. The practitioner book itself confirms the numerology's sound-based mechanism ('the Pythagorean system is based on sequential patterns rather than on sound vibrations,' implying Chaldean is sound-based) and presents the Babylon origin as settled history with no historian citations -- exactly the kind of practitioner lore the notes flagged, and the library's own older encyclopedia shows this 'Chaldeans divided their alphabet' story was already circulating in occult circles by 1891 (Waite), unconnected to any modern historical scholarship. The Chaldean Oracles / Golden Dawn revival sense was not found described in the library beyond passing mentions of Chaldean lore in Rosicrucian myth.",
       "citations": [
         {
@@ -277,7 +277,7 @@
     "id": "channeling",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "A Brill academic handbook on the topic confirms and sharpens the draft: channeling is scholarly-described as the direct successor (\"heir apparent\") of 19th-century Spiritualist mediumship, reborn in 1970s California TV culture. One added nuance the library surfaces: channeled entities are typically framed as ancient wisdom-beings or extraterrestrials rather than the familiar deceased spirits of classic mediumship — a difference in content, not mechanism, so it doesn't require changing the draft's core claim.",
       "citations": [
         {
@@ -316,7 +316,7 @@
     "id": "chaos-magick",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "An internal IOT history in the library and Versluis's scholarly survey both confirm the late-1970s English origin, the Carroll/Sherwin founding via Sherwin's magazine The New Equinox, and the Illuminates of Thanateros name — the existing draft is accurate.",
       "citations": [
         {
@@ -355,7 +355,7 @@
     "id": "clair-senses",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Searched the library's general occult/parapsychology reference works for a clairsentience definition; found none (Shepard's Encyclopedia of Occultism and Parapsychology, the closest fit, has no clairsentience entry and its clairvoyance material is folded into 19th/20th-century psychical-research usage, not the New Age \"clair-senses\" framework). This doesn't contradict the draft's correction — the \"clear feeling\" reading is also just the plain etymology (French clair) — but the library adds no independent corroboration.",
       "citations": [],
       "searched": "Leslie Shepard - Encyclopedia of Occultism and Parapsychology vol.1: 'clairsentience' — 0 hits; Leslie Shepard - Encyclopedia of Occultism and Parapsychology vol.2: 'sanguinarian'/adjacent clair- terms — no clair-senses treatment; checked 03 Practices/Energy Work and Divination/Scrying & Clairvoyance folder listings for a dedicated clair-senses or intuitive-development title — none downloaded/found beyond what's already cited"
@@ -380,7 +380,7 @@
     "id": "current",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Granholm's dissertation both confirms the Draconian/Typhonian current example (Kenneth Grant's own term, adopted by Dragon Rouge as an organizational touchstone) and shows \"current\" is not purely insider jargon: Granholm himself, citing the academic esotericism scholar Antoine Faivre, uses \"current\" as a standard academic term (e.g. \"alchemy is an important current in Western esotericism\"). This upgrades the sourcing noted as weakest in the researcher's notes.",
       "citations": [
         {
@@ -426,7 +426,7 @@
     "id": "death-work",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Penczak's book on witchcraft ancestor-work corroborates the psychopomp framing (\"guide of souls... out to the realm of the dead\") the draft adds, and Murrell's academic survey confirms ancestor veneration as a pillar across African traditional religions, backing the entry's broadened examples. The existing entry's plainer wording is also accurate; this is a genuine improvement rather than a correction.",
       "citations": [
         {
@@ -465,7 +465,7 @@
     "id": "demonolatry",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "An independent practitioner primer in the library (Akelta S.K. Wilde's Demonosophy, a distinct but closely related tradition) uses almost the exact framing of the draft: demons revered \"as gods\" and \"divine beings\" worked with \"from a place of honour and respect,\" rather than feared or merely worked with as tools. This corroborates the demonolatry.org primer already read on the web.",
       "citations": [
         {
@@ -498,7 +498,7 @@
     "id": "demonology",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "An academic conference volume in the library (Vos & Otten, Brill) is explicitly catalogued and framed as a study of \"demonology\" as a history-of-doctrines field spanning early Christianity through the Middle Ages, confirming the draft's claim that the term covers academic/historical study as well as occult cataloguing traditions.",
       "citations": [
         {
@@ -531,7 +531,7 @@
     "id": "divination",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "High-confidence entry with strong web sources (Britannica). Library has no dedicated 'Divination' headword (the encyclopedia covers it piecemeal under specific methods and under 'Fortune-Telling'), so the library neither contradicts nor adds beyond confirming that divination-by-tool and divination-by-intuition both appear throughout the reference works searched.",
       "citations": [],
       "searched": "Leslie Shepard - Encyclopedia of Occultism and Parapsychology (Vol. 1 & 2): no 'Divination' headword found; Amar Annus ed. - Divination and Interpretation of Signs in the Ancient World (2010): confirms divination as a cross-cultural sign-interpretation practice but at a level of academic detail beyond what the glossary needs."
@@ -558,7 +558,7 @@
     "id": "dowsing",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's older encyclopedia entry on Dowsing (citing Waite-era and 1970s dowsing literature) is more credulous in tone than the draft, but its own bibliography includes Vogt & Hyman's academic debunking study 'Water Witching, U.S.A.' -- the same controlled-testing line the draft and its web sources (McGill OSS) already rely on. Nothing in the library contradicts the chance-level finding; the ideomotor mechanism is independently corroborated under the Pendulum entry.",
       "citations": [
         {
@@ -591,7 +591,7 @@
     "id": "egregore",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's dedicated occult-egregore source (Stavish) gives a sharper anchor than the draft's vague \"associated with... Lévi\": the term's Greek/Book-of-Enoch etymology, and Lévi's specific 1868 use in Le Grand Arcane (itself preceded by Victor Hugo's 1859 literary coinage). Adding the etymology and date strengthens the entry against misinformation without changing its substance.",
       "citations": [
         {
@@ -631,7 +631,7 @@
     "id": "eldritch",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Two Cthulhu Mythos reference works in the library (a dedicated encyclopedia and a mythos dictionary) have no \"Eldritch\" entry at all, consistent with the draft's claim that Lovecraft used the word only as a descriptive adjective, never as a named force. Separately, a community member's own document in the owner's library uses \"eldritch\" exactly the way the draft describes: a consuming/corrosive force distinct from but linked to \"the void\" — confirming that sense is practitioner usage, not Lovecraftian or older-occult canon.",
       "citations": [],
       "private_sources": "Also corroborated by a private document in the owner's Drive, not cited publicly."
@@ -656,7 +656,7 @@
     "id": "entheogen",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Ratsch's Encyclopedia of Psychoactive Plants confirms the Ruck-et-al. coinage and its \"evoking/becoming divine within\" etymology (the exact 1979 date wasn't independently found in this library, though the attribution matches), and documents peyote's specific tie to the Native American Church and iboga's specific tie to the Bwiti religion, both legally regulated — exactly as the draft states.",
       "citations": [
         {
@@ -703,7 +703,7 @@
     "id": "gematria",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's Gematria entry independently confirms the draft: 'a form of numerology... in Jewish mysticism gematria was the study of Hebrew letters in association with numbers... used to discover hidden meanings in Hebrew words,' and explicitly notes the same method was also used with the Greek alphabet -- consistent with the draft's isopsephy comparison.",
       "citations": [
         {
@@ -736,7 +736,7 @@
     "id": "godform",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Kraig's Golden-Dawn-descended manual confirms the documented meaning exactly: physically taking and visualizing a deity's ritual posture is \"assuming a god-form.\" No library source corroborates the alternate \"sentient egregore\" community sense, consistent with the existing entry's issues note, so the draft's \"documented meaning first, community meaning labeled second\" approach is well supported; which one to lead with remains the owner's call.",
       "citations": [
         {
@@ -769,7 +769,7 @@
     "id": "godphone",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Raven Kaldera's \"Dealing with Deities\" (a published polytheist theology text, not a blog) uses \"god-phone\" exactly the way the draft frames it: an informal term for a rare, hard-to-verify direct line to a deity, and shows the community debate/skepticism (\"why do they get the god-phone, and not me?\") the draft mentions. This upgrades the sourcing beyond the blog-only citations the researcher used.",
       "citations": [
         {
@@ -808,7 +808,7 @@
     "id": "godspouse",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Metraux's ethnography devotes a full chapter (\"Mystical Marriage in Voodoo\") to formal marriage between a devotee and a lwa, and Kaldera and Filan's possession study confirms \"the phenomenon of god-spouses is found in many cultures, including those of the AfroCaribbean deities.\" This is much stronger sourcing than the researcher's note assumed (\"came from a search snippet only\") — recommend keeping, not cutting, the Vodou clause. The rest of the draft (modern pagan term, nuns-as-brides-of-Christ comparison) is unaffected.",
       "citations": [
         {
@@ -851,7 +851,7 @@
     "id": "hellenism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Drew Campbell's Hellenic Reconstructionist primer confirms the draft point for point: Hellenism/Hellenismos as a reconstruction 'rooted in specific cultures' via historical study, orthopraxy over shared belief ('primacy of historical precedent... rejection of eclecticism'), and practitioners typically working alone or in small local groups rather than large organizations.",
       "citations": [
         {
@@ -888,7 +888,7 @@
     "id": "hermeticism",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library directly confirms the note's caveat and sharpens it: the Emerald Tablet is a 12th-century Latin translation from Arabic, centuries later than the Greco-Roman Corpus Hermeticum, even though both get grouped as \"Hermetic.\" The draft avoids claiming pharaonic age but never states the Emerald Tablet's own much later date, worth one added clause for a public glossary guarding against misinformation.",
       "citations": [
         {
@@ -926,7 +926,7 @@
     "id": "hoodoo",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Two library sources by practitioners of different racial backgrounds (Alvarado, who is Creole, and Yronwode, who is white) both define Hoodoo consistently with the draft: southern African American folk magic/rootwork/conjure, herb and root work, ancestor contact, and Christian (Psalms, saints) influence, with a distinctly Central African as well as West African character. No library source directly settles the closed-practice question, which the draft already correctly attributes as a view rather than a flat fact.",
       "citations": [
         {
@@ -969,7 +969,7 @@
     "id": "horsing",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Metraux's classic Haitian ethnography confirms \"horse\"/\"mounted\" (chwal, from cheval) as the core Vodou possession vocabulary, supporting the draft's core claim. But Kaldera and Filan's cross-tradition study of spirit possession — co-written by a longtime Vodou initiate — shows \"horse\"/\"horsing\" is also used for Afro-Brazilian Umbanda possession and has been widely adopted by modern Pagan/polytheist deity-possession practice outside any Afro-diasporic ceremony (with some discomfort noted in that community about the borrowing). The draft's claim that \"the term belongs to that context\" overstates how contained the word has actually stayed.",
       "citations": [
         {
@@ -1022,7 +1022,7 @@
     "id": "hydromancy",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library confirms hydromancy as an ancient practice attested in classical sources (Natalis Comes, Pausanias, Macrobius, Del Rio) covering exactly the variants the draft names (ripples, color, springs/pegomancy). It does not attribute an origin to Babylon or Persia anywhere in this entry, which supports the researcher's decision to drop that unverified claim.",
       "citations": [
         {
@@ -1053,7 +1053,7 @@
     "id": "kemeticism",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "No book in the library specifically discusses Kemetic Orthodoxy, its 1988 founding, Tamara Siuda, or the Netjer theology; the extensive Kemetic-tradition shelf is almost entirely primary/historical Egyptology (Budge, Pinch, Ritner) and modern devotional titles, none of which cover the modern-movement history. Drew Campbell's Hellenic Reconstructionism book does note in passing that 'similar groups exist for Kemetic (Egyptian) beliefs,' which loosely supports the reconstructionist half of the draft but not the Orthodoxy claims.",
       "citations": [
         {
@@ -1097,7 +1097,7 @@
     "id": "left-hand-path",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Granholm's academic dissertation on Dragon Rouge independently confirms all three load-bearing claims in the draft: the individualism/self-deification vs. union-with-the-divine contrast, antinomianism as rejection of established morality, and the Tantric vamachara/vama marga origin of the terminology. The Blavatsky/black-magic historical detail (from the web source) is not confirmed or contradicted by anything found in the library; it remains web-sourced only.",
       "citations": [
         {
@@ -1270,7 +1270,7 @@
     "id": "luciferianism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Faxneld's academic article on Milton's Lucifer and modern Satanism corroborates the literary/positive-Lucifer lineage and shows that even LaVey's own Satanic Bible treats Satan and Lucifer as related but distinguishable figures (separate \"books\" for each), supporting the draft's claim that Luciferianism and Satanism overlap but are distinct. The specific Prometheus comparison was not found in the library but is not contradicted.",
       "citations": [
         {
@@ -1316,7 +1316,7 @@
     "id": "magick",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Crowley's own Book 4 Part III gives the exact definition quoted in the draft, and his scholarly biographer Kaczynski documents that Crowley adopted the archaic \"k\" spelling because ordinary \"magic\" was associated in the public mind with stage conjuring and charlatanism — matching the draft's stage-magic distinction.",
       "citations": [
         {
@@ -1353,7 +1353,7 @@
     "id": "middle-path",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "No library source (scholarly or practitioner) uses \"Middle Path\" for a position between LHP and RHP; the term did not surface in any of the eight books searched, including the two academic LHP studies (Granholm, Introvigne) and the two Qliphoth/Kabbalah primary sources. This matches the researcher's own note that the concept is blog-sourced only.",
       "citations": [],
       "searched": "Kennet Granholm - Embracing the Dark (Dragon Rouge); Thomas Karlsson - Qabalah, Qliphoth and Goetic Magic; Gershom Scholem - Kabbalah; Massimo Introvigne - Satanism, A Social History; T. J. Wray and Gregory Mobley - The Birth of Satan; Per Faxneld - From Milton to Modern Satanism; Satan and Suns - Demonosophy; Nienke Vos & Willemien Otten (eds.) - Demons and the Devil in Ancient and Medieval Christianity; regex: \"middle path\" (case-insensitive) across all of the above"
@@ -1387,7 +1387,7 @@
     "id": "necromancy",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Shepard's occult encyclopedia gives the same Greek etymology (nekros + manteia) and confirms the medieval broadening into \"black art\" via the Italian nigromancia, exactly matching the draft's two-meanings claim; Kieckhefer's scholarly study of a 15th-century necromancer's manual corroborates the same nigromantia/niger (\"black\") conflation. Ancient Mesopotamian attestation is confirmed indirectly: a Yale University Press study of biblical divination cites named scholarship (Finkel's \"Necromancy in Ancient Mesopotamia,\" Scurlock's work on Mesopotamian ghost-magic) — though one cited scholar argues necromancy was not central to the Mesopotamian divinatory tradition, a minor nuance the draft doesn't contradict since it only claims the practice is attested there. Ogden's dedicated Greek/Roman necromancy book is a scanned PDF with no text layer and couldn't be searched.",
       "citations": [
         {
@@ -1430,7 +1430,7 @@
     "id": "neo-druidry",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Barry Cunliffe's academic 'Druids: A Very Short Introduction' directly confirms the 18th-century (and later Romantic/19th-century) revival, explicitly states there is 'no direct evidence' linking modern Druid societies to the ancient druids, and calls the 18th-century Welsh bardic material a modern invention with 'nothing to offer a link to a druidic past.' This resolves the draft's own flagged uncertainty (the unfetched Britannica page) with a stronger, directly-read academic source.",
       "citations": [
         {
@@ -1467,7 +1467,7 @@
     "id": "neo-paganism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Kathryn Gottlieb's academic paper on cultural appropriation in Neopaganism defines it exactly as the draft does ('a religious category... based off of or inspired by a pre-Christian faith of some sort'), and the same paper's discussion of Margaret Murray's discredited witch-cult survival thesis (via Margot Adler) backs the 'new religious movements rather than unbroken survivals' framing used across this cluster of entries.",
       "citations": [
         {
@@ -1504,7 +1504,7 @@
     "id": "non-human",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Same folder checked as for Otherkin/Alterhuman; \"nonhuman\" appears only as an ordinary adjective (e.g. describing entities), never as the community's umbrella identity term, so there's nothing to confirm or deny the draft's specific framing.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown and EilWood - Kin Awakening 101.pdf (both read in full; 'nonhuman' used adjectivally only)"
@@ -1538,7 +1538,7 @@
     "id": "oracle",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's Oracles entry describes the same core facts as the draft: shrines/priestesses through whom a god was believed to speak, with Delphi as the most famous example (Pythia, Apollo, the tripod). No contradiction with the oracle-cards half of the entry, which the encyclopedia does not cover (a modern/New Age product category outside its scope).",
       "citations": [
         {
@@ -1569,7 +1569,7 @@
     "id": "otherkin",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's Otherkin & Therianthropic Spirituality folder (only 3 files) holds practitioner material that frames otherkin identity through energy-work/soul verification rather than the elves/fae/dragons vs. therian distinction or the identity-vs-disorder framing the draft states; it doesn't corroborate or contradict those specific claims, so this stays an honest gap.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/otherkin lectures.markdown (Discord lecture transcript, 2019, one practitioner's energy-based verification theory; no mention of elves/fae/dragons, no 'disorder' framing); 04 Entities (non-Deity)/Otherkin & Therianthropic Spirituality/EilWood - Kin Awakening 101.pdf (practitioner guide; possession/energy framing, no therian distinction); positive control: grep for 'otherkin' itself hits repeatedly in both files, confirming the search mechanics work; the specific claims just aren't there"
@@ -1603,7 +1603,7 @@
     "id": "pendulum",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The encyclopedia's Cherniack entry independently describes 'Chevreul's pendulum' as the standard explanation that pendulum movement is 'the result of involuntary muscular movements in the hand induced by mental processes' -- the ideomotor account the draft attributes to researchers -- while also noting practitioners and some parapsychologists dispute that this fully explains all reported results, matching the draft's even-handed framing.",
       "citations": [
         {
@@ -1636,7 +1636,7 @@
     "id": "pluralkit",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's Thoughtforms & Tulpamancy folder covers egregores and tulpas but never plurality/systems terminology or PluralKit itself; this is a piece of current software best sourced from its own FAQ/GitHub, as the draft already does.",
       "citations": [],
       "searched": "04 Entities (non-Deity)/Thoughtforms & Tulpamancy/Joseph Adkins - A Mystic's Guide to Thought Forms.pdf (egregores, tulpas, Discord-server-as-egregore aside; no 'plural' or 'PluralKit'); grepped 'plural' against both listing TSVs: no filename hits in that folder"
@@ -1661,7 +1661,7 @@
     "id": "psychic-abilities",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "No library source directly addresses the scientific-consensus claim; the occult library is a practitioner collection, not a skeptical/scientific one, so it neither corroborates nor contradicts the \"parapsychology is a pseudoscience\" framing. The existing web sources (Wikipedia's Parapsychology article) remain the right kind of source for that specific claim.",
       "citations": [],
       "searched": "Leslie Shepard - Encyclopedia of Occultism and Parapsychology (vol. 1 & 2): pseudoscience|reproducib|replicat — no direct statement of outside scientific consensus (an internal-to-the-field reference work)"
@@ -1686,7 +1686,7 @@
     "id": "psychic-vampirism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Melton's encyclopedia and Dion Fortune's foundational Psychic Self-Defense (1930) corroborate the draft: the community frames psychic vampirism as a felt need to draw life force/energy rather than blood, and there is no independent verification of the energy itself. Fortune's older occult usage (a 'psychic attack' done to someone) differs in framing from the modern self-identified-need sense the draft describes, but the draft is specifically scoped to the real-vampire-community sense, which holds up.",
       "citations": [
         {
@@ -1729,7 +1729,7 @@
     "id": "qliphoth",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Scholem's Kabbalah confirms the Zohar/Lurianic origin of the kelippot (\"shells, husks\") as forces of evil arising from the breaking of the vessels, exactly as the draft states. Karlsson's own book confirms he calls the reinterpreted structure a \"Tree of Death\" and that his and Dragon Rouge's qliphothic tunnel-workings derive from Kenneth Grant's 1977 Nightside of Eden, directly supporting the draft's attribution to Grant's Typhonian current and Karlsson's Dragon Rouge.",
       "citations": [
         {
@@ -1778,7 +1778,7 @@
     "id": "reconstructionism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Drew Campbell's book (itself an example of Hellenic Reconstructionism) defines the movement almost verbatim: rebuilding historical pre-Christian religion from ancient sources, with 'primacy of historical precedent' and explicit 'rejection of eclecticism,' contrasted directly against 'eclectic Wicca.' It also lists reconstructionist movements across Norse, Celtic, Slavic, Roman and Kemetic traditions, matching the draft's framing.",
       "citations": [
         {
@@ -1815,7 +1815,7 @@
     "id": "right-hand-path",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Granholm's dissertation states the RHP/LHP contrast in almost the same terms as the draft: RHP practitioners seek union with the divine and the dissolution of individual selfhood, versus LHP's self-deification. This is presented as the standard scholarly framing, matching the draft's attribution to \"writers who use the pair.\"",
       "citations": [
         {
@@ -1850,7 +1850,7 @@
     "id": "sanguinarian-vampirism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The real-vampire-community literature in the library backs the draft closely: Melton's encyclopedia confirms the sanguinarian/psychic split and the Atlanta Vampire Alliance/Suscitatio framing cited in the draft's sources, and Kaldera's ethics text spells out donor consent, STD testing and sterile technique almost verbatim. One nuance: Kaldera stresses the sanguinarian/psychic-vampire categories overlap in practice more than a clean 'contrast' suggests.",
       "citations": [
         {
@@ -1903,7 +1903,7 @@
     "id": "santeria",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Murrell (citing Miguel De La Torre) states flatly that \"Santería\" was \"a derogatory creation imposed on the religion by white Cuban Catholic clergy\" specifically to distance it from Christianity — a more specific, scholarly-sourced claim than the draft's softened \"outsider's label.\" The rest of the draft (Lucumí/Regla de Ocha alternates, Yoruba-plus-Catholicism-and-Spiritism origin, initiatory house/elders structure) is directly corroborated.",
       "citations": [
         {
@@ -1951,7 +1951,7 @@
     "id": "satan",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Wray and Mobley's The Birth of Satan (biblical-studies monograph) confirms every claim in the draft: \"satan\"/ha-satan as a functional title (\"the adversary\") rather than a proper name in the Hebrew Bible, its heavenly-court role as exemplified in Job, and the later Christian development into a cosmic evil figure.",
       "citations": [
         {
@@ -1992,7 +1992,7 @@
     "id": "satanism",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Introvigne's Satanism: A Social History (2016) confirms LaVey founded the Church of Satan in 1966 and independently corroborates the draft's added claim that The Satanic Temple began in early 2013, plus its nontheistic, activist self-presentation. It also treats \"Satanic ritual abuse\" as a discredited moral panic, consistent with the draft, describing the 1980s-90s literature on it as a \"scare.\"",
       "citations": [
         {
@@ -2041,7 +2041,7 @@
     "id": "servitor",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Two independent practitioner sources in the library (Damon Brand's Magickal Servitors and Joseph Adkins's Thought Forms glossary) corroborate the draft's description of a servitor as a deliberately created, single-task thoughtform distinct from a group-made egregore. No scholarly treatment turned up in the library either, matching the notes' caveat.",
       "citations": [
         {
@@ -2114,7 +2114,7 @@
     "id": "shield",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "This is better sourced than the draft's notes assumed (\"folk practice, practitioner blogs only\"): Christopher Penczak's published book The Witch's Shield: Protection Magick and Psychic Self-Defense (Llewellyn, 2004) builds its whole \"Protection Shield Techniques\" chapter around exactly this concept — an energetic barrier/boundary a practitioner raises around themselves, particularly stressed for people in public roles. The draft's definition holds up; confidence can reasonably be raised from low-medium.",
       "citations": [
         {
@@ -2151,7 +2151,7 @@
     "id": "shufflemancy",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "As expected for a recent internet-era practice, the library has no coverage. The draft's low-stakes framing and lifestyle-press sourcing are appropriate given there is no scholarly literature to check it against.",
       "citations": [],
       "searched": "spiritual-listing.tsv and personal-spiritual-listing.tsv grepped for 'shufflemancy' and 'playlist divinat' -- no hits. Not expected to exist in a physical-media library."
@@ -2176,7 +2176,7 @@
     "id": "sigil",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Crowley's Goetia confirms sigils as spirit-seals used to identify and summon spirits, and Spare's own Book of Pleasure confirms his method of condensing belief/desire into an abstract sigil form, exactly as the draft distinguishes the two senses.",
       "citations": [
         {
@@ -2204,7 +2204,7 @@
     "id": "spg",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Same two books checked for UPG have no mention of SPG, PVPG, or \"shared personal gnosis\" either, so there's no library evidence bearing on the researcher's decision to un-equate SPG from PVPG. Nothing found to contradict; the web sourcing already used is appropriate for this term.",
       "citations": [],
       "searched": "02 Traditions/Norse/T. Sheil and A. Sheil - What Is Heathenism.pdf; 03 Practices/Devotional Practice/Raven Kaldera - Dealing with Deities...pdf; no dedicated Heathen reconstructionist SPG/PVPG source in the library's Norse or Reference folders"
@@ -2238,7 +2238,7 @@
     "id": "stregheria",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Judika Illes's encyclopedia corroborates the Leland/Aradia backstory precisely: published 1899 in London, sourced from a fortune-teller named 'Maddalena' whom Leland could never produce again, with 'an older version (or any other version) of Aradia has never been found' and Leland's own admission he wasn't sure how much was authentic versus his own composition -- the evidentiary gap underlying the draft's 'scholars find no evidence' claim. The library's copy of Raven Grimassi's own 'The Witch's Familiar' is a scanned PDF with no extractable text, so Grimassi's specific historicity claims could not be checked directly; the library also has no book by Sabina Magliocco or Ethan Doyle White (the scholars named in the draft's Wikipedia source) to verify their specific critique of Stregheria, only the Aradia primary-source material and the general Illes encyclopedia entry.",
       "citations": [
         {
@@ -2281,7 +2281,7 @@
     "id": "tantric-vampirism",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library shows this is better documented than \"thinly documented outside a few community sources\" suggests: Michelle Belanger's Psychic Vampire Codex (2004/2010) — the single most influential text in the modern psychic-vampire community — devotes a full named technique, \"Tantric Exchange\" (root-chakra-focused energy feeding during sex), to exactly this concept, and S.T. Joshi's scholarly Encyclopedia of the Vampire cites that same typology (ambient, surface, contact, tantric, deep feeding) as an academic reference point. It's a real, well-defined community concept, just not independently studied outside vampire-community and vampire-studies literature.",
       "citations": [
         {
@@ -2325,7 +2325,7 @@
     "id": "tarot",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library's encyclopedia (Vol. 2, Tarot entry) independently confirms that the Egyptian-origin story was invented in 18th-century France by Antoine Court de Gébelin, a Protestant minister and amateur Egyptologist, and that this was 'largely disproved' -- matching the draft's framing exactly, and also confirming the Italian tarocchi card-game origin.",
       "citations": [
         {
@@ -2352,7 +2352,7 @@
     "id": "tasseomancy",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library confirms the mechanism and the formal name 'tasseography' for tea-leaf/coffee-ground reading, matching the draft. It has no coverage of the historical claims (17th-century European spread, Victorian Britain popularity) one way or the other, so those rest on the Wikipedia source alone as before; nothing here supports or contradicts the researcher's decision to drop the Persia claim.",
       "citations": [
         {
@@ -2393,7 +2393,7 @@
     "id": "thelema",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Kaczynski's scholarly biography confirms the April 1904 Cairo dictation by Aiwass exactly as the draft states, including the precise dates and Crowley's own later framing of the event.",
       "citations": [
         {
@@ -2426,7 +2426,7 @@
     "id": "thoughtform",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library independently corroborates the servitor-to-egregore hierarchy the draft describes (Adkins gives the same graduated scheme as the single web source in the notes) and the claim that a thoughtform can gain independent existence (Stavish, discussing the tulpa). This moves the entry past the notes' \"one source\" flag, though Besant/Leadbeater's 1901 Thought-Forms itself was not found in the library (searched by title and author).",
       "citations": [
         {
@@ -2472,7 +2472,7 @@
     "id": "tulpamancy",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "The library confirms David-Néel's 1920s books (1927, 1929) as the entry point of \"tulpa\" into Western esotericism, and her own account of a tulpa's autonomy from its creator, matching the draft's dating and its claim that practitioners experience the tulpa as independently minded. The anthropological (Veissière) and appropriation-debate angle is not covered by any library book found (searched the \"Thoughtforms & Tulpamancy\" folder and by author); only the web sources address it.",
       "citations": [
         {
@@ -2505,7 +2505,7 @@
     "id": "upg",
     "library": {
       "verdict": "nothing in library",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Neither of the two most relevant library books (a Heathenry primer, and Kaldera's polytheist theology book) uses \"UPG\" or \"gnosis\" at all, so the library doesn't confirm or contradict the term's Heathen-reconstructionist origin or the weight-debate the draft describes; Wikipedia and The Wild Hunt (already cited) remain the right sourcing for this internet-era term of art.",
       "citations": [],
       "searched": "02 Traditions/Norse/T. Sheil and A. Sheil - What Is Heathenism.pdf (regex 'UPG|personal gnosis|unverified' = 0 hits); 03 Practices/Devotional Practice/Raven Kaldera - Dealing with Deities...pdf (regex '\\bUPG\\b' and '\\bgnosis\\b' = 0 hits)"
@@ -2543,7 +2543,7 @@
     "id": "vodou",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Murrell's academic text explicitly confirms Vodou (not Voodoo/Vodun) as \"the historically correct term\" for the Haitian religion, per Haitians and modern scholars, with Voodoo treated as the pop-culture/pejorative spelling — matching the draft precisely. Metraux's classic ethnography devotes a full chapter to kanzo-style initiation and possession terminology.",
       "citations": [
         {
@@ -2586,7 +2586,7 @@
     "id": "void",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "A full-length practitioner book in the library's LHP/Draconian folder describes Void almost exactly as the draft does: a formless source that everything \"comes out from\" and can be \"taken back\" into, worked with with meditation/visualization as both a creative and destructive force. The author's own preface says the concept has no settled definition and had to be built up from scarce, scattered sources — directly bearing out the draft's \"no agreed definition\" line. This is still one practitioner's self-published system (2015), not a canonical tradition, so treat it as corroborating community usage rather than an authoritative definition.",
       "citations": [
         {
@@ -2624,7 +2624,7 @@
     "id": "ward",
     "library": {
       "verdict": "needs change",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Library sources disagree on scope in a way worth reflecting. Christopher Penczak (published author, not a blog) draws a specific technical line: \"a ward is a specific protection spell centered on a location rather than a person or object\" — reserving \"amulet\"/\"charm\" for personal or object protection. Anatel Paimonious's Warding 101 (also library-held) uses \"ward\" more loosely, including warding \"yourself.\" The draft's broad definition (person, object, or space) matches the looser common usage but erases a real distinction some practitioners maintain, which a public glossary aiming for precision should note.",
       "citations": [
         {
@@ -2664,7 +2664,7 @@
     "id": "wicca",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Gerald Gardner's own 1954 'Witchcraft Today' (with Margaret Murray's introduction claiming the rites were 'a true survival and not a mere revival') confirms both the 1950s public emergence through Gardner and the internal 'survival story' the draft attributes to some practitioners. Judika Illes's Element Encyclopedia independently corroborates the 1954 date and Gardner's 'father of modern Wicca' status, and separately notes that academics 'often object' to Gardner's claims of an old, secret tradition, backing the draft's '20th-century new religious movement' framing. The library holds no Ronald Hutton title, so that specific attribution is not independently verified here (though nothing found contradicts it).",
       "citations": [
         {
@@ -2705,7 +2705,7 @@
     "id": "witchcraft",
     "library": {
       "verdict": "supported",
-      "report": "lbds137/gdrive-reorg docs/glossary-research.md @ 5e6d469",
+      "report": "private research repo docs/glossary-research.md @ 5e6d469",
       "summary": "Judika Illes's Element Encyclopedia backs both halves of the revised draft: it repeatedly frames historical witchcraft prosecutions around 'harmful witchcraft'/'harmful magic' (matching the 'alleged harmful magic' phrasing), and its own introduction stresses that 'what constitutes witchcraft is dependent upon the eye of its beholder,' walking through multiple competing definitions -- consistent with the draft's 'wide range of practices, many pagan... and some entirely secular.' The two dedicated academic witch-trial histories in the library (Maxwell-Stuart, Robin Briggs) are scanned with no extractable text, so they could not be searched directly, but nothing found contradicts the draft, which wisely avoids stating any trial death-toll figures.",
       "citations": [
         {
