@@ -22,15 +22,31 @@ const description =
           </h2>
           {group.commands.map((command) => (
             <div class="command" id={command.name}>
+              {(command.aliases ?? []).map((alias) => (
+                <span class="anchor-alias" id={alias} />
+              ))}
               <p class="command-usage">
                 <Fragment set:html={permalink(command.name, `the ${command.name} command`)} />
                 {command.invoked ? (
                   <code>{command.invoked}</code>
                 ) : (
-                  command.usage?.map((line) => <code>{line}</code>)
+                  command.subcommands ? null : command.usage?.map((line) => <code>{line}</code>)
                 )}
               </p>
-              <div class="command-text" set:html={renderMarkdown(command.text)} />
+              {command.subcommands ? (
+                <div class="subcommands">
+                  {command.subcommands.map((sub) => (
+                    <div class="subcommand">
+                      <p class="command-usage">
+                        {sub.usage.map((line) => <code>{line}</code>)}
+                      </p>
+                      <div class="command-text" set:html={renderMarkdown(sub.text)} />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div class="command-text" set:html={renderMarkdown(command.text ?? '')} />
+              )}
             </div>
           ))}
         </section>

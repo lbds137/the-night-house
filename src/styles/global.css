@@ -566,6 +566,20 @@ main {
   margin-bottom: 0;
 }
 
+/* Old anchors of commands that became subcommands or were renamed: an invisible target so
+   /commands/#rand_color still lands on /color. */
+.anchor-alias {
+  display: block;
+  height: 0;
+}
+
+/* Rows of a grouped slash command (/color contrast, /color random, ...), one per subcommand. */
+.subcommand + .subcommand {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--surface-3);
+}
+
 /* Discord-style mentions and callouts */
 
 .mention {
