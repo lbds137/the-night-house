@@ -85,7 +85,9 @@
           text: "Shows a random color: its swatch, color code and value."
         - name: "hex"
           usage: ["/color hex <color>"]
-          text: "A hex code's value as a number, ready for wherever a color's integer form is wanted."
+          text: >-
+            A hex code's value as a number, ready for wherever a color's integer form is
+            wanted.
     - name: "hex_to_int"
       message: true
       usage: ["#ff0000"]
