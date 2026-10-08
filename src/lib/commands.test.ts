@@ -164,7 +164,10 @@ describe('checkCommandGroups', () => {
     it('accepts a root whose subcommands each carry usage and text', () => {
       const groups = [
         group([
-          grouped('color', [sub('contrast', ['/color contrast <color>']), sub('hex', ['/color hex <color>'])]),
+          grouped('color', [
+            sub('contrast', ['/color contrast <color>']),
+            sub('hex', ['/color hex <color>']),
+          ]),
         ]),
       ];
       expect(checkCommandGroups(groups)).toBe(groups);
