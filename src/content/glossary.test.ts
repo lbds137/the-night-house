@@ -75,5 +75,6 @@ describe('glossary sources', () => {
     );
     expect(outside).toEqual([]);
     expect(sourcesRaw).not.toContain('Personal/');
+    expect(sourcesRaw).not.toContain('gdrive-reorg');
   });
 });
