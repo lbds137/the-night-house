@@ -20,11 +20,45 @@ describe('commands.yaml', () => {
     const names = commandGroups.flatMap((g) => g.commands.map((c) => c.name));
     expect(names).toContain('define');
     expect(names).toContain('gematria');
+    expect(names).toContain('hebrew');
+    expect(names).toContain('color');
+    expect(names).toContain('pointer');
+    expect(names).toContain('unhiatus');
     expect(names).toContain('view_avatar');
     expect(names).toContain('expand_emoji');
     // Staff tools and the commands other commands call stay off the page.
     for (const hidden of ['embed_exec', 'db', 'message_link', 'log_user', 'rule_edit']) {
       expect(names).not.toContain(hidden);
+    }
+    // The fleet is slash-first: the text twins are gone as entries.
+    for (const retired of [
+      'contrast',
+      'contrasts',
+      'rand_color',
+      'atbash',
+      'alefbet',
+      'pyramid',
+      'rand_hebrew',
+      'message_pointer',
+    ]) {
+      expect(names).not.toContain(retired);
+    }
+  });
+
+  // Retired and renamed commands live on as alias anchors, so old /commands/# links keep working.
+  it('keeps the old anchors alive as aliases', () => {
+    const aliases = commandGroups.flatMap((g) => g.commands.flatMap((c) => c.aliases ?? []));
+    for (const old of [
+      'contrast',
+      'contrasts',
+      'rand_color',
+      'atbash',
+      'alefbet',
+      'pyramid',
+      'rand_hebrew',
+      'message_pointer',
+    ]) {
+      expect(aliases).toContain(old);
     }
   });
 
@@ -100,5 +134,79 @@ describe('checkCommandGroups', () => {
     expect(() =>
       checkCommandGroups([group([{ name: 'rule', usage: ['/rule'], text: ' ' }])]),
     ).toThrow('rule has no text');
+  });
+
+  describe('grouped slash commands', () => {
+    const sub = (name: string, usage: string[]) => ({ name, usage, text: 'Does a thing.' });
+    const grouped = (name: string, subcommands: ReturnType<typeof sub>[]) => ({
+      name,
+      subcommands,
+    });
+
+    it('accepts a root whose subcommands each carry usage and text', () => {
+      const groups = [
+        group([
+          grouped('color', [sub('contrast', ['/color contrast <color>']), sub('hex', ['/color hex <color>'])]),
+        ]),
+      ];
+      expect(checkCommandGroups(groups)).toBe(groups);
+    });
+
+    it('refuses a root that also carries usage, text, message mode or an invoked form', () => {
+      const subs = [sub('hex', ['/color hex <c>'])];
+      expect(() =>
+        checkCommandGroups([group([{ name: 'color', usage: ['/color'], subcommands: subs }])]),
+      ).toThrow('has both usage lines and subcommands');
+      expect(() =>
+        checkCommandGroups([group([{ name: 'color', text: 't', subcommands: subs }])]),
+      ).toThrow('has both its own text and subcommands');
+      expect(() =>
+        checkCommandGroups([group([{ name: 'color', message: true, subcommands: subs }])]),
+      ).toThrow('is both a message command and a grouped one');
+      expect(() =>
+        checkCommandGroups([group([{ name: 'color', invoked: 'a menu', subcommands: subs }])]),
+      ).toThrow('has both an invoked form and subcommands');
+      expect(() =>
+        checkCommandGroups([group([{ name: 'color', subcommands: [] }])]),
+      ).toThrow('has no subcommands');
+    });
+
+    it('refuses subcommand usage under another name and repeated subcommands', () => {
+      expect(() =>
+        checkCommandGroups([group([grouped('color', [sub('hex', ['/color hexes <color>'])])])]),
+      ).toThrow('should be "/color hex"');
+      expect(() =>
+        checkCommandGroups([
+          group([
+            grouped('color', [sub('hex', ['/color hex <c>']), sub('hex', ['/color hex <c>'])]),
+          ]),
+        ]),
+      ).toThrow('repeats the subcommand "hex"');
+    });
+
+    it('refuses subcommands with no usage or no text', () => {
+      expect(() =>
+        checkCommandGroups([group([grouped('color', [sub('hex', [])])])]),
+      ).toThrow('color hex has no usage');
+      expect(() =>
+        checkCommandGroups([
+          group([
+            { name: 'color', subcommands: [{ name: 'hex', usage: ['/color hex'], text: ' ' }] },
+          ]),
+        ]),
+      ).toThrow('color hex has no text');
+    });
+
+    it('refuses a bad or colliding alias', () => {
+      expect(() =>
+        checkCommandGroups([group([{ name: 'rule', usage: ['/rule'], text: 't', aliases: ['Rand Color'] }])]),
+      ).toThrow('is not an anchor alias');
+      expect(() =>
+        checkCommandGroups([
+          group([command('rule', ['/rule'])]),
+          group([{ name: 'color', aliases: ['rule'], subcommands: [] }], 'b'),
+        ]),
+      ).toThrow('alias "rule" of "color" reuses the anchor "rule"');
+    });
   });
 });
