@@ -42,6 +42,9 @@ describe('commands.yaml', () => {
       'message_link',
       'log_user',
       'rule_edit',
+      'edit',
+      'prompt',
+      'role_ping',
       'hiatus',
       'staff',
       'setup',
@@ -230,6 +233,46 @@ describe('checkCommandGroups', () => {
           group([{ name: 'color', aliases: ['rule'], subcommands: [] }], 'b'),
         ]),
       ).toThrow('alias "rule" of "color" reuses the anchor "rule"');
+    });
+
+    it('refuses unknown keys, so a misspelled one cannot drop its data', () => {
+      expect(() =>
+        checkCommandGroups([
+          group([fromYaml({ name: 'rule', usage: ['/rule'], text: 't', alias: ['old'] })]),
+        ]),
+      ).toThrow('command "rule" has unknown keys: alias');
+      const misspelled = { name: 'hex', usages: ['/color hex'], usage: ['/color hex'], text: 't' };
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'color', subcommands: [misspelled] })])]),
+      ).toThrow('color hex has unknown keys: usages');
+      const titled = { ...group([command('rule', ['/rule'])]), title: 'x' };
+      expect(() => checkCommandGroups([titled])).toThrow('group "misc" has unknown keys: title');
+    });
+
+    it('refuses a group with no name, since it is the section heading', () => {
+      expect(() =>
+        checkCommandGroups([{ ...group([command('rule', ['/rule'])]), name: ' ' }]),
+      ).toThrow('group "misc" has no name');
+    });
+
+    // The page shows any invoked value in place of the usage lines.
+    it('refuses a blank invoked form', () => {
+      expect(() =>
+        checkCommandGroups([group([{ name: 'x', text: 't', invoked: ' ', usage: ['/x'] }])]),
+      ).toThrow("x's invoked form is blank");
+    });
+
+    it('refuses a non-string where a string belongs, naming the field', () => {
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'rule', usage: [42], text: 't' })])]),
+      ).toThrow("rule's usage must be a list of strings");
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'rule', usage: ['/rule'], text: 42 })])]),
+      ).toThrow("rule's text must be a string");
+      const numbered = { name: 'hex', usage: ['/color hex'], text: 7 };
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'color', subcommands: [numbered] })])]),
+      ).toThrow("color hex's text must be a string");
     });
 
     // A YAML scalar where a list belongs must fail naming the field, not one character of it.
