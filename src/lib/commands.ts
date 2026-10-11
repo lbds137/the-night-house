@@ -79,15 +79,14 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
     seen.add(id);
   };
   for (const group of groups) {
-    checkKeys(group, GROUP_KEYS, `group ${JSON.stringify(group.id)}`);
-    checkString(group.name, `group ${JSON.stringify(group.id)}'s name`);
-    // The name is the section's heading and its accessible label.
-    if (!group.name?.trim()) {
-      throw new Error(`commands.yaml: group ${JSON.stringify(group.id)} has no name`);
-    }
+    // The id comes first: the later checks name the group by it.
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(group.id ?? '')) {
-      throw new Error(`commands.yaml: group "${group.name}" needs a kebab-case id`);
+      throw new Error(`commands.yaml: group ${JSON.stringify(group.name)} needs a kebab-case id`);
     }
+    checkKeys(group, GROUP_KEYS, `group "${group.id}"`);
+    checkString(group.name, `group "${group.id}"'s name`);
+    // The name is the section's heading and its accessible label.
+    if (!group.name?.trim()) throw new Error(`commands.yaml: group "${group.id}" has no name`);
     claim(group.id, `group "${group.name}"`);
     if (!group.commands?.length) throw new Error(`commands.yaml: group "${group.name}" is empty`);
     for (const command of group.commands) {
