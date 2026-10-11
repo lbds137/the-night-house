@@ -10,7 +10,7 @@ interface Entry {
   id: string;
   term: string;
   draft: string;
-  library?: { citations?: { file: string }[] };
+  library?: { citations?: { file: string }[]; report?: string };
 }
 
 const entries: Entry[] = JSON.parse(sourcesRaw);
@@ -75,6 +75,21 @@ describe('glossary sources', () => {
     );
     expect(outside).toEqual([]);
     expect(sourcesRaw).not.toContain('Personal/');
-    expect(sourcesRaw).not.toContain('private-research-repo');
+  });
+
+  // The research trail lives in a private repo. Guard by shape, so this file never has to
+  // name it: every repo reference must be a public one, and every report a known form.
+  it('names no private repo', () => {
+    const publicRepos = ['the-night-house', 'yagpdb-custom-commands'];
+    const repoRefs = [...sourcesRaw.matchAll(/lbds137\/([\w.-]+)/gi)].map((m) => m[1]);
+    expect(repoRefs.filter((r) => !publicRepos.includes(r.toLowerCase()))).toEqual([]);
+    const reports = entries.map((e) => e.library?.report).filter((r) => r !== undefined);
+    const unknown = reports.filter(
+      (r) =>
+        !/^private research repo docs\/\S+ @ [0-9a-f]{7,40}$/.test(r) &&
+        r !== 'n/a' &&
+        !r.startsWith('the-night-house '),
+    );
+    expect(unknown).toEqual([]);
   });
 });
