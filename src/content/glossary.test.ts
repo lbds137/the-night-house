@@ -81,8 +81,11 @@ describe('glossary sources', () => {
   // name it: every repo reference must be a public one, and every report a known form.
   it('names no private repo', () => {
     const publicRepos = ['the-night-house', 'yagpdb-custom-commands'];
-    const repoRefs = [...sourcesRaw.matchAll(/lbds137\/([\w.-]+)/gi)].map((m) => m[1]);
-    expect(repoRefs.filter((r) => !publicRepos.includes(r.toLowerCase()))).toEqual([]);
+    // A sentence-ending period or a .git suffix is not part of the repo's name.
+    const repoRefs = [...sourcesRaw.matchAll(/lbds137\/([\w.-]+)/gi)].map((m) =>
+      m[1].replace(/(\.git)?[.-]*$/i, '').toLowerCase(),
+    );
+    expect(repoRefs.filter((r) => !publicRepos.includes(r)), 'repo refs not public').toEqual([]);
     const reports = entries.map((e) => e.library?.report).filter((r) => r !== undefined);
     const unknown = reports.filter(
       (r) =>
@@ -90,6 +93,7 @@ describe('glossary sources', () => {
         r !== 'n/a' &&
         !r.startsWith('the-night-house '),
     );
-    expect(unknown).toEqual([]);
+    const forms = '"private research repo docs/<path> @ <commit>", "n/a", "the-night-house <note>"';
+    expect(unknown, `library.report must be one of: ${forms}`).toEqual([]);
   });
 });
