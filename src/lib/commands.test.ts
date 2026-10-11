@@ -298,6 +298,10 @@ describe('checkCommandGroups', () => {
           ]),
         ]),
       ).toThrow("color hex's usage must be a list of strings");
+      const scalarGroup = { id: 'misc', name: 'Misc', commands: 'rule' } as unknown as CommandGroup;
+      expect(() => checkCommandGroups([scalarGroup])).toThrow(
+        `group "misc"'s commands must be a list`,
+      );
     });
   });
 });

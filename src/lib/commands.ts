@@ -88,6 +88,10 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
     // The name is the section's heading and its accessible label.
     if (!group.name?.trim()) throw new Error(`commands.yaml: group "${group.id}" has no name`);
     claim(group.id, `group "${group.name}"`);
+    // A scalar here would pass the length check and be walked one character at a time.
+    if (group.commands !== undefined && !Array.isArray(group.commands)) {
+      throw new Error(`commands.yaml: group "${group.id}"'s commands must be a list`);
+    }
     if (!group.commands?.length) throw new Error(`commands.yaml: group "${group.name}" is empty`);
     for (const command of group.commands) {
       if (!/^[a-z][a-z0-9_]*$/.test(command.name ?? '')) {
