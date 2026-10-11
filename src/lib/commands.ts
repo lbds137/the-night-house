@@ -39,6 +39,33 @@ export interface CommandGroup {
 /** Fixed ids on the Commands page and its components, which no anchor may reuse. */
 export const RESERVED_IDS = ['content', 'permalink-status'];
 
+const GROUP_KEYS = ['id', 'name', 'commands'];
+const COMMAND_KEYS = ['name', 'usage', 'message', 'invoked', 'text', 'subcommands', 'aliases'];
+const SUBCOMMAND_KEYS = ['name', 'usage', 'text'];
+
+// A misspelled key (`alias:`, `usages:`) would otherwise drop its data without a word, and an
+// alias dropped that way breaks old links only where something happens to link them.
+function checkKeys(entry: object, allowed: string[], what: string) {
+  const unknown = Object.keys(entry).filter((key) => !allowed.includes(key));
+  if (unknown.length) {
+    throw new Error(`commands.yaml: ${what} has unknown keys: ${unknown.join(', ')}`);
+  }
+}
+
+// YAML hands over a number or a list where a string belongs; fail naming the field rather than
+// with a TypeError from .trim() deep in the checks.
+function checkString(value: unknown, what: string) {
+  if (value !== undefined && typeof value !== 'string') {
+    throw new Error(`commands.yaml: ${what} must be a string`);
+  }
+}
+
+function checkUsage(usage: unknown, what: string) {
+  if (!Array.isArray(usage) || usage.some((line) => typeof line !== 'string')) {
+    throw new Error(`commands.yaml: ${what}'s usage must be a list of strings`);
+  }
+}
+
 /**
  * Checks the groups the Commands page renders: every anchor unique (command names, group ids
  * and old-name aliases share the space), every usage line of a slash command starting with its
@@ -52,6 +79,12 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
     seen.add(id);
   };
   for (const group of groups) {
+    checkKeys(group, GROUP_KEYS, `group ${JSON.stringify(group.id)}`);
+    checkString(group.name, `group ${JSON.stringify(group.id)}'s name`);
+    // The name is the section's heading and its accessible label.
+    if (!group.name?.trim()) {
+      throw new Error(`commands.yaml: group ${JSON.stringify(group.id)} has no name`);
+    }
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(group.id ?? '')) {
       throw new Error(`commands.yaml: group "${group.name}" needs a kebab-case id`);
     }
@@ -63,6 +96,14 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
         throw new Error(`commands.yaml: ${name} is not a command name (lowercase, digits, _)`);
       }
       claim(command.name, `command "${command.name}"`);
+      checkKeys(command, COMMAND_KEYS, `command "${command.name}"`);
+      checkString(command.text, `${command.name}'s text`);
+      checkString(command.invoked, `${command.name}'s invoked form`);
+      // The page renders any invoked value in place of the usage lines, so a blank one would
+      // show an empty path; the page and these checks must agree on whether it is there.
+      if (command.invoked !== undefined && !command.invoked.trim()) {
+        throw new Error(`commands.yaml: ${command.name}'s invoked form is blank`);
+      }
       const aliases = command.aliases ?? [];
       // YAML accepts `aliases: pyramid` as a scalar; iterating it would check it one character
       // at a time and fail far from the cause.
@@ -119,17 +160,15 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
             );
           }
           seenSubs.add(sub.name);
+          checkKeys(sub, SUBCOMMAND_KEYS, `${command.name} ${sub.name}`);
+          checkString(sub.text, `${command.name} ${sub.name}'s text`);
           if (!sub.text?.trim()) {
             throw new Error(`commands.yaml: ${command.name} ${sub.name} has no text`);
           }
           if (!sub.usage?.length) {
             throw new Error(`commands.yaml: ${command.name} ${sub.name} has no usage`);
           }
-          if (!Array.isArray(sub.usage)) {
-            throw new Error(
-              `commands.yaml: ${command.name} ${sub.name}'s usage must be a list of strings`,
-            );
-          }
+          checkUsage(sub.usage, `${command.name} ${sub.name}`);
           for (const line of sub.usage) {
             if (!new RegExp(`^/${command.name} ${sub.name}( |$)`).test(line)) {
               throw new Error(
@@ -156,11 +195,7 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       } else {
         if (!command.text?.trim()) throw new Error(`commands.yaml: ${command.name} has no text`);
         if (!command.usage?.length) throw new Error(`commands.yaml: ${command.name} has no usage`);
-        if (!Array.isArray(command.usage)) {
-          throw new Error(
-            `commands.yaml: ${command.name}'s usage must be a list of strings`,
-          );
-        }
+        checkUsage(command.usage, command.name);
         for (const line of command.usage) {
           const typed = new RegExp(`^/${command.name}( |$)`).test(line);
           const example = line.trim() !== '' && !line.startsWith('/');
