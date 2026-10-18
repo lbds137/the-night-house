@@ -67,7 +67,8 @@ describe('commands.yaml', () => {
     }
   });
 
-  // Every grouped root, with its subcommands in page order, so a dropped sub fails here.
+  // Every grouped root, with its subcommands in page order, so a dropped sub fails here. A new
+  // grouped root fails too until it gets a row in this table.
   it('lists every subcommand of each grouped root', () => {
     const grouped = Object.fromEntries(
       commandGroups
