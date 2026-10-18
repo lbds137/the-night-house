@@ -1,6 +1,6 @@
 # The member commands of the server's YAGPDB bot, for the Commands page, in page order.
 # Source: github.com/lbds137/yagpdb-custom-commands, the slash roots and the commands/<topic>/
-# files whose header says `Group: Utility` (checked against the slash fleet of 2026-10-04).
+# files whose header says `Group: Utility` (checked against the slash fleet of 2026-10-18).
 # Staff tools and the commands other commands call (embed_exec, db, db_get_*, message_link,
 # ...) stay off the page.
 # Since 2026-10-04 the fleet is slash-first: related commands are subcommands of one root
@@ -65,6 +65,38 @@
           text: >-
             Random Hebrew letters, with the gematria of the result: `/hebrew random 7` gives seven
             letters, and `/hebrew random 4 3` gives three groups of four.
+-
+  name: "Ciphers"
+  id: "ciphers"
+  commands:
+    - name: "cipher"
+      subcommands:
+        - name: "encode"
+          usage: ["/cipher encode <key> <text>"]
+          text: >-
+            Enciphers the text with the Vigenère cipher and posts the result in the channel. The
+            key is a word, letters only. Only the letters A to Z are enciphered, keeping their
+            case; everything else passes through unchanged. A toy, so never use it for anything
+            that has to stay secret.
+        - name: "decode"
+          usage: ["/cipher decode <key> <text>"]
+          text: "Deciphers Vigenère text with its key. Only you see the answer."
+        - name: "crack"
+          usage: ["/cipher crack <text>"]
+          text: >-
+            Tries to break Vigenère text without the key, by letter-frequency analysis, and
+            shows the key it found with the deciphered text. It needs a fair amount of English to
+            go on; with too little, it says it found no clear key. Only you see the answer.
+        - name: "newcipher"
+          usage: ["/cipher newcipher <text>"]
+          text: >-
+            Deciphers text made with NewCipher, a homemade toy cipher from 2009. The bot only
+            deciphers it; it can't encipher. Only you see the answer.
+        - name: "oldcipher"
+          usage: ["/cipher oldcipher <text>"]
+          text: >-
+            Deciphers text made with OldCipher, an older homemade toy cipher from 2009. The bot only
+            deciphers it; it can't encipher. Only you see the answer.
 -
   name: "Colors"
   id: "colors"
