@@ -67,15 +67,19 @@ describe('commands.yaml', () => {
     }
   });
 
-  it('lists every /cipher subcommand', () => {
-    const cipher = commandGroups.flatMap((g) => g.commands).find((c) => c.name === 'cipher');
-    expect(cipher?.subcommands?.map((s) => s.name)).toEqual([
-      'encode',
-      'decode',
-      'crack',
-      'newcipher',
-      'oldcipher',
-    ]);
+  // Every grouped root, with its subcommands in page order, so a dropped sub fails here.
+  it('lists every subcommand of each grouped root', () => {
+    const grouped = Object.fromEntries(
+      commandGroups
+        .flatMap((g) => g.commands)
+        .filter((c) => c.subcommands)
+        .map((c) => [c.name, c.subcommands?.map((s) => s.name)]),
+    );
+    expect(grouped).toEqual({
+      hebrew: ['atbash', 'alefbet', 'pyramid', 'random'],
+      cipher: ['encode', 'decode', 'crack', 'newcipher', 'oldcipher'],
+      color: ['contrast', 'contrasts', 'random', 'hex'],
+    });
   });
 
   // Retired and renamed commands live on as alias anchors, so old /commands/# links keep working.
