@@ -67,6 +67,17 @@ describe('commands.yaml', () => {
     }
   });
 
+  it('lists every /cipher subcommand', () => {
+    const cipher = commandGroups.flatMap((g) => g.commands).find((c) => c.name === 'cipher');
+    expect(cipher?.subcommands?.map((s) => s.name)).toEqual([
+      'encode',
+      'decode',
+      'crack',
+      'newcipher',
+      'oldcipher',
+    ]);
+  });
+
   // Retired and renamed commands live on as alias anchors, so old /commands/# links keep working.
   it('keeps the old anchors alive as aliases', () => {
     const aliases = commandGroups.flatMap((g) => g.commands.flatMap((c) => c.aliases ?? []));

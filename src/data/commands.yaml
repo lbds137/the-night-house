@@ -75,9 +75,9 @@
           usage: ["/cipher encode <key> <text>"]
           text: >-
             Enciphers the text with the Vigenère cipher and posts the result in the channel. The
-            key is a word, letters only. Only the letters A to Z are enciphered, keeping their
-            case; everything else passes through unchanged. A toy, so never use it for anything
-            that has to stay secret.
+            key is a word, letters only. Only the letters A to Z, capital or small, are
+            enciphered, and they keep their case; everything else passes through unchanged. It's a
+            toy cipher: never use it for anything that has to stay secret.
         - name: "decode"
           usage: ["/cipher decode <key> <text>"]
           text: "Deciphers Vigenère text with its key. Only you see the answer."
