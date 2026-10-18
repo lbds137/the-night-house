@@ -31,6 +31,7 @@ describe('commands.yaml', () => {
     expect(names).toContain('gematria');
     expect(names).toContain('hebrew');
     expect(names).toContain('color');
+    expect(names).toContain('cipher');
     expect(names).toContain('pointer');
     expect(names).toContain('unhiatus');
     expect(names).toContain('view_avatar');
