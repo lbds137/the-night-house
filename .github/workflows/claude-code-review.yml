@@ -5,7 +5,8 @@ name: Claude Code Review
 # The action skips itself on the PR that adds or changes this file (it validates
 # against the default branch's copy), so that PR gets no review and a red check:
 # it is merged by hand. The automerge job below merges the owner's non-draft PRs
-# once the review passes and every other check is green.
+# once the review passes and every other check is green, and Dependabot's PRs
+# (which get no review) once every other check is green.
 
 on:
   pull_request:
@@ -101,8 +102,8 @@ jobs:
             *) echo "::error::No VERDICT line naming $sha, so this review can't gate a merge. Re-run this job."; exit 1 ;;
           esac
 
-  # Merges the PR once the review passed and every other check on the head commit
-  # finished green. Done in-workflow rather than with GitHub's auto-merge, which
+  # Merges the PR once the review passed (or, for Dependabot, was skipped) and every other
+  # check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge, which
   # needs required checks, and those need GitHub Pro on private repos. A merge made
   # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
   # dispatches the deploy and CodeQL runs itself (workflow_dispatch is exempt).
@@ -111,11 +112,20 @@ jobs:
   # pass alone can break the build together. combined-build rebases the PR onto current main,
   # as the merge will, and builds that. It runs the PR's code, so it gets a read-only token and
   # its own job: nothing it does (env vars, $GITHUB_ENV writes) can reach the merge job's token.
+  #
+  # A Dependabot PR skips the review, so both jobs merge it on green checks alone (its action
+  # pin bumps to this file included: Dependabot only rewrites `uses:` versions). They also
+  # require Dependabot to have triggered the run (github.actor keeps the original actor on a
+  # re-run): if anyone else pushes to its branch, the PR waits for a hand merge. !cancelled()
+  # replaces the implicit success() that would skip both jobs behind a skipped review.
   combined-build:
     needs: claude-review
     if: >-
-      github.event.pull_request.user.login == github.repository_owner &&
-      !github.event.pull_request.draft
+      github.event.pull_request.draft == false && !cancelled() && (
+        (github.event.pull_request.user.login == github.repository_owner &&
+         needs.claude-review.result == 'success') ||
+        (github.event.pull_request.user.login == 'dependabot[bot]' &&
+         github.actor == 'dependabot[bot]' && needs.claude-review.result == 'skipped'))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -160,8 +170,12 @@ jobs:
   automerge:
     needs: [claude-review, combined-build]
     if: >-
-      github.event.pull_request.user.login == github.repository_owner &&
-      !github.event.pull_request.draft
+      github.event.pull_request.draft == false && !cancelled() &&
+      needs.combined-build.result == 'success' && (
+        (github.event.pull_request.user.login == github.repository_owner &&
+         needs.claude-review.result == 'success') ||
+        (github.event.pull_request.user.login == 'dependabot[bot]' &&
+         github.actor == 'dependabot[bot]' && needs.claude-review.result == 'skipped'))
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
