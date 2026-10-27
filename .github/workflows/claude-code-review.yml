@@ -106,7 +106,8 @@ jobs:
   # check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge, which
   # needs required checks, and those need GitHub Pro on private repos. A merge made
   # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
-  # dispatches the deploy and CodeQL runs itself (workflow_dispatch is exempt).
+  # dispatches the deploy itself (workflow_dispatch is exempt). CodeQL is GitHub's default
+  # setup, which scans PRs and runs weekly on its own.
   #
   # The checks ran on the PR as branched, but main may have moved since: two PRs that each
   # pass alone can break the build together. combined-build rebases the PR onto current main,
@@ -229,9 +230,7 @@ jobs:
           gh pr merge "$PR" --repo "$REPO" --rebase --match-head-commit "$SHA"
           gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" ||
             echo "::warning::Merged, but deleting branch $HEAD_REF failed."
-      - name: Deploy and scan main
+      - name: Deploy main
         # The merge's push to main starts nothing (see above), so without this the
         # merged change never reaches the live site.
-        run: |
-          gh workflow run deploy.yml --repo "$REPO" --ref main
-          gh workflow run codeql.yml --repo "$REPO" --ref main
+        run: gh workflow run deploy.yml --repo "$REPO" --ref main
