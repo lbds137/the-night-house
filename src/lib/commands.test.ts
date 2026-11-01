@@ -330,9 +330,21 @@ describe('checkCommandGroups', () => {
       expect(() => checkCommandGroups([group([fromYaml(null)])])).toThrow(
         'commands.yaml: group "misc" has an entry that is not a mapping',
       );
+      // `- - name: x` nests a list where a mapping belongs.
+      expect(() => checkCommandGroups([group([fromYaml([])])])).toThrow(
+        'commands.yaml: group "misc" has an entry that is not a mapping',
+      );
       expect(() =>
         checkCommandGroups([group([fromYaml({ name: 'color', subcommands: [null] })])]),
       ).toThrow('commands.yaml: color has a subcommand that is not a mapping');
+    });
+
+    it('refuses a top level that is not a list', () => {
+      for (const top of [null, { id: 'misc' }]) {
+        expect(() => checkCommandGroups(top as unknown as CommandGroup[])).toThrow(
+          'commands.yaml: the top level must be a list of groups',
+        );
+      }
     });
 
     it('refuses a non-boolean message flag', () => {

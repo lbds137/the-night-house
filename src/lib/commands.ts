@@ -81,6 +81,10 @@ function checkUsage(usage: unknown, what: string) {
  * can't keep a stale example.
  */
 export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
+  // An empty file parses to null and a stray top-level key to a mapping; neither is iterable.
+  if (!Array.isArray(groups)) {
+    throw new Error('commands.yaml: the top level must be a list of groups');
+  }
   const seen = new Set<string>(RESERVED_IDS);
   const claim = (id: string, what: string) => {
     if (seen.has(id)) throw new Error(`commands.yaml: ${what} reuses the anchor "${id}"`);
