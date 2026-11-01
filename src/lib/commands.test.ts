@@ -85,19 +85,21 @@ describe('commands.yaml', () => {
 
   // Retired and renamed commands live on as alias anchors, so old /commands/# links keep working.
   it('keeps the old anchors alive as aliases', () => {
-    const aliases = commandGroups.flatMap((g) => g.commands.flatMap((c) => c.aliases ?? []));
-    for (const old of [
-      'contrast',
-      'contrasts',
-      'rand_color',
-      'atbash',
-      'alefbet',
-      'pyramid',
-      'rand_hebrew',
-      'message_pointer',
-    ]) {
-      expect(aliases).toContain(old);
-    }
+    const owners = Object.fromEntries(
+      commandGroups.flatMap((g) =>
+        g.commands.flatMap((c) => (c.aliases ?? []).map((alias) => [alias, c.name])),
+      ),
+    );
+    expect(owners).toEqual({
+      contrast: 'color',
+      contrasts: 'color',
+      rand_color: 'color',
+      atbash: 'hebrew',
+      alefbet: 'hebrew',
+      pyramid: 'hebrew',
+      rand_hebrew: 'hebrew',
+      message_pointer: 'pointer',
+    });
   });
 
   // The page's own ids share the anchor space with the groups and commands.
@@ -319,6 +321,26 @@ describe('checkCommandGroups', () => {
       expect(() => checkCommandGroups([scalarGroup])).toThrow(
         `group "misc"'s commands must be a list`,
       );
+    });
+
+    it('refuses a non-mapping group, command or subcommand entry', () => {
+      expect(() => checkCommandGroups([null as unknown as CommandGroup])).toThrow(
+        'commands.yaml: group entry is not a mapping',
+      );
+      expect(() => checkCommandGroups([group([fromYaml(null)])])).toThrow(
+        'commands.yaml: group "misc" has an entry that is not a mapping',
+      );
+      expect(() =>
+        checkCommandGroups([group([fromYaml({ name: 'color', subcommands: [null] })])]),
+      ).toThrow('commands.yaml: color has a subcommand that is not a mapping');
+    });
+
+    it('refuses a non-boolean message flag', () => {
+      expect(() =>
+        checkCommandGroups([
+          group([fromYaml({ name: 'rule', usage: ['/rule'], text: 't', message: 'no' })]),
+        ]),
+      ).toThrow("commands.yaml: rule's message must be true or false");
     });
   });
 });

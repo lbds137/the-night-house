@@ -2,7 +2,8 @@
 # Source: github.com/lbds137/yagpdb-custom-commands, the slash roots and the commands/<topic>/
 # files whose header says `Group: Utility` (checked against the slash fleet of 2026-10-18).
 # Staff tools and the commands other commands call (embed_exec, db, db_get_*, message_link,
-# ...) stay off the page.
+# ...) stay off the page. /unhiatus is listed on purpose: it is `Group: Utility`, because a
+# staff member on hiatus has lost the staff roles.
 # Since 2026-10-04 the fleet is slash-first: related commands are subcommands of one root
 # (/color contrast, /hebrew atbash, ...), and the retired text twins live on only as the
 # root's `aliases`, so old /commands/# links keep working.
@@ -39,8 +40,8 @@
         Works out the gematria of the text: the value of each word, each line and the whole,
         each reduced step by step to a single digit. It reads Hebrew, Paleo-Hebrew, Greek,
         Arabic, Latin, runes and the digits 1 to 9. When its letters correspond to 11 or fewer
-        different Major Arcana, it lists those cards too, in both the Rider-Waite-Smith and
-        Thoth decks.
+        different Major Arcana, it lists those cards too, once when the Rider-Waite-Smith and
+        Thoth decks agree, and for each deck when they differ.
     - name: "hebrew"
       aliases: ["atbash", "alefbet", "pyramid", "rand_hebrew"]
       subcommands:
@@ -154,21 +155,22 @@
       text: >-
         The right-click twin of [hugemoji](#hugemoji): shows every distinct custom emoji in
         that message at full size, in the order they appear, up to 10, each with a link back
-        to the message. If the message has no custom emoji, the bot says so.
+        to the message. Each emoji comes with an Open image button and a Dismiss button that
+        only whoever ran it, or staff, can use. If the message has no custom emoji, the bot
+        says so.
     - name: "avatar_viewer"
-      usage: ["/avatar_viewer [user ID or message link] [size]"]
+      usage: ["/avatar_viewer [user ID or message link [size]]"]
       text: >-
         Shows someone's avatar, with their ID, name, nickname and when their account was
-        created. With no user it shows
-        yours; a message link shows the avatar of whoever sent it. The size can be 32, 64,
-        128, 256, 512 or 1024 (the default). Type this one as an ordinary message — Discord's
-        slash list doesn't offer it.
+        created. With no user it shows yours; a message link shows the avatar of whoever sent
+        it. The size goes after a user or link and can be 32, 64, 128, 256, 512 or 1024 (the
+        default). Type this one as an ordinary message — Discord's slash list doesn't offer it.
     - name: "view_avatar"
       invoked: "right-click a user → Apps → View Avatar"
       text: >-
         The right-click twin of [avatar_viewer](#avatar_viewer): shows someone's avatar, with
-        their ID, name, nickname and when their account was created, and an Open image button
-        for the full-size file.
+        their ID, name, nickname and when their account was created, an Open image button for
+        the full-size file and a Dismiss button that only whoever ran it, or staff, can use.
     - name: "timestamp"
       usage: ["/timestamp [ID]"]
       text: >-

@@ -43,6 +43,14 @@ const GROUP_KEYS = ['id', 'name', 'commands'];
 const COMMAND_KEYS = ['name', 'usage', 'message', 'invoked', 'text', 'subcommands', 'aliases'];
 const SUBCOMMAND_KEYS = ['name', 'usage', 'text'];
 
+// A stray `-` in YAML hands over null; fail naming the surrounding list rather than with a
+// TypeError when reading the first field.
+function checkMapping(entry: unknown, what: string) {
+  if (typeof entry !== 'object' || entry === null || Array.isArray(entry)) {
+    throw new Error(`commands.yaml: ${what} is not a mapping`);
+  }
+}
+
 // A misspelled key (`alias:`, `usages:`) would otherwise drop its data without a word, and an
 // alias dropped that way breaks old links only where something happens to link them.
 function checkKeys(entry: object, allowed: string[], what: string) {
@@ -79,6 +87,7 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
     seen.add(id);
   };
   for (const group of groups) {
+    checkMapping(group, 'group entry');
     // The id comes first: the later checks name the group by it.
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(group.id ?? '')) {
       throw new Error(`commands.yaml: group ${JSON.stringify(group.name)} needs a kebab-case id`);
@@ -94,6 +103,7 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
     }
     if (!group.commands?.length) throw new Error(`commands.yaml: group "${group.name}" is empty`);
     for (const command of group.commands) {
+      checkMapping(command, `group "${group.id}" has an entry that`);
       if (!/^[a-z][a-z0-9_]*$/.test(command.name ?? '')) {
         const name = JSON.stringify(command.name);
         throw new Error(`commands.yaml: ${name} is not a command name (lowercase, digits, _)`);
@@ -102,6 +112,9 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
       checkKeys(command, COMMAND_KEYS, `command "${command.name}"`);
       checkString(command.text, `${command.name}'s text`);
       checkString(command.invoked, `${command.name}'s invoked form`);
+      if (command.message !== undefined && typeof command.message !== 'boolean') {
+        throw new Error(`commands.yaml: ${command.name}'s message must be true or false`);
+      }
       // The page renders any invoked value in place of the usage lines, so a blank one would
       // show an empty path; the page and these checks must agree on whether it is there.
       if (command.invoked !== undefined && !command.invoked.trim()) {
@@ -150,6 +163,7 @@ export function checkCommandGroups(groups: CommandGroup[]): CommandGroup[] {
         }
         const seenSubs = new Set<string>();
         for (const sub of command.subcommands) {
+          checkMapping(sub, `${command.name} has a subcommand that`);
           if (!/^[a-z][a-z0-9_]*$/.test(sub.name ?? '')) {
             const name = JSON.stringify(sub.name);
             throw new Error(
