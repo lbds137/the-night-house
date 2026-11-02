@@ -4,7 +4,8 @@ name: Claude Code Review
 # Needs the CLAUDE_CODE_OAUTH_TOKEN repo secret and the Claude GitHub App on the repo.
 # The action skips itself on the PR that adds or changes this file (it validates
 # against the default branch's copy), so that PR gets no review and a red check:
-# it is merged by hand. The automerge job below merges the owner's non-draft PRs
+# the owner merges it with `repo-ruleset merge <repo> <PR>`, which lifts the required
+# claude-review for that one merge. The automerge job below merges the owner's non-draft PRs
 # once the review passes and every other check is green, and Dependabot's PRs
 # (which get no review) once every other check is green.
 
@@ -78,36 +79,44 @@ jobs:
       - name: Verify the review passed
         env:
           GH_TOKEN: ${{ github.token }}
+          BASE: ${{ github.event.repository.default_branch }}
+          SINCE: ${{ steps.review-start.outputs.ts }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          COMMENTS: repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments?per_page=100
         run: |
-          base="${{ github.event.repository.default_branch }}"
-          git fetch --quiet --depth=1 origin "$base"
+          git fetch --quiet --depth=1 origin "$BASE"
           if ! git diff --quiet FETCH_HEAD -- .github/workflows/claude-code-review.yml; then
-            echo "::error::This PR changes the review workflow, so no review ran (the action skips itself). Merge it manually after reading it."
+            echo "::error::This PR changes the review workflow, so no review ran (the action skips itself). The owner merges it with: repo-ruleset merge <repo> <PR>"
             exit 1
           fi
-          since="${{ steps.review-start.outputs.ts }}"
-          body=$(gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments?per_page=100" \
-            --paginate \
-            --jq "[.[] | select(.user.login == \"claude[bot]\" and .created_at >= \"$since\")] | sort_by(.created_at) | .[] | .body" )
-          if [ -z "$body" ]; then
-            echo "::error::claude-review completed without posting a comment (no claude[bot] comment since $since). Re-run this job."
-            exit 1
+          # One line per claude[bot] comment: "new" or "old" (posted since this review started, or
+          # not), then its LAST non-empty line, where the prompt puts the verdict. A VERDICT quoted
+          # mid-comment (an @claude reply, a code block) never counts. Bold or backtick wrapping is
+          # stripped.
+          lasts=$(gh api "$COMMENTS" --paginate --slurp | jq -r '
+            [.[][] | select(.user.login == "claude[bot]")]
+            | sort_by(.created_at) | .[]
+            | (if .created_at >= env.SINCE then "new" else "old" end) + " "
+              + (.body | gsub("\r"; "") | split("\n") | map(select(test("\\S"))) | last // "")')
+          lasts=$(tr -d '*`' <<< "$lasts")
+          # A BLOCK naming this commit stands whatever comes after it, from any run: a later PASS
+          # could be an @claude reply, or a re-run rolling the dice on the same commit.
+          if grep -Eq "^(new|old) VERDICT: BLOCK $SHA[[:space:]]*\$" <<< "$lasts"; then
+            echo "::error::A review of $SHA found critical, high or medium issues. Fix them and push; the new review decides."; exit 1
+          elif ! grep -q '^new ' <<< "$lasts"; then
+            echo "::error::claude-review completed without posting a comment (no claude[bot] comment since $SINCE). Re-run this job."; exit 1
+          elif grep -Eq "^new VERDICT: PASS $SHA[[:space:]]*\$" <<< "$lasts"; then
+            echo "Review of $SHA passed."
+          else
+            echo "::error::No VERDICT line naming $SHA, so this review can't gate a merge. Re-run this job."; exit 1
           fi
-          # Bold or backtick wrapping is stripped; only verdicts naming this commit count.
-          sha="${{ github.event.pull_request.head.sha }}"
-          verdict=$(printf '%s\n' "$body" | tr -d '*`\r' | grep -E "^VERDICT: (PASS|BLOCK) $sha[[:space:]]*\$" | tail -n1 | awk '{print $2}')
-          case "$verdict" in
-            PASS) echo "Review of $sha passed." ;;
-            BLOCK) echo "::error::The review found critical, high or medium issues. Fix them and push; the new review decides."; exit 1 ;;
-            *) echo "::error::No VERDICT line naming $sha, so this review can't gate a merge. Re-run this job."; exit 1 ;;
-          esac
 
   # Merges the PR once the review passed (or, for Dependabot, was skipped) and every other
-  # check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge, which
-  # needs required checks, and those need GitHub Pro on private repos. A merge made
-  # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
-  # dispatches the deploy itself (workflow_dispatch is exempt). CodeQL is GitHub's default
-  # setup, which scans PRs and runs weekly on its own.
+  # check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge
+  # because this waits on every check, not just the ruleset's required ones, and refuses if main
+  # moved after combined-build. A merge made with GITHUB_TOKEN triggers no push workflows on the
+  # default branch, so the job dispatches the deploy itself (workflow_dispatch is exempt). CodeQL
+  # is GitHub's default setup, which scans PRs and runs weekly on its own.
   #
   # The checks ran on the PR as branched, but main may have moved since: two PRs that each
   # pass alone can break the build together. combined-build rebases the PR onto current main,
@@ -234,12 +243,18 @@ jobs:
       - name: Merge
         # --match-head-commit refuses if anything was pushed after the reviewed commit, and
         # the main check refuses if another merge landed after combined-build built on main.
+        # The job's `if` read draft when the run started, and the wait above can take 40 minutes.
         # The branch is deleted through the API: this job has no checkout for gh's
         # --delete-branch to work in.
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
           MAIN_SHA: ${{ needs.combined-build.outputs.main-sha }}
         run: |
+          draft=$(gh pr view "$PR" --repo "$REPO" --json isDraft --jq .isDraft)
+          if [ "$draft" != false ]; then
+            echo "::error::Not merging; the PR's draft state reads '$draft'. Mark it ready to start a new run."
+            exit 1
+          fi
           now=$(gh api "repos/$REPO/git/ref/heads/main" --jq .object.sha)
           if [ "$now" != "$MAIN_SHA" ]; then
             echo "::error::main moved during the combined build; re-run this job to test it."
