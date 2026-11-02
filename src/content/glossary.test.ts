@@ -99,13 +99,28 @@ describe('glossary sources', () => {
   });
 
   // The shape guard above can't see the name alone in free text (a note, a quote). A digest
-  // catches that without this file spelling the name; a literal here would publish it.
+  // catches that without this file spelling the name; a literal here would publish it. This
+  // deters accidental leaks only: the digest isn't a secret, and a good guess can be confirmed.
   it('holds no token matching the private repo name', () => {
     const privateNameSha256 = 'c04dabf6cf8bbcae7215a99dc0cc32225bbe7c45d7073aa12d6684e71ef92c31';
-    const tokens = new Set(sourcesRaw.toLowerCase().split(/[^\w-]+/));
-    const matches = [...tokens].filter(
-      (t) => createHash('sha256').update(t).digest('hex') === privateNameSha256,
-    );
-    expect(matches.length, 'glossary-sources.json holds the private repo name').toBe(0);
+    const files = import.meta.glob<string>('/{docs,src}/**/*.{astro,css,json,md,ts,yaml}', {
+      query: '?raw',
+      import: 'default',
+      eager: true,
+    });
+    // Without this, a glob that matched nothing would pass forever.
+    expect(Object.keys(files)).toContain('/docs/glossary-sources.json');
+    expect(Object.keys(files)).toContain('/src/content/glossary.md');
+    // Every run of adjacent hyphen-separated parts, so "<name>-notes" still counts as a match.
+    const hyphenRuns = (token: string) => {
+      const parts = token.split('-');
+      return parts.flatMap((_, i) => parts.map((__, j) => parts.slice(i, j + 1).join('-')));
+    };
+    const holdsName = (text: string) =>
+      new Set(text.toLowerCase().split(/[^a-z0-9-]+/).flatMap(hyphenRuns)).values().some(
+        (run) => createHash('sha256').update(run).digest('hex') === privateNameSha256,
+      );
+    const leaking = Object.keys(files).filter((path) => holdsName(files[path]));
+    expect(leaking, 'these files hold the private repo name').toEqual([]);
   });
 });
