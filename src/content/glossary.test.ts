@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import sourcesRaw from '../../docs/glossary-sources.json?raw';
 import { RESERVED_IDS, parseGlossary } from '../lib/glossary';
@@ -95,5 +96,16 @@ describe('glossary sources', () => {
     );
     const forms = '"private research repo docs/<path> @ <commit>", "n/a", "the-night-house <note>"';
     expect(unknown, `library.report must be one of: ${forms}`).toEqual([]);
+  });
+
+  // The shape guard above can't see the name alone in free text (a note, a quote). A digest
+  // catches that without this file spelling the name; a literal here would publish it.
+  it('holds no token matching the private repo name', () => {
+    const privateNameSha256 = 'c04dabf6cf8bbcae7215a99dc0cc32225bbe7c45d7073aa12d6684e71ef92c31';
+    const tokens = new Set(sourcesRaw.toLowerCase().split(/[^\w-]+/));
+    const matches = [...tokens].filter(
+      (t) => createHash('sha256').update(t).digest('hex') === privateNameSha256,
+    );
+    expect(matches.length, 'glossary-sources.json holds the private repo name').toBe(0);
   });
 });
