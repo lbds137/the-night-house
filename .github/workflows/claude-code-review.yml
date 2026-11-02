@@ -178,7 +178,7 @@ jobs:
         (github.event.pull_request.user.login == 'dependabot[bot]' &&
          github.actor == 'dependabot[bot]' && needs.claude-review.result == 'skipped'))
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 50
     permissions:
       actions: write
       contents: write
@@ -190,28 +190,46 @@ jobs:
       REPO: ${{ github.repository }}
       PR: ${{ github.event.pull_request.number }}
       SHA: ${{ github.event.pull_request.head.sha }}
+      RUN_ID: ${{ github.run_id }}
     steps:
       - name: Wait for the other checks
         run: |
-          # Only the latest run of each check counts: a run cancelled by a newer one
-          # on the same commit must not block the merge.
+          # Three views of the head commit, all of which must be settled and green:
+          #  - workflow runs, the latest per workflow other than this one. A run exists as soon
+          #    as its workflow is triggered, before any of its jobs, so a CI job that hasn't been
+          #    created yet still holds the merge; a red job anywhere makes its run red.
+          #  - check runs from every app (CodeQL, GitGuardian...), the latest per app and name,
+          #    so a check cancelled and redone on the same commit doesn't block. This workflow's
+          #    own jobs are left out: `needs` already gates on them.
+          #  - legacy commit statuses (with none, the combined state reads "pending").
+          # Every pull_request workflow is triggered by the same event, so their runs appear
+          # together; the 30 s head start and the rule that something besides this workflow must
+          # be listed keep a Dependabot PR from merging on an empty list before they do.
+          # pipefail: a failed gh call must end the job, not read as an empty, passing view.
+          set -o pipefail
+          own=$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .workflow_id)
+          sleep 30
           for _ in $(seq 80); do
-            runs=$(gh api "repos/$REPO/commits/$SHA/check-runs?per_page=100" \
-              --jq '[.check_runs[] | select(.name != "automerge")] | group_by(.name) | map(max_by(.id))
-                    | .[] | "\(.status) \(.conclusion) \(.name)"')
-            # Legacy commit statuses too; with none, the combined state reads "pending".
+            wf=$(gh api "repos/$REPO/actions/runs?head_sha=$SHA&per_page=100" --paginate --slurp | jq -r --argjson own "$own" '
+              [.[].workflow_runs[] | select(.workflow_id != $own)] | group_by(.workflow_id) | map(max_by(.id))
+              | .[] | "\(.status) \(.conclusion) workflow \(.name)"')
+            checks=$(gh api "repos/$REPO/commits/$SHA/check-runs?per_page=100" --paginate --slurp | jq -r '
+              [.[].check_runs[] | select(.name != "automerge" and .name != "claude-review" and .name != "combined-build")]
+              | group_by([.app.id, .name]) | map(max_by(.id))
+              | .[] | "\(.status) \(.conclusion) check \(.name)"')
             status=$(gh api "repos/$REPO/commits/$SHA/status" --jq 'if .total_count == 0 then "none" else .state end')
-            if [ -n "$runs" ] && ! grep -qv '^completed ' <<< "$runs" && [ "$status" != pending ]; then
-              bad=$(grep -vE '^completed (success|skipped|neutral) ' <<< "$runs" || true)
+            all=$(printf '%s\n%s\n' "$wf" "$checks" | grep . || true)
+            if [ -n "$all" ] && ! grep -qv '^completed ' <<< "$all" && [ "$status" != pending ]; then
+              bad=$(grep -vE '^completed (success|skipped|neutral) ' <<< "$all" || true)
               case "$status" in failure|error) bad="$bad${bad:+$'\n'}commit status: $status" ;; esac
               if [ -n "$bad" ]; then
-                echo "::error::Not merging; these checks did not pass:"; echo "$bad"; exit 1
+                echo "::error::Not merging; these did not pass:"; echo "$bad"; exit 1
               fi
-              echo "All checks passed:"; echo "$runs"; exit 0
+              echo "All checks passed:"; echo "$all"; exit 0
             fi
             sleep 30
           done
-          echo "::error::Checks still running after 40 minutes; merge by hand or re-run this job."
+          echo "::error::Checks still running (or none besides this workflow) after 40 minutes; merge by hand or re-run this job."
           exit 1
       - name: Merge
         # --match-head-commit refuses if anything was pushed after the reviewed commit, and
