@@ -1168,7 +1168,7 @@
   {
     "term": "Lilith",
     "kind": "new",
-    "draft": "**Lilith**: a female demon of Jewish folklore. Her name is often connected with the Mesopotamian *lilītu* demons, though the link is debated. The Hebrew word *lilit* appears once in the Hebrew Bible (Isaiah 34:14), among the creatures of a desolate ruin, and translators disagree on how to render it. The best-known story comes from the medieval, satirical *Alphabet of Ben Sira*: made from earth like Adam as his first wife, she refused to lie beneath him, spoke God's name and flew away. In Kabbalah she appears as Samael's consort, notably in the Zohar, and as a queen of the demonic \"other side\" (compare Qliphoth). Since the early 1970s Jewish feminists have reclaimed her as a symbol of women's independence, and some Left Hand Path and Luciferian practitioners honor her as a goddess or dark mother.",
+    "draft": "**Lilith**: a female demon of Jewish folklore. Her name is often connected with the Mesopotamian *lilītu* demons, though the link is debated: the winged figure of the British Museum's \"Burney Relief\" was read as Lilith from the 1930s on — the reading Patai popularized in *The Hebrew Goddess* — but scholars now generally see Ishtar there, and the museum itself prefers Ereshkigal. The Hebrew word *lilit* appears once in the Hebrew Bible (Isaiah 34:14), among the creatures of a desolate ruin, and translators disagree on how to render it. The best-known story comes from the medieval, satirical *Alphabet of Ben Sira*: made from earth like Adam as his first wife, she refused to lie beneath him, spoke God's name and flew away. In Kabbalah she appears as Samael's consort, notably in the Zohar, and as a queen of the demonic \"other side\" (compare Qliphoth). Since the early 1970s Jewish feminists have reclaimed her as a symbol of women's independence — the Jewish feminist magazine *Lilith*, founded in 1976, bears her name — and some Left Hand Path and Luciferian practitioners honor her as a goddess or dark mother. In the Draconian current descended from Kenneth Grant's Typhonian work she is central: Dragon Rouge names its first initatory degree after her, the order's road into the Qliphoth goes through the qlipha of Lilith, and she is likened to Shakti, a creator and destroyer.",
     "sources": [
       [
         "https://www.jewishvirtuallibrary.org/lilith",
@@ -1181,14 +1181,22 @@
       [
         "https://en.wikipedia.org/wiki/Judith_Plaskow",
         "\"The Coming of Lilith\" (1972), early Jewish feminist reclamation"
+      ],
+      [
+        "https://www.lilith.org/about/",
+        "Lilith magazine about page: founded 1976"
+      ],
+      [
+        "https://en.wikipedia.org/wiki/Burney_Relief",
+        "Burney Relief (Queen of the Night): the 1930s Lilith identification now doubted; generally Ishtar, museum prefers Ereshkigal"
       ]
     ],
     "confidence": "medium",
-    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). Not checked: Typhonian or Dragon Rouge specifics and Lilith magazine's founding year, so the draft names neither.",
+    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). 2026-11-04 checked the items left out of the first pass and named them in the draft: the Burney Relief identification history (Wikipedia), Lilith magazine's founding year (1976, lilith.org), Dragon Rouge specifics (Granholm PDF pp. 144-145, 192: first degree named Lilith, road into the qliphoth through her qlipha, likened to Shakti) and the Grant derivation (Karlsson p. 147).",
     "id": "lilith",
     "library": {
       "verdict": "supported",
-      "report": "the-night-house glossary-lilith PR, library check 2026-10-04 (quotes and PDF pages re-checked with pdftotext)",
+      "report": "the-night-house glossary-lilith PR, library checks 2026-10-04 and 2026-11-04 (quotes and PDF pages re-checked with pdftotext)",
       "summary": "Patai covers the Mesopotamian background, calls the single Isaiah reference doubtful, and gives the Ben Sira dialogue, the flight by God's name and the Zohar's Samael pairing. Dan and von Stuckrad date the first Samael-Lilith marriage to 13th-century Castile, before the Zohar; von Stuckrad calls Ben Sira satiric and the modern Lilith a cipher for female power. Barzai's LHP anthology supports modern veneration as a goddess and dark mother.",
       "citations": [
         {
@@ -1250,9 +1258,33 @@
           "location": "PDF p. 10",
           "stance": "supports",
           "quote": "Ama Lilith is the Dark Mother. The progenitor of demons."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/02 Traditions/LHP/Draconian/Kennet Granholm - Embracing the Dark - The Magic Order of Dragon Rouge.pdf",
+          "location": "PDF p. 144",
+          "stance": "supports",
+          "quote": "Lilith, a much invoked demoness, is likened to Shakti and is seen as both a creator and destroyer"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/02 Traditions/LHP/Draconian/Kennet Granholm - Embracing the Dark - The Magic Order of Dragon Rouge.pdf",
+          "location": "PDF p. 145",
+          "stance": "supports",
+          "quote": "the road into the qliphoth goes through the qlipha of Lilith. The magician is to symbolically step into Lilith’s womb"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/02 Traditions/LHP/Draconian/Kennet Granholm - Embracing the Dark - The Magic Order of Dragon Rouge.pdf",
+          "location": "PDF p. 192",
+          "stance": "supports",
+          "quote": "The Dragon Rouge degrees are number and named in the followin manner: • Degree 1.0 – Lilith"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/02 Traditions/LHP/Qlipot/Thomas Karlsson - Qabalah, Qliphoth and Goetic Magic.pdf",
+          "location": "p.147 (OCR scan)",
+          "stance": "supports",
+          "quote": "published in 1977 in Nightside of Eden, the Qabalistic classic by Kenneth Grant"
         }
       ],
-      "searched": "Patai, Lilith (full text); Dan, Samael, Lilith, and the Concept of Evil in Early Kabbalah (full text); von Stuckrad, Constructing Femininity (full-text grep); Barzai, Lilith - Goddess of Sitra Ahra (grep and foreword)"
+      "searched": "Patai, Lilith (full text); Dan, Samael, Lilith, and the Concept of Evil in Early Kabbalah (full text); von Stuckrad, Constructing Femininity (full-text grep); Barzai, Lilith - Goddess of Sitra Ahra (grep and foreword); Granholm, Embracing the Dark (full-text grep for Lilith, 60 hits); Karlsson, Qabalah, Qliphoth and Goetic Magic (grep for Lilith and Nightside of Eden)"
     }
   },
   {
