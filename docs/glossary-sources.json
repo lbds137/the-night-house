@@ -1188,11 +1188,11 @@
       ],
       [
         "https://en.wikipedia.org/wiki/Burney_Relief",
-        "Burney Relief (Queen of the Night): Emil Kraeling tentatively identified the winged figure as lilītu (\"Perhaps we have here a third representation of a demon. If so, it must be Lilîtu [...] the demon of an evil wind\") in a 1937 paper (BASOR 67); Henri Frankfort's relief study (1937, Archiv für Orientforschung 12) discussed the Lilith reading without making it himself; the identification \"has become a staple of popular writing\"; Patai (1990, The Hebrew Goddess 3rd ed.) believes the relief depicts a lilītu; now doubted, scholars generally see Ishtar (the museum itself prefers Ereshkigal)"
+        "Burney Relief (Queen of the Night): Emil Kraeling tentatively identified the winged figure as lilītu (\"Perhaps we have here a third representation of a demon. If so, it must be Lilîtu [...] the demon of an evil wind\") in a 1937 paper (BASOR 67); Henri Frankfort's relief study (1937, Archiv für Orientforschung 12) discussed the Lilith reading without making it himself; the identification \"has become a staple of popular writing\"; Patai (1990, The Hebrew Goddess 3rd ed.) believes the relief depicts a lilītu; now doubted, scholars generally see Ishtar (the museum itself prefers Ereshkigal). The Kraeling quote is as this article gives it; his paper itself was not read"
       ]
     ],
     "confidence": "medium",
-    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). 2026-11-04 added the Burney Relief history (Kraeling 1937; both papers' bibliographic data re-checked against Wikipedia's bibliography), Lilith magazine's founding year (1976, lilith.org) and Dragon Rouge specifics (Granholm PDF pp. 144-145, 192: first degree named Lilith, road into the qliphoth through her qlipha, likened to Shakti). Standing decisions: the Draconian claim is scoped to Dragon Rouge, which takes up Grant's term (Granholm PDF p. 126, printed 123, fn 25: the term is Grant's; PDF p. 188, printed 185, lodge contract: Dragon Rouge uses it); the entry says Kraeling identified the figure as lilītu, matching the source's word, and \"tentatively\", matching his hedge (2026-11-08 Anthropic re-review of the GLM-written 11-04 pass; the same review dated the Dragon Rouge claims to Granholm's 2005 study, since the order is living); Karlsson's tunnel-names quote (p. 147) is context for the Grant lineage, not a source for an entry claim.",
+    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). 2026-11-04 added the Burney Relief history (Kraeling 1937; both papers' bibliographic data re-checked against Wikipedia's bibliography), Lilith magazine's founding year (1976, lilith.org) and Dragon Rouge specifics (Granholm PDF pp. 144-145, 192: first degree named Lilith, road into the qliphoth through her qlipha, likened to Shakti). Standing decisions: the Draconian claim is scoped to Dragon Rouge, which takes up Grant's term (Granholm PDF p. 126, printed 123, fn 25: the term is Grant's; PDF p. 188, printed 185, lodge contract: Dragon Rouge uses it); the entry says Kraeling identified the figure as lilītu, matching the source's word, and \"tentatively\", matching his hedge (2026-11-08 Anthropic re-review of the GLM-written 11-04 pass; the same review dated the Dragon Rouge claims to Granholm's 2005 study, since the order is living); Karlsson's tunnel-names quote (p. 147) is context for the Grant lineage, not a source for an entry claim. Unverified at source (2026-11-08), Wikipedia only: the British Museum's Ereshkigal preference (its collection page returns 403) and Patai, The Hebrew Goddess p. 221 (not in the library); neither carries an entry claim alone.",
     "id": "lilith",
     "library": {
       "verdict": "supported",
@@ -1204,6 +1204,12 @@
           "location": "PDF p. 1",
           "stance": "supports",
           "quote": "Lilitu (Lilith), a she-demon; Ardat Lili (or Lilith's handmaid)"
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 18 (footnote 5)",
+          "stance": "supports",
+          "quote": "Emil G. Kraeling, Bulletin of the American Schools of Oriental Research 67 (Oct. 1937), 16-18."
         },
         {
           "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
