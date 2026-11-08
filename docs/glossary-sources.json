@@ -1168,7 +1168,7 @@
   {
     "term": "Lilith",
     "kind": "new",
-    "draft": "**Lilith**: a female demon of Jewish folklore. Her name is often connected with the Mesopotamian *lilītu* demons, though the link is debated. The winged figure of the British Museum's \"Burney Relief\" was tentatively identified by Emil Kraeling in 1937 as the demon *lilītu*, the identification Raphael Patai's *The Hebrew Goddess* also holds; scholars now generally see Ishtar there. The Hebrew word *lilit* appears once in the Hebrew Bible (Isaiah 34:14), among the creatures of a desolate ruin, and translators disagree on how to render it. The best-known story comes from the medieval, satirical *Alphabet of Ben Sira*: made from earth like Adam as his first wife, she refused to lie beneath him, spoke God's name and flew away. In Kabbalah she appears as Samael's consort, notably in the Zohar, and as a queen of the demonic \"other side\" (compare Qliphoth). Since the early 1970s Jewish feminists have reclaimed her as a symbol of women's independence (the Jewish feminist magazine *Lilith*, founded in 1976, bears her name), and some Left Hand Path and Luciferian practitioners honor her as a goddess or dark mother. In Kennet Granholm's 2005 study, Dragon Rouge, which takes up Kenneth Grant's term \"the Draconian current\", gives her a central place: the order names its first initiatory degree after her, its road into the Qliphoth goes through the qlipha of Lilith, and she is likened to Shakti and seen as both creator and destroyer.",
+    "draft": "**Lilith**: a female demon of Jewish folklore. Her name is often connected with the Mesopotamian *lilītu* demons, though the link is debated. The winged figure of the British Museum's \"Burney Relief\" was tentatively identified by Emil Kraeling in 1937 as the demon *lilītu*, and Raphael Patai also read it as Lilith; scholars now generally see Ishtar there. The Hebrew word *lilit* appears once in the Hebrew Bible (Isaiah 34:14), among the creatures of a desolate ruin, and translators disagree on how to render it. The best-known story comes from the medieval, satirical *Alphabet of Ben Sira*: made from earth like Adam as his first wife, she refused to lie beneath him, spoke God's name and flew away. In Kabbalah she appears as Samael's consort, notably in the Zohar, and as a queen of the demonic \"other side\" (compare Qliphoth). Since the early 1970s Jewish feminists have reclaimed her as a symbol of women's independence (the Jewish feminist magazine *Lilith*, founded in 1976, bears her name), and some Left Hand Path and Luciferian practitioners honor her as a goddess or dark mother. In Kennet Granholm's 2005 study, Dragon Rouge, which takes up Kenneth Grant's term \"the Draconian current\", gives her a central place: the order names its first initiatory degree after her, its road into the Qliphoth goes through the qlipha of Lilith, and she is likened to Shakti and seen as both creator and destroyer.",
     "sources": [
       [
         "https://www.jewishvirtuallibrary.org/lilith",
@@ -1192,7 +1192,7 @@
       ]
     ],
     "confidence": "medium",
-    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). 2026-11-04 added the Burney Relief history (Kraeling 1937; both papers' bibliographic data re-checked against Wikipedia's bibliography), Lilith magazine's founding year (1976, lilith.org) and Dragon Rouge specifics (Granholm PDF pp. 144-145, 192: first degree named Lilith, road into the qliphoth through her qlipha, likened to Shakti). Standing decisions: the Draconian claim is scoped to Dragon Rouge, which takes up Grant's term (Granholm PDF p. 126, printed 123, fn 25: the term is Grant's; PDF p. 188, printed 185, lodge contract: Dragon Rouge uses it); the entry says Kraeling identified the figure as lilītu, matching the source's word, and \"tentatively\", matching his hedge (2026-11-08 Anthropic re-review of the GLM-written 11-04 pass; the same review dated the Dragon Rouge claims to Granholm's 2005 study, since the order is living); Karlsson's tunnel-names quote (p. 147) is context for the Grant lineage, not a source for an entry claim. Unverified at source (2026-11-08), Wikipedia only: the British Museum's Ereshkigal preference (its collection page returns 403) and Patai, The Hebrew Goddess p. 221 (not in the library); neither carries an entry claim alone.",
+    "notes": "Added 2026-10-04 to back the guide's name section (the server's name is an homage to Lilith). A figure from Jewish tradition also taken up by non-Jewish occultists; the draft keeps the two apart. Avoids \"derives from\" (the Mesopotamian link is debated) and \"left Eden\" (the sources say she flew to the Red Sea). 2026-11-04 added the Burney Relief history (Kraeling 1937; both papers' bibliographic data re-checked against Wikipedia's bibliography), Lilith magazine's founding year (1976, lilith.org) and Dragon Rouge specifics (Granholm PDF pp. 144-145, 192: first degree named Lilith, road into the qliphoth through her qlipha, likened to Shakti). Standing decisions: the Draconian claim is scoped to Dragon Rouge, which takes up Grant's term (Granholm PDF p. 126, printed 123, fn 25: the term is Grant's; PDF p. 188, printed 185, lodge contract: Dragon Rouge uses it); the entry says Kraeling identified the figure as lilītu, matching the source's word, and \"tentatively\", matching his hedge (2026-11-08 Anthropic re-review of the GLM-written 11-04 pass; the same review dated the Dragon Rouge claims to Granholm's 2005 study, since the order is living); Karlsson's tunnel-names quote (p. 147) is context for the Grant lineage, not a source for an entry claim. Unverified at source (2026-11-08), Wikipedia only: the British Museum's Ereshkigal preference (its collection page returns 403; not in the entry) and Patai, The Hebrew Goddess p. 221 (not in the library; per Wikipedia, a lilitu demon). So the entry says only that Patai read the figure as Lilith, which his 1964 article (\"Lilith\", Journal of American Folklore 77) states on PDF p. 1, where he calls her a goddess, \"no longer a lowly she-demon\"; the same article's fn 5 confirms Kraeling's BASOR 67 citation.",
     "id": "lilith",
     "library": {
       "verdict": "supported",
@@ -1207,7 +1207,19 @@
         },
         {
           "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
-          "location": "PDF p. 18 (footnote 5)",
+          "location": "PDF p. 1",
+          "stance": "supports",
+          "quote": "A Babylonian terracotta relief, roughly contemporary with the above poem, shows in what form Lilith was believed to appear to human eyes."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 1",
+          "stance": "nuances",
+          "quote": "Evidently, this is no longer a lowly she-demon, but a goddess who tames wild beasts and, as shown by the owls on the reliefs, rules by night."
+        },
+        {
+          "file": "Knowledge/Library/Spiritual/01 Deities/Cross-Tradition/Lilith/Raphael Patai - Lilith.pdf",
+          "location": "PDF p. 18 (footnote 5; bibliographic check of Kraeling 1937)",
           "stance": "supports",
           "quote": "Emil G. Kraeling, Bulletin of the American Schools of Oriental Research 67 (Oct. 1937), 16-18."
         },
