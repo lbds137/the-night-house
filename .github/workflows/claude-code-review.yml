@@ -72,6 +72,18 @@ jobs:
 
           claude_args: '--model claude-opus-5-5 --allowed-tools "Bash(gh issue view:*),Bash(gh search:*),Bash(gh issue list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr list:*)"'
 
+      # The action's own log rarely says why it failed (a quota wall, an auth error); the
+      # result text in its execution file does.
+      - name: Show why the review failed
+        if: always() && steps.claude-review.outcome == 'failure'
+        env:
+          EXEC_FILE: ${{ steps.claude-review.outputs.execution_file }}
+        run: |
+          f=${EXEC_FILE:-$RUNNER_TEMP/claude-execution-output.json}
+          if [ ! -s "$f" ]; then echo "No execution file at $f."; exit 0; fi
+          jq -r '[.[]? | select(.type == "result")] | last | .result // "no result text" | tostring | .[0:500]' "$f" \
+            || echo "The execution file is not the expected JSON."
+
       # This job is the check auto-merge waits on, so it passes only on a posted review
       # whose verdict names this run's head commit: VERDICT: PASS <sha>. The action can
       # finish green having posted nothing, and a stale PASS for an earlier commit must
@@ -111,8 +123,8 @@ jobs:
             echo "::error::No VERDICT line naming $SHA, so this review can't gate a merge. Re-run this job."; exit 1
           fi
 
-  # Merges the PR once the review passed (or, for Dependabot, was skipped) and every other
-  # check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge
+  # Merges the PR once the review passed (or, for Dependabot, was skipped), combined-build (which
+  # runs alongside the review) passed, and every other check on the head commit finished green. Done in-workflow rather than with GitHub's auto-merge
   # because this waits on every check, not just the ruleset's required ones, and refuses if main
   # moved after combined-build. A merge made with GITHUB_TOKEN triggers no push workflows on the
   # default branch, so the job dispatches the deploy itself (workflow_dispatch is exempt). CodeQL
@@ -122,20 +134,21 @@ jobs:
   # pass alone can break the build together. combined-build rebases the PR onto current main,
   # as the merge will, and builds that. It runs the PR's code, so it gets a read-only token and
   # its own job: nothing it does (env vars, $GITHUB_ENV writes) can reach the merge job's token.
+  # It runs alongside the review rather than after it, which saves the build's time on every
+  # merge; the cost is a build spent on a PR the review then blocks, and a longer window in which
+  # main can move (the Merge step refuses then, and a re-run of the workflow rebuilds).
   #
   # A Dependabot PR skips the review, so both jobs merge it on green checks alone (its action
   # pin bumps to this file included: Dependabot only rewrites `uses:` versions). They also
   # require Dependabot to have triggered the run (github.actor keeps the original actor on a
-  # re-run): if anyone else pushes to its branch, the PR waits for a hand merge. !cancelled()
-  # replaces the implicit success() that would skip both jobs behind a skipped review.
+  # re-run): if anyone else pushes to its branch, the PR waits for a hand merge. automerge's
+  # !cancelled() replaces the implicit success() that would skip it behind a skipped review.
   combined-build:
-    needs: claude-review
     if: >-
-      github.event.pull_request.draft == false && !cancelled() && (
-        (github.event.pull_request.user.login == github.repository_owner &&
-         needs.claude-review.result == 'success') ||
+      github.event.pull_request.draft == false && (
+        github.event.pull_request.user.login == github.repository_owner ||
         (github.event.pull_request.user.login == 'dependabot[bot]' &&
-         github.actor == 'dependabot[bot]' && needs.claude-review.result == 'skipped'))
+         github.actor == 'dependabot[bot]'))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -212,12 +225,12 @@ jobs:
           #    own jobs are left out: `needs` already gates on them.
           #  - legacy commit statuses (with none, the combined state reads "pending").
           # Every pull_request workflow is triggered by the same event, so their runs appear
-          # together; the 30 s head start and the rule that something besides this workflow must
-          # be listed keep a Dependabot PR from merging on an empty list before they do.
+          # together, and this job starts only after combined-build (and an owner's review), a
+          # minute or more after they were triggered; the rule that something besides this
+          # workflow must be listed still keeps a PR from merging on an empty list.
           # pipefail: a failed gh call must end the job, not read as an empty, passing view.
           set -o pipefail
           own=$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .workflow_id)
-          sleep 30
           for _ in $(seq 80); do
             wf=$(gh api "repos/$REPO/actions/runs?head_sha=$SHA&per_page=100" --paginate --slurp | jq -r --argjson own "$own" '
               [.[].workflow_runs[] | select(.workflow_id != $own)] | group_by(.workflow_id) | map(max_by(.id))
@@ -244,10 +257,7 @@ jobs:
         # --match-head-commit refuses if anything was pushed after the reviewed commit, and
         # the main check refuses if another merge landed after combined-build built on main.
         # The job's `if` read draft when the run started, and the wait above can take 40 minutes.
-        # The branch is deleted through the API: this job has no checkout for gh's
-        # --delete-branch to work in.
         env:
-          HEAD_REF: ${{ github.event.pull_request.head.ref }}
           MAIN_SHA: ${{ needs.combined-build.outputs.main-sha }}
         run: |
           draft=$(gh pr view "$PR" --repo "$REPO" --json isDraft --jq .isDraft)
@@ -257,13 +267,38 @@ jobs:
           fi
           now=$(gh api "repos/$REPO/git/ref/heads/main" --jq .object.sha)
           if [ "$now" != "$MAIN_SHA" ]; then
-            echo "::error::main moved during the combined build; re-run this job to test it."
+            # Re-running only this job would compare against the same stale build.
+            echo "::error::main moved after the combined build; re-run all jobs to build on it."
             exit 1
           fi
           gh pr merge "$PR" --repo "$REPO" --rebase --match-head-commit "$SHA"
-          gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" ||
-            echo "::warning::Merged, but deleting branch $HEAD_REF failed."
       - name: Deploy main
         # The merge's push to main starts nothing (see above), so without this the
         # merged change never reaches the live site.
         run: gh workflow run deploy.yml --repo "$REPO" --ref main
+      # The repo's "delete branch on merge" setting cleans up after merges made with a user
+      # token, but a merge made with this workflow's token leaves the head branch behind. After
+      # the deploy, so a delete problem can't hold it up (a failed deploy leaves the branch for a
+      # hand delete). Skipped for a fork's branch (not this repo's
+      # to delete); the step itself spares the default branch and any branch another open PR is
+      # based on, and a refused delete (a protected branch) only warns, since the merge happened.
+      - name: Delete the merged branch
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [ "$HEAD_REF" = "$DEFAULT_BRANCH" ]; then echo "Head is the default branch; kept."; exit 0; fi
+          # In the API path a "#" starts a fragment and "%" an escape, so the call could name
+          # another branch: leave such a name for a hand delete.
+          case "$HEAD_REF" in *[#%]*) echo "::warning::$HEAD_REF has # or % in its name; delete it by hand."; exit 0 ;; esac
+          for side in base head; do
+            n=$(gh pr list --repo "$REPO" --"$side" "$HEAD_REF" --state open --json number --jq length) \
+              || { echo "::warning::Could not list open PRs with $side $HEAD_REF; kept."; exit 0; }
+            if [ "$n" != 0 ]; then echo "$n other open PR(s) use $HEAD_REF as their $side; kept."; exit 0; fi
+          done
+          if gh api -X DELETE "repos/$REPO/git/refs/heads/$HEAD_REF" --silent; then
+            echo "Deleted $HEAD_REF."
+          else
+            echo "::warning::Could not delete $HEAD_REF (already gone, or protected); delete it by hand if it remains."
+          fi
