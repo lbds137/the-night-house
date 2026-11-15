@@ -186,6 +186,10 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
   **vitest** (`pnpm test`; tests live next to the code, e.g. `src/lib/markdown.test.ts`),
   **@types/node** 24 (for the Node-side integration in `src/integrations/`)
   (`astro check` doesn't support TypeScript 7 yet)
+- **@emnapi/runtime** ^1.11.3 (dev) only pins `@astrojs/check`'s optional peer: left to pnpm it
+  resolved to 2.0.0-beta.2, which mismatches astro2tsx's `@emnapi/core` 1.x, crashes on import,
+  and `astro check` then misreports "@astrojs/check and typescript are required". Drop it once
+  `pnpm why @emnapi/runtime` without it shows no 2.x under `@astrojs/check`
 
 ## Known Issues and Patterns
 
