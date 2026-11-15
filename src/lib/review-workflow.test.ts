@@ -1,6 +1,6 @@
 // Runs the review workflow's real gate steps the way Actions does (bash -e, no pipefail) against
 // a stub gh. A workflow edit gets no Claude review and no live run before it lands, so this is
-// the only thing that exercises these two steps ahead of the merge they guard.
+// the only thing that exercises these steps ahead of the merge they guard.
 import { spawnSync } from 'node:child_process';
 import { chmodSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -29,7 +29,18 @@ case "$1 $2" in
     [ "$DRAFT" = fail ] && { echo "gh: HTTP 502" >&2; exit 1; }
     echo "$DRAFT" ;;
   "pr merge") echo "$*" >>"$GH_LOG" ;;
-  "api -X") echo "$*" >>"$GH_LOG" ;;
+  "pr list")
+    # Open PRs using the branch: OPEN_BASE / OPEN_HEAD per side ("fail" = an API error).
+    [[ "$*" == *"--state open --json number --jq length"* ]] ||
+      { echo "stub gh: bad flags $*" >&2; exit 9; }
+    case "$*" in
+      *--base*) n=\${OPEN_BASE:-0} ;;
+      *--head*) n=\${OPEN_HEAD:-0} ;;
+      *) echo "stub gh: no side in $*" >&2; exit 9 ;;
+    esac
+    [ "$n" = fail ] && { echo "gh: HTTP 502" >&2; exit 1; }
+    echo "$n" ;;
+  "api -X") echo "$*" >>"$GH_LOG"; exit "\${DELETE_RC:-0}" ;;
   "api "*git/ref/heads/main) echo "$MAIN_NOW" ;;
   "api "*)
     # The canned JSON is the slurped shape, so the call has to ask for that shape.
@@ -228,5 +239,42 @@ describe('Merge', () => {
     expect(output).toContain('main moved');
     expect(calls).not.toContain('pr merge');
     expect(passed).toBe(false);
+  });
+});
+
+describe('Delete the merged branch', () => {
+  const del = (env: Record<string, string> = {}) =>
+    runStep(stepScript('automerge', 'Delete the merged branch'), {
+      HEAD_REF: 'some-branch',
+      DEFAULT_BRANCH: 'main',
+      REPO: 'o/r',
+      ...env,
+    });
+
+  it('deletes a branch no open PR uses', () => {
+    const { passed, calls } = del();
+    expect(calls).toContain('api -X DELETE repos/o/r/git/refs/heads/some-branch --silent');
+    expect(passed).toBe(true);
+  });
+
+  it.each([
+    ['the default branch', { HEAD_REF: 'main' }, 'Head is the default branch'],
+    ['a name with # in it', { HEAD_REF: 'fix#1' }, 'has # or % in its name'],
+    ['a name with % in it', { HEAD_REF: 'a%2Fb' }, 'has # or % in its name'],
+    ['a branch another open PR is based on', { OPEN_BASE: '1' }, 'as their base; kept'],
+    ['a branch another open PR comes from', { OPEN_HEAD: '1' }, 'as their head; kept'],
+    ['a branch whose open PRs cannot be listed', { OPEN_BASE: 'fail' }, 'Could not list'],
+  ])('keeps %s, without failing the job', (_, env, reason) => {
+    const { passed, calls, output } = del(env);
+    expect(calls).not.toContain('DELETE');
+    expect(output).toContain(reason);
+    expect(passed).toBe(true);
+  });
+
+  it('only warns when the delete is refused, since the merge already happened', () => {
+    const { passed, calls, output } = del({ DELETE_RC: '1' });
+    expect(calls).toContain('DELETE');
+    expect(output).toContain('Could not delete some-branch');
+    expect(passed).toBe(true);
   });
 });
