@@ -24,5 +24,5 @@ Shipped in branch guard-backlog. The digest guard in src/content/glossary.test.t
 
 Follow-up (claude-review on #127): positive controls added for astro.config.mjs, pnpm-lock.yaml, LICENSE, .gitignore, site.webmanifest and browserconfig.xml, plus a shape check that backlog/tasks/*.md matched. The guard now also scans LICENSE, .gitignore and root *.yaml/*.yml. Root *.txt and .github/**/*.md are forward-looking (no file yet). Correction: #127's description wrongly claimed every new pattern had a control.
 
-Root *.yml is also forward-looking (only pnpm-lock.yaml exists at the root), noted in the test comment (claude-review on #128). pnpm-lock.yaml stays scanned: the Set dedupe keeps it cheap; if the scan gets slow, check it first.
+Root *.yml is also forward-looking (only pnpm-lock.yaml exists at the root), noted in the test comment (claude-review on #128). pnpm-lock.yaml stays scanned: the Set dedupes the hashing; if the scan gets slow, check it first.
 <!-- SECTION:FINAL_SUMMARY:END -->
