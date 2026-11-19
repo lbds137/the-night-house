@@ -1,5 +1,7 @@
 {
   "env": {
-    "SYG_TRACKING_SURFACE": "backlog-md"
+    "SYG_TRACKING_SURFACE": "backlog-md",
+    "SYG_CI_ANCHOR": "Claude Code Review",
+    "SYG_CI_AUTOMERGE_JOB": "automerge"
   }
 }
