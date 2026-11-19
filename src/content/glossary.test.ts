@@ -106,7 +106,7 @@ describe('glossary sources', () => {
     // Every text type the repo uses or could plausibly add; binaries are left out on purpose.
     const files = import.meta.glob<string>(
       [
-        // Root *.txt and .github/**/*.md match nothing yet: forward-looking, so no control below.
+        // Root *.txt and *.yml and .github/**/*.md match nothing yet: forward-looking, no control.
         '/*.{json,md,mjs,txt,yaml,yml}',
         '/LICENSE',
         '/.gitignore',
