@@ -106,7 +106,10 @@ describe('glossary sources', () => {
     // Every text type the repo uses or could plausibly add; binaries are left out on purpose.
     const files = import.meta.glob<string>(
       [
-        '/*.{json,md,mjs,txt}',
+        // Root *.txt and .github/**/*.md match nothing yet: forward-looking, so no control below.
+        '/*.{json,md,mjs,txt,yaml,yml}',
+        '/LICENSE',
+        '/.gitignore',
         '/{docs,scripts,src}/**/*.{astro,css,html,js,json,md,mdx,mjs,svg,ts,yaml,yml}',
         '/.github/**/*.{md,yaml,yml}',
         '/public/**/*.{json,txt,webmanifest,xml}',
@@ -122,17 +125,25 @@ describe('glossary sources', () => {
     for (const known of [
       '/CLAUDE.md',
       '/package.json',
+      '/astro.config.mjs',
+      '/pnpm-lock.yaml',
+      '/LICENSE',
+      '/.gitignore',
       '/docs/glossary-sources.json',
       '/scripts/og-card.mjs',
       '/src/content/glossary.md',
       '/.github/workflows/deploy.yml',
       '/public/robots.txt',
+      '/public/site.webmanifest',
+      '/public/browserconfig.xml',
       '/public/CNAME',
       '/backlog/config.yml',
       '/.claude/settings.json',
     ]) {
       expect(Object.keys(files)).toContain(known);
     }
+    // Task files get renamed and archived, so check the shape rather than one name.
+    expect(Object.keys(files).some((p) => /^\/backlog\/tasks\/.+\.md$/.test(p))).toBe(true);
     // Every run of adjacent hyphen-separated parts, so "<name>-notes" still counts as a match.
     const hyphenRuns = (token: string) => {
       const parts = token.split('-');
