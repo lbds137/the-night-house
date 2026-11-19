@@ -1,9 +1,10 @@
 ---
 id: TASK-1
 title: 'Confirm the faster automerge path from #124 on the next PR'
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-19T21:29:00Z'
+updated_date: '2026-11-19T21:35:00Z'
 labels:
   - workflow
 dependencies: []
@@ -15,3 +16,9 @@ ordinal: 1000
 <!-- SECTION:DESCRIPTION:BEGIN -->
 #124 (merged 8295ae1) runs combined-build in parallel with the review, drops the old 30 s sleep before automerge, and adds a guarded head-branch delete. Trigger: the next PR opens (any, Dependabot included). Check: combined-build ran in parallel with claude-review, automerge fired without the sleep, and the guarded delete ran. Commands: gh run list --branch <head>, gh run list --branch main --workflow deploy.yml.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Shipped. Confirmed on PR #126 (run 44619542099): combined-build started 21:31:04Z, claude-review 21:31:05Z, so they ran in parallel. Automerge started 21:32:25Z, 2 s after the review finished, so the old 30 s sleep is gone. It merged at 21:32:33Z; the head branch was deleted (ls-remote empty) and deploy 44619805874 succeeded.
+<!-- SECTION:FINAL_SUMMARY:END -->

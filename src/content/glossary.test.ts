@@ -106,19 +106,30 @@ describe('glossary sources', () => {
     // Every text type the repo uses or could plausibly add; binaries are left out on purpose.
     const files = import.meta.glob<string>(
       [
-        '/*.md',
+        '/*.{json,md,mjs,txt}',
         '/{docs,scripts,src}/**/*.{astro,css,html,js,json,md,mdx,mjs,svg,ts,yaml,yml}',
-        '/.github/**/*.{yaml,yml}',
+        '/.github/**/*.{md,yaml,yml}',
+        '/public/**/*.{json,txt,webmanifest,xml}',
+        '/public/CNAME',
+        // backlog/ holds free-text notes about other repos, the likeliest place for a slip.
+        '/backlog/**/*.{md,yml}',
+        // Only the tracked settings: settings.local.json and worktrees/ are local, not published.
+        '/.claude/settings.json',
       ],
       { query: '?raw', import: 'default', eager: true },
     );
     // Without this, a pattern that matched nothing would pass forever.
     for (const known of [
       '/CLAUDE.md',
+      '/package.json',
       '/docs/glossary-sources.json',
       '/scripts/og-card.mjs',
       '/src/content/glossary.md',
       '/.github/workflows/deploy.yml',
+      '/public/robots.txt',
+      '/public/CNAME',
+      '/backlog/config.yml',
+      '/.claude/settings.json',
     ]) {
       expect(Object.keys(files)).toContain(known);
     }
