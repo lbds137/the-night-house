@@ -11,7 +11,8 @@
     "build": "astro check && vitest run && astro build",
     "preview": "astro preview",
     "test": "vitest run",
-    "discord:rules": "node scripts/discord-rules.ts"
+    "discord:rules": "node scripts/discord-rules.ts",
+    "backlog": "backlog"
   },
   "dependencies": {
     "astro": "7.4.12",
@@ -24,6 +25,7 @@
     "@astrojs/check": "^0.9.12",
     "@emnapi/runtime": "^1.11.3",
     "@types/node": "^24.19.0",
+    "backlog.md": "1.55.3",
     "typescript": "^6.0.3",
     "vitest": "^5.0.5"
   },

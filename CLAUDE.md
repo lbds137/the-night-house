@@ -94,6 +94,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 ### Directory Structure
 
 ```
+├── backlog/            # Task store (backlog.md; `pnpm backlog task list --plain`): open work,
+│                       # deferred items with their trigger
 ├── public/             # Served as-is: CNAME, favicons, robots.txt, og-card.png (link preview)
 ├── scripts/            # og-card.mjs regenerates public/og-card.png (needs Noto fonts installed);
 │                       # screenshots.mjs (PR screenshots); discord-rules.ts (rules → bot)
@@ -211,7 +213,8 @@ To create a safe, inclusive space for LHP practitioners that explicitly rejects 
 
 ## Improvement Opportunities
 
-- **Content**: add the Resources nav group once its pages have content
+- Open and deferred work lives in `backlog/` (tracking surface pinned in `.claude/settings.json`);
+  file new items with `pnpm backlog task create`, not here
 - Ruled out: security headers via a `_headers` file; GitHub Pages doesn't support custom headers
 
 ## Claude Code Tool Usage Guidelines
