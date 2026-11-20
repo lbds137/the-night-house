@@ -4,12 +4,14 @@ title: 'Blog automerge: drop the unconditional sleep 30'
 status: Deferred
 assignee: []
 created_date: '2026-11-19T21:29:00Z'
+updated_date: '2026-11-20T02:18:00Z'
 labels:
   - blog
   - workflow
   - deferred
 dependencies: []
-ordinal: 7000
+priority: medium
+ordinal: 10
 ---
 
 ## Description
