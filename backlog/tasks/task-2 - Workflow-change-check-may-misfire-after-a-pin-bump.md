@@ -4,11 +4,13 @@ title: Workflow-change check may misfire after a pin bump
 status: Deferred
 assignee: []
 created_date: '2026-11-19T21:29:00Z'
+updated_date: '2026-11-20T02:18:00Z'
 labels:
   - workflow
   - deferred
 dependencies: []
-ordinal: 2000
+priority: low
+ordinal: 40
 ---
 
 ## Description

@@ -4,12 +4,13 @@ title: 'Blog: bind index description once; lazy excerpt in postDescription'
 status: Deferred
 assignee: []
 created_date: '2026-11-19T22:51:00Z'
-updated_date: '2026-11-19T22:53:00Z'
+updated_date: '2026-11-20T02:18:00Z'
 labels:
   - blog
   - deferred
 dependencies: []
-ordinal: 10000
+priority: low
+ordinal: 30
 ---
 
 ## Description

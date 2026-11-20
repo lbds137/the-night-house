@@ -4,11 +4,13 @@ title: Add the Resources nav group
 status: Deferred
 assignee: []
 created_date: '2026-11-19T21:29:00Z'
+updated_date: '2026-11-20T02:18:00Z'
 labels:
   - content
   - deferred
 dependencies: []
-ordinal: 8000
+priority: low
+ordinal: 60
 ---
 
 ## Description
